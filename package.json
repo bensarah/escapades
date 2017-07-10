@@ -1,0 +1,26 @@
+{
+  "name": "hiking-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "next": "beta",
+    "nprogress": "^0.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "standard": "^10.0.2"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "standard",
+    "fix": "standard --fix",
+    "test": "npm run lint && jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
