@@ -8,7 +8,7 @@ export default () => (
     <Title>Mount Whitney</Title>
 
     <p>The most amazing hike ever.</p>
-    <img src='/static/2017/mount-whitney-1.jpg' />
+    <img src='/static/2017/mount-whitney/1.jpg' />
 
     <style jsx>{`
       img {
