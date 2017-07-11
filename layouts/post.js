@@ -1,6 +1,7 @@
 import Page from './main'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import Footer from '../components/post/footer'
 
 const Post = ({ children }) => (
   <Page>
@@ -21,6 +22,9 @@ const Post = ({ children }) => (
         overflow-x: hidden;
       }
     `}</style>
+    <Footer>
+      footer
+    </Footer>
   </Page>
 )
 

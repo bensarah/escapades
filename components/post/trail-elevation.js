@@ -26,11 +26,11 @@ class TrailElevation extends Component {
         <div className='wmin-full hmin300 py30'>
           <div className='txt-s color-darken50 px42'>
             <svg className='icon inline-block align-middle'><use xlinkHref='#icon-arrow-up' /></svg>{upsAndDowns[0]}m -
-          <svg className='icon inline-block align-middle'><use xlinkHref='#icon-arrow-down' /></svg>{upsAndDowns[1]}m
-        </div>
+            <svg className='icon inline-block align-middle'><use xlinkHref='#icon-arrow-down' /></svg>{upsAndDowns[1]}m
+          </div>
           <ResponsiveContainer width='100%' height={200}>
             <AreaChart margin={{top: 42, right: 42, left: 42, bottom: 12}} data={this.state.elevations.map(e => ({e: Math.max(e, 0)}))}>
-              <YAxis orientation='right' domain={['dataMin', 'dataMax']} name='m'/>
+              <YAxis orientation='right' domain={['dataMin', 'dataMax']} name='m' />
               <Area type='monotone' dataKey='e' stroke='#2abaf7' fill='#2abaf7' fillOpacity={0.5} strokeWidth={2} dot={null} />
             </AreaChart>
           </ResponsiveContainer>

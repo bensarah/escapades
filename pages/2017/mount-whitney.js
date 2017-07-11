@@ -19,7 +19,7 @@ const MountWhitney = () => (
       zoom={11.6}
       trail={trail}
     />
-    <TrailElevation trail={trail}/>
+    <TrailElevation trail={trail} />
     <P>Woow so much elevation.</P>
     <P>
       Here’s another, longer paragraph.

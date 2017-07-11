@@ -9,9 +9,6 @@ const Main = ({ children }) => (
     <Meta />
 
     <style jsx>{`
-      .main {
-        padding: 25px 50px;
-      }
     `}</style>
   </div>
 )
