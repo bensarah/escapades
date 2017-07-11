@@ -1,9 +1,9 @@
-import Page from '../layouts/main'
-import Link from 'next/prefetch'
 import Head from 'next/head'
+import Page from '../layouts/main'
+import PostInfo from '../components/post-info.js'
 import posts from '../posts'
 
-export default () => (
+const Index = () => (
   <Page>
     <Head>
       <title>hike.climb.camp</title>
@@ -11,11 +11,11 @@ export default () => (
 
     <div className='home'>
       <div className='main'>
-        <h1>hike.climb.camp</h1>
+        <h1 className='my30 align-center'>hike.climb.camp</h1>
         <div className='posts'>
           {
             posts.map(({ id, date, title }) => (
-              <Post
+              <PostInfo
                 id={id}
                 key={id}
                 date={date}
@@ -28,18 +28,17 @@ export default () => (
     </div>
 
     <style jsx>{`
+      h1 {
+        font-size: 36px;
+      }
 
+      .home {
+        max-width: 650px;
+        margin: auto;
+        font-size: 14px;
+      }
     `}</style>
   </Page>
 )
 
-const Post = ({ id, date, title }) => (
-  <div className='post'>
-    <span className='date'>{ date }</span>
-    <Link href={`/${new Date(date).getFullYear()}/${id}`}><a>{ title }</a></Link>
-
-    <style jsx>{`
-
-    `}</style>
-  </div>
-)
+export default Index

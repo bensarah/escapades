@@ -1,6 +1,7 @@
 import Meta from '../components/meta'
+import PropTypes from 'prop-types'
 
-export default ({ children }) => (
+const Main = ({ children }) => (
   <div className='main'>
 
     { children }
@@ -14,3 +15,9 @@ export default ({ children }) => (
     `}</style>
   </div>
 )
+
+Main.propTypes = {
+  children: PropTypes.array
+}
+
+export default Main

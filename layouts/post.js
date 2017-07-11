@@ -1,7 +1,10 @@
 import Page from './main'
+import PropTypes from 'prop-types'
+import Link from 'next/link'
 
-export default ({ children }) => (
+const Post = ({ children }) => (
   <Page>
+    <Link href='/'><a className='link'>Home</a></Link>
     <article>
       { children }
     </article>
@@ -20,3 +23,9 @@ export default ({ children }) => (
     `}</style>
   </Page>
 )
+
+Post.propTypes = {
+  children: PropTypes.array
+}
+
+export default Post

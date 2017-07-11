@@ -1,20 +1,18 @@
-export default ({ children }) => (
-  <h1>
-    <a href='#'>{ children }</a>
+import PropTypes from 'prop-types'
+
+const Title = ({ children }) => (
+  <h1 className='prose my12'>
+    { children }
     <style jsx>{`
       h1 {
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 10px;
-      }
-      a {
-        color: #FF001F;
-        text-decoration: none;
-      }
-      a:hover {
-        background-color: #FF001F;
-        color: #fff;
+        font-size: 36px;
       }
     `}</style>
   </h1>
 )
+
+Title.propTypes = {
+  children: PropTypes.string
+}
+
+export default Title
