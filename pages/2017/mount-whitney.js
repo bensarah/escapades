@@ -4,6 +4,7 @@ import Title from '../../components/post/title'
 import Img from '../../components/post/img'
 import P from '../../components/post/paragraph'
 import Map from '../../components/post/map'
+import TrailElevation from '../../components/post/trail-elevation'
 
 import trail from '../../static/2017/mount-whitney/trail'
 
@@ -18,8 +19,17 @@ const MountWhitney = () => (
       zoom={11.6}
       trail={trail}
     />
+    <TrailElevation trail={trail}/>
     <P>Woow so much elevation.</P>
-    <Img src='/static/2017/mount-whitney/1.jpg'/>
+    <P>
+      Here’s another, longer paragraph.
+      I can write about how fantastic the mountains are, because they are!
+      For real, I have never seen such beautiful mountains.
+      Each sentence is written
+      on a new line but it’s a put in form automatically,
+      magic!
+    </P>
+    <Img src='/static/2017/mount-whitney/1.jpg' />
 
   </Post>
 )

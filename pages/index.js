@@ -11,7 +11,7 @@ const Index = () => (
 
     <div className='home'>
       <div className='main'>
-        <h1 className='my30 align-center'>hike.climb.camp</h1>
+        <h1 className='my30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
         <div className='posts'>
           {
             posts.map(({ id, date, title }) => (

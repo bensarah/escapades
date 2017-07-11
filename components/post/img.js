@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 
 const Img = ({ src }) => (
   <div>
-    <img src={ src }/>
+    <img src={src} />
     <style jsx>{`
       img {
-        max-width: 100%;
+        width: 100%;
       }
     `}</style>
   </div>

@@ -18,11 +18,8 @@ class Map extends Component {
   render () {
     return (
       <div>
-        <Head>
-        </Head>
-        <div id='map'>
-
-        </div>
+        <Head />
+        <div id='map' className='animation-fade-in animation--speed-2' />
         <style jsx>{`
           #map {
             width: 100%;
@@ -46,6 +43,8 @@ class Map extends Component {
     this.map = map
     this.style = style
 
+    this.enableStyleChange()
+
     map.on('load', () => this.onLoad())
   }
 
@@ -68,8 +67,6 @@ class Map extends Component {
   }
 
   onLoad () {
-    this.enableStyleChange()
-
     if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
   }
 

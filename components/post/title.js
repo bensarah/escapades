@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 const Title = ({ children }) => (
-  <h1 className='prose my12'>
+  <h1 className='prose my12 animation-fade-in'>
     { children }
     <style jsx>{`
       h1 {

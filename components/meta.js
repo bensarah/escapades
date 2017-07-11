@@ -10,11 +10,11 @@ const Meta = () => (
   <div>
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
-      <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"/>
-      <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+      <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' />
+      <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js' />
       <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
-      <link href="https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css" rel="stylesheet"/>
-      <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js"></script>
+      <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
+      <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
     </Head>
 
     <style jsx global>{`

@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "cheap-ruler": "^2.5.0",
     "lodash": "^4.17.4",
     "mapbox-gl": "^0.38.0",
     "next": "beta",
     "nprogress": "^0.2.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "recharts": "^1.0.0-alpha.2",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "eslint-config-standard": "^10.2.1",
