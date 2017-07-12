@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const Img = ({ src }) => (
+const Img = ({ src, className }) => (
   <div>
-    <img src={src} />
+    <img src={src} className={className} />
     <style jsx>{`
       img {
         width: 100%;
@@ -12,6 +12,7 @@ const Img = ({ src }) => (
 )
 
 Img.propTypes = {
+  className: PropTypes.string,
   src: PropTypes.string
 }
 

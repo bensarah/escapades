@@ -19,14 +19,6 @@ class MapHeader extends Component {
           .map-container {
             background-color: #0a1224;
           }
-
-          .marker {
-            background-color: #ffffff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-          }
         `}</style>
       </div>
     )
@@ -44,23 +36,24 @@ class MapHeader extends Component {
       attributionControl: false
     })
 
-    map.fitBounds([-142.382813, 0.351560, 58.359375, 63.704722], {animate: false})
+    var worldBounds = [-142.382813, 0.351560, 58.359375, 63.704722]
+    map.fitBounds(worldBounds, {animate: false})
 
     this.map = map
   }
 
   componentWillReceiveProps (nextProps) {
-    console.log(nextProps)
+    const size = 10 // px
     if (nextProps.highlight) {
-      var el = document.createElement('div')
-      el.id = 'marker'
-      var marker = new mapboxgl.Marker(el, { offset: [-10 / 2, -10 / 2] })
+      let el = document.createElement('div')
+      el.id = 'marker-' + new Date().getDate()
+      let marker = new mapboxgl.Marker(el, { offset: [-size / 2, -size / 2] })
         .setLngLat(nextProps.highlight)
         .addTo(this.map)
 
-      ReactDOM.render(<BlipMarker size={10}/>, document.getElementById('marker'))
+      ReactDOM.render(<BlipMarker size={size}/>, el)
 
-      setTimeout(() => marker.remove(), 1000)
+      setTimeout(() => marker.remove(), 1300)
     }
   }
 

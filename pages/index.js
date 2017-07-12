@@ -27,13 +27,14 @@ class Index extends Component {
             <h1 className='my30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
             <div className='posts'>
               {
-                posts.map(({ id, date, title, coords }) => (
+                posts.map(({ id, date, title, coords, header }) => (
                   <PostInfo
                     id={id}
                     key={id}
                     date={date}
                     title={title}
-                    onMouseEnter={() => this.setState({highlight: coords})}
+                    header={header}
+                    highlight={() => this.setState({highlight: coords})}
                   />
                 ))
               }

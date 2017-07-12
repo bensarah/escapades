@@ -1,24 +1,44 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import Img from './post/img'
 
-const PostInfo = ({ id, date, title, onMouseEnter }) => (
-  <div className='post bg-darken5 px12 py12 round' onMouseEnter={onMouseEnter}>
-    <span className='mr6'>{ date } - </span>
-    <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
-      <a className='link'>{ title }</a>
-    </Link>
+const PostInfo = ({ id, date, title, highlight, header }) => (
+  <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
+    <div className='post mx12 my12 px12 py12 round cursor-pointer' onMouseEnter={highlight} onClick={highlight}>
+      <Img src={header} className='img-header'/>
 
-    <style jsx>{`
+      <h1 className='mx12 my12 prose'>{ date } - { title }</h1>
 
-    `}</style>
-  </div>
+      <style jsx global>{`
+        .img-header {
+          height: 100px;
+          object-fit: cover;
+          border-radius: 3px
+        }
+
+        h1 {
+          font-size: 18px;
+        }
+
+        .post {
+          background-color: #eeeeee;
+          transition: background-color 0.5s ease-out;
+        }
+
+        .post:hover {
+          background-color: #cbccdb;
+        }
+      `}</style>
+    </div>
+  </Link>
 )
 
 PostInfo.propTypes = {
   id: PropTypes.string,
   date: PropTypes.string,
   title: PropTypes.string,
-  onMouseEnter: PropTypes.func
+  highlight: PropTypes.func,
+  header: PropTypes.string
 }
 
 export default PostInfo
