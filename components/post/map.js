@@ -1,24 +1,14 @@
 import PropTypes from 'prop-types'
 import {Component} from 'react'
-import Head from 'next/head'
 import _ from 'lodash'
 import style from '../../styles/style'
 
 /* global mapboxgl */
 
 class Map extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      isClicked: false,
-      map: null
-    }
-  }
-
   render () {
     return (
       <div>
-        <Head />
         <div id='map' className='animation-fade-in animation--speed-2' />
         <style jsx>{`
           #map {
@@ -49,20 +39,26 @@ class Map extends Component {
   }
 
   enableStyleChange () {
+    // Maximal style on hover
+    this.map.on('mousemove', () => {
+      this.setStyle('maximal')
+    })
+    this.map.on('mouseout', () => {
+      this.setStyle('minimal')
+    })
+
+    // Only enable scroll zoom (and dragpan for touch device)
+    // once the map has been clicked once
     this.map.scrollZoom.disable()
     if ('ontouchstart' in window) {
       // for touch screens
       this.map.dragPan.disable()
     }
+
     this.map.once('mousedown', () => {
       this.setStyle('maximal')
       this.map.scrollZoom.enable()
       this.map.dragPan.enable()
-
-      this.map.once('mouseout', () => {
-        this.setStyle('minimal')
-        this.enableStyleChange()
-      })
     })
   }
 
