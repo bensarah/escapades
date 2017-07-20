@@ -25,7 +25,7 @@ class Index extends Component {
         <div className='home'>
           <div className='main'>
             <h1 className='my30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
-            <div className='posts'>
+            <div className='posts flex-parent flex-parent--row'>
               {
                 posts.map(({ id, date, title, coords, header }) => (
                   <PostInfo
