@@ -47,6 +47,11 @@ class Index extends Component {
             font-size: 36px;
           }
 
+          .posts {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .home {
             max-width: 650px;
             margin: auto;

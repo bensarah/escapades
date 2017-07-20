@@ -4,7 +4,7 @@ import Link from 'next/link'
 const PostInfo = ({ id, date, title, highlight, header }) => (
   <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
     <div
-      className='post h240 w240 mx30 my30 round cursor-pointer z0'
+      className='post h240 w240 hmin240 wmin240 mx30 my30 round cursor-pointer z0'
       onMouseEnter={highlight}
       onClick={highlight}
       style={{background: `url(${header}) no-repeat center center`}}
