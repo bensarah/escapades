@@ -17,8 +17,8 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
               <image x='0' y='0' height='180' width='360' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
             </pattern>
             <linearGradient id={'grad' + id} x1='0%' y1='100%' x2='100%' y2='0%'>
-              <stop offset='0%' style={{stopColor: '#c63a22', stopOpacity: 0.5}} />
-              <stop offset='100%' style={{stopColor: '#e2a541', stopOpacity: 0.2}}/>
+              <stop offset='0%' style={{stopColor: '#962b18', stopOpacity: 0.5}} />
+              <stop offset='100%' style={{stopColor: '#e2e041', stopOpacity: 0.2}}/>
             </linearGradient>
           </defs>
           <polygon points={polygon} fill={`url(#${'img' + id})`} />
@@ -33,8 +33,8 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
           .title {
             font-size: 25px;
             line-height: 35px;
-            font-family: 'Passion One', sans-serif;
-            text-shadow: 4px 4px rgba(48, 50, 64, 0.5);
+            font-family: 'Anton', sans-serif;
+            text-shadow: 1px 1px 3px #303240;
           }
 
           .filter {
