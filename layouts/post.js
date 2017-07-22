@@ -1,11 +1,15 @@
 import Page from './main'
 import PropTypes from 'prop-types'
-import Link from 'next/link'
+import Header from '../components/post/header'
 import Footer from '../components/post/footer'
 
-const Post = ({ children }) => (
+const Post = ({ title, header, children }) => (
   <Page>
-    <Link href='/'><a className='link'>Home</a></Link>
+    <Header
+      img={header}
+      title={title}
+      home={true}
+    />
     <article>
       { children }
     </article>
@@ -29,6 +33,8 @@ const Post = ({ children }) => (
 )
 
 Post.propTypes = {
+  title: PropTypes.string,
+  header: PropTypes.string,
   children: PropTypes.array
 }
 

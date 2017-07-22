@@ -12,5 +12,19 @@ export default [
     id: 'mount-dana',
     coords: [-119.221144, 37.899727],
     header: '/static/2017/mount-whitney/1.jpg'
+  },
+  {
+    title: 'Half Dome',
+    date: '2017/03/21',
+    id: 'half-dome',
+    coords: [-119.533147, 37.746009],
+    header: '/static/2017/half-dome/header.jpg'
+  },
+  {
+    title: 'Lassen Peak',
+    date: '2016/08/12',
+    id: 'lassen-peak',
+    coords: [-121.505004, 40.488014],
+    header: '/static/2016/lassen-peak/header.jpg'
   }
 ]
