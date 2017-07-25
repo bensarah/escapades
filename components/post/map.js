@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import {Component} from 'react'
 import _ from 'lodash'
+import extent from 'geojson-extent'
 import style from '../../styles/style'
 
 /* global mapboxgl */
@@ -25,16 +26,13 @@ class Map extends Component {
 
     const map = new mapboxgl.Map({
       container: 'map',
-      style: this.minimalStyle(style),
-      center: this.props.center,
-      zoom: this.props.zoom
+      style: this.minimalStyle(style)
     })
 
     this.map = map
     this.style = style
 
     this.enableStyleChange()
-
     map.on('load', () => this.onLoad())
   }
 
@@ -64,6 +62,8 @@ class Map extends Component {
 
   onLoad () {
     if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
+    var bbox = extent(this.props.trail)
+    this.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {animate: false})
   }
 
   minimalStyle (style) {

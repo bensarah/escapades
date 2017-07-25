@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import Header from '../components/post/header'
 import Footer from '../components/post/footer'
 
-const Post = ({ title, header, children }) => (
+const Post = ({ title, header, trail, children }) => (
   <Page>
     <Header
       img={header}
       title={title}
       home={true}
+      trail={trail}
     />
     <article>
       { children }
@@ -35,7 +36,8 @@ const Post = ({ title, header, children }) => (
 Post.propTypes = {
   title: PropTypes.string,
   header: PropTypes.string,
-  children: PropTypes.array
+  children: PropTypes.array,
+  trail: PropTypes.object
 }
 
 export default Post

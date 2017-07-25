@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cheap-ruler": "^2.5.0",
+    "geojson-extent": "^0.3.2",
     "lodash": "^4.17.4",
     "mapbox-gl": "^0.38.0",
     "next": "beta",

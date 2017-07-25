@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Link from 'next/link'
+import TrailElevation from './trail-elevation'
 
-const Header = ({ img, title, home }) => {
+const Header = ({ img, title, trail, home }) => {
   return (
     <div
       className='header hmin300 w-full display-block relative'
       style={{background: `url(${img}) no-repeat center center`, backgroundSize: 'cover'}}
     >
       <Head><title>{title}</title></Head>
-      <h1 className='absolute bottom left right align-center py24'>{title.toUpperCase()}</h1>
       {
         home
         ? <Link href='/'><a className='link'>hike.climb.camp</a></Link>
         : null
       }
+      <h1 className='align-center pt60'>{title.toUpperCase()}</h1>
+      <TrailElevation trail={trail}/>
       <style jsx>{`
         h1 {
           font-size: 36px;
@@ -30,7 +32,8 @@ const Header = ({ img, title, home }) => {
 Header.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string,
-  home: PropTypes.bool
+  home: PropTypes.bool,
+  trail: PropTypes.object
 }
 
 export default Header

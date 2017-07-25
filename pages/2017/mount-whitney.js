@@ -2,7 +2,6 @@ import Post from '../../layouts/post'
 import Img from '../../components/post/img'
 import P from '../../components/post/paragraph'
 import Map from '../../components/post/map'
-import TrailElevation from '../../components/post/trail-elevation'
 
 import trail from '../../static/2017/mount-whitney/trail'
 
@@ -10,6 +9,7 @@ const MountWhitney = () => (
   <Post
     title='Mount Whitney'
     header='/static/2017/mount-whitney/1.jpg'
+    trail={trail}
   >
     <P>The most amazing hike ever.</P>
     <Map
@@ -17,7 +17,6 @@ const MountWhitney = () => (
       zoom={11.6}
       trail={trail}
     />
-    <TrailElevation trail={trail} />
     <P>Woow so much elevation.</P>
     <P>
       Here’s another, longer paragraph.
