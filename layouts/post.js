@@ -3,6 +3,7 @@ import Page from './main'
 import PropTypes from 'prop-types'
 import Header from '../components/post/header'
 import Footer from '../components/post/footer'
+import {StickyContainer, Sticky} from 'react-sticky'
 
 class Post extends Component {
   constructor (props) {
@@ -23,7 +24,11 @@ class Post extends Component {
           trail={this.props.trail}
         />
         <div className='flex-parent flex-parent--row flex-parent--stretch-cross'>
-          <div className='sidebar flex-child'>{this.state.content}</div>
+          <StickyContainer className='flex-child' style={{minWidth: '50%', minHeight: '100%'}}>
+            <Sticky>
+              {({ style }) => <div style={{...style, backgroundColor: '#9f8b8b', height: '100vh'}} ref={sidebar => { this.sidebar = sidebar }}>{this.state.content}</div>}
+            </Sticky>
+          </StickyContainer>
           <article className='flex-child flex-child--grow px60 py30'>
             {
               this.props.children.map((child, i) => React.cloneElement(child, {key: i, setContent: (content) => this.setState({content})}))
@@ -31,17 +36,8 @@ class Post extends Component {
           </article>
         </div>
         <style jsx>{`
-          .article-container {
-            position: relative;
-          }
-
           article {
             font-size: 18px;
-          }
-
-          .sidebar {
-            min-width: 30%;
-            background-color: yellow;
           }
         `}</style>
         <style jsx global>{`

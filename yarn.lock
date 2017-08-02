@@ -4080,7 +4080,7 @@ quote-stream@~0.0.0:
     minimist "0.0.8"
     through2 "~0.4.1"
 
-raf@^3.2.0:
+raf@^3.2.0, raf@^3.3.0:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.3.2.tgz#0c13be0b5b49b46f76d6669248d527cf2b02fe27"
   dependencies:
@@ -4156,6 +4156,13 @@ react-smooth@0.3.0:
     prop-types "^15.5.8"
     raf "^3.2.0"
     react-transition-group "^1.1.1"
+
+react-sticky@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-6.0.1.tgz#356988bdcc6fc8cd2d89746d2302edce67d86687"
+  dependencies:
+    prop-types "^15.5.8"
+    raf "^3.3.0"
 
 react-transition-group@^1.1.1:
   version "1.2.0"
