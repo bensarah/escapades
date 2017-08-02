@@ -6,7 +6,7 @@ import TrailElevation from './trail-elevation'
 const Header = ({ img, title, trail, home }) => {
   return (
     <div
-      className='header hmin300 w-full display-block relative'
+      className='header w-full display-block relative'
       style={{background: `url(${img}) no-repeat center center`, backgroundSize: 'cover'}}
     >
       <Head><title>{title}</title></Head>
@@ -18,6 +18,11 @@ const Header = ({ img, title, trail, home }) => {
       <h1 className='align-center pt60'>{title.toUpperCase()}</h1>
       <TrailElevation trail={trail}/>
       <style jsx>{`
+        .header {
+          height:100vh;
+          background-color: rgba(1, 1, 1, 0.8);
+        }
+
         h1 {
           font-size: 36px;
           color: white;

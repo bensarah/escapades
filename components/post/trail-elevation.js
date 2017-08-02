@@ -17,9 +17,6 @@ class TrailElevation extends Component {
 
   render () {
     switch (this.state.status) {
-    case 'pending':
-      return <div className='wmin-full py30 loading--dark' />
-
     case 'ok': {
       let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
