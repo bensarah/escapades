@@ -9,7 +9,7 @@ class Post extends Component {
     super(props)
 
     this.state = {
-      content: ''
+      content: 'not triggered yet'
     }
   }
 
@@ -22,17 +22,26 @@ class Post extends Component {
           home={true}
           trail={this.props.trail}
         />
-        <div>{this.state.content}</div>
-        <article>
-          {
-            this.props.children.map((child, i) => React.cloneElement(child, {key: i, setContent: (content) => this.setState({content})}))
-          }
-        </article>
+        <div className='flex-parent flex-parent--row flex-parent--stretch-cross'>
+          <div className='sidebar flex-child'>{this.state.content}</div>
+          <article className='flex-child flex-child--grow px60 py30'>
+            {
+              this.props.children.map((child, i) => React.cloneElement(child, {key: i, setContent: (content) => this.setState({content})}))
+            }
+          </article>
+        </div>
         <style jsx>{`
+          .article-container {
+            position: relative;
+          }
+
           article {
-            max-width: 650px;
-            margin: auto;
-            font-size: 14px;
+            font-size: 18px;
+          }
+
+          .sidebar {
+            min-width: 30%;
+            background-color: yellow;
           }
         `}</style>
         <style jsx global>{`

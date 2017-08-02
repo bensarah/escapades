@@ -49,7 +49,6 @@ const MountWhitney = () => (
       on a new line but it’s a put in form automatically,
       magic!
     </P>
-
   </Post>
 )
 

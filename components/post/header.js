@@ -19,7 +19,7 @@ const Header = ({ img, title, trail, home }) => {
       <TrailElevation trail={trail}/>
       <style jsx>{`
         .header {
-          height:100vh;
+          height: 100vh;
           background-color: rgba(1, 1, 1, 0.8);
         }
 
