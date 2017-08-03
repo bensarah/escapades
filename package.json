@@ -1,12 +1,11 @@
 {
   "name": "hiking-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Install and develop",
   "main": "index.js",
   "dependencies": {
     "cheap-ruler": "^2.5.0",
     "geojson-extent": "^0.3.2",
-    "hashids": "^1.1.1",
     "lodash": "^4.17.4",
     "mapbox-gl": "^0.38.0",
     "next": "beta",
@@ -18,7 +17,6 @@
     "react-transition-group": "1.x",
     "react-waypoint": "^7.0.4",
     "recharts": "^1.0.0-alpha.2",
-    "shortid": "^2.2.8",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   },
@@ -30,12 +28,25 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "standard",
     "fix": "standard --fix",
     "test": "npm run lint && jest"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "benjamintd",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjamintd/hiking-blog.git"
+  },
+  "keywords": [
+    "hiking",
+    "maps",
+    "pictures"
+  ],
+  "bugs": {
+    "url": "https://github.com/benjamintd/hiking-blog/issues"
+  },
+  "homepage": "https://github.com/benjamintd/hiking-blog#readme"
 }

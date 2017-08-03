@@ -1,3 +1,4 @@
+import {Component} from 'react'
 import Post from '../../layouts/post'
 import Img from '../../components/post/img'
 import P from '../../components/post/paragraph'
@@ -5,50 +6,86 @@ import Waypoint from '../../components/post/waypoint'
 import Map from '../../components/post/map'
 import trail from '../../static/2017/mount-whitney/trail'
 
-const MountWhitney = () => (
-  <Post
-    title='Mount Whitney'
-    header='/static/2017/mount-whitney/2.jpg'
-    trail={trail}
-  >
-    <Waypoint bottomOffset={-20}>
-      <Map
-        center={[-118.263187, 36.579833]}
-        zoom={11.6}
+class MountWhitney extends Component {
+  render () {
+    return (
+      <Post
+        title='Mount Whitney'
+        header='/static/2017/mount-whitney/2.jpg'
         trail={trail}
-      />
-    </Waypoint>
-    <P>The most amazing hike ever.</P>
-    <P>Woow so much elevation.</P>
-    <P>
-      Here’s another, longer paragraph.
-      I can write about how fantastic the mountains are, because they are!
-      For real, I have never seen such beautiful mountains.
-      Each sentence is written
-      on a new line but it’s a put in form automatically,
-      magic!
-    </P>
-    <Img src='/static/2017/mount-whitney/1.jpg' />
-    <Waypoint action={() => console.log('coucou')}>
-      <div style={{background: 'url(/static/2017/mount-whitney/2.jpg) no-repeat center center', width: '100%', height: '100%'}}></div>
-    </Waypoint>
-    <P>
-      Here’s another, longer paragraph.
-      I can write about how fantastic the mountains are, because they are!
-      For real, I have never seen such beautiful mountains.
-      Each sentence is written
-      on a new line but it’s a put in form automatically,
-      magic!
-    </P>
-    <P>
-      Here’s another, longer paragraph.
-      I can write about how fantastic the mountains are, because they are!
-      For real, I have never seen such beautiful mountains.
-      Each sentence is written
-      on a new line but it’s a put in form automatically,
-      magic!
-    </P>
-  </Post>
-)
+      >
+        <Map
+          container='sidebar'
+          trail={trail}
+          onMap={(map) => this.setState({map})}
+        />
+        <Waypoint action={() => this.state.map.easeTo({center: [-118.24022, 36.5872], zoom: 14, duration: 1500})}><div/></Waypoint>
+        <P>The most amazing hike ever.</P>
+        <P>Woow so much elevation.</P>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+        <Img src='/static/2017/mount-whitney/1.jpg' />
+        <Waypoint action={() => this.state.map.easeTo({center: [-118.29227, 36.578497], zoom: 12, duration: 1500})}><div/></Waypoint>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+        <Waypoint action={() => console.log('coucou')}>
+          <div style={{background: 'url(/static/2017/mount-whitney/2.jpg) no-repeat center center', width: '100%', height: '100%'}}></div>
+        </Waypoint>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+        <P>
+          Here’s another, longer paragraph.
+          I can write about how fantastic the mountains are, because they are!
+          For real, I have never seen such beautiful mountains.
+          Each sentence is written
+          on a new line but it’s a put in form automatically,
+          magic!
+        </P>
+      </Post>
+    )
+  }
+}
 
 export default MountWhitney

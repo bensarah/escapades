@@ -33,6 +33,7 @@ class Post extends Component {
                   transitionName='smooth'
                   transitionEnterTimeout={1000}
                   transitionLeaveTimeout={1000}>
+                  <div key='sidebar' id='sidebar' className='absolute h-full w-full'></div>
                   <div key={this.state.id} className='absolute h-full w-full'>{this.state.content}</div>
                 </CSSTransitionGroup>
               </div>}

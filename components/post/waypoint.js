@@ -10,6 +10,7 @@ class WP extends Component {
         if (this.props.action) this.props.action()
       }}
       bottomOffset={this.props.bottomOffset || '50%'}
+      topOffset={this.props.topOffset || 0}
     />
   }
 }
@@ -19,7 +20,8 @@ WP.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   action: PropTypes.func,
   setContent: PropTypes.func,
-  bottomOffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  bottomOffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  topOffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 export default WP
