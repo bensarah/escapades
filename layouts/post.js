@@ -40,7 +40,12 @@ class Post extends Component {
           </StickyContainer>
           <article className='flex-child flex-child--grow px60 py30'>
             {
-              this.props.children.map((child, i) => React.cloneElement(child, {key: i, setContent: (content) => this.setState({content, id: this.state.id + 1})}))
+              this.props.children.map((child, i) => React.cloneElement(child, {
+                key: i,
+                setContent: (content) => {
+                  if (content !== this.state.content) this.setState({content, id: this.state.id + 1})
+                }
+              }))
             }
           </article>
         </div>
