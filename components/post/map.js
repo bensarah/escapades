@@ -10,11 +10,11 @@ class Map extends Component {
   render () {
     return (
       <div>
-        <div id='map' className='animation-fade-in animation--speed-2' />
+        <div id='map'/>
         <style jsx>{`
           #map {
             width: 100%;
-            height: 500px;
+            height: 100vh;
           }
         `}</style>
       </div>
@@ -30,6 +30,7 @@ class Map extends Component {
     })
 
     this.map = map
+    this.setState({map})
     this.style = style
 
     this.enableStyleChange()
@@ -63,7 +64,7 @@ class Map extends Component {
   onLoad () {
     if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
     var bbox = extent(this.props.trail)
-    this.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {animate: false})
+    this.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {animate: false, padding: 20})
   }
 
   minimalStyle (style) {

@@ -5,16 +5,21 @@ import Waypoint from 'react-waypoint'
 class WP extends Component {
   render () {
     return <Waypoint
-      onEnter={() => this.props.setContent('enter')}
-      onLeave={() => this.props.setContent('leave')}
+      onEnter={() => {
+        if (this.props.children) this.props.setContent(this.props.children)
+        if (this.props.action) this.props.action()
+      }}
+      bottomOffset={this.props.bottomOffset || '50%'}
     />
   }
 }
 
 WP.propTypes = {
   id: PropTypes.string,
-  element: PropTypes.string,
-  setContent: PropTypes.func
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  action: PropTypes.func,
+  setContent: PropTypes.func,
+  bottomOffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 export default WP

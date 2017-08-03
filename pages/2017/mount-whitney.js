@@ -1,9 +1,8 @@
 import Post from '../../layouts/post'
 import Img from '../../components/post/img'
 import P from '../../components/post/paragraph'
-import Map from '../../components/post/map'
 import Waypoint from '../../components/post/waypoint'
-
+import Map from '../../components/post/map'
 import trail from '../../static/2017/mount-whitney/trail'
 
 const MountWhitney = () => (
@@ -11,18 +10,15 @@ const MountWhitney = () => (
     title='Mount Whitney'
     header='/static/2017/mount-whitney/2.jpg'
     trail={trail}
-    id='mount-whitney'
   >
+    <Waypoint bottomOffset={-20}>
+      <Map
+        center={[-118.263187, 36.579833]}
+        zoom={11.6}
+        trail={trail}
+      />
+    </Waypoint>
     <P>The most amazing hike ever.</P>
-    <Map
-      center={[-118.263187, 36.579833]}
-      zoom={11.6}
-      trail={trail}
-    />
-    <Waypoint
-      id='mount-whitney'
-      element='coucou'
-    />
     <P>Woow so much elevation.</P>
     <P>
       Here’s another, longer paragraph.
@@ -33,6 +29,9 @@ const MountWhitney = () => (
       magic!
     </P>
     <Img src='/static/2017/mount-whitney/1.jpg' />
+    <Waypoint action={() => console.log('coucou')}>
+      <div style={{background: 'url(/static/2017/mount-whitney/2.jpg) no-repeat center center', width: '100%', height: '100%'}}></div>
+    </Waypoint>
     <P>
       Here’s another, longer paragraph.
       I can write about how fantastic the mountains are, because they are!

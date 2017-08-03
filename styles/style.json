@@ -109,7 +109,7 @@
     "glyphs": "mapbox://fonts/benjamintd/{fontstack}/{range}.pbf",
     "layers": [
         {
-            "id": "background",
+            "id": "minimal--background",
             "type": "background",
             "layout": {
                 "visibility": "visible"
