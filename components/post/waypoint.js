@@ -6,7 +6,7 @@ class WP extends Component {
   render () {
     return <Waypoint
       onEnter={() => {
-        if (this.props.children) this.props.setContent(this.props.children)
+        this.props.setContent(this.props.children)
         if (this.props.action) this.props.action()
       }}
       bottomOffset={this.props.bottomOffset || '50%'}

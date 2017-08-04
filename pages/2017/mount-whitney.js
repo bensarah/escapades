@@ -19,7 +19,7 @@ class MountWhitney extends Component {
           trail={trail}
           onMap={(map) => this.setState({map})}
         />
-        <Waypoint action={() => this.state.map.easeTo({center: [-118.24022, 36.5872], zoom: 14, duration: 1500})}><div/></Waypoint>
+        <Waypoint action={() => this.state.map.easeTo({center: [-118.24022, 36.5872], zoom: 14, duration: 1500})} />
         <P>The most amazing hike ever.</P>
         <P>Woow so much elevation.</P>
         <P>
@@ -31,7 +31,7 @@ class MountWhitney extends Component {
           magic!
         </P>
         <Img src='/static/2017/mount-whitney/1.jpg' />
-        <Waypoint action={() => this.state.map.easeTo({center: [-118.29227, 36.578497], zoom: 12, duration: 1500})}><div/></Waypoint>
+        <Waypoint action={() => this.state.map.easeTo({center: [-118.29227, 36.578497], zoom: 12, duration: 1500})} />
         <P>
           Here’s another, longer paragraph.
           I can write about how fantastic the mountains are, because they are!
