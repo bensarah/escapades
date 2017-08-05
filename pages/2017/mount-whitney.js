@@ -3,8 +3,9 @@ import Post from '../../layouts/post'
 import Img from '../../components/post/img'
 import Quote from '../../components/post/quote'
 import P from '../../components/post/paragraph'
-import Waypoint from '../../components/post/waypoint'
 import Map from '../../components/post/map'
+import Waypoint from '../../components/post/waypoint'
+
 import trail from '../../static/2017/mount-whitney/trail'
 
 class MountWhitney extends Component {

@@ -24,9 +24,9 @@ class TrailElevation extends Component {
           <ResponsiveContainer width='102%' height={200}>
             <AreaChart data={this.state.elevations.map((e, i, a) => ({distance: (i * this.state.distance / a.length).toFixed(1) + ' km', elevation: Math.max(e, 0)}))}>
               <Tooltip cursor={false} />
-              <XAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='km' dataKey='distance' />
-              <YAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='m' />
-              <Area type='linear' dataKey='elevation' stroke='#2abaf7' fill='#2abaf7' fillOpacity={0.5} strokeWidth={2} dot={null} />
+              <XAxis hide={false} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='km' dataKey='distance' />
+              <YAxis hide={true} tickLine={true} axisLine={false} domain={['dataMin', 'dataMax']} name='m' />
+              <Area type='linear' dataKey='elevation' stroke='#C63A22' fill='#C63A22' fillOpacity={0.5} strokeWidth={2} dot={null} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
