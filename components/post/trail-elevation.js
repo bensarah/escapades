@@ -26,7 +26,7 @@ class TrailElevation extends Component {
               <Tooltip cursor={false} />
               <XAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='km' dataKey='distance' />
               <YAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='m' />
-              <Area type='monotone' dataKey='elevation' stroke='#2abaf7' fill='#2abaf7' fillOpacity={0.5} strokeWidth={2} dot={null} />
+              <Area type='linear' dataKey='elevation' stroke='#2abaf7' fill='#2abaf7' fillOpacity={0.5} strokeWidth={2} dot={null} />
             </AreaChart>
           </ResponsiveContainer>
         </div>

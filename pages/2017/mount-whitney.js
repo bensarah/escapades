@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Post from '../../layouts/post'
 import Img from '../../components/post/img'
+import Quote from '../../components/post/quote'
 import P from '../../components/post/paragraph'
 import Waypoint from '../../components/post/waypoint'
 import Map from '../../components/post/map'
@@ -59,14 +60,14 @@ class MountWhitney extends Component {
           on a new line but it’s a put in form automatically,
           magic!
         </P>
-        <P>
+        <Quote>
           Here’s another, longer paragraph.
           I can write about how fantastic the mountains are, because they are!
           For real, I have never seen such beautiful mountains.
           Each sentence is written
           on a new line but it’s a put in form automatically,
           magic!
-        </P>
+        </Quote>
         <P>
           Here’s another, longer paragraph.
           I can write about how fantastic the mountains are, because they are!
