@@ -6,7 +6,7 @@ import palette from '../../styles/palette'
 class Section extends Component {
   render () {
     return (
-      <div className='section-container'>
+      <div className='section-container py30'>
         <div className='section align-middle flex-parent flex-parent--column flex-parent--center-main'>
           <Waypoint
             action={this.props.action}

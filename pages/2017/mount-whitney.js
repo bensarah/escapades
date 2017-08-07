@@ -1,6 +1,5 @@
 import {Component} from 'react'
 import Post from '../../layouts/post'
-import Img from '../../components/post/img'
 import Quote from '../../components/post/quote'
 import P from '../../components/post/paragraph'
 import Map from '../../components/post/map'
@@ -33,7 +32,6 @@ class MountWhitney extends Component {
           on a new line but it’s a put in form automatically,
           magic!
         </P>
-        <Img src='/static/2017/mount-whitney/1.jpg' />
         <Waypoint action={() => this.state.map.easeTo({center: [-118.29227, 36.578497], zoom: 12, duration: 1500})} />
         <P>
           Here’s another, longer paragraph.

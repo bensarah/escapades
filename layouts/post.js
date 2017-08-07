@@ -33,12 +33,12 @@ class Post extends Component {
               <div style={{...style, height: '100vh'}} ref={sidebar => { this.sidebar = sidebar }}>
                 <CSSTransitionGroup
                   transitionName='smooth'
-                  transitionEnterTimeout={0}
+                  transitionEnterTimeout={500}
                   transitionLeaveTimeout={0}>
                   <div key='sidebar' id='sidebar' className='absolute h-full w-full'></div>
                   {
                     this.state.content
-                    ? <div key={this.state.id} className='absolute h-full w-full'>{this.state.content}</div>
+                    ? <div key={this.state.id} className='absolute h-full w-full z5'>{this.state.content}</div>
                     : null
                   }
                 </CSSTransitionGroup>
@@ -69,7 +69,7 @@ class Post extends Component {
 
           .smooth-enter.smooth-enter-active {
             opacity: 1;
-            transition: opacity 1000ms ease-in;
+            transition: opacity 500ms ease-in;
           }
 
           .smooth-leave {
@@ -78,8 +78,8 @@ class Post extends Component {
 
           .smooth-leave.smooth-leave-active {
             opacity: 0.01;
-            transition: opacity 1000ms ease-in;
-            transition-delay: 1000ms
+            transition: opacity 500ms ease-in;
+            transition-delay: 500ms
           }
         `}</style>
         <style jsx global>{`

@@ -7,8 +7,13 @@ const Footnote = ({ children }) => (
     <style jsx>{`
       p {
         font-size: 14px;
-        color: ${palette.taupe};
-        font-family: 'Open Sans', serif
+        color: ${palette.lavande};
+        font-family: 'Open Sans', serif;
+      }
+
+      *::selection {
+        color: ${palette.tournesol};
+        background-color: ${palette.grisClair};
       }
     `}</style>
   </p>
