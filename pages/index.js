@@ -4,6 +4,7 @@ import Page from '../layouts/main'
 import PostInfo from '../components/post-info.js'
 import MapHeader from '../components/map-header.js'
 import posts from '../posts'
+import palette from '../styles/palette'
 
 class Index extends Component {
   constructor (props) {
@@ -21,10 +22,11 @@ class Index extends Component {
         </Head>
         <MapHeader
           highlight={this.state.highlight}
+          dots={posts.map(post => post.coords)}
         />
         <div className='home'>
           <div className='main'>
-            <h1 className='my30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
+            <h1 className='py30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
             <div className='flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
               {
                 posts.map(({ id, date, title, coords, header }) => (
@@ -45,13 +47,13 @@ class Index extends Component {
         <style jsx>{`
           h1 {
             font-size: 36px;
+            color: ${palette.tournesol}
           }
 
           .home {
-            max-width: 90%;
             margin: auto;
             font-size: 14px;
-            background-color: #fff;
+            background-color: ${palette.bleuNuit};
           }
         `}</style>
       </Page>
