@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 const P = ({ children }) => (
-  <p className='prose py12'>
+  <p className='prose pb30'>
     { children }
     <style jsx>{`
       p {

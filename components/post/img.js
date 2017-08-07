@@ -1,22 +1,18 @@
 import PropTypes from 'prop-types'
 
-const Img = ({ src, className }) => (
-  <div className='container'>
-    <img src={src} className={className} />
-    <style jsx>{`
-      img {
-        width: 100%;
-      }
-
-      .container {
-        width: 100%;
-      }
-    `}</style>
+const Img = ({ src }) => (
+  <div
+    style={{
+      background: `url(${src}) no-repeat center center`,
+      width: '100%',
+      height: '100%',
+      backgroundSize: 'cover'
+    }}
+  >
   </div>
 )
 
 Img.propTypes = {
-  className: PropTypes.string,
   src: PropTypes.string
 }
 

@@ -2,8 +2,9 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Link from 'next/link'
 import TrailElevation from './trail-elevation'
+import palette from '../../styles/palette'
 
-const Header = ({ img, title, trail, home }) => {
+const Header = ({ img, title, subtitle, trail, home }) => {
   return (
     <div
       className='header w-full display-block relative'
@@ -15,7 +16,10 @@ const Header = ({ img, title, trail, home }) => {
         ? <Link href='/'><a className='link'>hike.climb.camp</a></Link>
         : null
       }
-      <h1 className='align-center pt60'>{title.toUpperCase()}</h1>
+      <div className='align-l absolute bottom pb300 pl60'>
+        <h1>{title.toUpperCase()}</h1>
+        <h2>{subtitle}</h2>
+      </div>
       <TrailElevation trail={trail}/>
       <style jsx>{`
         .header {
@@ -24,9 +28,16 @@ const Header = ({ img, title, trail, home }) => {
         }
 
         h1 {
-          font-size: 36px;
+          font-size: 54px;
           color: white;
           font-family: 'Anton', sans-serif;
+          text-shadow: 1px 1px 3px #303240;
+        }
+
+        h2 {
+          font-size: 32px;
+          color: ${palette.grisClair};
+          font-family: 'Bad Script', serif;
           text-shadow: 1px 1px 3px #303240;
         }
       `}</style>
@@ -37,6 +48,7 @@ const Header = ({ img, title, trail, home }) => {
 Header.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string,
+  subtitle: PropTypes.string,
   home: PropTypes.bool,
   trail: PropTypes.object
 }

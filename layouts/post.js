@@ -5,6 +5,7 @@ import Header from '../components/post/header'
 import Footer from '../components/post/footer'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
+import palette from '../styles/palette'
 
 class Post extends Component {
   constructor (props) {
@@ -21,6 +22,7 @@ class Post extends Component {
         <Header
           img={this.props.header}
           title={this.props.title}
+          subtitle={this.props.subtitle}
           home={true}
           trail={this.props.trail}
         />
@@ -31,8 +33,8 @@ class Post extends Component {
               <div style={{...style, height: '100vh'}} ref={sidebar => { this.sidebar = sidebar }}>
                 <CSSTransitionGroup
                   transitionName='smooth'
-                  transitionEnterTimeout={1000}
-                  transitionLeaveTimeout={1000}>
+                  transitionEnterTimeout={0}
+                  transitionLeaveTimeout={0}>
                   <div key='sidebar' id='sidebar' className='absolute h-full w-full'></div>
                   {
                     this.state.content
@@ -57,6 +59,8 @@ class Post extends Component {
         <style jsx>{`
           article {
             font-size: 18px;
+            color: ${palette.grisClair};
+            background-color: ${palette.bleuNuit};
           }
 
           .smooth-enter {
@@ -75,6 +79,7 @@ class Post extends Component {
           .smooth-leave.smooth-leave-active {
             opacity: 0.01;
             transition: opacity 1000ms ease-in;
+            transition-delay: 1000ms
           }
         `}</style>
         <style jsx global>{`
@@ -93,6 +98,7 @@ class Post extends Component {
 
 Post.propTypes = {
   title: PropTypes.string,
+  subtitle: PropTypes.string,
   header: PropTypes.string,
   children: PropTypes.array,
   trail: PropTypes.object,

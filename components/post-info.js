@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import palette from '../styles/palette'
 
 const PostInfo = ({ id, date, title, highlight, header }) => {
   const polygon = '0,0 300,0 300,170 160,170 150,180 140,170 0,170'
@@ -18,20 +19,20 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
                 <image x='0' y='0' height='180' width='360' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
               </pattern>
               <linearGradient id={'grad' + id} x1='0%' y1='100%' x2='100%' y2='0%'>
-                <stop offset='0%' style={{stopColor: '#962b18', stopOpacity: 0.5}} />
-                <stop offset='100%' style={{stopColor: '#e2e041', stopOpacity: 0.2}}/>
+                <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.5}} />
+                <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 0.2}}/>
               </linearGradient>
             </defs>
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
             <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`} />
-            <text className='title' x='30' y='150' fill='#ffffff'>{title.toUpperCase()}</text>
+            <text className='title' x='30' y='150' fill='white'>{title.toUpperCase()}</text>
           </svg>
         </Link>
 
         <svg className='timeline' height='42' width='360'>
-          <line x1='0' y1='12' x2='360' y2='12' style={{stroke: '#777d9b', strokeWidth: 2}}/>
-          <circle cx='180' cy='12' r='5' style={{stroke: '#ffffff', strokeWidth: 2, fill: '#c63a22'}}/>
-          <text className='date' x='180' y='36' fill='#777d9b' textAnchor='middle' >{date}</text>
+          <line x1='0' y1='12' x2='360' y2='12' style={{stroke: palette.lavande, strokeWidth: 2}}/>
+          <circle cx='180' cy='12' r='5' style={{stroke: 'white', strokeWidth: 2, fill: palette.brique}}/>
+          <text className='date' x='180' y='36' fill={palette.lavande} textAnchor='middle' >{date}</text>
         </svg>
 
         <style jsx global>{`

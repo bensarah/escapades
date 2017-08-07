@@ -13,6 +13,7 @@ class MountWhitney extends Component {
     return (
       <Post
         title='Mount Whitney'
+        subtitle='Inyo National Forest, California'
         header='/static/2017/mount-whitney/2.jpg'
         trail={trail}
       >
