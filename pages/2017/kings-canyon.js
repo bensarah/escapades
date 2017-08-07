@@ -67,7 +67,7 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.715100, 36.731829]), 1000)}
+          action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
         > {/*zoom sur Rowell Meadow*/}
           <P>
             En une heure, nous arrivons sur cette plaine verte : une petite clairière laisse apparaître un vallon rempli d’herbes hautes d’un vert éclatant. L’endroit parfait pour un cliché ! Mais nous allons rapidement être rejoints par un groupe d’incorrigibles dont deux individus se sont invités sur cette photo…
@@ -107,7 +107,9 @@ class KingsCanyon extends Component {
           </P>
         </Section>
 
-        <Section> {/*La carte zoome sur Seville Lake*/}
+        <Section
+          action={() => setTimeout(() => this.state.map.panTo([-118.719584, 36.682804]), 1000)}
+        > {/*La carte zoome sur Seville Lake - idéalement on voit Ball Dome*/}
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
             Nous dépassons un autre groupe qui campait proche du lac.
             Premier échange : “Good evening”. Second échange : “Lots of mosquitos, heh!”.
@@ -176,7 +178,9 @@ class KingsCanyon extends Component {
           </P>
         </Section>
 
-        <Section> {/*La carte zoome sur Micthell Peak*/}
+        <Section
+          action={() => setTimeout(() => this.state.map.panTo([-118.715210, 36.731693]), 1000)}
+        > {/*La carte zoome sur Micthell Peak 36.731693, -118.715210*/}
           <P>
             On y est : Mitchell Peak, 3 150m d’altitude. Nous n’avions jamais randonné aussi haut*.
           </P>
