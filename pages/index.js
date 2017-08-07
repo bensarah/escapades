@@ -25,7 +25,7 @@ class Index extends Component {
         <div className='home'>
           <div className='main'>
             <h1 className='my30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
-            <div className='posts'>
+            <div className='flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
               {
                 posts.map(({ id, date, title, coords, header }) => (
                   <PostInfo
@@ -48,7 +48,7 @@ class Index extends Component {
           }
 
           .home {
-            max-width: 650px;
+            max-width: 90%;
             margin: auto;
             font-size: 14px;
             background-color: #fff;

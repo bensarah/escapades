@@ -2,8 +2,10 @@
 
 ## Install and develop
 
+This project uses [yarn](https://yarnpkg.com/lang/en/docs/install/) for dependency management. Install and run with the following command:
+
 ```sh
-npm install
+yarn
 npm run dev
 ```
 
