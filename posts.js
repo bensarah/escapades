@@ -26,5 +26,12 @@ export default [
     id: 'lassen-peak',
     coords: [-121.505004, 40.488014],
     header: '/static/2016/lassen-peak/header.jpg'
+  },
+  {
+    title: 'Kings Canyon',
+    date: '2017/07/22',
+    id: 'kings-canyon',
+    coords: [-121.505004, 40.488014],
+    header: '/static/2017/kings-canyon/1.jpg'
   }
 ]

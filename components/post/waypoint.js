@@ -4,14 +4,16 @@ import Waypoint from 'react-waypoint'
 
 class WP extends Component {
   render () {
-    return <Waypoint
-      onEnter={() => {
-        this.props.setContent(this.props.children)
-        if (this.props.action) this.props.action()
-      }}
-      bottomOffset={this.props.bottomOffset || '50%'}
-      topOffset={this.props.topOffset || 0}
-    />
+    return <div>
+      <Waypoint
+        onEnter={() => {
+          this.props.setContent(this.props.children)
+          if (this.props.action) this.props.action()
+        }}
+        bottomOffset={this.props.bottomOffset || '40%'}
+        topOffset={this.props.topOffset || 0}
+      />
+    </div>
   }
 }
 
