@@ -67,17 +67,17 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
-        > {/*zoom sur Rowell Meadow*/}
+          action={() => console.log('Moustique picture')}
+          sidebarContent={<Img src='/static/2017/kings-canyon/story2.jpg'/>}
+        >
           <P>
             En une heure, nous arrivons sur cette plaine verte : une petite clairière laisse apparaître un vallon rempli d’herbes hautes d’un vert éclatant. L’endroit parfait pour un cliché ! Mais nous allons rapidement être rejoints par un groupe d’incorrigibles dont deux individus se sont invités sur cette photo…
           </P>
         </Section>
 
         <Section
-          action={() => console.log('Moustique picture')}
-          sidebarContent={<Img src='/static/2017/kings-canyon/story2.jpg'/>}
-        >
+          action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
+        >  {/*zoom sur Rowell Meadow*/}
           <P>
             Bzzz, bzzz, bzzz…
           </P>
@@ -203,7 +203,11 @@ class KingsCanyon extends Component {
           </P>
           <Quote>La vue en vaut bien la peine.</Quote>
           <Quote>Magnifique randonnée !</Quote>
-          <Quote>Le plus haut pik que j’ai gravi.<small>Simon, 9 ans (avec la faute d’orthographe bien mignonne)</small></Quote>
+          <Quote
+            author='Simon, 9 ans (avec la faute d’orthographe bien mignonne)'
+          >
+            Le plus haut pik que j’ai gravi.
+          </Quote>
           <P>Des Allemands, des Russes, des Américains des 4 coins des Etats-Unis…</P>
         </Section>
 

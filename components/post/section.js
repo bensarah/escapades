@@ -6,8 +6,8 @@ import palette from '../../styles/palette'
 class Section extends Component {
   render () {
     return (
-      <div className='section-container py30'>
-        <div className='section align-middle flex-parent flex-parent--column flex-parent--center-main'>
+      <div className='section-container'>
+        <div className='section align-middle flex-parent flex-parent--column flex-parent--center-main py30'>
           <Waypoint
             action={this.props.action}
             setContent={this.props.setContent}
@@ -15,13 +15,16 @@ class Section extends Component {
             {this.props.sidebarContent}
           </Waypoint>
           {this.props.children}
-          <style jsx>{`
-            .section {
-              min-height: 100vh;
-            }
-          `}</style>
         </div>
         <hr className='txt-hr' style={{background: palette.lavande}}/>
+        <style jsx>{`
+          .section {
+            min-height: 100vh;
+          }
+          hr {
+            margin: 0;
+          }
+        `}</style>
       </div>
     )
   }
