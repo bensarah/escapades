@@ -2,6 +2,8 @@ import {Component} from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
+import palette from '../styles/palette'
+import style from '../styles/style-header'
 
 /* global mapboxgl */
 
@@ -17,7 +19,12 @@ class MapHeader extends Component {
           }
 
           .map-container {
-            background-color: #0a1224;
+            background-color: ${palette.bleuNuit};
+          }
+        `}</style>
+        <style jsx global>{`
+          .mapboxgl-ctrl-logo {
+            opacity: 0.2 !important;
           }
         `}</style>
       </div>
@@ -29,7 +36,7 @@ class MapHeader extends Component {
 
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/benjamintd/cj5013w56001c2soatvh44si5',
+      style: style,
       center: [-33, 40],
       zoom: 1,
       interactive: false,
@@ -40,10 +47,27 @@ class MapHeader extends Component {
     map.fitBounds(worldBounds, {animate: false})
 
     this.map = map
+
+    map.on('load', () => {
+      var dotsGeoJSON = this.dotsToGeoJSON(this.props.dots)
+      map.addLayer({
+        id: 'dots',
+        type: 'circle',
+        source: {
+          type: 'geojson',
+          data: dotsGeoJSON
+        },
+        paint: {
+          'circle-color': palette.tournesol,
+          'circle-opacity': 0.5,
+          'circle-radius': 2.2
+        }
+      })
+    })
   }
 
   componentWillReceiveProps (nextProps) {
-    const size = 10 // px
+    const size = 15 // px
     if (nextProps.highlight) {
       let el = document.createElement('div')
       el.id = 'marker-' + new Date().getDate()
@@ -66,10 +90,29 @@ class MapHeader extends Component {
       </div>
     )
   }
+
+  dotsToGeoJSON (dots) {
+    var features = dots.map(dot => {
+      return {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          coordinates: dot,
+          type: 'Point'
+        }
+      }
+    })
+
+    return {
+      type: 'FeatureCollection',
+      features: features
+    }
+  }
 }
 
 MapHeader.propTypes = {
-  highlight: PropTypes.array
+  highlight: PropTypes.array,
+  dots: PropTypes.array
 }
 
 export default MapHeader

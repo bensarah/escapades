@@ -25,19 +25,19 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
             </defs>
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
             <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`} />
-            <text className='title' x='30' y='150' fill='white'>{title.toUpperCase()}</text>
+            <text className='title' x='20' y='150' fill='white'>{title.toUpperCase()}</text>
           </svg>
         </Link>
 
         <svg className='timeline' height='42' width='360'>
-          <line x1='0' y1='12' x2='360' y2='12' style={{stroke: palette.lavande, strokeWidth: 2}}/>
-          <circle cx='180' cy='12' r='5' style={{stroke: 'white', strokeWidth: 2, fill: palette.brique}}/>
-          <text className='date' x='180' y='36' fill={palette.lavande} textAnchor='middle' >{date}</text>
+          <line x1='0' y1='12' x2='360' y2='12' style={{stroke: palette.grisClair, strokeWidth: 2}}/>
+          <circle cx='180' cy='12' r='5' style={{stroke: palette.bleuNuit, strokeWidth: 3, fill: palette.tournesol}}/>
+          <text className='date' x='180' y='36' fill={palette.grisClair} textAnchor='middle' >{date}</text>
         </svg>
 
         <style jsx global>{`
           .title {
-            font-size: 25px;
+            font-size: 30px;
             line-height: 35px;
             font-family: 'Anton', sans-serif;
             text-shadow: 1px 1px 3px #303240;
