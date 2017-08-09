@@ -39,16 +39,16 @@ class KingsCanyon extends Component {
           }}
         >
           <P>
-            Toutes les randonnées apportent leur lot de surprises et celle-ci n'en fut pas exclue.
+            Toutes les randonnées apportent leur lot de surprises et celle-ci n’en fut pas exclue.
           </P>
-          <Emoji src='https://twemoji.maxcdn.com/2/72x72/1f603.png'/>
+
         </Section>
 
         <Section
           action={() => console.log('ce aue tu veux')}
-        > {/*Cela zoome sur la 1ere section de la rando : du trailhead jusque Seville Like*/}
+        > {/* Cela zoome sur la 1ere section de la rando : du trailhead jusque Seville Like */}
           <P>
-            Nous sommes partis vers 16h l'après-midi du samedi.
+            Nous sommes partis vers 16h l’après-midi du samedi.
             Les précieux <em>wilderness permits</em><sup>*</sup> en poche, le <em>bear canister</em><sup>*</sup> rempli de nourriture et la tente sur le dos.
             Sur les conseils du ranger, direction Seville Lake qui offre apparemment un très bon spot pour passer la nuit.
           </P>
@@ -56,7 +56,10 @@ class KingsCanyon extends Component {
             Les wilderness permits sont des permis pour bivouaquer dans les parcs nationaux. Ils s’obtiennent auprès des rangers.
           </Footnote>
           <Footnote>
-            <em>‘Be bear aware’</em> : la Californie est un territoire rempli d’ours - animal aussi majestueux que dangereux. Il faut donc être quelque peu préparé et emporter un bear canister pour chaque bivouac. C’est un cylindre rigide qu’on ne peut ouvrir qu’avec un cerveau et des doigts d’humain et dans lequel on place sa nourriture. Accessoirement, ces contenants sont aussi très utiles pour isoler la nourriture des marmottes ou des chipmunks.
+            <em>‘Be bear aware’</em> : la Californie est un territoire rempli d’ours - animal aussi majestueux que dangereux.
+            Il faut donc être quelque peu préparé et emporter un bear canister pour chaque bivouac.
+            C’est un cylindre rigide qu’on ne peut ouvrir qu’avec un cerveau et des doigts d’humain et dans lequel on place sa nourriture.
+            Accessoirement, ces contenants sont aussi très utiles pour isoler la nourriture des marmottes ou des chipmunks.
           </Footnote>
         </Section>
 
@@ -73,13 +76,15 @@ class KingsCanyon extends Component {
           sidebarContent={<Img src='/static/2017/kings-canyon/story2.jpg'/>}
         >
           <P>
-            En une heure, nous arrivons sur cette plaine verte : une petite clairière laisse apparaître un vallon rempli d’herbes hautes d’un vert éclatant. L’endroit parfait pour un cliché ! Mais nous allons rapidement être rejoints par un groupe d’incorrigibles dont deux individus se sont invités sur cette photo…
+            En une heure, nous arrivons sur cette plaine verte : une petite clairière laisse apparaître un vallon rempli d’herbes hautes d’un vert éclatant.
+            L’endroit parfait pour un cliché !
+            Mais nous allons rapidement être rejoints par un groupe d’incorrigibles dont deux individus se sont invités sur cette photo…
           </P>
         </Section>
 
         <Section
           action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
-        >  {/*zoom sur Rowell Meadow*/}
+        > {/* zoom sur Rowell Meadows */}
           <P>
             Bzzz, bzzz, bzzz…
           </P>
@@ -103,7 +108,7 @@ class KingsCanyon extends Component {
             Ça ne se calme pas on dirait, j’espère qu’il n’y aura pas de moustiques à Seville Lake.
           </Quote>
           <P>
-            L‘espoir fait avancer 😃.
+            L‘espoir fait avancer <Emoji name='smile'/>.
             Nous avons marché plus de deux heures accompagnés de ces nuisibles, accumulant les piqûres.
             Hélas, la situation est bien loin de s’améliorer en se rapprochant du lac, les moustiques deviennent toujours plus nombreux et inassouvis.
           </P>
@@ -111,7 +116,7 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => this.state.map.panTo([-118.719584, 36.682804]), 1000)}
-        > {/*La carte zoome sur Seville Lake - idéalement on voit Ball Dome*/}
+        > {/* La carte zoome sur Seville Lake - idéalement on voit Ball Dome */}
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
             Nous dépassons un autre groupe qui campait proche du lac.
             Premier échange : “Good evening”. Second échange : “Lots of mosquitos, heh!”.
@@ -148,7 +153,7 @@ class KingsCanyon extends Component {
           </P>
         </Section>
 
-        <Section> {/*zoomer sur la portion Seville Lake - Mitchell Peak*/}
+        <Section> {/* zoomer sur la portion Seville Lake - Mitchell Peak */}
           <P>
             Nous marchons donc de bon pas vers Mitchell Peak.
             Sur le chemin, le bourdonnement de ces moustiques m’excède, j’ai l’impression qu’on se fait piquer par-delà les vêtements. Aucun discours, ni juron ne les aura convaincus de nous faire la paix.
@@ -182,7 +187,7 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => this.state.map.panTo([-118.715210, 36.731693]), 1000)}
-        > {/*La carte zoome sur Micthell Peak 36.731693, -118.715210*/}
+        > {/* La carte zoome sur Micthell Peak 36.731693, -118.715210 */}
           <P>
             On y est : Mitchell Peak, 3 150m d’altitude. Nous n’avions jamais randonné aussi haut*.
           </P>
@@ -213,7 +218,7 @@ class KingsCanyon extends Component {
           <P>Des Allemands, des Russes, des Américains des 4 coins des Etats-Unis…</P>
         </Section>
 
-        <Section> { /*La carte highlighte la descente*/ }
+        <Section> { /* La carte highlighte la descente */ }
           <P>
             Après le déjeuner, la descente fut plus tranquille. Les moustiques ont laissé places aux mouches inoffensives pour les heures les plus chaudes de la journée.
           </P>
@@ -228,7 +233,7 @@ class KingsCanyon extends Component {
           <P>
             Nous rejoignons la voiture - notre Fiat 500 SUV, si si ça existe - un peu avant 16h le dimanche. Après 24h dans la nature, des centaines de moustiques, un pic formidable et remplis d’aventure.
           </P>
-          <P>Sapin emoji</P>
+          <P><Emoji name='evergreen-tree'/></P>
         </Section>
 
       </Post>

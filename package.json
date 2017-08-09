@@ -17,6 +17,7 @@
     "react-transition-group": "1.x",
     "react-waypoint": "^7.0.4",
     "recharts": "^1.0.0-alpha.2",
+    "twemoji": "^2.5.0",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   },
