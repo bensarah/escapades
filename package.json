@@ -17,7 +17,7 @@
     "react-transition-group": "1.x",
     "react-waypoint": "^7.0.4",
     "recharts": "^1.0.0-alpha.2",
-    "twemoji": "^2.5.0",
+    "sharp": "^0.18.2",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   },
@@ -34,7 +34,8 @@
     "start": "next start",
     "lint": "standard",
     "fix": "standard --fix",
-    "test": "npm run lint && jest"
+    "test": "npm run lint && jest",
+    "optimize": "find static -type f -exec node build/optimize.js {} \\;"
   },
   "author": "benjamintd",
   "license": "ISC",
