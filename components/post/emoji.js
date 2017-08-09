@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types'
-import Head from 'next/head'
 
-const Emoji = ({ name }) => (
-  <i className={'twa twa-' + name}>
-    <Head>
-      <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />
-    </Head>
-  </i>
+const Emoji = ({ name, size }) => (
+  <i className={'twa twa-' + name + (size ? ' twa-' + size : '')}></i>
 )
 
 Emoji.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
+  size: PropTypes.string
 }
 
 export default Emoji

@@ -233,7 +233,7 @@ class KingsCanyon extends Component {
           <P>
             Nous rejoignons la voiture - notre Fiat 500 SUV, si si ça existe - un peu avant 16h le dimanche. Après 24h dans la nature, des centaines de moustiques, un pic formidable et remplis d’aventure.
           </P>
-          <P><Emoji name='evergreen-tree'/></P>
+          <P><Emoji name='evergreen-tree' size='2x'/></P>
         </Section>
 
       </Post>
