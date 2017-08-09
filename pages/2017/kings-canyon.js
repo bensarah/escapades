@@ -7,6 +7,7 @@ import Waypoint from '../../components/post/waypoint'
 import Section from '../../components/post/section'
 import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
+import Emoji from '../../components/post/emoji'
 import Footnote from '../../components/post/footnote'
 import trail from '../../static/2017/kings-canyon/trail'
 
@@ -38,15 +39,16 @@ class KingsCanyon extends Component {
           }}
         >
           <P>
-            Toutes les randonnées apportent leur lot de surprises et celle-ci n'en fut pas exclue. 😃
+            Toutes les randonnées apportent leur lot de surprises et celle-ci n’en fut pas exclue.
           </P>
+
         </Section>
 
         <Section
           action={() => console.log('ce aue tu veux')}
-        >
+        > {/* Cela zoome sur la 1ere section de la rando : du trailhead jusque Seville Like */}
           <P>
-            Nous sommes partis vers 16h l'après-midi du samedi.
+            Nous sommes partis vers 16h l’après-midi du samedi.
             Les précieux <em>wilderness permits</em><sup>*</sup> en poche, le <em>bear canister</em><sup>*</sup> rempli de nourriture et la tente sur le dos.
             Sur les conseils du ranger, direction Seville Lake qui offre apparemment un très bon spot pour passer la nuit.
           </P>
@@ -54,7 +56,10 @@ class KingsCanyon extends Component {
             Les wilderness permits sont des permis pour bivouaquer dans les parcs nationaux. Ils s’obtiennent auprès des rangers.
           </Footnote>
           <Footnote>
-            <em>‘Be bear aware’</em> : la Californie est un territoire rempli d’ours - animal aussi majestueux que dangereux. Il faut donc être quelque peu préparé et emporter un bear canister pour chaque bivouac. C’est un cylindre rigide qu’on ne peut ouvrir qu’avec un cerveau et des doigts d’humain et dans lequel on place sa nourriture. Accessoirement, ces contenants sont aussi très utiles pour isoler la nourriture des marmottes ou des chipmunks.
+            <em>‘Be bear aware’</em> : la Californie est un territoire rempli d’ours - animal aussi majestueux que dangereux.
+            Il faut donc être quelque peu préparé et emporter un bear canister pour chaque bivouac.
+            C’est un cylindre rigide qu’on ne peut ouvrir qu’avec un cerveau et des doigts d’humain et dans lequel on place sa nourriture.
+            Accessoirement, ces contenants sont aussi très utiles pour isoler la nourriture des marmottes ou des chipmunks.
           </Footnote>
         </Section>
 
@@ -67,17 +72,19 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.715100, 36.731829]), 1000)}
+          action={() => console.log('Moustique picture')}
+          sidebarContent={<Img src='/static/2017/kings-canyon/story2.jpg'/>}
         >
           <P>
-            En une heure, nous arrivons sur cette plaine verte : une petite clairière laisse apparaître un vallon rempli d’herbes hautes d’un vert éclatant. L’endroit parfait pour un cliché ! Mais nous allons rapidement être rejoints par un groupe d’incorrigibles dont deux individus se sont invités sur cette photo…
+            En une heure, nous arrivons sur cette plaine verte : une petite clairière laisse apparaître un vallon rempli d’herbes hautes d’un vert éclatant.
+            L’endroit parfait pour un cliché !
+            Mais nous allons rapidement être rejoints par un groupe d’incorrigibles dont deux individus se sont invités sur cette photo…
           </P>
         </Section>
 
         <Section
-          action={() => console.log('Moustique picture')}
-          sidebarContent={<Img src='/static/2017/kings-canyon/story2.jpg'/>}
-        >
+          action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
+        > {/* zoom sur Rowell Meadows */}
           <P>
             Bzzz, bzzz, bzzz…
           </P>
@@ -85,10 +92,6 @@ class KingsCanyon extends Component {
             Les moustiques nous ont visiblement vite repérés et l’arrêt à Rowell Meadow fut bref, juste le temps de prendre quelques photos et de récupérer le répulsif.
             Innocents, nous pensions que poursuivre le chemin suffirait à s’éloigner de ces nuisibles. C’était sans savoir qu’ils allaient nous accompagner jusqu’à notre tente et même jusqu’au lendemain matin, mais nous y reviendrons plus tard.
           </P>
-        </Section>
-
-        <Section
-        >
           <P>
             Nous continuons le chemin en pressant le pas.
             Notre randonnée est rythmée de bzzz et de paf.
@@ -96,20 +99,24 @@ class KingsCanyon extends Component {
             Le répulsif s’avère n’être efficace que cinq minutes.
             Seule consolation : nous arrivons à en tuer de bonnes dizaines, soit probablement moins de 1% de cette meute affamée.
           </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/durdur.jpg'/>}
+        >
           <Quote>
             Ça ne se calme pas on dirait, j’espère qu’il n’y aura pas de moustiques à Seville Lake.
           </Quote>
-        </Section>
-
-        <Section>
           <P>
-            L‘espoir fait avancer 😃.
+            L‘espoir fait avancer <Emoji name='smile'/>.
             Nous avons marché plus de deux heures accompagnés de ces nuisibles, accumulant les piqûres.
             Hélas, la situation est bien loin de s’améliorer en se rapprochant du lac, les moustiques deviennent toujours plus nombreux et inassouvis.
           </P>
         </Section>
 
-        <Section>
+        <Section
+          action={() => setTimeout(() => this.state.map.panTo([-118.719584, 36.682804]), 1000)}
+        > {/* La carte zoome sur Seville Lake - idéalement on voit Ball Dome */}
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
             Nous dépassons un autre groupe qui campait proche du lac.
             Premier échange : “Good evening”. Second échange : “Lots of mosquitos, heh!”.
@@ -131,6 +138,104 @@ class KingsCanyon extends Component {
             💤
           </P>
         </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/lac-matin.jpg'/>}
+        >
+          <P>
+            Réveil au lever du jour, on sort de la tente.
+            L’air est plus frais et nous sommes enfin tranquilles.
+            Nous nous approchons du lac avec l’appareil photo.
+            Un cliché plus tard et bzz, ça reprend.
+            Nous n’aurons eu que 5min de répit.
+            On s’active, replie la tente, refait les sacs à dos puis nous voilà repartis à la hâte avec cette fois-ci l’attirail commando : seuls le visage et les mains restent à l’air libre.
+            Ils n’en seront pas épargnés.
+          </P>
+        </Section>
+
+        <Section> {/* zoomer sur la portion Seville Lake - Mitchell Peak */}
+          <P>
+            Nous marchons donc de bon pas vers Mitchell Peak.
+            Sur le chemin, le bourdonnement de ces moustiques m’excède, j’ai l’impression qu’on se fait piquer par-delà les vêtements. Aucun discours, ni juron ne les aura convaincus de nous faire la paix.
+          </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/foret.jpg'/>}
+        >
+          <P>
+            Ce n’est qu’au tiers de l’ascension du deuxième point fort de cette randonnée que nous avons été enfin tranquilles. Nous marchons donc vers Mitchell Peak même si pour le moment nous ne voyons que forêts et cailloux.
+          </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/benwalking.jpg'/>}
+        >
+          <P>
+            La montée est plutôt linéaire et les paysages de changent guère pendant de longues minutes.
+            Les jambes sont plus tendues et j’ai l’impression que la vue ne se dégage pas. Un maigre espoir demeure malgré la fatigue. On se soutient et s’encourage mutuellement lors des passages à vide.
+          </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/neve.jpg'/>}
+        >
+          <P>
+            Enfin ! La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut. La vue se dégage, c’est magnifique. Plus on monte, plus c’est beau.
+          </P>
+        </Section>
+
+        <Section
+          action={() => setTimeout(() => this.state.map.panTo([-118.715210, 36.731693]), 1000)}
+        > {/* La carte zoome sur Micthell Peak 36.731693, -118.715210 */}
+          <P>
+            On y est : Mitchell Peak, 3 150m d’altitude. Nous n’avions jamais randonné aussi haut*.
+          </P>
+          <Footnote>Même si le Mont Dana 3981m puis Whitney 4421m suivront la semaine suivante.</Footnote>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/panorama1.jpg'/>}
+        >
+          <P>
+            Nous nous régalons de cette vue, en essayant de reconnaître les pics sur la carte. Des montagnes enneigées dans toutes les directions, des lacs et des vallées : c’est splendide ! une vue à 360 degrés à couper le souffle.
+          </P>
+        </Section>
+
+        <Section
+        sidebarContent={<Img src='/static/2017/kings-canyon/panorama2.jpg'/>}
+        >
+          <P>
+            Autre surprise du sommet, un contenant en plastique renferme des mots écrits par les précédents randonneurs :
+          </P>
+          <Quote>La vue en vaut bien la peine.</Quote>
+          <Quote>Magnifique randonnée !</Quote>
+          <Quote
+            author='Simon, 9 ans (avec la faute d’orthographe bien mignonne)'
+          >
+            Le plus haut pik que j’ai gravi.
+          </Quote>
+          <P>Des Allemands, des Russes, des Américains des 4 coins des Etats-Unis…</P>
+        </Section>
+
+        <Section> { /* La carte highlighte la descente */ }
+          <P>
+            Après le déjeuner, la descente fut plus tranquille. Les moustiques ont laissé places aux mouches inoffensives pour les heures les plus chaudes de la journée.
+          </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2017/kings-canyon/sequoia.jpg'/>}
+        >
+          <P>
+            Ah j’oubliais : on a quand même survécu à une chute de Sequoïa. Un de ces arbres s’est effondré à 10m de nous alors que nous dévalions le sentier.
+          </P>
+          <P>
+            Nous rejoignons la voiture - notre Fiat 500 SUV, si si ça existe - un peu avant 16h le dimanche. Après 24h dans la nature, des centaines de moustiques, un pic formidable et remplis d’aventure.
+          </P>
+          <P><Emoji name='evergreen-tree'/></P>
+        </Section>
+
       </Post>
     )
   }
