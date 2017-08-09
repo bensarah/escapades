@@ -68,6 +68,7 @@ class Map extends Component {
     if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
     var bbox = extent(this.props.trail)
     this.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 20})
+    this.map.resize()
   }
 
   minimalStyle (style) {
