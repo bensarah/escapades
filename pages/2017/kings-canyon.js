@@ -7,6 +7,7 @@ import Waypoint from '../../components/post/waypoint'
 import Section from '../../components/post/section'
 import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
+import Emoji from '../../components/post/emoji'
 import Footnote from '../../components/post/footnote'
 import trail from '../../static/2017/kings-canyon/trail'
 
@@ -38,8 +39,9 @@ class KingsCanyon extends Component {
           }}
         >
           <P>
-            Toutes les randonnées apportent leur lot de surprises et celle-ci n'en fut pas exclue. 😃
+            Toutes les randonnées apportent leur lot de surprises et celle-ci n'en fut pas exclue.
           </P>
+          <Emoji src='https://twemoji.maxcdn.com/2/72x72/1f603.png'/>
         </Section>
 
         <Section
@@ -211,7 +213,7 @@ class KingsCanyon extends Component {
           <P>Des Allemands, des Russes, des Américains des 4 coins des Etats-Unis…</P>
         </Section>
 
-        <Section> {/*La carte highlighte la descente*/}
+        <Section> { /*La carte highlighte la descente*/ }
           <P>
             Après le déjeuner, la descente fut plus tranquille. Les moustiques ont laissé places aux mouches inoffensives pour les heures les plus chaudes de la journée.
           </P>
