@@ -56,6 +56,9 @@ class Post extends Component {
             }
           </article>
         </div>
+        <Footer>
+          footer
+        </Footer>
         <style jsx>{`
           article {
             font-size: 18px;
@@ -88,9 +91,6 @@ class Post extends Component {
             overflow-x: hidden;
           }
         `}</style>
-        <Footer>
-          footer
-        </Footer>
       </Page>
     )
   }
