@@ -6,7 +6,7 @@ import 'whatwg-fetch'
 import palette from '../../styles/palette'
 
 const accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
-const samples = 40
+const samples = 200
 
 class TrailElevation extends Component {
   constructor (props) {

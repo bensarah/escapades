@@ -1,5 +1,6 @@
 var sharp = require('sharp')
 var path = require('path')
+var fs = require('fs')
 
 function sharpen (file) {
   if (file.indexOf('.optim.') > -1) return
@@ -8,7 +9,9 @@ function sharpen (file) {
   return sharp(file)
     .resize(2000)
     .sharpen()
-    .toFile(file + '.optim.jpg', console.log)
+    .toFile(file + '.optim.jpg')
+    .then(() => fs.rename(file + '.optim.jpg', file))
+    .then(() => console.log(file), 'optimized')
 }
 
 var imgPath = path.resolve(process.cwd(), process.argv[2])
