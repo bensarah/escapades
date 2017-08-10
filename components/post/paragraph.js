@@ -13,7 +13,7 @@ const P = ({ children }) => (
 )
 
 P.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
 }
 
 export default P

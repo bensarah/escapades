@@ -2,15 +2,12 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Link from 'next/link'
 import TrailElevation from './trail-elevation'
+import {findTrail} from '../../helpers/trail-extractor'
 import palette from '../../styles/palette'
 
 const Header = ({ img, title, subtitle, trail, home }) => {
   // Define the trail linestring - trail might be a feature collection.
-  var trailLineString
-  if (trail.type === 'Feature') trailLineString = trail
-  else if (trail.type === 'FeatureCollection') {
-    trailLineString = trail.features.filter(t => t.properties.type === 'trail')[0]
-  }
+  var trailLineString = findTrail(trail)
 
   return (
     <div

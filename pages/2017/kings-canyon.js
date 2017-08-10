@@ -8,6 +8,7 @@ import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
 import Emoji from '../../components/post/emoji'
 import Footnote from '../../components/post/footnote'
+import {findTrail, extractTrailPortion, extractTrailPoint} from '../../helpers/trail-extractor'
 import trail from '../../static/2017/kings-canyon/trail'
 
 class KingsCanyon extends Component {
@@ -40,8 +41,9 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => console.log('ce aue tu veux')}
-        > {/* Cela zoome sur la 1ere section de la rando : du trailhead jusque Seville Like */}
+          action={() => this.state.map.getSource('trail-highlight').setData(extractTrailPortion(findTrail(trail), 0, 0.4))}
+          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+        >
           <P>
             Nous sommes partis vers 16h l’après-midi du samedi.
             Les précieux <em>wilderness permits</em><sup>*</sup> en poche, le <em>bear canister</em><sup>*</sup> rempli de nourriture et la tente sur le dos.
@@ -78,8 +80,15 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
-        > {/* zoom sur Rowell Meadows */}
+          action={() => {
+            setTimeout(() => {
+              this.state.map.panTo([-118.741567, 36.715440])
+              this.state.map.zoomTo(13)
+              this.state.map.getSource('point-highlight').setData(extractTrailPoint(findTrail(trail), 0.115))
+            }, 1000)
+          }}
+          leaveAction={() => this.state.map.getSource('point-highlight').setData({type: 'FeatureCollection', features: []})}
+        >
           <P>
             Bzzz, bzzz, bzzz…
           </P>
@@ -111,7 +120,7 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => this.state.map.panTo([-118.719584, 36.682804]), 1000)}
-        > {/* La carte zoome sur Seville Lake - idéalement on voit Ball Dome */}
+        >
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
             Nous dépassons un autre groupe qui campait proche du lac.
             Premier échange : “Good evening”. Second échange : “Lots of mosquitos, heh!”.
@@ -148,7 +157,15 @@ class KingsCanyon extends Component {
           </P>
         </Section>
 
-        <Section> {/* zoomer sur la portion Seville Lake - Mitchell Peak */}
+        <Section
+          action={() => {
+            var trailPortion = extractTrailPortion(findTrail(trail), 0.3, 0.72)
+            var bbox = extent(trailPortion)
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
+            this.state.map.getSource('trail-highlight').setData(trailPortion)
+          }}
+          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+        >
           <P>
             Nous marchons donc de bon pas vers Mitchell Peak.
             Sur le chemin, le bourdonnement de ces moustiques m’excède, j’ai l’impression qu’on se fait piquer par-delà les vêtements. Aucun discours, ni juron ne les aura convaincus de nous faire la paix.
@@ -181,8 +198,11 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.715210, 36.731693]), 1000)}
-        > {/* La carte zoome sur Micthell Peak 36.731693, -118.715210 */}
+          action={() => setTimeout(() => {
+            this.state.map.panTo([-118.715293, 36.731825])
+            this.state.map.zoomTo(13.5)
+          }, 1000)}
+        >
           <P>
             On y est : Mitchell Peak, 3 150m d’altitude. Nous n’avions jamais randonné aussi haut*.
           </P>
@@ -213,7 +233,15 @@ class KingsCanyon extends Component {
           <P>Des Allemands, des Russes, des Américains des 4 coins des Etats-Unis…</P>
         </Section>
 
-        <Section> { /* La carte highlighte la descente */ }
+        <Section
+          action={() => {
+            var trailPortion = extractTrailPortion(findTrail(trail), 0.72, 1)
+            var bbox = extent(trailPortion)
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
+            this.state.map.getSource('trail-highlight').setData(trailPortion)
+          }}
+          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+          >
           <P>
             Après le déjeuner, la descente fut plus tranquille. Les moustiques ont laissé places aux mouches inoffensives pour les heures les plus chaudes de la journée.
           </P>

@@ -10,6 +10,7 @@ class Section extends Component {
         <div className='section align-middle flex-parent flex-parent--column flex-parent--center-main py30'>
           <Waypoint
             action={this.props.action}
+            leaveAction={this.props.leaveAction}
             setContent={this.props.setContent}
           >
             {this.props.sidebarContent}
@@ -33,7 +34,8 @@ class Section extends Component {
 Section.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   action: PropTypes.func,
-  sidebarContent: PropTypes.obj,
+  leaveAction: PropTypes.func,
+  sidebarContent: PropTypes.object,
   setContent: PropTypes.func
 }
 

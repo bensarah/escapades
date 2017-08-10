@@ -103,6 +103,14 @@
         "trail": {
             "type": "geojson",
             "data": {"type": "FeatureCollection", "features": []}
+        },
+        "trail-highlight": {
+            "type": "geojson",
+            "data": {"type": "FeatureCollection", "features": []}
+        },
+        "point-highlight": {
+            "type": "geojson",
+            "data": {"type": "FeatureCollection", "features": []}
         }
     },
     "sprite": "mapbox://sprites/benjamintd/cj4ypvi2500f32splev1iitn7",
@@ -10477,7 +10485,7 @@
             "source": "trail",
             "type": "line",
             "paint": {
-                "line-color": "#861414",
+                "line-color": "#a72d18",
                 "line-width": 4
             },
             "layout": {
@@ -10490,8 +10498,34 @@
             "source": "trail",
             "type": "line",
             "paint": {
-                "line-color": "#f43d3d",
+                "line-color": "#C63A22",
                 "line-width": 3
+            },
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            }
+        },
+        {
+            "id": "minimal--trail-highlight-casing",
+            "source": "trail-highlight",
+            "type": "line",
+            "paint": {
+                "line-color": "#fee92b",
+                "line-width": 4.3
+            },
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            }
+        },
+        {
+            "id": "minimal--trail-highlight",
+            "source": "trail-highlight",
+            "type": "line",
+            "paint": {
+                "line-color": "#e28e41",
+                "line-width": 3.3
             },
             "layout": {
                 "line-join": "round",
@@ -10504,7 +10538,7 @@
             "type": "circle",
             "paint": {
                 "circle-radius": 17,
-                "circle-color": "#861414"
+                "circle-color": "#a72d18"
             },
             "filter": ["==", "$type", "Point"]
         },
@@ -10514,7 +10548,7 @@
             "type": "circle",
             "paint": {
                 "circle-radius": 16,
-                "circle-color": "#f43d3d"
+                "circle-color": "#C63A22"
             },
             "filter": ["==", "$type", "Point"]
         },
@@ -10554,6 +10588,35 @@
                 "icon-image": "mountain-11"
             },
             "filter": ["==", "type", "peak"]
+        },
+        {
+            "id": "minimal--point-highlight-outline",
+            "source": "point-highlight",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 16,
+                "circle-color": "#e28e41"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--point-highlight-circle",
+            "source": "point-highlight",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 13,
+                "circle-color": "#ffffff"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--point-highlight",
+            "source": "point-highlight",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "hiker"
+            },
+            "filter": ["==", "$type", "Point"]
         },
         {
             "id": "housenum-label",

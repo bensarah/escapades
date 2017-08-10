@@ -20,7 +20,7 @@ const Footnote = ({ children }) => (
 )
 
 Footnote.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
 }
 
 export default Footnote
