@@ -20,7 +20,7 @@ class TrailElevation extends Component {
   render () {
     switch (this.state.status) {
     case 'ok': {
-      let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
+      // let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
         <div className='absolute bottom w-full mx-neg6 my-neg6'>
           <ResponsiveContainer width='102%' height={200}>
@@ -42,6 +42,15 @@ class TrailElevation extends Component {
 
   componentDidMount () {
     this.setState({status: 'pending'})
+
+    // don't make the calls to Mapbox API if not necessary
+    if (this.props.trail.properties.elevations && this.props.trail.properties.distance) {
+      return this.setState({
+        status: 'ok',
+        distance: this.props.trail.properties.distance,
+        elevations: this.props.trail.properties.elevations
+      })
+    }
 
     // also sets the 'distance' property in the state
     let coords = this.sampleLine(samples, this.props.trail)
@@ -74,6 +83,7 @@ class TrailElevation extends Component {
           status: 'ok',
           elevations: elevations
         })
+        console.log(JSON.stringify(this.state))
       })
       .catch(() => {
         this.setState({
