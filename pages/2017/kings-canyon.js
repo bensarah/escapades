@@ -199,8 +199,7 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => {
-            this.state.map.panTo([-118.715293, 36.731825])
-            this.state.map.zoomTo(13.5)
+            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5})
           }, 1000)}
         >
           <P>

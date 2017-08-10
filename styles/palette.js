@@ -5,7 +5,6 @@ const palette = {
   lavande: '#777D9B',
   bleuNuit: '#081926',
   grisClair: '#d9dade'
-  //Ben liked this color #962b18 for brique
 }
 
 export default palette

@@ -10481,6 +10481,20 @@
             }
         },
         {
+            "id": "minimal--trail-highlight",
+            "source": "trail-highlight",
+            "type": "line",
+            "paint": {
+                "line-color": "#E2A541",
+                "line-width": 15,
+                "line-opacity": 0.5
+            },
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            }
+        },
+        {
             "id": "minimal--trail-casing",
             "source": "trail",
             "type": "line",
@@ -10500,32 +10514,6 @@
             "paint": {
                 "line-color": "#C63A22",
                 "line-width": 3
-            },
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            }
-        },
-        {
-            "id": "minimal--trail-highlight-casing",
-            "source": "trail-highlight",
-            "type": "line",
-            "paint": {
-                "line-color": "#fee92b",
-                "line-width": 4.3
-            },
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            }
-        },
-        {
-            "id": "minimal--trail-highlight",
-            "source": "trail-highlight",
-            "type": "line",
-            "paint": {
-                "line-color": "#e28e41",
-                "line-width": 3.3
             },
             "layout": {
                 "line-join": "round",
@@ -10595,7 +10583,7 @@
             "type": "circle",
             "paint": {
                 "circle-radius": 16,
-                "circle-color": "#e28e41"
+                "circle-color": "#E2A541"
             },
             "filter": ["==", "$type", "Point"]
         },
