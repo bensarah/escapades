@@ -10499,6 +10499,45 @@
             }
         },
         {
+            "id": "minimal--circle-outline-casing",
+            "source": "trail",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 17,
+                "circle-color": "#861414"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--circle-outline",
+            "source": "trail",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 16,
+                "circle-color": "#f43d3d"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--circle",
+            "source": "trail",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 13,
+                "circle-color": "#ffffff"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--camp",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "campsite-11"
+            },
+            "filter": ["==", "type", "camp"]
+        },
+        {
             "id": "housenum-label",
             "type": "symbol",
             "source": "composite",

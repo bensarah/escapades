@@ -5,6 +5,13 @@ import TrailElevation from './trail-elevation'
 import palette from '../../styles/palette'
 
 const Header = ({ img, title, subtitle, trail, home }) => {
+  // Define the trail linestring - trail might be a feature collection.
+  var trailLineString
+  if (trail.type === 'Feature') trailLineString = trail
+  else if (trail.type === 'FeatureCollection') {
+    trailLineString = trail.features.filter(t => t.properties.type === 'trail')[0]
+  }
+
   return (
     <div
       className='header w-full display-block relative'
@@ -20,7 +27,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         <h1>{title.toUpperCase()}</h1>
         <h2>{subtitle}</h2>
       </div>
-      <TrailElevation trail={trail}/>
+      <TrailElevation trail={trailLineString}/>
       <style jsx>{`
         .header {
           height: 100vh;

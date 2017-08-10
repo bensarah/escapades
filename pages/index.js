@@ -25,7 +25,7 @@ class Index extends Component {
           dots={posts.map(post => post.coords)}
         />
         <div className='home'>
-          <div className='main'>
+          <div className='main pb60 pt30'>
             <h1 className='py30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
             <div className='flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
               {
