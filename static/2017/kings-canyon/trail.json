@@ -15,6 +15,32 @@
     },
     {
       "type": "Feature",
+      "properties": {
+        "type": "peak",
+        "name": "Mitchell Peak",
+        "altitude": "3150 m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.715127, 36.731627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "start"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.764352798, 36.7234753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "properties": {"type": "trail"},
       "geometry": {
         "type": "LineString",

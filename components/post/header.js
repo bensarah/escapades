@@ -18,11 +18,22 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       style={{background: `url(${img}) no-repeat center center`, backgroundSize: 'cover'}}
     >
       <Head><title>{title}</title></Head>
-      {
-        home
-        ? <Link href='/'><a className='link'>hike.climb.camp</a></Link>
-        : null
-      }
+      <div className='header absolute w-full'>
+        {
+          home
+          ? <Link href='/'><a className='link absolute'>hike.climb.camp</a></Link>
+          : null
+        }
+        <svg>
+          <defs>
+            <linearGradient id='gradient' x1='0%' y1='100%' x2='100%' y2='0%'>
+              <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.5}} />
+              <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 0.1}}/>
+            </linearGradient>
+          </defs>
+          <rect fill='url(#gradient)' width='100%' height='100%'/>
+        </svg>
+      </div>
       <div className='align-l absolute bottom pb300 pl60'>
         <h1>{title.toUpperCase()}</h1>
         <h2>{subtitle}</h2>
@@ -31,7 +42,11 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <style jsx>{`
         .header {
           height: 100vh;
-          background-color: rgba(1, 1, 1, 0.8);
+        }
+
+        svg {
+          height: 100%;
+          width: 100%;
         }
 
         h1 {

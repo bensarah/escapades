@@ -21,8 +21,8 @@ class KingsCanyon extends Component {
         id='kings-canyon'
       >
         <Map
-          center={[-118.761885166, 36.7179543094]}
-          zoom={11.6}
+          center={[-118.739498, 36.716707]}
+          zoom={9}
           trail={trail}
           container='sidebar'
           onMap={(map) => this.setState({map})}
@@ -36,7 +36,7 @@ class KingsCanyon extends Component {
           <P>
             Toutes les randonnées apportent leur lot de surprises et celle-ci n’en fut pas exclue.
           </P>
-
+          <P><Emoji name='tent' size='2x'/></P>
         </Section>
 
         <Section

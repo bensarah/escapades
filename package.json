@@ -35,7 +35,7 @@
     "lint": "standard",
     "fix": "standard --fix",
     "test": "npm run lint && jest",
-    "optimize": "find static -type f -exec node build/optimize.js {} \\;"
+    "optimize": "find static -type f -exec node helpers/optimize.js {} \\;"
   },
   "author": "benjamintd",
   "license": "ISC",
