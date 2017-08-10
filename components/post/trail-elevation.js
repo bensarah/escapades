@@ -6,6 +6,7 @@ import 'whatwg-fetch'
 import palette from '../../styles/palette'
 
 const accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
+const samples = 40
 
 class TrailElevation extends Component {
   constructor (props) {
@@ -43,7 +44,7 @@ class TrailElevation extends Component {
     this.setState({status: 'pending'})
 
     // also sets the 'distance' property in the state
-    let coords = this.sampleLine(20, this.props.trail)
+    let coords = this.sampleLine(samples, this.props.trail)
 
     let baseUrl = 'https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2/tilequery/'
 

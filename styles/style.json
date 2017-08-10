@@ -10538,6 +10538,24 @@
             "filter": ["==", "type", "camp"]
         },
         {
+            "id": "minimal--start",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "play-11"
+            },
+            "filter": ["==", "type", "start"]
+        },
+        {
+            "id": "minimal--peak",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "mountain-11"
+            },
+            "filter": ["==", "type", "peak"]
+        },
+        {
             "id": "housenum-label",
             "type": "symbol",
             "source": "composite",

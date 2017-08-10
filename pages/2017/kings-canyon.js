@@ -3,7 +3,6 @@ import extent from 'geojson-extent'
 import Post from '../../layouts/post'
 import P from '../../components/post/paragraph'
 import Map from '../../components/post/map'
-import Waypoint from '../../components/post/waypoint'
 import Section from '../../components/post/section'
 import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
@@ -27,10 +26,6 @@ class KingsCanyon extends Component {
           trail={trail}
           container='sidebar'
           onMap={(map) => this.setState({map})}
-        />
-        <Waypoint
-          id='kings-canyon'
-          element='coucou'
         />
         <Section
           action={() => {
