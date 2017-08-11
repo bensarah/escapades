@@ -32,6 +32,11 @@ class Map extends Component {
       zoom: this.props.zoom || 1
     })
 
+    map.addControl(new mapboxgl.ScaleControl({
+      maxWidth: 80,
+      unit: 'metric'
+    }))
+
     this.map = map
     this.props.onMap(map)
     this.style = style

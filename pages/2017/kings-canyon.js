@@ -98,7 +98,7 @@ class KingsCanyon extends Component {
           </P>
           <P>
             Nous continuons le chemin en pressant le pas.
-            Notre randonnée est rythmée de bzzz et de paf.
+            Notre randonnée est rythmée de <em>bzzz</em> et de <em>paf</em>.
             Je crois que l’expression “nuée” de moustiques ne suffirait pas à décrire le harcèlement que nous avons subi.
             Le répulsif s’avère n’être efficace que cinq minutes.
             Seule consolation : nous arrivons à en tuer de bonnes dizaines, soit probablement moins de 1% de cette meute affamée.

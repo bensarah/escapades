@@ -11,13 +11,8 @@ class MapHeader extends Component {
   render () {
     return (
       <div className='map-container'>
-        <div id='map' className='animation-fade-in animation--speed-4' />
+        <div id='map' className='animation-fade-in animation--speed-4 w-full h180 z1' />
         <style jsx>{`
-          #map {
-            width: 100%;
-            height: 200px;
-          }
-
           .map-container {
             background-color: ${palette.bleuNuit};
           }

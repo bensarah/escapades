@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Link from 'next/link'
 import TrailElevation from './trail-elevation'
+import Logo from '../logo'
 import {findTrail} from '../../helpers/trail-extractor'
 import palette from '../../styles/palette'
 
@@ -16,12 +17,13 @@ const Header = ({ img, title, subtitle, trail, home }) => {
     >
       <Head><title>{title}</title></Head>
       <div className='header absolute w-full'>
-        {
-          home
-          ? <Link href='/'><a className='link absolute'>hike.climb.camp</a></Link>
-          : null
-        }
-        <svg>
+        <Link href='/'>
+          <a className='home cursor-pointer absolute z5 px12 py12'>
+            <Logo style={{fill: '#ffffff', height: '30px'}} className='inline pr12'/>
+            escapades.io
+          </a>
+        </Link>
+        <svg className='z1'>
           <defs>
             <linearGradient id='gradient' x1='0%' y1='100%' x2='100%' y2='0%'>
               <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.5}} />
@@ -37,6 +39,13 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       </div>
       <TrailElevation trail={trailLineString}/>
       <style jsx>{`
+        .home {
+          color: #fff;
+          font-family: 'Noto Serif', serif;
+          font-weight: bold;
+          font-size: 16px;
+        }
+
         .header {
           height: 100vh;
         }
@@ -56,7 +65,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         h2 {
           font-size: 32px;
           color: ${palette.grisClair};
-          font-family: 'Bad Script', serif;
+          font-family: 'Noto Serif', serif;
           text-shadow: 1px 1px 3px #303240;
         }
       `}</style>
