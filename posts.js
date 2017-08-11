@@ -40,5 +40,5 @@ export default [
     id: 'clouds-rest',
     coords: [-119.489384, 37.767769],
     header: '/static/2015/clouds-rest/header.jpg'
-  },
+  }
 ]

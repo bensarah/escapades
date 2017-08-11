@@ -19,7 +19,7 @@ const Quote = ({ children, author }) => (
       p {
         font-size: 14px;
         color: ${palette.tournesol};
-        font-family: 'Open Sans', sans
+        font-family: 'Nunito', sans
         font-style: italic;
       }
     `}</style>

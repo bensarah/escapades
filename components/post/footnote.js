@@ -8,7 +8,7 @@ const Footnote = ({ children }) => (
       p {
         font-size: 14px;
         color: ${palette.lavande};
-        font-family: 'Open Sans', serif;
+        font-family: 'Nunito', serif;
       }
 
       *::selection {

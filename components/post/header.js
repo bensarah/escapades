@@ -33,7 +33,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
           <rect fill='url(#gradient)' width='100%' height='100%'/>
         </svg>
       </div>
-      <div className='align-l absolute bottom pb300 pl60'>
+      <div className='align-l absolute bottom pb240 pl60'>
         <h1>{title.toUpperCase()}</h1>
         <h2>{subtitle}</h2>
       </div>
@@ -56,17 +56,27 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         }
 
         h1 {
-          font-size: 54px;
+          font-size: 30px;
           color: white;
           font-family: 'Anton', sans-serif;
           text-shadow: 1px 1px 3px #303240;
         }
 
         h2 {
-          font-size: 32px;
+          font-size: 18px;
           color: ${palette.grisClair};
           font-family: 'Noto Serif', serif;
           text-shadow: 1px 1px 3px #303240;
+        }
+
+        @media screen and (min-width: 800px) {
+          h1 {
+            font-size: 54px;
+          }
+
+          h2 {
+            font-size: 32px;
+          }
         }
       `}</style>
     </div>
