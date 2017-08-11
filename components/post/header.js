@@ -26,11 +26,16 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         <svg className='z1'>
           <defs>
             <linearGradient id='gradient' x1='0%' y1='100%' x2='100%' y2='0%'>
-              <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.5}} />
-              <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 0.1}}/>
+              <stop offset='0%' style={{stopColor: palette.bleuNuit, stopOpacity: 1}} />
+              <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 1}}/>
+            </linearGradient>
+            <linearGradient id='gradient2' x1='0%' y1='0%' x2='100%' y2='100%'>
+              <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 1}} />
+              <stop offset='100%' style={{stopColor: palette.lavande, stopOpacity: 1}}/>
             </linearGradient>
           </defs>
-          <rect fill='url(#gradient)' width='100%' height='100%'/>
+          <rect fill='url(#gradient)' width='100%' height='100%' style={{opacity: 0.5}}/>
+          <rect fill='url(#gradient2)' width='100%' height='100%' style={{opacity: 0.4}}/>
         </svg>
       </div>
       <div className='align-l absolute bottom pb240 pl60'>
