@@ -18,18 +18,17 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
               <pattern id={'img' + id} patternUnits='userSpaceOnUse' height='180' width='360'>
                 <image x='0' y='0' height='180' width='360' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
               </pattern>
-              <linearGradient id={'grad1' + id} x1='0%' y1='100%' x2='100%' y2='0%'>
-                <stop offset='0%' style={{stopColor: palette.bleuNuit, stopOpacity: 1}} />
-                <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 1}}/>
+              <linearGradient id={'grad1' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
+                <stop offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.75}} />
+                <stop offset='100%' style={{stopColor: palette.bleuNuit, stopOpacity: 0.75}}/>
               </linearGradient>
-              <linearGradient id={'grad1' + id} x1='0%' y1='100%' x2='100%' y2='0%'>
-                <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 1}} />
+              <linearGradient id={'grad2' + id} x1='0%' y1='100%' x2='100%' y2='0%'>
+                <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 1}}/>
                 <stop offset='100%' style={{stopColor: palette.lavande, stopOpacity: 1}}/>
               </linearGradient>
             </defs>
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
-            <polygon className='filter' points={polygon} fill={`url(#${'grad1' + id})`} style={{opacity: 0.5}} />
-            <polygon className='filter' points={polygon} fill={`url(#${'grad2' + id})`} style={{opacity: 0.4}} />
+            <polygon className='filter' points={polygon} fill={`url(#${'grad1' + id})`}/>
             <text className='title' x='20' y='150' fill='white'>{title.toUpperCase()}</text>
           </svg>
         </Link>
