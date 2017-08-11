@@ -5,6 +5,7 @@ import TrailElevation from './trail-elevation'
 import Logo from '../logo'
 import {findTrail} from '../../helpers/trail-extractor'
 import palette from '../../styles/palette'
+import {hexToRGB} from '../../helpers/colors'
 
 const Header = ({ img, title, subtitle, trail, home }) => {
   // Define the trail linestring - trail might be a feature collection.
@@ -16,24 +17,15 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       style={{background: `url(${img}) no-repeat center center`, backgroundSize: 'cover'}}
     >
       <Head><title>{title}</title></Head>
-      <div className='header absolute w-full'>
+      <div className='header absolute w-full z1'>
         <Link href='/'>
           <a className='home cursor-pointer absolute z5 px12 py12'>
             <Logo style={{fill: '#ffffff', height: '30px'}} className='inline pr12'/>
             escapades.io
           </a>
         </Link>
-        <svg className='z1'>
-          <defs>
-            <linearGradient id='gradient' x1='0%' y1='100%' x2='100%' y2='0%'>
-              <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.5}} />
-              <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 0.1}}/>
-            </linearGradient>
-          </defs>
-          <rect fill='url(#gradient)' width='100%' height='100%'/>
-        </svg>
       </div>
-      <div className='align-l absolute bottom pb240 pl60'>
+      <div className='align-l absolute bottom pb240 pl60 z2'>
         <h1>{title.toUpperCase()}</h1>
         <h2>{subtitle}</h2>
       </div>
@@ -48,6 +40,23 @@ const Header = ({ img, title, subtitle, trail, home }) => {
 
         .header {
           height: 100vh;
+          z-index: 1;
+        }
+
+        .header:before {
+          content:'';
+          display:block;
+          height:100%;
+          width:100%;
+          top:0;
+          left:0;
+          position:absolute;
+          pointer-events:none;
+          z-index: -1;
+        }
+
+        .header::before {
+          background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
         }
 
         svg {
