@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
 import palette from '../styles/palette'
 import style from '../styles/style-header'
+import extent from 'geojson-extent'
 
 /* global mapboxgl */
 
@@ -11,13 +12,8 @@ class MapHeader extends Component {
   render () {
     return (
       <div className='map-container'>
-        <div id='map' className='animation-fade-in animation--speed-4' />
+        <div id='map' className='animation-fade-in animation--speed-4 w-full h180 z1' />
         <style jsx>{`
-          #map {
-            width: 100%;
-            height: 200px;
-          }
-
           .map-container {
             background-color: ${palette.bleuNuit};
           }
@@ -43,8 +39,9 @@ class MapHeader extends Component {
       attributionControl: false
     })
 
-    var worldBounds = [-142.382813, 0.351560, 58.359375, 63.704722]
-    map.fitBounds(worldBounds, {animate: false})
+    var bbox = extent(this.dotsToGeoJSON(this.props.dots))
+    var dotsBounds = [bbox.slice(0, 2), bbox.slice(2, 4)]
+    map.fitBounds(dotsBounds, {animate: false, padding: 30})
 
     this.map = map
 

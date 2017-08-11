@@ -6,6 +6,7 @@ import 'whatwg-fetch'
 import palette from '../../styles/palette'
 
 const accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
+const samples = 200
 
 class TrailElevation extends Component {
   constructor (props) {
@@ -19,15 +20,15 @@ class TrailElevation extends Component {
   render () {
     switch (this.state.status) {
     case 'ok': {
-      let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
+      // let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
-        <div className='absolute bottom w-full mx-neg6 my-neg6'>
-          <ResponsiveContainer width='102%' height={200}>
+        <div className='absolute bottom w-full mx-neg6 my-neg6 z2'>
+          <ResponsiveContainer width='102%' height={180}>
             <AreaChart data={this.state.elevations.map((e, i, a) => ({distance: (i * this.state.distance / a.length).toFixed(1) + ' km', elevation: Math.max(e, 0)}))}>
               <Tooltip cursor={false} />
               <XAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='km' dataKey='distance' />
-              <YAxis hide={true} tickLine={true} axisLine={false} domain={['dataMin', 'dataMax']} name='m' />
-              <Area type='linear' dataKey='elevation' stroke={palette.brique} fill={palette.brique} fillOpacity={0.5} strokeWidth={2} dot={null} />
+              <YAxis hide={true} tickLine={true} axisLine={false} domain={['dataMin', 'dataMax']} name='m' dataKey='elevation'/>
+              <Area type='linear' dataKey='elevation' stroke={palette.tournesol} fill={palette.tournesol} fillOpacity={0.7} strokeWidth={2} dot={null} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -42,8 +43,17 @@ class TrailElevation extends Component {
   componentDidMount () {
     this.setState({status: 'pending'})
 
+    // don't make the calls to Mapbox API if not necessary
+    if (this.props.trail.properties.elevations && this.props.trail.properties.distance) {
+      return this.setState({
+        status: 'ok',
+        distance: this.props.trail.properties.distance,
+        elevations: this.props.trail.properties.elevations
+      })
+    }
+
     // also sets the 'distance' property in the state
-    let coords = this.sampleLine(20, this.props.trail)
+    let coords = this.sampleLine(samples, this.props.trail)
 
     let baseUrl = 'https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2/tilequery/'
 
@@ -73,6 +83,7 @@ class TrailElevation extends Component {
           status: 'ok',
           elevations: elevations
         })
+        console.log(JSON.stringify(this.state))
       })
       .catch(() => {
         this.setState({

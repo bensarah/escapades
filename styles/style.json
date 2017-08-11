@@ -103,6 +103,14 @@
         "trail": {
             "type": "geojson",
             "data": {"type": "FeatureCollection", "features": []}
+        },
+        "trail-highlight": {
+            "type": "geojson",
+            "data": {"type": "FeatureCollection", "features": []}
+        },
+        "point-highlight": {
+            "type": "geojson",
+            "data": {"type": "FeatureCollection", "features": []}
         }
     },
     "sprite": "mapbox://sprites/benjamintd/cj4ypvi2500f32splev1iitn7",
@@ -10473,11 +10481,25 @@
             }
         },
         {
+            "id": "minimal--trail-highlight",
+            "source": "trail-highlight",
+            "type": "line",
+            "paint": {
+                "line-color": "#E2A541",
+                "line-width": 15,
+                "line-opacity": 0.5
+            },
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            }
+        },
+        {
             "id": "minimal--trail-casing",
             "source": "trail",
             "type": "line",
             "paint": {
-                "line-color": "#861414",
+                "line-color": "#a72d18",
                 "line-width": 4
             },
             "layout": {
@@ -10490,13 +10512,99 @@
             "source": "trail",
             "type": "line",
             "paint": {
-                "line-color": "#f43d3d",
+                "line-color": "#C63A22",
                 "line-width": 3
             },
             "layout": {
                 "line-join": "round",
                 "line-cap": "round"
             }
+        },
+        {
+            "id": "minimal--circle-outline-casing",
+            "source": "trail",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 17,
+                "circle-color": "#a72d18"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--circle-outline",
+            "source": "trail",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 16,
+                "circle-color": "#C63A22"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--circle",
+            "source": "trail",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 13,
+                "circle-color": "#ffffff"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--camp",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "campsite-11"
+            },
+            "filter": ["==", "type", "camp"]
+        },
+        {
+            "id": "minimal--start",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "play-11"
+            },
+            "filter": ["==", "type", "start"]
+        },
+        {
+            "id": "minimal--peak",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "mountain-11"
+            },
+            "filter": ["==", "type", "peak"]
+        },
+        {
+            "id": "minimal--point-highlight-outline",
+            "source": "point-highlight",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 16,
+                "circle-color": "#E2A541"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--point-highlight-circle",
+            "source": "point-highlight",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 13,
+                "circle-color": "#ffffff"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "minimal--point-highlight",
+            "source": "point-highlight",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "hiker"
+            },
+            "filter": ["==", "$type", "Point"]
         },
         {
             "id": "housenum-label",

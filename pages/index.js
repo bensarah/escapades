@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import Head from 'next/head'
 import Page from '../layouts/main'
-import PostInfo from '../components/post-info.js'
-import MapHeader from '../components/map-header.js'
+import PostInfo from '../components/post-info'
+import MapHeader from '../components/map-header'
+import Logo from '../components/logo'
 import posts from '../posts'
 import palette from '../styles/palette'
 
@@ -18,23 +19,26 @@ class Index extends Component {
     return (
       <Page>
         <Head>
-          <title>hike.climb.camp</title>
+          <title>escapades.io</title>
         </Head>
         <MapHeader
           highlight={this.state.highlight}
           dots={posts.map(post => post.coords)}
+          logo={true}
         />
         <div className='home'>
-          <div className='main'>
-            <h1 className='py30 align-center animation-fade-in animation--speed-1'>hike.climb.camp</h1>
-            <div className='flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
+          <div className='main pb60 pt30'>
+            <Logo style={{fill: palette.tournesol, width: '60px'}} className='mx-auto w60 animation-fade-in animation--speed-1'/>
+            <h1 className='align-center animation-fade-in animation--speed-1'>escapades.io</h1>
+            <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
               {
-                posts.map(({ id, date, title, coords, header }) => (
+                posts.map(({ id, date, title, subtitle, coords, header }) => (
                   <PostInfo
                     id={id}
                     key={id}
                     date={date}
                     title={title}
+                    subtitle={subtitle}
                     header={header}
                     highlight={() => this.setState({highlight: coords})}
                   />
@@ -47,7 +51,12 @@ class Index extends Component {
         <style jsx>{`
           h1 {
             font-size: 36px;
+            font-family: 'Bad Script';
             color: ${palette.tournesol}
+          }
+
+          object * {
+            fill: ${palette.tournesol}
           }
 
           .home {

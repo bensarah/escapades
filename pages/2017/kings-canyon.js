@@ -3,12 +3,12 @@ import extent from 'geojson-extent'
 import Post from '../../layouts/post'
 import P from '../../components/post/paragraph'
 import Map from '../../components/post/map'
-import Waypoint from '../../components/post/waypoint'
 import Section from '../../components/post/section'
 import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
 import Emoji from '../../components/post/emoji'
 import Footnote from '../../components/post/footnote'
+import {findTrail, extractTrailPortion, extractTrailPoint} from '../../helpers/trail-extractor'
 import trail from '../../static/2017/kings-canyon/trail'
 
 class KingsCanyon extends Component {
@@ -20,33 +20,68 @@ class KingsCanyon extends Component {
         header='/static/2017/kings-canyon/1.jpg'
         trail={trail}
         id='kings-canyon'
+        photos={[
+          {
+            src: '/static/2017/kings-canyon/kings-canyon.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Avant la rando, balade sur la route scénique de Kings Canyon'
+          },
+          {
+            src: '/static/2017/kings-canyon/fleurs.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Quelques fleurs sur le chemin'
+          },
+          {
+            src: '/static/2017/kings-canyon/moro-rock.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Avant de repartir, un petit tour sur le rocher de Moro Rock'
+          },
+          {
+            src: '/static/2017/kings-canyon/selfie-sommet.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'L’incontournable Selfie Sommet'
+          },
+          {
+            src: '/static/2017/kings-canyon/sequoias.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Le parc contient certains des plus vieux arbres du monde'
+          },
+          {
+            src: '/static/2017/kings-canyon/anti-moustique.jpg',
+            width: 2000,
+            height: 3000,
+            caption: 'Les manches longues et la tête protégée contre les moustiques'
+          }
+        ]}
       >
         <Map
-          center={[-118.761885166, 36.7179543094]}
-          zoom={11.6}
+          center={[-120.56396484375, 38.47939467327645]}
+          zoom={2}
           trail={trail}
           container='sidebar'
           onMap={(map) => this.setState({map})}
         />
-        <Waypoint
-          id='kings-canyon'
-          element='coucou'
-        />
         <Section
           action={() => {
             var bbox = extent(trail)
-            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 20})
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {linear: true, duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
           }}
         >
           <P>
             Toutes les randonnées apportent leur lot de surprises et celle-ci n’en fut pas exclue.
           </P>
-
+          <P><Emoji name='tent' size='2x'/></P>
         </Section>
 
         <Section
-          action={() => console.log('ce aue tu veux')}
-        > {/* Cela zoome sur la 1ere section de la rando : du trailhead jusque Seville Like */}
+          action={() => this.state.map.getSource('trail-highlight').setData(extractTrailPortion(findTrail(trail), 0, 0.4))}
+          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+        >
           <P>
             Nous sommes partis vers 16h l’après-midi du samedi.
             Les précieux <em>wilderness permits</em><sup>*</sup> en poche, le <em>bear canister</em><sup>*</sup> rempli de nourriture et la tente sur le dos.
@@ -83,8 +118,14 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.741567, 36.715440]), 1000)}
-        > {/* zoom sur Rowell Meadows */}
+          action={() => {
+            setTimeout(() => {
+              this.state.map.flyTo({center: [-118.741567, 36.715440], zoom: 13})
+              this.state.map.getSource('point-highlight').setData(extractTrailPoint(findTrail(trail), 0.115))
+            }, 1000)
+          }}
+          leaveAction={() => this.state.map.getSource('point-highlight').setData({type: 'FeatureCollection', features: []})}
+        >
           <P>
             Bzzz, bzzz, bzzz…
           </P>
@@ -94,7 +135,7 @@ class KingsCanyon extends Component {
           </P>
           <P>
             Nous continuons le chemin en pressant le pas.
-            Notre randonnée est rythmée de bzzz et de paf.
+            Notre randonnée est rythmée de <em>bzzz</em> et de <em>paf</em>.
             Je crois que l’expression “nuée” de moustiques ne suffirait pas à décrire le harcèlement que nous avons subi.
             Le répulsif s’avère n’être efficace que cinq minutes.
             Seule consolation : nous arrivons à en tuer de bonnes dizaines, soit probablement moins de 1% de cette meute affamée.
@@ -116,7 +157,7 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => this.state.map.panTo([-118.719584, 36.682804]), 1000)}
-        > {/* La carte zoome sur Seville Lake - idéalement on voit Ball Dome */}
+        >
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
             Nous dépassons un autre groupe qui campait proche du lac.
             Premier échange : “Good evening”. Second échange : “Lots of mosquitos, heh!”.
@@ -153,7 +194,15 @@ class KingsCanyon extends Component {
           </P>
         </Section>
 
-        <Section> {/* zoomer sur la portion Seville Lake - Mitchell Peak */}
+        <Section
+          action={() => {
+            var trailPortion = extractTrailPortion(findTrail(trail), 0.3, 0.72)
+            var bbox = extent(trailPortion)
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
+            this.state.map.getSource('trail-highlight').setData(trailPortion)
+          }}
+          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+        >
           <P>
             Nous marchons donc de bon pas vers Mitchell Peak.
             Sur le chemin, le bourdonnement de ces moustiques m’excède, j’ai l’impression qu’on se fait piquer par-delà les vêtements. Aucun discours, ni juron ne les aura convaincus de nous faire la paix.
@@ -186,8 +235,10 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.715210, 36.731693]), 1000)}
-        > {/* La carte zoome sur Micthell Peak 36.731693, -118.715210 */}
+          action={() => setTimeout(() => {
+            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5})
+          }, 1000)}
+        >
           <P>
             On y est : Mitchell Peak, 3 150m d’altitude. Nous n’avions jamais randonné aussi haut*.
           </P>
@@ -218,7 +269,15 @@ class KingsCanyon extends Component {
           <P>Des Allemands, des Russes, des Américains des 4 coins des Etats-Unis…</P>
         </Section>
 
-        <Section> { /* La carte highlighte la descente */ }
+        <Section
+          action={() => {
+            var trailPortion = extractTrailPortion(findTrail(trail), 0.72, 1)
+            var bbox = extent(trailPortion)
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
+            this.state.map.getSource('trail-highlight').setData(trailPortion)
+          }}
+          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+          >
           <P>
             Après le déjeuner, la descente fut plus tranquille. Les moustiques ont laissé places aux mouches inoffensives pour les heures les plus chaudes de la journée.
           </P>
@@ -233,7 +292,7 @@ class KingsCanyon extends Component {
           <P>
             Nous rejoignons la voiture - notre Fiat 500 SUV, si si ça existe - un peu avant 16h le dimanche. Après 24h dans la nature, des centaines de moustiques, un pic formidable et remplis d’aventure.
           </P>
-          <P><Emoji name='evergreen-tree'/></P>
+          <P><Emoji name='evergreen-tree' size='2x'/></P>
         </Section>
 
       </Post>

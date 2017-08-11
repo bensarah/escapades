@@ -32,6 +32,11 @@ class Map extends Component {
       zoom: this.props.zoom || 1
     })
 
+    map.addControl(new mapboxgl.ScaleControl({
+      maxWidth: 80,
+      unit: 'metric'
+    }))
+
     this.map = map
     this.props.onMap(map)
     this.style = style
@@ -65,6 +70,7 @@ class Map extends Component {
   }
 
   onLoad () {
+    this.map.resize()
     if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
     var bbox = extent(this.props.trail)
     this.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 20})

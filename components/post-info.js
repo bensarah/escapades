@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import palette from '../styles/palette'
 
-const PostInfo = ({ id, date, title, highlight, header }) => {
+const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
   const polygon = '0,0 300,0 300,170 160,170 150,180 140,170 0,170'
 
   return (
@@ -18,14 +18,20 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
               <pattern id={'img' + id} patternUnits='userSpaceOnUse' height='180' width='360'>
                 <image x='0' y='0' height='180' width='360' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
               </pattern>
-              <linearGradient id={'grad' + id} x1='0%' y1='100%' x2='100%' y2='0%'>
-                <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.5}} />
-                <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 0.2}}/>
+              <linearGradient id={'grad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
+                <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.6}} />
+                <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 1}}/>
+              </linearGradient>
+              <linearGradient id={'hovergrad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
+                <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.1}} />
+                <stop offset='100%' style={{stopColor: palette.brique, stopOpacity: 0.3}}/>
               </linearGradient>
             </defs>
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
-            <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`} />
-            <text className='title' x='20' y='150' fill='white'>{title.toUpperCase()}</text>
+            <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`}/>
+            <polygon className='hoverfilter' points={polygon} fill={`url(#${'hovergrad' + id})`} opacity='0'/>
+            <text className='title' x='20' y='120' fill='white'>{title.toUpperCase()}</text>
+            <text className='subtitle' x='20' y='150' fill={palette.grisClair}>{subtitle}</text>
           </svg>
         </Link>
 
@@ -43,6 +49,12 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
             text-shadow: 1px 1px 3px #303240;
           }
 
+          .subtitle {
+            font-size: 20px;
+            font-family: 'Bad Script', sans;
+            text-shadow: 1px 1px 3px #303240;
+          }
+
           .filter {
             opacity: 1;
             transition: opacity 0.7s ease-out;
@@ -53,7 +65,13 @@ const PostInfo = ({ id, date, title, highlight, header }) => {
           }
 
           .post:hover .filter{
-            opacity: 0;
+            opacity: 0.3;
+          }
+          .post:hover .hoverfilter{
+            opacity: 1;
+          }
+          .post:hover .title{
+            fill: ${palette.lightenLavande};
           }
         `}</style>
       </div>
@@ -64,6 +82,7 @@ PostInfo.propTypes = {
   id: PropTypes.string,
   date: PropTypes.string,
   title: PropTypes.string,
+  subtitle: PropTypes.string,
   highlight: PropTypes.func,
   header: PropTypes.string
 }
