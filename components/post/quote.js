@@ -13,13 +13,13 @@ const Quote = ({ children, author }) => (
       blockquote {
         font-size: 24px;
         color: ${palette.tournesol};
-        font-family: 'Noto Serif', serif;
+        font-family: 'Bad Script';
         font-style: italic;
       }
       p {
         font-size: 14px;
         color: ${palette.tournesol};
-        font-family: 'Nunito', sans
+        font-family: 'Open Sans', sans
         font-style: italic;
       }
     `}</style>

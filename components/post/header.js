@@ -43,7 +43,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <style jsx>{`
         .home {
           color: #fff;
-          font-family: 'Noto Serif', serif;
+          font-family: 'Bad Script';
           font-weight: bold;
           font-size: 16px;
         }
@@ -67,7 +67,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         h2 {
           font-size: 18px;
           color: ${palette.grisClair};
-          font-family: 'Noto Serif', serif;
+          font-family: 'Bad Script';
           text-shadow: 1px 1px 3px #303240;
         }
 
