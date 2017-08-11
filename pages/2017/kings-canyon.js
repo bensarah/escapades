@@ -60,8 +60,8 @@ class KingsCanyon extends Component {
         ]}
       >
         <Map
-          center={[-118.739498, 36.716707]}
-          zoom={9}
+          center={[-120.56396484375, 38.47939467327645]}
+          zoom={2}
           trail={trail}
           container='sidebar'
           onMap={(map) => this.setState({map})}
@@ -69,7 +69,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             var bbox = extent(trail)
-            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {linear: true, duration: 3000, padding: 50})
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {linear: true, duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
           }}
         >
           <P>

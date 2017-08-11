@@ -32,12 +32,13 @@ class Index extends Component {
             <h1 className='align-center animation-fade-in animation--speed-1'>escapades.io</h1>
             <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
               {
-                posts.map(({ id, date, title, coords, header }) => (
+                posts.map(({ id, date, title, subtitle, coords, header }) => (
                   <PostInfo
                     id={id}
                     key={id}
                     date={date}
                     title={title}
+                    subtitle={subtitle}
                     header={header}
                     highlight={() => this.setState({highlight: coords})}
                   />
@@ -50,7 +51,7 @@ class Index extends Component {
         <style jsx>{`
           h1 {
             font-size: 36px;
-            font-family: 'Noto Serif';
+            font-family: 'Bad Script';
             color: ${palette.tournesol}
           }
 
