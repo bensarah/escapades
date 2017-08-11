@@ -10,6 +10,7 @@ const Meta = () => (
   <div>
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <link rel='icon' href='/static/favicon.png/'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Noto+Serif' rel='stylesheet' />
       <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
       <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
