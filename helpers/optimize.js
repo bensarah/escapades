@@ -1,3 +1,5 @@
+// using common js since this will be executed straight by node
+
 var sharp = require('sharp')
 var path = require('path')
 var fs = require('fs')

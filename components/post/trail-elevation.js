@@ -22,7 +22,7 @@ class TrailElevation extends Component {
     case 'ok': {
       // let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
-        <div className='absolute bottom w-full mx-neg6 my-neg6'>
+        <div className='absolute bottom w-full mx-neg6 my-neg6 z2'>
           <ResponsiveContainer width='102%' height={180}>
             <AreaChart data={this.state.elevations.map((e, i, a) => ({distance: (i * this.state.distance / a.length).toFixed(1) + ' km', elevation: Math.max(e, 0)}))}>
               <Tooltip cursor={false} />

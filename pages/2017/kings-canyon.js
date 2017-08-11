@@ -69,9 +69,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             var bbox = extent(trail)
-            this.state.map.fitBounds(
-              [bbox.slice(0, 2), bbox.slice(2, 4)],
-              {padding: {top: 20, bottom: 65, left: 15, right: 5}})
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {linear: true, duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
           }}
         >
           <P>
