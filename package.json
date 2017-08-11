@@ -30,10 +30,6 @@
     "jest": "^20.0.4",
     "standard": "^10.0.2"
   },
-  "peerDependencies": {
-    "react-dom": "^0.14 || ^15.0",
-    "react": "^0.14 || ^15.0"
-  },
   "scripts": {
     "dev": "next",
     "build": "NODE_ENV=production next build",
