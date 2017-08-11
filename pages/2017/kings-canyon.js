@@ -20,6 +20,44 @@ class KingsCanyon extends Component {
         header='/static/2017/kings-canyon/1.jpg'
         trail={trail}
         id='kings-canyon'
+        photos={[
+          {
+            src: '/static/2017/kings-canyon/kings-canyon.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Avant la rando, balade sur la route scénique de Kings Canyon'
+          },
+          {
+            src: '/static/2017/kings-canyon/fleurs.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Quelques fleurs sur le chemin'
+          },
+          {
+            src: '/static/2017/kings-canyon/moro-rock.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Avant de repartir, un petit tour sur le rocher de Moro Rock'
+          },
+          {
+            src: '/static/2017/kings-canyon/selfie-sommet.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'L’incontournable Selfie Sommet'
+          },
+          {
+            src: '/static/2017/kings-canyon/sequoias.jpg',
+            width: 2000,
+            height: 1333,
+            caption: 'Le parc contient certains des plus vieux arbres du monde'
+          },
+          {
+            src: '/static/2017/kings-canyon/anti-moustique.jpg',
+            width: 2000,
+            height: 3000,
+            caption: 'Les manches longues et la tête protégée contre les moustiques'
+          }
+        ]}
       >
         <Map
           center={[-118.739498, 36.716707]}
@@ -82,8 +120,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             setTimeout(() => {
-              this.state.map.panTo([-118.741567, 36.715440])
-              this.state.map.zoomTo(13)
+              this.state.map.flyTo({center: [-118.741567, 36.715440], zoom: 13})
               this.state.map.getSource('point-highlight').setData(extractTrailPoint(findTrail(trail), 0.115))
             }, 1000)
           }}

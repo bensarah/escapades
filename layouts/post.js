@@ -3,6 +3,7 @@ import Page from './main'
 import PropTypes from 'prop-types'
 import Header from '../components/post/header'
 import Footer from '../components/post/footer'
+import PhotoGallery from '../components/post/photo-gallery'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import palette from '../styles/palette'
@@ -56,9 +57,7 @@ class Post extends Component {
             }
           </article>
         </div>
-        <Footer>
-          footer
-        </Footer>
+        <PhotoGallery photos={this.props.photos}/>
         <style jsx>{`
           article {
             font-size: 18px;
@@ -102,7 +101,7 @@ Post.propTypes = {
   header: PropTypes.string,
   children: PropTypes.array,
   trail: PropTypes.object,
-  id: PropTypes.string
+  photos: PropTypes.array
 }
 
 export default Post
