@@ -26,12 +26,12 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         <svg className='z1'>
           <defs>
             <linearGradient id='gradient' x1='50%' y1='0%' x2='50%' y2='100%'>
-              <stop offset='0%' style={{stopColor: palette.lavande, stopOpacity: 1}} />
-              <stop offset='100%' style={{stopColor: palette.bleuNuit, stopOpacity: 1}}/>
+              <stop offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.6}} />
+              <stop offset='100%' style={{stopColor: palette.taupe, stopOpacity: 1}}/>
             </linearGradient>
 
           </defs>
-          <rect fill='url(#gradient)' width='100%' height='100%' style={{opacity: 0.75}}/>
+          <rect fill='url(#gradient)' width='100%' height='100%' style={{opacity: 0.8}}/>
 
         </svg>
       </div>

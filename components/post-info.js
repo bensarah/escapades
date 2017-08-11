@@ -19,12 +19,17 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
                 <image x='0' y='0' height='180' width='360' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
               </pattern>
               <linearGradient id={'grad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
-                <stop offset='0%' style={{stopColor: palette.brique, stopOpacity: 0.25}} />
-                <stop offset='100%' style={{stopColor: palette.bleuNuit, stopOpacity: 1}}/>
+                <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.6}} />
+                <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 1}}/>
+              </linearGradient>
+              <linearGradient id={'hovergrad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
+                <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.1}} />
+                <stop offset='100%' style={{stopColor: palette.brique, stopOpacity: 0.3}}/>
               </linearGradient>
             </defs>
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
             <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`}/>
+            <polygon className='hoverfilter' points={polygon} fill={`url(#${'hovergrad' + id})`} opacity='0'/>
             <text className='title' x='20' y='120' fill='white'>{title.toUpperCase()}</text>
             <text className='subtitle' x='20' y='150' fill={palette.grisClair}>{subtitle}</text>
           </svg>
@@ -60,7 +65,13 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
           }
 
           .post:hover .filter{
-            opacity: 0;
+            opacity: 0.3;
+          }
+          .post:hover .hoverfilter{
+            opacity: 1;
+          }
+          .post:hover .title{
+            fill: ${palette.lightenLavande};
           }
         `}</style>
       </div>
