@@ -9,30 +9,22 @@ class InfoSection extends Component {
 
     return (
       <div className='info-section'>
-        <div className='flex-parent flex-parent--row top-row py30 px30 align-center'>
-
+        <div className='flex-parent flex-parent--row py30 px30 align-center top-row'>
           <div className='px6'>
-            <svg className='icon--l inline-block'>
-              <use xlinkHref='#icon-map'></use>
-            </svg>
-            <br/>
-            {this.props.trail.properties.distance.toFixed(1)} km parcourus
+            <div className='metric'>Distance parcourue</div>
+            <div className='bigtext'>
+              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='unit'>km</span>
+            </div>
+            <p className='subbigtext'>en <span className='brique'>☀</span> {this.joursString()} <span className='brique'>🌙</span></p>
           </div>
 
           <div className='px6'>
-            <svg className='icon--l inline-block'>
-              <use xlinkHref='#icon-arrow-up'></use>
-            </svg>
-            <br/>
-            {upsDowns[0]} m de dénivelé positif
-          </div>
-
-          <div className='px6'>
-            <svg className='icon--l inline-block'>
-              <use xlinkHref='#icon-sun'></use>
-            </svg>
-            <br/>
-            {this.joursString()}
+            <div className='metric'>Dénivelé positif</div>
+            <div className="bigtext">
+              + {upsDowns[0]} <span className='unit'>m</span>
+            </div>
+            <p className='subbigtext'><span className='brique'>↗</span>  max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small>
+ <span className='brique'> ↘</span></p>
           </div>
 
         </div>
@@ -40,14 +32,9 @@ class InfoSection extends Component {
           {this.tagsToTags()}
         </div>
         <style jsx>{`
-          .top-row {
-            font-size: 20px;
-          }
-
           .top-row div {
-            font-family: Belgrano;
-            color: ${palette.brique}
             fill: ${palette.brique}
+            color: white;
           }
 
           .info-section {
@@ -56,6 +43,34 @@ class InfoSection extends Component {
 
           .flex-parent div {
             flex: 1
+          }
+
+          .metric {
+            font-family: Open Sans;
+            font-size: 24px;
+          }
+
+          .bigtext {
+            font-size: 48px;
+            font-family: Anton;
+          }
+
+          .unit {
+            font-size: 24px;
+            font-family: Anton;
+          }
+
+          .subbigtext {
+            font-size: 16px;
+            font-family: Open Sans;
+            color: 'white'
+          }
+
+          .brique {
+            color: ${palette.brique}
+          }
+          small {
+            font-size: 12px;
           }
 
           @media screen and (min-width: 800px) {
@@ -86,9 +101,16 @@ class InfoSection extends Component {
     return [ups, downs]
   }
 
+  elevMax () {
+    return Math.max.apply(null, this.props.trail.properties.elevations)
+  }
+  elevMin () {
+    return Math.min.apply(null, this.props.trail.properties.elevations)
+  }
+
   joursString () {
-    if (this.props.jours > 2) return `${this.props.jours} jours, ${this.props.jours - 1} nuits`
-    if (this.props.jours === 2) return `${this.props.jours} jours, ${this.props.jours - 1} nuit`
+    if (this.props.jours > 2) return `${this.props.jours} jours · ${this.props.jours - 1} nuits`
+    if (this.props.jours === 2) return `${this.props.jours} jours · ${this.props.jours - 1} nuit`
     else return `${this.props.jours} jours`
   }
 
@@ -127,7 +149,8 @@ class InfoSection extends Component {
           className='px12 py12'
           style={{
             flex: 1,
-            fontWeight: 'bold',
+            fontFamily: 'Bad Script',
+            fontSize: '18px',
             color: 'white',
             textShadow: '1px 1px 5px rgba(0, 0, 0, 0.3)'
           }}
