@@ -21,7 +21,7 @@ class KingsCanyon extends Component {
         trail={trail}
         id='kings-canyon'
         jours={2}
-        tags={['Attention aux ours', 'Permis obligatoires', 'Bivouac']}
+        tags={['Attention aux ours', 'Peu fréquenté', 'Bivouac', 'Eau sur le chemin']}
         photos={[
           {
             src: '/static/2017/kings-canyon/kings-canyon.jpg',
@@ -63,7 +63,7 @@ class KingsCanyon extends Component {
       >
         <Map
           center={[-120.56396484375, 38.47939467327645]}
-          zoom={2}
+          zoom={4}
           trail={trail}
           container='sidebar'
           onMap={(map) => this.setState({map})}

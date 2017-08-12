@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import {Component} from 'react'
 import _ from 'lodash'
-import extent from 'geojson-extent'
 import style from '../../styles/style'
 
 /* global mapboxgl */

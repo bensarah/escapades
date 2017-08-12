@@ -43,7 +43,7 @@ class PhotoGallery extends React.Component {
         />
         <style jsx>{`
           h2 {
-            font-family: 'Bad Script';
+            font-family: 'Belgrano';
             font-size: 30px;
             color: ${palette.lavande};
           }

@@ -36,7 +36,7 @@ class InfoSection extends Component {
           </div>
 
         </div>
-        <div className='flex-parent flex-parent--row py30 px30 align-center'>
+        <div className='flex-parent flex-parent--row flex-parent--wrap py30 px30 align-center'>
           {this.tagsToTags()}
         </div>
         <style jsx>{`
@@ -93,7 +93,7 @@ class InfoSection extends Component {
   }
 
   tagsToTags () {
-    return this.props.tags.map(tag => {
+    return this.props.tags.map((tag, i) => {
       var emoji
       switch (tag) {
       case 'Attention aux ours':
@@ -105,18 +105,34 @@ class InfoSection extends Component {
       case 'Bivouac':
         emoji = <Emoji name='tent' size='2x'/>
         break
+      case 'Difficile':
+        emoji = <Emoji name='chart-with-upwards-trend' size='2x'/>
+        break
+      case 'Peu fréquenté':
+        emoji = <Emoji name='walking' size='2x'/>
+        break
+      case 'Fréquenté':
+        emoji = <span><Emoji name='walking' size='2x'/><Emoji name='walking' size='2x'/></span>
+        break
+      case 'Eau sur le chemin':
+        emoji = <Emoji name='potable-water' size='2x'/>
+        break
       default:
         emoji = <Emoji name='smile' size='2x'/>
         break
       }
 
       return (
-        <div style={{
-          flex: 1,
-          fontWeight: 'bold',
-          color: 'white',
-          textShadow: '1px 1px 5px rgba(0, 0, 0, 0.3)'
-        }} key={tag}>
+        <div
+          className='px12 py12'
+          style={{
+            flex: 1,
+            fontWeight: 'bold',
+            color: 'white',
+            textShadow: '1px 1px 5px rgba(0, 0, 0, 0.3)'
+          }}
+          key={i}
+        >
           {emoji}<br/>{tag}
         </div>
       )
