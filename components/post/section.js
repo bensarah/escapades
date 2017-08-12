@@ -17,7 +17,11 @@ class Section extends Component {
           </Waypoint>
           {this.props.children}
         </div>
-        <hr className='txt-hr' style={{background: palette.lavande}}/>
+        {
+          this.props.last
+          ? null
+          : <hr className='txt-hr' style={{background: palette.lavande}}/>
+        }
         <style jsx>{`
           .section {
             min-height: 100vh;
@@ -36,7 +40,8 @@ Section.propTypes = {
   action: PropTypes.func,
   leaveAction: PropTypes.func,
   sidebarContent: PropTypes.object,
-  setContent: PropTypes.func
+  setContent: PropTypes.func,
+  last: PropTypes.bool
 }
 
 export default Section

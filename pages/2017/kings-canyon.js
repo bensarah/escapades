@@ -285,6 +285,7 @@ class KingsCanyon extends Component {
 
         <Section
           sidebarContent={<Img src='/static/2017/kings-canyon/sequoia.jpg'/>}
+          last={true}
         >
           <P>
             Ah j’oubliais : on a quand même survécu à une chute de Sequoïa. Un de ces arbres s’est effondré à 10m de nous alors que nous dévalions le sentier.
