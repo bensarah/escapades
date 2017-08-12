@@ -24,7 +24,7 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
               </linearGradient>
               <linearGradient id={'hovergrad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
                 <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.1}} />
-                <stop offset='100%' style={{stopColor: palette.brique, stopOpacity: 0.5}}/>
+                <stop offset='100%' style={{stopColor: palette.brique, stopOpacity: 0.2}}/>
               </linearGradient>
             </defs>
             <polygon points={polygon} fill={`url(#${'img' + id})`} />

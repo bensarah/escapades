@@ -20,6 +20,8 @@ class KingsCanyon extends Component {
         header='/static/2017/kings-canyon/1.jpg'
         trail={trail}
         id='kings-canyon'
+        jours={2}
+        tags={['Attention aux ours', 'Permis obligatoires', 'Bivouac']}
         photos={[
           {
             src: '/static/2017/kings-canyon/kings-canyon.jpg',
@@ -69,7 +71,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             var bbox = extent(trail)
-            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {linear: true, duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
           }}
         >
           <P>

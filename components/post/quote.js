@@ -14,8 +14,8 @@ const Quote = ({ children, author }) => (
         font-size: 24px;
         color: ${palette.tournesol};
         font-family: 'Bad Script';
-        font-style: italic;
       }
+
       p {
         font-size: 14px;
         color: ${palette.tournesol};
