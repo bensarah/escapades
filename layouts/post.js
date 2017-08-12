@@ -2,10 +2,11 @@ import React, {Component} from 'react'
 import Page from './main'
 import PropTypes from 'prop-types'
 import Header from '../components/post/header'
-import Footer from '../components/post/footer'
+import InfoSection from '../components/post/info-section'
 import PhotoGallery from '../components/post/photo-gallery'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
+import {findTrail} from '../helpers/trail-extractor'
 import palette from '../styles/palette'
 
 class Post extends Component {
@@ -26,6 +27,11 @@ class Post extends Component {
           subtitle={this.props.subtitle}
           home={true}
           trail={this.props.trail}
+        />
+        <InfoSection
+          trail={findTrail(this.props.trail)}
+          jours={this.props.jours}
+          tags={this.props.tags}
         />
         <div className='flex-parent flex-parent--row flex-parent--stretch-cross'>
           <StickyContainer className='flex-child' style={{minWidth: '50%', minHeight: '100%'}}>
@@ -101,7 +107,9 @@ Post.propTypes = {
   header: PropTypes.string,
   children: PropTypes.array,
   trail: PropTypes.object,
-  photos: PropTypes.array
+  photos: PropTypes.array,
+  jours: PropTypes.int,
+  tags: PropTypes.array
 }
 
 export default Post

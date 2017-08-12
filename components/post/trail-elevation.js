@@ -23,12 +23,18 @@ class TrailElevation extends Component {
       // let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
         <div className='absolute bottom w-full mx-neg6 my-neg6 z2'>
-          <ResponsiveContainer width='102%' height={180}>
+          <ResponsiveContainer width='101%' height={180}>
             <AreaChart data={this.state.elevations.map((e, i, a) => ({distance: (i * this.state.distance / a.length).toFixed(1) + ' km', elevation: Math.max(e, 0)}))}>
+              <defs>
+                <linearGradient id='fill-gradient' x1='0' y1='0' x2='0' y2='100%'>
+                  <stop offset='20%' stopColor={palette.tournesol} stopOpacity={0.4}/>
+                  <stop offset='95%' stopColor={palette.tournesol} stopOpacity={1}/>
+                </linearGradient>
+              </defs>
               <Tooltip cursor={false} />
               <XAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='km' dataKey='distance' />
               <YAxis hide={true} tickLine={true} axisLine={false} domain={['dataMin', 'dataMax']} name='m' dataKey='elevation'/>
-              <Area type='linear' dataKey='elevation' stroke={palette.tournesol} fill={palette.tournesol} fillOpacity={0.7} strokeWidth={2} dot={null} />
+              <Area type='linear' dataKey='elevation' stroke={palette.tournesol} fill='url(#fill-gradient)' fillOpacity={1} strokeWidth={2} dot={null} />
             </AreaChart>
           </ResponsiveContainer>
         </div>

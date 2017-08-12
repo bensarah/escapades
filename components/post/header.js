@@ -25,7 +25,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
           </a>
         </Link>
       </div>
-      <div className='align-l absolute bottom pb240 pl60 z2'>
+      <div className='align-l absolute bottom pb240-ml pb180 pl60 z2'>
         <h1>{title.toUpperCase()}</h1>
         <h2>{subtitle}</h2>
       </div>
@@ -33,7 +33,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <style jsx>{`
         .home {
           color: #fff;
-          font-family: 'Bad Script';
+          font-family: 'Belgrano';
           font-weight: bold;
           font-size: 16px;
         }

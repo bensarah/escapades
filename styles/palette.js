@@ -1,6 +1,6 @@
 const palette = {
   brique: '#C63A22',
-  tournesol: '#E2A541',
+  tournesol: '#f0bd25',
   taupe: '#776155',
   lavande: '#777D9B',
   bleuNuit: '#081926',

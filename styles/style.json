@@ -10555,7 +10555,7 @@
             "source": "trail",
             "type": "symbol",
             "layout": {
-                "icon-image": "campsite-11"
+                "icon-image": "campground_opt"
             },
             "filter": ["==", "type", "camp"]
         },

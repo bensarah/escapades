@@ -51,7 +51,7 @@ class Index extends Component {
         <style jsx>{`
           h1 {
             font-size: 36px;
-            font-family: 'Bad Script';
+            font-family: 'Belgrano';
             color: ${palette.tournesol}
           }
 
