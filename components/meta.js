@@ -11,7 +11,7 @@ const Meta = () => (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <link rel='icon' href='/static/favicon.png/'/>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script|Belgrano' rel='stylesheet' />
       <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
       <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
       <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />

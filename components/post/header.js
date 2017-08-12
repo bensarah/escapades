@@ -33,7 +33,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <style jsx>{`
         .home {
           color: #fff;
-          font-family: 'Bad Script';
+          font-family: 'Belgrano';
           font-weight: bold;
           font-size: 16px;
         }
