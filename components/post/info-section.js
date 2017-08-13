@@ -146,14 +146,13 @@ class InfoSection extends Component {
           className='tag px12 py12'
           key={i}
         >
-          <Isvg wrapper={React.DOM.div} className='icon w36 h36 inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
+          <Isvg wrapper={React.DOM.div} className='icon w60 h60 inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
           <br/>{tag}
           <style>{`
             .tag {
               flex: 1;
               font-family: "Bad Script";
               font-size: 18px;
-              font-weight: bold;
               color: white;
               text-shadow: '1px 1px 5px rgba(0, 0, 0, 0.2);
             }
