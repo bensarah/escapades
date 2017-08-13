@@ -20,7 +20,7 @@ class KingsCanyon extends Component {
         header='/static/2017/kings-canyon/1.jpg'
         trail={trail}
         id='kings-canyon'
-        jours={2}
+        jours={'1 jour · 1 nuit'}
         tags={['Attention aux ours', 'Peu fréquenté', 'Bivouac', 'Eau sur le chemin']}
         photos={[
           {

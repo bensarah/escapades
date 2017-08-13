@@ -9,7 +9,7 @@ Router.onRouteChangeError = () => NProgress.done()
 const Meta = () => (
   <div>
     <Head>
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta name='viewport' content='width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no' />
       <link rel='icon' href='/static/favicon.png/'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script|Belgrano' rel='stylesheet' />
       <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
