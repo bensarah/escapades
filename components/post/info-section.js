@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import PropTypes from 'prop-types'
+import Isvg from 'react-inlinesvg'
 import palette from '../../styles/palette'
-import Emoji from './emoji'
 
 class InfoSection extends Component {
   render () {
@@ -10,21 +10,22 @@ class InfoSection extends Component {
     return (
       <div className='info-section'>
         <div className='flex-parent flex-parent--row py30 px30 align-center top-row'>
+
           <div className='px6'>
             <div className='metric'>Distance parcourue</div>
             <div className='bigtext'>
               {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='unit'>km</span>
             </div>
-            <p className='subbigtext'>en <span className='brique'>☀</span> {this.joursString()} <span className='brique'>🌙</span></p>
+            <p className='subbigtext'><span className='brique px3'>☀</span> {this.props.jours} <span className='brique px3'>☾</span></p>
           </div>
 
           <div className='px6'>
             <div className='metric'>Dénivelé positif</div>
-            <div className="bigtext">
+            <div className='bigtext'>
               + {upsDowns[0]} <span className='unit'>m</span>
             </div>
-            <p className='subbigtext'><span className='brique'>↗</span>  max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small>
- <span className='brique'> ↘</span></p>
+            <p className='subbigtext'><span className='brique px3'>↗</span>  max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small>
+            <span className='brique px3'>↘</span></p>
           </div>
 
         </div>
@@ -32,6 +33,10 @@ class InfoSection extends Component {
           {this.tagsToTags()}
         </div>
         <style jsx>{`
+          .info-section {
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+          }
+
           .top-row div {
             fill: ${palette.brique}
             color: white;
@@ -45,9 +50,13 @@ class InfoSection extends Component {
             flex: 1
           }
 
-          .metric {
+          .metric, .subbigtext {
             font-family: Open Sans;
-            font-size: 24px;
+            font-size: 20px;
+          }
+
+          .metric {
+            font-weight: bold;
           }
 
           .bigtext {
@@ -58,12 +67,6 @@ class InfoSection extends Component {
           .unit {
             font-size: 24px;
             font-family: Anton;
-          }
-
-          .subbigtext {
-            font-size: 16px;
-            font-family: Open Sans;
-            color: 'white'
           }
 
           .brique {
@@ -108,55 +111,58 @@ class InfoSection extends Component {
     return Math.min.apply(null, this.props.trail.properties.elevations)
   }
 
-  joursString () {
-    if (this.props.jours > 2) return `${this.props.jours} jours · ${this.props.jours - 1} nuits`
-    if (this.props.jours === 2) return `${this.props.jours} jours · ${this.props.jours - 1} nuit`
-    else return `${this.props.jours} jours`
-  }
-
   tagsToTags () {
     return this.props.tags.map((tag, i) => {
-      var emoji
+      var icon
       switch (tag) {
       case 'Attention aux ours':
-        emoji = <Emoji name='bear' size='2x'/>
+        icon = 'bear'
         break
       case 'Permis obligatoires':
-        emoji = <Emoji name='ticket' size='2x'/>
+        icon = 'permit'
         break
       case 'Bivouac':
-        emoji = <Emoji name='tent' size='2x'/>
+        icon = 'tent'
         break
       case 'Difficile':
-        emoji = <Emoji name='chart-with-upwards-trend' size='2x'/>
+        icon = 'hiking-poles'
         break
       case 'Peu fréquenté':
-        emoji = <Emoji name='walking' size='2x'/>
+        icon = 'trail'
         break
       case 'Fréquenté':
-        emoji = <span><Emoji name='walking' size='2x'/><Emoji name='walking' size='2x'/></span>
+        icon = 'hiker'
         break
       case 'Eau sur le chemin':
-        emoji = <Emoji name='potable-water' size='2x'/>
+        icon = 'water'
         break
       default:
-        emoji = <Emoji name='smile' size='2x'/>
+        icon = 'mountains'
         break
       }
 
       return (
         <div
-          className='px12 py12'
-          style={{
-            flex: 1,
-            fontFamily: 'Bad Script',
-            fontSize: '18px',
-            color: 'white',
-            textShadow: '1px 1px 5px rgba(0, 0, 0, 0.3)'
-          }}
+          className='tag px12 py12'
           key={i}
         >
-          {emoji}<br/>{tag}
+          <Isvg wrapper={React.DOM.div} className='icon w36 h36 inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
+          <br/>{tag}
+          <style>{`
+            .tag {
+              flex: 1;
+              font-family: "Bad Script";
+              font-size: 18px;
+              font-weight: bold;
+              color: white;
+              text-shadow: '1px 1px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .icon svg {
+              stroke: 'white';
+              filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, 0.2) );
+            }
+          `}</style>
         </div>
       )
     })
@@ -165,7 +171,7 @@ class InfoSection extends Component {
 
 InfoSection.propTypes = {
   trail: PropTypes.object.isRequired,
-  jours: PropTypes.number,
+  jours: PropTypes.string,
   tags: PropTypes.array
 }
 
