@@ -165,7 +165,7 @@ class InfoSection extends Component {
 
 InfoSection.propTypes = {
   trail: PropTypes.object.isRequired,
-  jours: PropTypes.int,
+  jours: PropTypes.number,
   tags: PropTypes.array
 }
 
