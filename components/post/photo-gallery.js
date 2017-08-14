@@ -43,8 +43,9 @@ class PhotoGallery extends React.Component {
         />
         <style jsx>{`
           h2 {
-            font-family: 'Belgrano';
+            font-family: 'Open Sans';
             font-size: 30px;
+            font-weight: bold;
             color: ${palette.lavande};
           }
 

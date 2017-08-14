@@ -13,13 +13,11 @@ function extractTrailPortion (linestring, start, end) {
   var totalDistance = ruler.lineDistance(c)
   var d1 = start * totalDistance
   var d2 = end * totalDistance
-  console.log(totalDistance, d1, d2)
   var r = []
   var d = 0
 
   if (d1 === 0) r.push(c[0])
   for (var i = 1; i < c.length; i++) {
-    console.log(ruler.distance(c[i - 1], c[i]))
     d += ruler.distance(c[i - 1], c[i])
     if (d > d2) break
     if (d >= d1) r.push(c[i])
