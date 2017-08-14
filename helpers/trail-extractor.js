@@ -76,7 +76,7 @@ function moveSource (map, layer, trail, proportionStart, proportionEnd, duration
   var interval = setInterval(() => {
     var p = g.next()
     if (p.done) clearInterval(interval)
-    else map.getSource('point-highlight').setData(p.value)
+    else map.getSource(layer).setData(p.value)
   }, 10)
 }
 
