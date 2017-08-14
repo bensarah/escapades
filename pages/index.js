@@ -19,7 +19,7 @@ class Index extends Component {
     return (
       <Page>
         <Head>
-          <title>escapades.io</title>
+          <title>escapades</title>
         </Head>
         <MapHeader
           highlight={this.state.highlight}
@@ -29,7 +29,7 @@ class Index extends Component {
         <div className='home'>
           <div className='main pb60 pt30'>
             <Logo style={{fill: palette.tournesol, width: '60px'}} className='mx-auto w60 animation-fade-in animation--speed-1'/>
-            <h1 className='align-center animation-fade-in animation--speed-1'>escapades.io</h1>
+            <h1 className='align-center animation-fade-in animation--speed-1'>escapades</h1>
             <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
               {
                 posts.map(({ id, date, title, subtitle, coords, header }) => (

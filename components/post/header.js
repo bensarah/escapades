@@ -21,7 +21,7 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         <Link href='/'>
           <a className='home cursor-pointer absolute z5 px12 py12'>
             <Logo style={{fill: '#ffffff', height: '30px'}} className='inline pr12'/>
-            escapades.io
+            escapades
           </a>
         </Link>
       </div>
