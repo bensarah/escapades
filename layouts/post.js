@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Header from '../components/post/header'
 import InfoSection from '../components/post/info-section'
 import PhotoGallery from '../components/post/photo-gallery'
+import Footer from '../components/post/footer'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import {findTrail} from '../helpers/trail-extractor'
@@ -64,6 +65,7 @@ class Post extends Component {
           </article>
         </div>
         <PhotoGallery photos={this.props.photos}/>
+        <Footer />
         <style jsx>{`
           article {
             font-size: 18px;

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
+import palette from '../styles/palette'
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -33,7 +34,7 @@ const Meta = () => (
       }
 
       #nprogress .bar {
-        background: #22BAD9;
+        background: ${palette.brique};
         position: fixed;
         z-index: 1031;
         top: 0;
@@ -48,7 +49,7 @@ const Meta = () => (
         right: 0px;
         width: 100px;
         height: 100%;
-        box-shadow: 0 0 10px #22BAD9, 0 0 5px #22BAD9;
+        box-shadow: 0 0 10px ${palette.brique}, 0 0 5px ${palette.brique};
         opacity: 1.0;
         transform: rotate(3deg) translate(0px, -4px);
       }

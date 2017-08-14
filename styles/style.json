@@ -10485,7 +10485,7 @@
             "source": "trail-highlight",
             "type": "line",
             "paint": {
-                "line-color": "#E2A541",
+                "line-color": "#f0bd25",
                 "line-width": 15,
                 "line-opacity": 0.5
             },
