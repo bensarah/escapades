@@ -8,7 +8,7 @@ import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
 import Emoji from '../../components/post/emoji'
 import Footnote from '../../components/post/footnote'
-import {findTrail, extractTrailPortion, extractTrailPoint} from '../../helpers/trail-extractor'
+import {findTrail, extractTrailPortion, moveSource} from '../../helpers/trail-extractor'
 import trail from '../../static/2017/kings-canyon/trail'
 
 class KingsCanyon extends Component {
@@ -122,11 +122,10 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             setTimeout(() => {
-              this.state.map.flyTo({center: [-118.741567, 36.715440], zoom: 13})
-              this.state.map.getSource('point-highlight').setData(extractTrailPoint(findTrail(trail), 0.115))
+              this.state.map.flyTo({center: [-118.741567, 36.715440], zoom: 13, duration: 1500})
+              moveSource(this.state.map, 'point-highlight', trail, 0, 0.115, 3000)
             }, 1000)
           }}
-          leaveAction={() => this.state.map.getSource('point-highlight').setData({type: 'FeatureCollection', features: []})}
         >
           <P>
             Bzzz, bzzz, bzzz…
@@ -158,7 +157,10 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => setTimeout(() => this.state.map.panTo([-118.719584, 36.682804]), 1000)}
+          action={() => setTimeout(() => {
+            this.state.map.flyTo({center: [-118.719584, 36.682804], duration: 3000})
+            moveSource(this.state.map, 'point-highlight', trail, 0.115, 0.343, 3000)
+          }, 1000)}
         >
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
             Nous dépassons un autre groupe qui campait proche du lac.
@@ -202,6 +204,7 @@ class KingsCanyon extends Component {
             var bbox = extent(trailPortion)
             this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
             this.state.map.getSource('trail-highlight').setData(trailPortion)
+            moveSource(this.state.map, 'point-highlight', trail, 0.345, 0.5, 3000)
           }}
           leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
         >
@@ -238,7 +241,8 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => {
-            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5})
+            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5, duration: 3000})
+            moveSource(this.state.map, 'point-highlight', trail, 0.5, 0.715, 3000)
           }, 1000)}
         >
           <P>
@@ -277,6 +281,7 @@ class KingsCanyon extends Component {
             var bbox = extent(trailPortion)
             this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
             this.state.map.getSource('trail-highlight').setData(trailPortion)
+            moveSource(this.state.map, 'point-highlight', trail, 0.715, 1, 5000, 'linear')
           }}
           leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
           >
