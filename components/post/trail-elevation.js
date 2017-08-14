@@ -31,7 +31,9 @@ class TrailElevation extends Component {
                   <stop offset='95%' stopColor={palette.tournesol} stopOpacity={1}/>
                 </linearGradient>
               </defs>
-              <Tooltip cursor={false} />
+              <Tooltip
+                content={this.tooltipContent}
+              />
               <XAxis hide={true} tickLine={false} axisLine={false} domain={['dataMin', 'dataMax']} name='km' dataKey='distance' />
               <YAxis hide={true} tickLine={true} axisLine={false} domain={['dataMin', 'dataMax']} name='m' dataKey='elevation'/>
               <Area type='linear' dataKey='elevation' stroke={palette.tournesol} fill='url(#fill-gradient)' fillOpacity={1} strokeWidth={2} dot={null} />
@@ -96,6 +98,20 @@ class TrailElevation extends Component {
           status: 'error'
         })
       })
+  }
+
+  tooltipContent ({label, payload}) {
+    if (!payload[0]) return null
+    return (
+      <div
+        className='py12 px12 color-gray'
+        style={{background: 'white', boxShadow: '1px 1px 5px rgba(0, 0, 0, 0.2)'}}
+      >
+        {`${payload[0].value} m d'altitude`}
+        <br/>
+        {`après ${label}`}
+      </div>
+    )
   }
 
   sampleLine (n, route) {
