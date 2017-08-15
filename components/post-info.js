@@ -37,7 +37,7 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
 
         <svg className='timeline' height='42' width='360'>
           <line x1='0' y1='12' x2='360' y2='12' style={{stroke: palette.grisClair, strokeWidth: 2}}/>
-          <circle cx='180' cy='12' r='5' style={{stroke: palette.bleuNuit, strokeWidth: 3, fill: palette.tournesol}}/>
+          <circle cx='180' cy='12' r='5' style={{stroke: 'white', strokeWidth: 3, fill: palette.tournesol}}/>
           <text className='date' x='180' y='36' fill={palette.grisClair} textAnchor='middle' >{date}</text>
         </svg>
 
@@ -68,6 +68,9 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
           }
           .post:hover .hoverfilter{
             opacity: 1;
+          }
+          .date {
+            font-size: 12px;
           }
         `}</style>
       </div>
