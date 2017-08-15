@@ -4,7 +4,7 @@ import Page from '../layouts/main'
 import PostInfo from '../components/post-info'
 import MapHeader from '../components/map-header'
 import Footer from '../components/post/footer'
-import P from '../components/post/paragraph'
+import Quote from '../components/post/quote'
 import Logo from '../components/logo'
 import LogoText from '../components/logo-text'
 import posts from '../posts'
@@ -96,6 +96,16 @@ class Index extends Component {
             </div>
           </div>
         </div>
+        <div id='rando-suggestion' style={{backgroundColor: palette.grisClair}}>
+          <p className='pt30 align-center'>
+            Vous hésitez entre plusieurs randos ?
+            <br />
+            Commencez par l'<a href='/2017/kings-canyon'>ascension de 'Mitchell Peak'</a>.
+          </p>
+          <p className='quote pt6 pb30 align-center'>
+            « La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut... »
+          </p>
+        </div>
       <Footer/>
 
         <style jsx>{`
@@ -169,6 +179,19 @@ class Index extends Component {
 
           p {
             font-size: 14px;
+          }
+
+          .quote {
+            font-size: 20px;
+            color: ${palette.brique};
+            font-family: 'Bad Script';
+          }
+
+          a {
+            color: ${palette.lavande}
+          }
+          a:hover {
+            color: ${palette.lightenLavande}
           }
 
         `}</style>
