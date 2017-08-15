@@ -5,6 +5,7 @@ import PostInfo from '../components/post-info'
 import MapHeader from '../components/map-header'
 import Footer from '../components/post/footer'
 import Quote from '../components/post/quote'
+import Emoji from '../components/post/emoji'
 import Logo from '../components/logo'
 import LogoText from '../components/logo-text'
 import posts from '../posts'
@@ -55,18 +56,25 @@ class Index extends Component {
             </div>
           </div>
           <div className='px36 pb24'>
-            <div className='h120 px12 py12 border round'> {/*US - California Rectangle*/}
-              There, we'll talk about California adventures
+            <div className='px12 py12 border round display-block'> {/*US - California Rectangle*/}
+              <div>
+                <h4><Emoji name='us'/> Aux US, en Californie</h4>
+                <br />
+                <span className='pr12'>🌄  <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
+                <span className='pr12'>🌄  <a href='/2017/kings-canyon'>Mount Dana</a></span>
+              </div>
+              <div className='absolute right'>
+                <MapHeader
+                  highlight={this.state.highlight}
+                  dots={posts.map(post => post.coords)}
+                  logo={true}
+                />
+              </div>
             </div>
             <div className='h120 px12 py12 mt24 border round'> {/*France Rectangle*/}
               C'est ça La France
             </div>
           </div>
-          <MapHeader
-            highlight={this.state.highlight}
-            dots={posts.map(post => post.coords)}
-            logo={true}
-          />
         </div>
         <div className='chronological-section'>
           <div className='py24'>
@@ -168,13 +176,20 @@ class Index extends Component {
             font-family: 'Open Sans';
             font-size: 30px;
             font-weight: bold;
-            color: ${palette.lavande};
+            color: ${palette.lightenLavande};
           }
 
           h3 {
             font-size: 16px;
             color: ${palette.lavande};
             font-family: 'Bad Script';
+          }
+
+          h4 {
+            font-family: 'Open Sans';
+            font-size: 20px;
+            font-weight: bold;
+            color: ${palette.lavande};
           }
 
           p {
@@ -193,6 +208,7 @@ class Index extends Component {
           a:hover {
             color: ${palette.lightenLavande}
           }
+
 
         `}</style>
       </Page>
