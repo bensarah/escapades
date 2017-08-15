@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import TrailElevation from './trail-elevation'
 import Logo from '../logo'
+import LogoText from '../logo-text'
 import {findTrail} from '../../helpers/trail-extractor'
 import palette from '../../styles/palette'
 import {hexToRGB} from '../../helpers/colors'
@@ -20,8 +21,8 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <div className='header absolute w-full z1'>
         <Link href='/'>
           <a className='home cursor-pointer absolute z5 px12 py12'>
-            <Logo style={{fill: '#ffffff', height: '30px'}} className='inline pr12'/>
-            escapades
+            <Logo style={{fill: '#ffffff', height: '30px'}} className='inline'/>
+            <LogoText style={{fill: '#ffffff', height: '30px', marginBottom: '-7px'}} className='inline'/>
           </a>
         </Link>
       </div>
