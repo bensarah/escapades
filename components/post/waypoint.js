@@ -12,7 +12,7 @@ class WP extends Component {
         }}
         onLeave={() => { if (this.props.leaveAction) this.props.leaveAction() }}
         bottomOffset={this.props.bottomOffset || '40%'}
-        topOffset={this.props.topOffset || '-40%'}
+        topOffset={this.props.topOffset || '-10%'}
       />
     </div>
   }

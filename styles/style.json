@@ -10583,7 +10583,7 @@
             "type": "circle",
             "paint": {
                 "circle-radius": 16,
-                "circle-color": "#E2A541"
+                "circle-color": "#f0bd25"
             },
             "filter": ["==", "$type", "Point"]
         },

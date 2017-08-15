@@ -34,7 +34,7 @@ const Meta = () => (
       }
 
       #nprogress .bar {
-        background: ${palette.brique};
+        background: ${palette.lightenLavande};
         position: fixed;
         z-index: 1031;
         top: 0;
@@ -49,7 +49,7 @@ const Meta = () => (
         right: 0px;
         width: 100px;
         height: 100%;
-        box-shadow: 0 0 10px ${palette.brique}, 0 0 5px ${palette.brique};
+        box-shadow: 0 0 10px ${palette.lightenLavande}, 0 0 5px ${palette.lightenLavande};
         opacity: 1.0;
         transform: rotate(3deg) translate(0px, -4px);
       }
