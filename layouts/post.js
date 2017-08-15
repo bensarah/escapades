@@ -110,7 +110,7 @@ Post.propTypes = {
   children: PropTypes.array,
   trail: PropTypes.object,
   photos: PropTypes.array,
-  jours: PropTypes.int,
+  jours: PropTypes.string,
   tags: PropTypes.array
 }
 

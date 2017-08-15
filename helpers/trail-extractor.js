@@ -70,14 +70,4 @@ function * trailPointsGenerator (linestring, proportionStart, proportionEnd, ste
   }
 }
 
-function moveSource (map, layer, trail, proportionStart, proportionEnd, duration, interpolation) {
-  var steps = duration / 10
-  var g = trailPointsGenerator(findTrail(trail), proportionStart, proportionEnd, steps, interpolation)
-  var interval = setInterval(() => {
-    var p = g.next()
-    if (p.done) clearInterval(interval)
-    else map.getSource(layer).setData(p.value)
-  }, 10)
-}
-
-export {extractTrailPortion, extractTrailPoint, findTrail, moveSource}
+export {extractTrailPortion, extractTrailPoint, findTrail, trailPointsGenerator}

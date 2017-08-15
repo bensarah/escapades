@@ -8,7 +8,7 @@ import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
 import Emoji from '../../components/post/emoji'
 import Footnote from '../../components/post/footnote'
-import {findTrail, extractTrailPortion, moveSource} from '../../helpers/trail-extractor'
+import {highlightFromTo} from '../../helpers/map-utils'
 import trail from '../../static/2017/kings-canyon/trail'
 
 class KingsCanyon extends Component {
@@ -72,6 +72,7 @@ class KingsCanyon extends Component {
           action={() => {
             var bbox = extent(trail)
             this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
+            highlightFromTo(this.state.map, trail, 0, 0)
           }}
         >
           <P>
@@ -81,8 +82,7 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => this.state.map.getSource('trail-highlight').setData(extractTrailPortion(findTrail(trail), 0, 0.4))}
-          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
+          action={() => highlightFromTo(this.state.map, trail, 0, 0.4, {pointHighlight: false})}
         >
           <P>
             Nous sommes partis vers 16h l’après-midi du samedi.
@@ -109,7 +109,6 @@ class KingsCanyon extends Component {
         </Section>
 
         <Section
-          action={() => console.log('Moustique picture')}
           sidebarContent={<Img src='/static/2017/kings-canyon/story2.jpg'/>}
         >
           <P>
@@ -123,7 +122,7 @@ class KingsCanyon extends Component {
           action={() => {
             setTimeout(() => {
               this.state.map.flyTo({center: [-118.741567, 36.715440], zoom: 13, duration: 1500})
-              moveSource(this.state.map, 'point-highlight', trail, 0, 0.115, 3000)
+              highlightFromTo(this.state.map, trail, 0, 0.115)
             }, 1000)
           }}
         >
@@ -159,7 +158,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => setTimeout(() => {
             this.state.map.flyTo({center: [-118.719584, 36.682804], duration: 3000})
-            moveSource(this.state.map, 'point-highlight', trail, 0.115, 0.343, 3000)
+            highlightFromTo(this.state.map, trail, 0.115, 0.343)
           }, 1000)}
         >
           <P>Le reflet de l’eau de Seville Lake apparaît au loin.
@@ -200,13 +199,9 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => {
-            var trailPortion = extractTrailPortion(findTrail(trail), 0.3, 0.72)
-            var bbox = extent(trailPortion)
-            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
-            this.state.map.getSource('trail-highlight').setData(trailPortion)
-            moveSource(this.state.map, 'point-highlight', trail, 0.345, 0.5, 3000)
+            this.state.map.flyTo({center: [-118.715182, 36.708975], zoom: 12.5, duration: 3000})
+            highlightFromTo(this.state.map, trail, 0.345, 0.5)
           }}
-          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
         >
           <P>
             Nous marchons donc de bon pas vers Mitchell Peak.
@@ -241,8 +236,8 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => {
-            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5, duration: 3000})
-            moveSource(this.state.map, 'point-highlight', trail, 0.5, 0.715, 3000)
+            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5, duration: 4000})
+            highlightFromTo(this.state.map, trail, 0.5, 0.715)
           }, 1000)}
         >
           <P>
@@ -277,13 +272,9 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => {
-            var trailPortion = extractTrailPortion(findTrail(trail), 0.72, 1)
-            var bbox = extent(trailPortion)
-            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 1500, padding: 50})
-            this.state.map.getSource('trail-highlight').setData(trailPortion)
-            moveSource(this.state.map, 'point-highlight', trail, 0.715, 1, 5000, 'linear')
+            this.state.map.flyTo({center: [-118.739576, 36.725910], zoom: 12, duration: 4000})
+            highlightFromTo(this.state.map, trail, 0.715, 1)
           }}
-          leaveAction={() => this.state.map.getSource('trail-highlight').setData({type: 'FeatureCollection', features: []})}
           >
           <P>
             Après le déjeuner, la descente fut plus tranquille. Les moustiques ont laissé places aux mouches inoffensives pour les heures les plus chaudes de la journée.
