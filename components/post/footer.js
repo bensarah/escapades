@@ -28,7 +28,7 @@ const Footer = ({ children }) => (
         </div>
       </div>
 
-      <img className='footer-img absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`}></img>
+      <img className='footer-img absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`} draggable={false}></img>
     <style jsx>{`
       .footer {
         background-color: ${palette.bleuNuit};

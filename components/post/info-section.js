@@ -16,7 +16,9 @@ class InfoSection extends Component {
             <div className='bigtext'>
               {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='unit'>km</span>
             </div>
-            <p className='subbigtext'><span className='brique px3'>☀</span> {this.props.jours} <span className='brique px3'>☾</span></p>
+            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
+            <span className='subbigtext'>{this.props.jours}</span>
+            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
           </div>
 
           <div className='px6'>
@@ -24,8 +26,9 @@ class InfoSection extends Component {
             <div className='bigtext'>
               + {upsDowns[0]} <span className='unit'>m</span>
             </div>
-            <p className='subbigtext'><span className='brique px3'>↗</span>  max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small>
-            <span className='brique px3'>↘</span></p>
+            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
+            <span className='subbigtext'>max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small></span>
+            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
           </div>
 
         </div>
@@ -70,7 +73,7 @@ class InfoSection extends Component {
           }
 
           .brique {
-            color: ${palette.brique}
+            fill: ${palette.brique}
           }
           small {
             font-size: 12px;

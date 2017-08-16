@@ -179,7 +179,7 @@ class KingsCanyon extends Component {
             De retour sous la tente on se rassure, ça devrait aller mieux demain matin…
           </P>
           <P>
-            💤
+            <Emoji name='zzz'/>
           </P>
         </Section>
 
