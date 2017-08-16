@@ -42,7 +42,9 @@ class Index extends Component {
               <p className='intro py30 align-center'>
                 Nous avons décidé de vous faire partager nos escapades en randonnée sur ce site.
                 <br />
-                Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'><strong>géographiquement</strong></a> et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
+                Vous pouvez retrouver l’index des différentes randos
+                <a href='#geographical-section'><strong>géographiquement</strong></a>
+                et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
               </p>
             </div>
 
@@ -63,7 +65,8 @@ class Index extends Component {
                 <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
                   <div className='flex-child--grow'>
                     <h3><Emoji name='us'/> Aux US, en Californie</h3>
-                    <br />{/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co*/}
+                    <br />
+                    {/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co */}
                     <p className='park pt12'><Emoji name='round-pushpin'/> Kings Canyon</p>
                     <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
                     <p className='park pt12'><Emoji name='round-pushpin'/> Yosemite National Park</p>

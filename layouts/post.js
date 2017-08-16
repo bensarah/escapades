@@ -53,7 +53,7 @@ class Post extends Component {
               </div>}
             </Sticky>
           </StickyContainer>
-          <article className='flex-child flex-child--grow py30'>
+          <article className='flex-child flex-child--grow py30 px18 px60-ml'>
             {
               this.props.children.map((child, i) => React.cloneElement(child, {
                 key: i,
@@ -71,18 +71,6 @@ class Post extends Component {
             font-size: 18px;
             color: ${palette.grisClair};
             background-color: ${palette.bleuNuit};
-          }
-
-          @media screen and (min-width: 500px) {
-            article {
-              padding: 0px 60px 0px 60px;
-            }
-          }
-
-          @media screen and (max-width: 500px) {
-            article {
-              padding: 0px 18px 0px 18px;
-            }
           }
 
           .smooth-enter {

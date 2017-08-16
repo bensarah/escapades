@@ -11,20 +11,7 @@ import extent from 'geojson-extent'
 class MapHighlights extends Component {
   render () {
     return (
-        <div id='map' className='z1'>
-        <style jsx>{`
-          #map {
-            background-color: ${palette.bleuNuit};
-            height: 300px;
-            width: 400px;
-          }
-
-          @media screen and (max-width: 500px) {
-            #map {
-              max-width: 200px;
-            }
-          }
-        `}</style>
+        <div id='map h240 w240 h300-ml w420-ml' className='z1'>
         <style jsx global>{`
           .mapboxgl-ctrl-logo {
             opacity: 0.2 !important;

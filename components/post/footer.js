@@ -28,7 +28,7 @@ const Footer = ({ children }) => (
         </div>
       </div>
 
-      <img className='footer-img absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`} draggable={false}></img>
+      <img className='none block-ml absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`} draggable={false}></img>
     <style jsx>{`
       .footer {
         background-color: ${palette.bleuNuit};
@@ -37,16 +37,6 @@ const Footer = ({ children }) => (
 
       .clickable:hover, a:hover {
         color: white;
-      }
-
-      .footer-img {
-        display: none;
-      }
-
-      @media screen and (min-width: 800px) {
-        .footer-img {
-          display: block;
-        }
       }
     `}</style>
   </div>
