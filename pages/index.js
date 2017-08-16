@@ -36,94 +36,97 @@ class Index extends Component {
           </div>
         </div>
 
-        <div className='main px18'>
-          <div>
-            <p className='intro py30 align-center'>
-              Nous avons décidé de vous faire partager nos escapades en randonnée sur ce site.
-              <br />
-              Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'><strong>géographiquement</strong></a> et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
-            </p>
-          </div>
-
-          <hr className='txt-hr hr-transparent'/>
-
-          <div id='geographical-section'>
-            <div className='py24'>
-              <div className='pl36 pb18'>
-                <h2 className='pt12'>Des deux côtés de l’Atlantique</h2>
-                <p className='pt12'>
-                  Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
-                  <br />
-                  Cliquez sur l’une d’entre elles pour en savoir plus.
-                </p>
-              </div>
+        <div className='main'>
+          <div className='px18'>
+            <div>
+              <p className='intro py30 align-center'>
+                Nous avons décidé de vous faire partager nos escapades en randonnée sur ce site.
+                <br />
+                Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'><strong>géographiquement</strong></a> et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
+              </p>
             </div>
-            <div className='px18 pb24'>
-              <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
-                <div className='flex-child--grow'>
-                  <h3><Emoji name='us'/> Aux US, en Californie</h3>
-                  <br />{/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co*/}
-                  <p className='park pt12'><Emoji name='round-pushpin'/> Kings Canyon</p>
-                  <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
-                  <p className='park pt12'><Emoji name='round-pushpin'/> Yosemite National Park</p>
-                  <span className='pr12'>🌄 <a href='/'>Mount Dana</a></span>
-                  <span className='pr12'>🌄 <a href='/'>Half Dome</a></span>
-                  <span className='pr12'>🌄 <a href='/'>Clouds Rest</a></span>
-                </div>
-                <div className='flex-child'>
-                  <MapHighlights
-                    highlight={this.state.highlight}
-                    dots={posts.map(post => post.coords)}
-                    logo={true}
-                  />
+
+            <hr className='txt-hr hr-transparent'/>
+
+            <div id='geographical-section'>
+              <div className='py24'>
+                <div className='pl36 pb18'>
+                  <h2 className='pt12'>Des deux côtés de l’Atlantique</h2>
+                  <p className='pt12'>
+                    Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
+                    <br />
+                    Cliquez sur l’une d’entre elles pour en savoir plus.
+                  </p>
                 </div>
               </div>
-              <div className='h120 px12 py12 mt24 border round'> {/* France Rectangle, à faire quand les US sont terminés */}
-                C’est ça La France
-              </div>
-            </div>
-          </div>
-
-          <hr className='txt-hr hr-transparent'/>
-
-          <div id='chronological-section'>
-            <div className='py24'>
-              <div className='px18 pb18'>
-                <h2 className='pt12'>Tant de sentiers parcourus depuis 2012</h2>
-                <p className='pt12'>
-                  Vous pouvez retrouver ci-dessous les mêmes randonnées que dans la précédente section, cette fois-ci ordonnées chronologiquement.
-                  <br />
-                  Cliquez sur une randonnée pour en lire l’histoire.
-                </p>
-              </div>
-              <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
-                {
-                  posts.map(({ id, date, title, subtitle, coords, header }) => (
-                    <PostInfo
-                      id={id}
-                      key={id}
-                      date={date}
-                      title={title}
-                      subtitle={subtitle}
-                      header={header}
-                      highlight={() => this.setState({highlight: coords})}
+              <div className='px18 pb24'>
+                <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
+                  <div className='flex-child--grow'>
+                    <h3><Emoji name='us'/> Aux US, en Californie</h3>
+                    <br />{/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co*/}
+                    <p className='park pt12'><Emoji name='round-pushpin'/> Kings Canyon</p>
+                    <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
+                    <p className='park pt12'><Emoji name='round-pushpin'/> Yosemite National Park</p>
+                    <span className='pr12'>🌄 <a href='/'>Mount Dana</a></span>
+                    <span className='pr12'>🌄 <a href='/'>Half Dome</a></span>
+                    <span className='pr12'>🌄 <a href='/'>Clouds Rest</a></span>
+                  </div>
+                  <div className='flex-child'>
+                    <MapHighlights
+                      highlight={this.state.highlight}
+                      dots={posts.map(post => post.coords)}
+                      logo={true}
                     />
-                  ))
-                }
+                  </div>
+                </div>
+                <div className='h120 px12 py12 mt24 border round'> {/* France Rectangle, à faire quand les US sont terminés */}
+                  C’est ça La France
+                </div>
+              </div>
+            </div>
+
+            <hr className='txt-hr hr-transparent'/>
+
+            <div id='chronological-section'>
+              <div className='py24'>
+                <div className='px18 pb18'>
+                  <h2 className='pt12'>Tant de sentiers parcourus depuis 2012</h2>
+                  <p className='pt12'>
+                    Vous pouvez retrouver ci-dessous les mêmes randonnées que dans la précédente section, cette fois-ci ordonnées chronologiquement.
+                    <br />
+                    Cliquez sur une randonnée pour en lire l’histoire.
+                  </p>
+                </div>
+                <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
+                  {
+                    posts.map(({ id, date, title, subtitle, coords, header }) => (
+                      <PostInfo
+                        id={id}
+                        key={id}
+                        date={date}
+                        title={title}
+                        subtitle={subtitle}
+                        header={header}
+                        highlight={() => this.setState({highlight: coords})}
+                      />
+                    ))
+                  }
+                </div>
               </div>
             </div>
           </div>
 
-          <div className='bg-gray-faint color-gray'>
-            <p className='pt30 align-center'>
-              <strong>Vous hésitez entre plusieurs randos ?</strong>
-              <br />
-              Commencez par l’ascension de <a href='/2017/kings-canyon'>Mitchell Peak</a>.
-            </p>
-            <p className='quote pt6 pb30 align-center'>
-              « La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut... »
-            </p>
+          <div className='px18 bg-gray-faint color-gray'>
+              <p className='pt30 align-center'>
+                <strong>Vous hésitez entre plusieurs randos ?</strong>
+                <br />
+                Commencez par l’ascension de <a href='/2017/kings-canyon'>Mitchell Peak</a>.
+              </p>
+              <p className='quote pt6 pb30 align-center'>
+                « La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut... »
+              </p>
           </div>
+
         </div>
       <Footer/>
 
