@@ -18,6 +18,12 @@ class MapHighlights extends Component {
             height: 300px;
             width: 400px;
           }
+
+          @media screen and (max-width: 500px) {
+            #map {
+              max-width: 200px;
+            }
+          }
         `}</style>
         <style jsx global>{`
           .mapboxgl-ctrl-logo {

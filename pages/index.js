@@ -36,16 +36,16 @@ class Index extends Component {
           </div>
         </div>
 
-        <div className='main'>
+        <div className='main px18'>
           <div>
             <p className='intro py30 align-center'>
               Nous avons décidé de vous faire partager nos escapades en randonnée sur ce site.
               <br />
-              Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'>géographiquement</a> et <a href='#chronological-section'>chronologiquement</a>.
+              Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'><strong>géographiquement</strong></a> et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
             </p>
           </div>
 
-          <hr className='txt-hr'/>
+          <hr className='txt-hr hr-transparent'/>
 
           <div id='geographical-section'>
             <div className='py24'>
@@ -58,17 +58,17 @@ class Index extends Component {
                 </p>
               </div>
             </div>
-            <div className='px36 pb24'>
+            <div className='px18 pb24'>
               <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
                 <div className='flex-child--grow'>
                   <h3><Emoji name='us'/> Aux US, en Californie</h3>
                   <br />{/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co*/}
-                  <p className='pt12'><Emoji name='round-pushpin'/> <strong>Kings Canyon</strong></p>
+                  <p className='park pt12'><Emoji name='round-pushpin'/> Kings Canyon</p>
                   <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
-                  <p className='pt12'><Emoji name='round-pushpin'/> <strong>Yosemite National Park</strong></p>
-                  <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mount Dana</a></span>
-                  <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Half Dome</a></span>
-                  <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Clouds Rest</a></span>
+                  <p className='park pt12'><Emoji name='round-pushpin'/> Yosemite National Park</p>
+                  <span className='pr12'>🌄 <a href='/'>Mount Dana</a></span>
+                  <span className='pr12'>🌄 <a href='/'>Half Dome</a></span>
+                  <span className='pr12'>🌄 <a href='/'>Clouds Rest</a></span>
                 </div>
                 <div className='flex-child'>
                   <MapHighlights
@@ -84,16 +84,16 @@ class Index extends Component {
             </div>
           </div>
 
-          <hr className='txt-hr'/>
+          <hr className='txt-hr hr-transparent'/>
 
           <div id='chronological-section'>
             <div className='py24'>
-              <div className='pl36 pb18'>
+              <div className='px18 pb18'>
                 <h2 className='pt12'>Tant de sentiers parcourus depuis 2012</h2>
                 <p className='pt12'>
                   Vous pouvez retrouver ci-dessous les mêmes randonnées que dans la précédente section, cette fois-ci ordonnées chronologiquement.
                   <br />
-                  Cliquez sur une randonnées pour en lire l’histoire.
+                  Cliquez sur une randonnée pour en lire l’histoire.
                 </p>
               </div>
               <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
@@ -181,11 +181,15 @@ class Index extends Component {
           h2, h3 {
             font-family: 'Open Sans';
             font-weight: bold;
-            color: ${palette.tournesol};
           }
 
           h2 {
             font-size: 30px;
+            color: ${palette.tournesol};
+          }
+
+          h3 {
+            color: 'white';
           }
 
           h3, .quote, .intro {
@@ -207,6 +211,21 @@ class Index extends Component {
 
           a:hover {
             color: ${palette.lightenLavande}
+          }
+
+          .park {
+            font-size: 16px;
+            color: ${palette.brique};
+          }
+
+          .hr-transparent {
+            background-image: linear-gradient(to right, ${palette.bleuNuit}, rgba(0, 0, 0, 0), ${palette.bleuNuit});
+            margin-right: 100px;
+            margin-left: 100px;
+          }
+
+          @media screen and (max-width: 400px) {
+
           }
         `}</style>
       </Page>
