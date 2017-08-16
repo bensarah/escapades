@@ -5,7 +5,6 @@ const P = ({ children }) => (
     { children }
     <style jsx>{`
       p {
-        text-align: justify;
         font-size: 18px;
       }
     `}</style>

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import palette from '../../styles/palette'
 
 const Quote = ({ children, author }) => (
-  <div className='pl60 pr12 py30'>
-    <blockquote className='pl0'>
+  <div className='pr12 py30'>
+    <blockquote>
       « {children} »
     </blockquote>
     <p>
@@ -19,9 +19,28 @@ const Quote = ({ children, author }) => (
       p {
         font-size: 14px;
         color: ${palette.tournesol};
-        font-family: 'Open Sans', sans
+        font-family: 'Open Sans', sans;
         font-style: italic;
       }
+
+      @media screen and (min-width: 500px) {
+        blockquote {
+          padding-left: 60px;
+        }
+        p {
+          padding-left: 66px;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        blockquote {
+          padding-left: 10px;
+        }
+        p {
+          padding-left: 16px;
+        }
+      }
+
     `}</style>
   </div>
 )

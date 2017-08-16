@@ -157,15 +157,14 @@ class Index extends Component {
             background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
           }
 
-          hr {
-            background: ${palette.lavande}
-            margin-left: 30px;
-            margin-right: 30px;
-          }
-
           svg {
             height: 100%;
             width: 100%;
+          }
+
+          hr {
+            background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
+            margin: 0px 100px 0px 100px;
           }
 
           .subtext {
@@ -221,15 +220,6 @@ class Index extends Component {
             color: ${palette.brique};
           }
 
-          .hr-transparent {
-            background-image: linear-gradient(to right, ${palette.bleuNuit}, rgba(0, 0, 0, 0), ${palette.bleuNuit});
-            margin-right: 100px;
-            margin-left: 100px;
-          }
-
-          @media screen and (max-width: 400px) {
-
-          }
         `}</style>
       </Page>
     )
