@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
 import palette from '../styles/palette'
-import style from '../styles/style-header'
+import style from '../styles/style-dark'
 import extent from 'geojson-extent'
 
 /* global mapboxgl */
 
-class MapHeader extends Component {
+class MapHighlights extends Component {
   render () {
     return (
-      <div className='map-container'>
-        <div id='map' className='animation-fade-in animation--speed-4 w180 h180 z1' />
+        <div id='map' className='z1'>
         <style jsx>{`
-          .map-container {
+          #map {
             background-color: ${palette.bleuNuit};
+            height: 300px;
+            width: 400px;
           }
         `}</style>
         <style jsx global>{`
@@ -56,7 +57,7 @@ class MapHeader extends Component {
         },
         paint: {
           'circle-color': palette.tournesol,
-          'circle-opacity': 0.5,
+          'circle-opacity': 0.7,
           'circle-radius': 2.2
         }
       })
@@ -107,9 +108,9 @@ class MapHeader extends Component {
   }
 }
 
-MapHeader.propTypes = {
+MapHighlights.propTypes = {
   highlight: PropTypes.array,
   dots: PropTypes.array
 }
 
-export default MapHeader
+export default MapHighlights
