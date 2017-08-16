@@ -52,7 +52,7 @@ class Index extends Component {
               <div className='pl36 pb18'>
                 <h2 className='pt12'>Des deux côtés de l’Atlantique</h2>
                 <p className='pt12'>
-                  Voilà un aperçu de nos randos dans les différentes régions du globe.
+                  Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
                   <br />
                   Cliquez sur l’une d’entre elles pour en savoir plus.
                 </p>
@@ -62,9 +62,13 @@ class Index extends Component {
               <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
                 <div className='flex-child--grow'>
                   <h3><Emoji name='us'/> Aux US, en Californie</h3>
-                  <br />
+                  <br />{/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co*/}
+                  <p className='pt12'><Emoji name='round-pushpin'/> <strong>Kings Canyon</strong></p>
                   <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
+                  <p className='pt12'><Emoji name='round-pushpin'/> <strong>Yosemite National Park</strong></p>
                   <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mount Dana</a></span>
+                  <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Half Dome</a></span>
+                  <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Clouds Rest</a></span>
                 </div>
                 <div className='flex-child'>
                   <MapHighlights
@@ -74,7 +78,7 @@ class Index extends Component {
                   />
                 </div>
               </div>
-              <div className='h120 px12 py12 mt24 border round'> {/* France Rectangle */}
+              <div className='h120 px12 py12 mt24 border round'> {/* France Rectangle, à faire quand les US sont terminés */}
                 C’est ça La France
               </div>
             </div>
@@ -112,7 +116,7 @@ class Index extends Component {
 
           <div className='bg-gray-faint color-gray'>
             <p className='pt30 align-center'>
-              Vous hésitez entre plusieurs randos ?
+              <strong>Vous hésitez entre plusieurs randos ?</strong>
               <br />
               Commencez par l’ascension de <a href='/2017/kings-canyon'>Mitchell Peak</a>.
             </p>
