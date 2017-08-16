@@ -2,11 +2,10 @@ import PropTypes from 'prop-types'
 import palette from '../../styles/palette'
 
 const Footnote = ({ children }) => (
-    <p className='prose pb6'>
+    <p className='prose pb6 txt-m'>
       * { children }
     <style jsx>{`
       p {
-        font-size: 14px;
         color: ${palette.lavande};
         font-family: 'Open Sans', serif;
       }

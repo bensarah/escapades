@@ -1,15 +1,13 @@
 import { Component } from 'react'
 import Head from 'next/head'
 import Page from '../layouts/main'
-import PostInfo from '../components/post-info'
-import MapHighlights from '../components/map-highlights'
-import Footer from '../components/post/footer'
-import Emoji from '../components/post/emoji'
-import Logo from '../components/logo'
-import LogoText from '../components/logo-text'
+import PostInfo from '../components/index/post-info'
+import MapHighlights from '../components/index/map-highlights'
+import Header from '../components/index/header'
+import Footer from '../components/footer'
+import Emoji from '../components/emoji'
 import posts from '../posts'
 import palette from '../styles/palette'
-import {hexToRGB} from '../helpers/colors'
 
 class Index extends Component {
   constructor (props) {
@@ -25,16 +23,7 @@ class Index extends Component {
         <Head>
           <title>escapades</title>
         </Head>
-        <div
-          className='header w-full display-block relative'
-          style={{background: `url(/static/header-background.jpg) no-repeat center center`, backgroundSize: 'cover'}}
-        >
-          <div className='align-l absolute bottom pb120-ml pb60 pl60 z2'>
-            <Logo style={{fill: 'white', width: '150px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='pb18 align-center animation-fade-in animation--speed-1'/>
-            <LogoText style={{fill: 'white', height: '80px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='align-center animation-fade-in animation--speed-1'/>
-            <p className='subtext align-center'>Notre blog de rando</p>
-          </div>
-        </div>
+        <Header/>
 
         <div className='main'>
           <div className='px18'>
@@ -53,7 +42,7 @@ class Index extends Component {
             <div id='geographical-section'>
               <div className='py24'>
                 <div className='pl36 pb18'>
-                  <h2 className='pt12'>Des deux côtés de l’Atlantique</h2>
+                  <h2 className='pt12 txt-xl'>Des deux côtés de l’Atlantique</h2>
                   <p className='pt12'>
                     Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
                     <br />
@@ -139,27 +128,6 @@ class Index extends Component {
             color: white;
           }
 
-          .header {
-              height: 100vh;
-              z-index: 1;
-          }
-
-          .header:before {
-            content:'';
-            display:block;
-            height:100%;
-            width:100%;
-            top:0;
-            left:0;
-            position:absolute;
-            pointer-events:none;
-            z-index: -1;
-          }
-
-          .header::before {
-            background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
-          }
-
           svg {
             height: 100%;
             width: 100%;
@@ -170,26 +138,12 @@ class Index extends Component {
             margin: 0px 100px 0px 100px;
           }
 
-          .subtext {
-            font-size: 18px;
-            color: ${palette.grisClair};
-            font-family: 'Bad Script';
-            text-shadow: 1px 1px 3px ${palette.bleuNuit};
-          }
-
-          @media screen and (min-width: 800px) {
-            .subtext {
-              font-size: 32px;
-            }
-          }
-
           h2, h3 {
             font-family: 'Open Sans';
             font-weight: bold;
           }
 
           h2 {
-            font-size: 30px;
             color: ${palette.tournesol};
           }
 

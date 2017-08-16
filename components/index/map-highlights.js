@@ -2,8 +2,8 @@ import {Component} from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
-import palette from '../styles/palette'
-import style from '../styles/style-dark'
+import palette from '../../styles/palette'
+import style from '../../styles/style-dark'
 import extent from 'geojson-extent'
 
 /* global mapboxgl */
@@ -11,7 +11,7 @@ import extent from 'geojson-extent'
 class MapHighlights extends Component {
   render () {
     return (
-        <div id='map h240 w240 h300-ml w420-ml' className='z1'>
+        <div id='map' className='h240 w240 h300-ml w420-ml z1'>
         <style jsx global>{`
           .mapboxgl-ctrl-logo {
             opacity: 0.2 !important;

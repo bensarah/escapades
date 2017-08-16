@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import Emoji from './emoji'
-import palette from '../../styles/palette'
+import palette from '../styles/palette'
 import Link from 'next/link'
 
 const Footer = ({ children }) => (

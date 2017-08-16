@@ -12,22 +12,22 @@ class InfoSection extends Component {
         <div className='flex-parent flex-parent--row py30 px30 align-center top-row'>
 
           <div className='px6'>
-            <div className='metric'>Distance parcourue</div>
-            <div className='bigtext'>
-              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='unit'>km</span>
-            </div>
+            <div className='txt-l txt-bold'>Distance parcourue</div>
+            <span className='bigtext'>
+              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <small>km</small>
+            </span>
             <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
-            <span className='subbigtext'>{this.props.jours}</span>
+            <span className='txt-l'>{this.props.jours}</span>
             <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
           </div>
 
           <div className='px6'>
-            <div className='metric'>Dénivelé positif</div>
-            <div className='bigtext'>
-              + {upsDowns[0]} <span className='unit'>m</span>
-            </div>
+            <div className='txt-l txt-bold'>Dénivelé positif</div>
+            <span className='bigtext'>
+              + {upsDowns[0]} <small>m</small>
+            </span>
             <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
-            <span className='subbigtext'>max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small></span>
+            <span className='txt-l prose'>max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small></span>
             <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
           </div>
 
@@ -53,36 +53,13 @@ class InfoSection extends Component {
             flex: 1
           }
 
-          .metric, .subbigtext {
-            font-family: Open Sans;
-            font-size: 20px;
-          }
-
-          .metric {
-            font-weight: bold;
-          }
-
           .bigtext {
             font-size: 48px;
             font-family: Anton;
           }
 
-          .unit {
-            font-size: 24px;
-            font-family: Anton;
-          }
-
           .brique {
             fill: ${palette.brique}
-          }
-          small {
-            font-size: 12px;
-          }
-
-          @media screen and (min-width: 800px) {
-            .top-row {
-              font-size: 26px;
-            }
           }
         `}</style>
       </div>
@@ -146,7 +123,7 @@ class InfoSection extends Component {
 
       return (
         <div
-          className='tag px12 py12'
+          className='tag px12 py12 txt-m'
           key={i}
         >
           <Isvg className='icon w60 h60 inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
@@ -155,7 +132,6 @@ class InfoSection extends Component {
             .tag {
               flex: 1;
               font-family: "Bad Script";
-              font-size: 18px;
               color: white;
               text-shadow: '1px 1px 5px rgba(0, 0, 0, 0.2);
             }

@@ -2,16 +2,15 @@ import PropTypes from 'prop-types'
 import palette from '../../styles/palette'
 
 const Quote = ({ children, author }) => (
-  <div className='pr12 py30 pl12 pl60-ml'>
+  <div className='pr12 py30 pl12 pl60-ml txt-l'>
     <blockquote>
       «&nbsp;{children}&nbsp;»
     </blockquote>
-    <p>
+    <p className='txt-m txt-italic'>
       { author }
     </p>
     <style jsx>{`
       blockquote {
-        font-size: 24px;
         font-family: 'Bad Script';
       }
 
@@ -19,12 +18,6 @@ const Quote = ({ children, author }) => (
         color: ${palette.tournesol};
         margin: 0;
         padding: 0;
-      }
-
-      p {
-        font-size: 14px;
-        font-family: 'Open Sans', sans;
-        font-style: italic;
       }
     `}</style>
   </div>
