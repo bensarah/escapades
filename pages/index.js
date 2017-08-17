@@ -2,10 +2,9 @@ import { Component } from 'react'
 import Head from 'next/head'
 import Page from '../layouts/main'
 import PostInfo from '../components/index/post-info'
-import MapHighlights from '../components/index/map-highlights'
 import Header from '../components/index/header'
 import Footer from '../components/footer'
-import Emoji from '../components/emoji'
+import Region from '../components/index/region'
 import posts from '../posts'
 import palette from '../styles/palette'
 
@@ -49,29 +48,7 @@ class Index extends Component {
                 </div>
               </div>
               <div className='px18 pb24'>
-                <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
-                  <div className='flex-child--grow'>
-                    <h3 className='txt-bold color-white'><Emoji name='us'/> Aux US, en Californie</h3>
-                    <br />
-                    {/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co */}
-                    <p className='park pt12'><Emoji name='round-pushpin'/> Kings Canyon</p>
-                    <span className='pr12'>🌄 <a href='/2017/kings-canyon'>Mitchell Peak</a></span>
-                    <p className='park pt12'><Emoji name='round-pushpin'/> Yosemite National Park</p>
-                    <span className='pr12'>🌄 <a href='/'>Mount Dana</a></span>
-                    <span className='pr12'>🌄 <a href='/'>Half Dome</a></span>
-                    <span className='pr12'>🌄 <a href='/'>Clouds Rest</a></span>
-                  </div>
-                  <div className='flex-child'>
-                    <MapHighlights
-                      highlight={this.state.highlight}
-                      dots={posts.map(post => post.coords)}
-                      logo={true}
-                    />
-                  </div>
-                </div>
-                <div className='h120 px12 py12 mt24 border round'> {/* France Rectangle, à faire quand les US sont terminés */}
-                  C’est ça La France
-                </div>
+                {this.regions()}
               </div>
             </div>
 
@@ -89,17 +66,19 @@ class Index extends Component {
                 </div>
                 <div className='pt30 flex-parent flex-parent--row flex-parent--center-main flex-parent--wrap'>
                   {
-                    posts.map(({ id, date, title, subtitle, coords, header }) => (
-                      <PostInfo
-                        id={id}
-                        key={id}
-                        date={date}
-                        title={title}
-                        subtitle={subtitle}
-                        header={header}
-                        highlight={() => this.setState({highlight: coords})}
-                      />
-                    ))
+                    posts
+                      .sort((a, b) => new Date(b.date) - new Date(a.date))
+                      .map(({ id, date, title, park, coords, header }) => (
+                        <PostInfo
+                          id={id}
+                          key={id}
+                          date={date}
+                          title={title}
+                          subtitle={park}
+                          header={header}
+                          highlight={() => this.setState({highlight: coords})}
+                        />
+                      ))
                   }
                 </div>
               </div>
@@ -165,6 +144,18 @@ class Index extends Component {
         `}</style>
       </Page>
     )
+  }
+
+  regions () {
+    var hierarchy = {}
+    posts.forEach(post => {
+      if (!hierarchy[post.region]) hierarchy[post.region] = {}
+      if (!hierarchy[post.region][post.park]) hierarchy[post.region][post.park] = []
+
+      hierarchy[post.region][post.park].push(post)
+    })
+
+    return Object.keys(hierarchy).map((region, i) => <Region key={i} name={region} parks={hierarchy[region]}/>)
   }
 }
 

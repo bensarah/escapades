@@ -31,7 +31,7 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
             <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`} opacity='1'/>
             <polygon className='hoverfilter' points={polygon} fill={`url(#${'hovergrad' + id})`} opacity='0'/>
             <text className='anton txt-shadow txt-xl' x='20' y='120' fill='white'>{title.toUpperCase()}</text>
-            <text className='bad-script txt-shadow txt-l' x='20' y='150' fill={palette.grisClair}>{subtitle}</text>
+            <text className='bad-script txt-shadow txt-l' x='20' y='150' fill='white'>{subtitle}</text>
           </svg>
         </Link>
 
