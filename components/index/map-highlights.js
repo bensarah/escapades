@@ -35,7 +35,7 @@ class MapHighlights extends Component {
 
     var bbox = extent(this.dotsToGeoJSON(this.props.dots))
     var dotsBounds = [bbox.slice(0, 2), bbox.slice(2, 4)]
-    map.fitBounds(dotsBounds, {animate: false, padding: 30})
+    map.fitBounds(dotsBounds, {animate: false, padding: 60})
 
     this.map = map
 
