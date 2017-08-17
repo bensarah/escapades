@@ -2,6 +2,7 @@ import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import palette from '../styles/palette'
+import {hexToRGB} from '../helpers/colors'
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -12,7 +13,7 @@ const Meta = () => (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no' />
       <link rel='icon' href='/static/favicon.png/'/>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script|Belgrano' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
       <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
       <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
       <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
@@ -52,6 +53,30 @@ const Meta = () => (
         box-shadow: 0 0 10px ${palette.lightenLavande}, 0 0 5px ${palette.lightenLavande};
         opacity: 1.0;
         transform: rotate(3deg) translate(0px, -4px);
+      }
+
+      /* font families and other helper classes */
+
+      .bad-script {
+        font-family: 'Bad Script', serif;
+      }
+
+      .anton {
+        font-family: 'Anton', sans-serif;
+      }
+
+      .txt-shadow {
+        text-shadow: 1px 1px 4px ${hexToRGB(palette.bleuNuit, 0.5)};
+      }
+
+      .drop-shadow {
+        filter: drop-shadow( 1px 1px 3px ${hexToRGB(palette.bleuNuit, 0.3)} );
+      }
+
+      hr {
+        height: 1px;
+        background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
+        margin: 0px 100px 0px 100px;
       }
     `}</style>
   </div>

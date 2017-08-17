@@ -20,25 +20,18 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <Head><title>{title}</title></Head>
       <div className='header absolute w-full z1'>
         <Link href='/'>
-          <a className='home cursor-pointer absolute z5 px12 py12'>
-            <Logo style={{fill: '#ffffff', height: '30px'}} className='inline'/>
-            <LogoText style={{fill: '#ffffff', height: '30px', marginBottom: '-7px'}} className='inline'/>
+          <a className='cursor-pointer absolute z5 px12 py12 txt-m txt-bold'>
+            <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
+            <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
           </a>
         </Link>
       </div>
       <div className='align-l absolute bottom pb240-ml pb180 pl60 z2'>
-        <h1>{title.toUpperCase()}</h1>
-        <h2>{subtitle}</h2>
+        <h1 className='anton txt-shadow txt-xl color-white pb12'>{title.toUpperCase()}</h1>
+        <h2 className='bad-script txt-shadow txt-l txt-xl-ml color-gray-light'>{subtitle}</h2>
       </div>
       <TrailElevation trail={trailLineString}/>
       <style jsx>{`
-        .home {
-          color: #fff;
-          font-family: 'Belgrano';
-          font-weight: bold;
-          font-size: 16px;
-        }
-
         .header {
           height: 100vh;
           z-index: 1;
@@ -65,27 +58,9 @@ const Header = ({ img, title, subtitle, trail, home }) => {
           width: 100%;
         }
 
-        h1 {
-          font-size: 30px;
-          color: white;
-          font-family: 'Anton', sans-serif;
-          text-shadow: 1px 1px 3px #303240;
-        }
-
-        h2 {
-          font-size: 18px;
-          color: ${palette.grisClair};
-          font-family: 'Bad Script';
-          text-shadow: 1px 1px 3px #303240;
-        }
-
         @media screen and (min-width: 800px) {
           h1 {
             font-size: 54px;
-          }
-
-          h2 {
-            font-size: 32px;
           }
         }
       `}</style>

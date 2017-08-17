@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Header from '../components/post/header'
 import InfoSection from '../components/post/info-section'
 import PhotoGallery from '../components/post/photo-gallery'
-import Footer from '../components/post/footer'
+import Footer from '../components/footer'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import {findTrail} from '../helpers/trail-extractor'
@@ -53,7 +53,7 @@ class Post extends Component {
               </div>}
             </Sticky>
           </StickyContainer>
-          <article className='flex-child flex-child--grow px60 py30'>
+          <article className='flex-child flex-child--grow py30 px18 px60-ml color-gray-light'>
             {
               this.props.children.map((child, i) => React.cloneElement(child, {
                 key: i,
@@ -68,8 +68,6 @@ class Post extends Component {
         <Footer />
         <style jsx>{`
           article {
-            font-size: 18px;
-            color: ${palette.grisClair};
             background-color: ${palette.bleuNuit};
           }
 

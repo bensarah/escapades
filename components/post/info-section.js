@@ -8,24 +8,27 @@ class InfoSection extends Component {
     var upsDowns = this.upsAndDowns()
 
     return (
-      <div className='info-section'>
-        <div className='flex-parent flex-parent--row py30 px30 align-center top-row'>
+      <div className='info-section txt-shadow color-white'>
+        <div className='flex-parent flex-parent--row py30 px6 px30-ml align-center top-row'>
 
           <div className='px6'>
-            <div className='metric'>Distance parcourue</div>
-            <div className='bigtext'>
-              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='unit'>km</span>
+            <div className='txt-l txt-bold'>Distance parcourue</div>
+            <div className='anton bigtext'>
+              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='txt-l txt-bold'>km</span>
             </div>
-            <p className='subbigtext'><span className='brique px3'>☀</span> {this.props.jours} <span className='brique px3'>☾</span></p>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
+            <span className='txt-l'>{this.props.jours}</span>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
           </div>
 
           <div className='px6'>
-            <div className='metric'>Dénivelé positif</div>
-            <div className='bigtext'>
-              + {upsDowns[0]} <span className='unit'>m</span>
+            <div className='txt-l txt-bold'>Dénivelé positif</div>
+            <div className='anton bigtext'>
+              + {upsDowns[0]} <span className='txt-l txt-bold'>m</span>
             </div>
-            <p className='subbigtext'><span className='brique px3'>↗</span>  max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small>
-            <span className='brique px3'>↘</span></p>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
+            <span className='txt-l'>max {this.elevMax()} m · min {this.elevMin()} m</span>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
           </div>
 
         </div>
@@ -34,15 +37,6 @@ class InfoSection extends Component {
         </div>
         <style jsx>{`
           .info-section {
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-          }
-
-          .top-row div {
-            fill: ${palette.brique}
-            color: white;
-          }
-
-          .info-section {
             background: linear-gradient(to bottom, ${palette.tournesol} 50%, #ffa100);
           }
 
@@ -50,36 +44,12 @@ class InfoSection extends Component {
             flex: 1
           }
 
-          .metric, .subbigtext {
-            font-family: Open Sans;
-            font-size: 20px;
-          }
-
-          .metric {
-            font-weight: bold;
-          }
-
           .bigtext {
             font-size: 48px;
-            font-family: Anton;
-          }
-
-          .unit {
-            font-size: 24px;
-            font-family: Anton;
           }
 
           .brique {
-            color: ${palette.brique}
-          }
-          small {
-            font-size: 12px;
-          }
-
-          @media screen and (min-width: 800px) {
-            .top-row {
-              font-size: 26px;
-            }
+            fill: ${palette.brique}
           }
         `}</style>
       </div>
@@ -143,28 +113,29 @@ class InfoSection extends Component {
 
       return (
         <div
-          className='tag px12 py12'
+          className='tag bad-script txt-shadow color-white px12 py12 txt-m txt-l-ml'
           key={i}
         >
-          <Isvg className='icon w60 h60 inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
+          <Isvg className='icon drop-shadow w36 h36 w60-ml h60-ml inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
           <br/>{tag}
           <style>{`
             .tag {
               flex: 1;
-              font-family: "Bad Script";
-              font-size: 18px;
-              color: white;
-              text-shadow: '1px 1px 5px rgba(0, 0, 0, 0.2);
             }
 
             .icon svg {
-              stroke: 'white';
-              filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, 0.2) );
+              stroke: white;
             }
           `}</style>
         </div>
       )
     })
+  }
+
+  get styles () {
+    return {
+      icon: 'inline-block align-middle px6'
+    }
   }
 }
 

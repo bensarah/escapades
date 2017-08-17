@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import palette from '../styles/palette'
+import palette from '../../styles/palette'
 
 const BlipMarker = ({ size }) => (
   <div className='marker animation-pulse' style={{width: size, height: size}}>

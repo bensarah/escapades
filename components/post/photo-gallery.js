@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Gallery from 'react-photo-gallery'
 import Lightbox from 'react-images'
-import Emoji from './emoji'
+import Emoji from '../emoji'
 import palette from '../../styles/palette'
 
 class PhotoGallery extends React.Component {
@@ -23,15 +23,15 @@ class PhotoGallery extends React.Component {
   render () {
     if (!this.props.photos || this.props.photos.length === 0) return null
     return (
-      <div className='section px6 py6'>
+      <div className='section px3 py3'>
         <div className='py18'>
-          <h2 className='align-center pb6'>Plus de photos <Emoji name='camera'/></h2>
-          <p className='align-center'>Vous pouvez cliquer sur les photos pour les agrandir.</p>
+          <h2 className='align-center pb6 txt-xl txt-bold'>Plus de photos <Emoji name='camera'/></h2>
+          <p className='align-center txt-m'>Vous pouvez cliquer sur les photos pour les agrandir.</p>
         </div>
         <Gallery
           photos={this.props.photos}
           onClickPhoto={this.openLightbox}
-          margin={6}
+          margin={3}
         />
         <Lightbox
           images={this.props.photos}
@@ -43,15 +43,10 @@ class PhotoGallery extends React.Component {
         />
         <style jsx>{`
           h2 {
-            font-family: 'Open Sans';
-            font-size: 30px;
-            font-weight: bold;
             color: ${palette.lavande};
           }
 
           p {
-            font-family: 'Open Sans';
-            font-size: 14px;
             color: ${palette.bleuNuit};
           }
         `}</style>

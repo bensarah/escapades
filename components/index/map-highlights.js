@@ -2,22 +2,16 @@ import {Component} from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
-import palette from '../styles/palette'
-import style from '../styles/style-header'
+import palette from '../../styles/palette'
+import style from '../../styles/style-dark'
 import extent from 'geojson-extent'
 
 /* global mapboxgl */
 
-class MapHeader extends Component {
+class MapHighlights extends Component {
   render () {
     return (
-      <div className='map-container'>
-        <div id='map' className='animation-fade-in animation--speed-4 w-full h180 z1' />
-        <style jsx>{`
-          .map-container {
-            background-color: ${palette.bleuNuit};
-          }
-        `}</style>
+        <div id='map' className='h-full w-full'>
         <style jsx global>{`
           .mapboxgl-ctrl-logo {
             opacity: 0.2 !important;
@@ -41,7 +35,7 @@ class MapHeader extends Component {
 
     var bbox = extent(this.dotsToGeoJSON(this.props.dots))
     var dotsBounds = [bbox.slice(0, 2), bbox.slice(2, 4)]
-    map.fitBounds(dotsBounds, {animate: false, padding: 30})
+    map.fitBounds(dotsBounds, {animate: false, padding: 60})
 
     this.map = map
 
@@ -56,7 +50,7 @@ class MapHeader extends Component {
         },
         paint: {
           'circle-color': palette.tournesol,
-          'circle-opacity': 0.5,
+          'circle-opacity': 0.7,
           'circle-radius': 2.2
         }
       })
@@ -107,9 +101,9 @@ class MapHeader extends Component {
   }
 }
 
-MapHeader.propTypes = {
+MapHighlights.propTypes = {
   highlight: PropTypes.array,
   dots: PropTypes.array
 }
 
-export default MapHeader
+export default MapHighlights

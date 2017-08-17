@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 import Emoji from './emoji'
-import palette from '../../styles/palette'
+import palette from '../styles/palette'
 import Link from 'next/link'
 
 const Footer = ({ children }) => (
-  <div className='footer relative hmin120 py30 px30'>
+  <div className='footer relative hmin120 py30 px30 color-gray-light'>
     <div className='w-full display-block'/>
       <div>
-        <span className='clickable cursor-pointer' onClick={() => window.scrollTo(window.pageYOffset, 0)}>
+        <span className='clickable cursor-pointer color-white-on-hover' onClick={() => window.scrollTo(window.pageYOffset, 0)}>
           <Emoji name='arrow-up'/><span className='pl6'>Haut de page</span>
         </span>
         <span className='px18'/>
@@ -28,25 +28,14 @@ const Footer = ({ children }) => (
         </div>
       </div>
 
-      <img className='footer-img absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`}></img>
+      <img className='none block-ml absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`} draggable={false}></img>
     <style jsx>{`
       .footer {
         background-color: ${palette.bleuNuit};
-        color: ${palette.grisClair};
       }
 
       .clickable:hover, a:hover {
         color: white;
-      }
-
-      .footer-img {
-        display: none;
-      }
-
-      @media screen and (min-width: 800px) {
-        .footer-img {
-          display: block;
-        }
       }
     `}</style>
   </div>

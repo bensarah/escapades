@@ -6,7 +6,7 @@ import Map from '../../components/post/map'
 import Section from '../../components/post/section'
 import Quote from '../../components/post/quote'
 import Img from '../../components/post/img'
-import Emoji from '../../components/post/emoji'
+import Emoji from '../../components/emoji'
 import Footnote from '../../components/post/footnote'
 import {highlightFromTo} from '../../helpers/map-utils'
 import trail from '../../static/2017/kings-canyon/trail'
@@ -179,7 +179,7 @@ class KingsCanyon extends Component {
             De retour sous la tente on se rassure, ça devrait aller mieux demain matin…
           </P>
           <P>
-            💤
+            <Emoji name='zzz'/>
           </P>
         </Section>
 

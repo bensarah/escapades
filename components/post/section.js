@@ -20,13 +20,14 @@ class Section extends Component {
         {
           this.props.last
           ? null
-          : <hr className='txt-hr' style={{background: palette.lavande}}/>
+          : <hr/>
         }
         <style jsx>{`
           .section {
             min-height: 100vh;
           }
           hr {
+            background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
             margin: 0;
           }
         `}</style>

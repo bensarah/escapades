@@ -1,14 +1,8 @@
 import PropTypes from 'prop-types'
 
 const P = ({ children }) => (
-  <p className='prose pb30'>
+  <p className='prose pb30 txt-m txt-l-ml'>
     { children }
-    <style jsx>{`
-      p {
-        text-align: justify;
-        font-size: 18px;
-      }
-    `}</style>
   </p>
 )
 

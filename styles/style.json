@@ -10578,22 +10578,16 @@
             "filter": ["==", "type", "peak"]
         },
         {
-            "id": "minimal--point-highlight-outline",
-            "source": "point-highlight",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 16,
-                "circle-color": "#f0bd25"
-            },
-            "filter": ["==", "$type", "Point"]
-        },
-        {
             "id": "minimal--point-highlight-circle",
             "source": "point-highlight",
             "type": "circle",
             "paint": {
                 "circle-radius": 13,
-                "circle-color": "#ffffff"
+                "circle-color": "#ffffff",
+                "circle-opacity": 0.95,
+                "circle-stroke-width": 3,
+                "circle-stroke-color": "#f0bd25",
+                "circle-stroke-opacity": 0.5
             },
             "filter": ["==", "$type", "Point"]
         },
