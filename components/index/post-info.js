@@ -2,12 +2,12 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import palette from '../../styles/palette'
 
-const PostInfo = ({ id, date, title, subtitle, header }) => {
+const PostInfo = ({ id, date, title, subtitle, header, url }) => {
   const polygon = '0,0 240,0 240,170 130,170 120,180 110,170 0,170'
 
   return (
       <div>
-        <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
+        <Link prefetch href={url}>
           <svg
             className='post flex-child relative w240 mx30 unround cursor-pointer'
             height='180' width='300'
@@ -65,7 +65,8 @@ PostInfo.propTypes = {
   date: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  header: PropTypes.string
+  header: PropTypes.string,
+  url: PropTypes.string
 }
 
 export default PostInfo

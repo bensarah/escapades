@@ -69,7 +69,7 @@ class Index extends Component {
                   {
                     posts
                       .sort((a, b) => new Date(b.date) - new Date(a.date))
-                      .map(({ id, date, title, park, coords, header }) => (
+                      .map(({ id, date, title, park, coords, header, url }) => (
                         <PostInfo
                           id={id}
                           key={id}
@@ -77,6 +77,7 @@ class Index extends Component {
                           title={title}
                           subtitle={park}
                           header={header}
+                          url={url}
                         />
                       ))
                   }
