@@ -20,7 +20,7 @@ class Section extends Component {
         {
           this.props.last
           ? null
-          : <hr className='txt-hr'/>
+          : <hr/>
         }
         <style jsx>{`
           .section {

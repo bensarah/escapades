@@ -1,17 +1,18 @@
+import PropTypes from 'prop-types'
 import Logo from '../logo'
 import LogoText from '../logo-text'
 import {hexToRGB} from '../../helpers/colors'
 import palette from '../../styles/palette'
 
-const IndexHeader = () => (
+const IndexHeader = ({background}) => (
   <div
     className='header w-full display-block relative'
-    style={{background: `url(/static/header-background.jpg) no-repeat center center`, backgroundSize: 'cover'}}
+    style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}
   >
-    <div className='align-l absolute bottom pb120-ml pb60 pl60 z2'>
-      <Logo style={{fill: 'white', width: '150px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='pb18 align-center animation-fade-in animation--speed-1'/>
-      <LogoText style={{fill: 'white', height: '80px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='align-center animation-fade-in animation--speed-1'/>
-      <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l align-center'>Notre blog de rando</p>
+    <div className='align-l align-center absolute bottom pb120-ml pb60 pl60 z2 animation-fade-in animation--speed-1'>
+      <Logo style={{fill: 'white', width: '150px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='pb18'/>
+      <LogoText style={{fill: 'white', height: '80px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}}/>
+      <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
     </div>
     <style jsx>{`
       .header {
@@ -37,5 +38,9 @@ const IndexHeader = () => (
     `}</style>
   </div>
 )
+
+IndexHeader.propTypes = {
+  background: PropTypes.string
+}
 
 export default IndexHeader

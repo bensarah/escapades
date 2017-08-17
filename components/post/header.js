@@ -21,14 +21,14 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <div className='header absolute w-full z1'>
         <Link href='/'>
           <a className='cursor-pointer absolute z5 px12 py12 txt-m txt-bold'>
-            <Logo style={{fill: '#ffffff', height: '30px'}} className='inline'/>
-            <LogoText style={{fill: '#ffffff', height: '30px', marginBottom: '-7px'}} className='inline'/>
+            <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
+            <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
           </a>
         </Link>
       </div>
       <div className='align-l absolute bottom pb240-ml pb180 pl60 z2'>
-        <h1 className='anton txt-shadow txt-xl color-white'>{title.toUpperCase()}</h1>
-        <h2 className='bad-script txt-shadow txt-l txt-xl-ml color-gray-faint'>{subtitle}</h2>
+        <h1 className='anton txt-shadow txt-xl color-white pb12'>{title.toUpperCase()}</h1>
+        <h2 className='bad-script txt-shadow txt-l txt-xl-ml color-gray-light'>{subtitle}</h2>
       </div>
       <TrailElevation trail={trailLineString}/>
       <style jsx>{`

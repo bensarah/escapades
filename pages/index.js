@@ -23,7 +23,7 @@ class Index extends Component {
         <Head>
           <title>escapades</title>
         </Head>
-        <Header/>
+        <Header background='/static/header-background.jpg'/>
 
         <div className='main'>
           <div className='px18'>
@@ -35,12 +35,12 @@ class Index extends Component {
               </p>
             </div>
 
-            <hr className='txt-hr hr-transparent'/>
+            <hr/>
 
             <div id='geographical-section'>
               <div className='py24'>
                 <div className='pl36 pb18'>
-                  <h2 className='pt12 txt-xl'>Des deux côtés de l’Atlantique</h2>
+                  <h2 className='pt12 txt-xl txt-bold'>Des deux côtés de l’Atlantique</h2>
                   <p className='pt12'>
                     Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
                     <br />
@@ -51,7 +51,7 @@ class Index extends Component {
               <div className='px18 pb24'>
                 <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--row'> {/* US - California Rectangle */}
                   <div className='flex-child--grow'>
-                    <h3><Emoji name='us'/> Aux US, en Californie</h3>
+                    <h3 className='txt-bold color-white'><Emoji name='us'/> Aux US, en Californie</h3>
                     <br />
                     {/* TODO rendre ça plus dynamique :D, les pars rattachés aux randos & co */}
                     <p className='park pt12'><Emoji name='round-pushpin'/> Kings Canyon</p>
@@ -75,12 +75,12 @@ class Index extends Component {
               </div>
             </div>
 
-            <hr className='txt-hr hr-transparent'/>
+            <hr/>
 
             <div id='chronological-section'>
               <div className='py24'>
                 <div className='px18 pb18'>
-                  <h2 className='pt12'>Tant de sentiers parcourus depuis 2012</h2>
+                  <h2 className='pt12 txt-xl txt-bold'>Tant de sentiers parcourus depuis 2012</h2>
                   <p className='pt12'>
                     Vous pouvez retrouver ci-dessous les mêmes randonnées que dans la précédente section, cette fois-ci ordonnées chronologiquement.
                     <br />
@@ -136,25 +136,12 @@ class Index extends Component {
             margin: 0px 100px 0px 100px;
           }
 
-          h2, h3 {
-            font-family: 'Open Sans';
-            font-weight: bold;
-          }
-
           h2 {
             color: ${palette.tournesol};
           }
 
-          h3 {
-            color: 'white';
-          }
-
           h3, .quote, .intro {
             font-size: 20px;
-          }
-
-          p {
-            font-size: 14px;
           }
 
           .quote {

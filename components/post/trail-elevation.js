@@ -23,7 +23,7 @@ class TrailElevation extends Component {
       // let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
         <div className='absolute bottom w-full mx-neg6 my-neg6 z2'>
-          <ResponsiveContainer width='101%' height={180}>
+          <ResponsiveContainer width='101%' height={this.height}>
             <AreaChart data={this.state.elevations.map((e, i, a) => ({distance: (i * this.state.distance / a.length).toFixed(1) + ' km', elevation: Math.max(e, 0)}))}>
               <defs>
                 <linearGradient id='fill-gradient' x1='0' y1='0' x2='0' y2='100%'>
@@ -148,6 +148,10 @@ class TrailElevation extends Component {
       })
 
     return [ups, downs]
+  }
+
+  get height () {
+    return window.innerWidth >= 800 ? 180 : 120
   }
 }
 

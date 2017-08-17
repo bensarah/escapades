@@ -8,7 +8,7 @@ class InfoSection extends Component {
     var upsDowns = this.upsAndDowns()
 
     return (
-      <div className='info-section txt-shadow'>
+      <div className='info-section txt-shadow color-white'>
         <div className='flex-parent flex-parent--row py30 px6 px30-ml align-center top-row'>
 
           <div className='px6'>
@@ -16,9 +16,9 @@ class InfoSection extends Component {
             <div className='anton bigtext'>
               {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='txt-l txt-bold'>km</span>
             </div>
-            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
             <span className='txt-l'>{this.props.jours}</span>
-            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
           </div>
 
           <div className='px6'>
@@ -26,9 +26,9 @@ class InfoSection extends Component {
             <div className='anton bigtext'>
               + {upsDowns[0]} <span className='txt-l txt-bold'>m</span>
             </div>
-            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
-            <span className='txt-l prose'>max {this.elevMax()} m · min {this.elevMin()} m</span>
-            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
+            <span className='txt-l'>max {this.elevMax()} m · min {this.elevMin()} m</span>
+            <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
           </div>
 
         </div>
@@ -36,11 +36,6 @@ class InfoSection extends Component {
           {this.tagsToTags()}
         </div>
         <style jsx>{`
-          .top-row div {
-            fill: ${palette.brique}
-            color: white;
-          }
-
           .info-section {
             background: linear-gradient(to bottom, ${palette.tournesol} 50%, #ffa100);
           }
@@ -135,6 +130,12 @@ class InfoSection extends Component {
         </div>
       )
     })
+  }
+
+  get styles () {
+    return {
+      icon: 'inline-block align-middle px6'
+    }
   }
 }
 

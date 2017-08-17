@@ -72,6 +72,12 @@ const Meta = () => (
       .drop-shadow {
         filter: drop-shadow( 1px 1px 3px ${hexToRGB(palette.bleuNuit, 0.3)} );
       }
+
+      hr {
+        height: 1px;
+        background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
+        margin: 0px 100px 0px 100px;
+      }
     `}</style>
   </div>
 )

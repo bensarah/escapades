@@ -4,10 +4,10 @@ import palette from '../styles/palette'
 import Link from 'next/link'
 
 const Footer = ({ children }) => (
-  <div className='footer relative hmin120 py30 px30 color-gray-faint'>
+  <div className='footer relative hmin120 py30 px30 color-gray-light'>
     <div className='w-full display-block'/>
       <div>
-        <span className='clickable cursor-pointer' onClick={() => window.scrollTo(window.pageYOffset, 0)}>
+        <span className='clickable cursor-pointer color-white-on-hover' onClick={() => window.scrollTo(window.pageYOffset, 0)}>
           <Emoji name='arrow-up'/><span className='pl6'>Haut de page</span>
         </span>
         <span className='px18'/>
