@@ -4,7 +4,7 @@ import palette from '../styles/palette'
 import Link from 'next/link'
 
 const Footer = ({ children }) => (
-  <div className='footer relative hmin120 py30 px30'>
+  <div className='footer relative hmin120 py30 px30 color-gray-faint'>
     <div className='w-full display-block'/>
       <div>
         <span className='clickable cursor-pointer' onClick={() => window.scrollTo(window.pageYOffset, 0)}>
@@ -32,7 +32,6 @@ const Footer = ({ children }) => (
     <style jsx>{`
       .footer {
         background-color: ${palette.bleuNuit};
-        color: ${palette.grisClair};
       }
 
       .clickable:hover, a:hover {

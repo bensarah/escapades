@@ -8,27 +8,27 @@ class InfoSection extends Component {
     var upsDowns = this.upsAndDowns()
 
     return (
-      <div className='info-section'>
-        <div className='flex-parent flex-parent--row py30 px30 align-center top-row'>
+      <div className='info-section txt-shadow'>
+        <div className='flex-parent flex-parent--row py30 px6 px30-ml align-center top-row'>
 
           <div className='px6'>
             <div className='txt-l txt-bold'>Distance parcourue</div>
-            <span className='bigtext'>
-              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <small>km</small>
-            </span>
-            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
+            <div className='anton bigtext'>
+              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='txt-l txt-bold'>km</span>
+            </div>
+            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
             <span className='txt-l'>{this.props.jours}</span>
-            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
+            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-moon'/></svg></span>
           </div>
 
           <div className='px6'>
             <div className='txt-l txt-bold'>Dénivelé positif</div>
-            <span className='bigtext'>
-              + {upsDowns[0]} <small>m</small>
-            </span>
-            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
-            <span className='txt-l prose'>max {this.elevMax()} <small>m</small> · min {this.elevMin()} <small>m</small></span>
-            <span className='inline-block px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
+            <div className='anton bigtext'>
+              + {upsDowns[0]} <span className='txt-l txt-bold'>m</span>
+            </div>
+            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
+            <span className='txt-l prose'>max {this.elevMax()} m · min {this.elevMin()} m</span>
+            <span className='inline-block align-middle px6'><svg className='brique icon'><use xlinkHref='#icon-chevron-down'/></svg></span>
           </div>
 
         </div>
@@ -36,10 +36,6 @@ class InfoSection extends Component {
           {this.tagsToTags()}
         </div>
         <style jsx>{`
-          .info-section {
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-          }
-
           .top-row div {
             fill: ${palette.brique}
             color: white;
@@ -55,7 +51,6 @@ class InfoSection extends Component {
 
           .bigtext {
             font-size: 48px;
-            font-family: Anton;
           }
 
           .brique {
@@ -123,22 +118,18 @@ class InfoSection extends Component {
 
       return (
         <div
-          className='tag px12 py12 txt-m'
+          className='tag bad-script txt-shadow color-white px12 py12 txt-m txt-l-ml'
           key={i}
         >
-          <Isvg className='icon w60 h60 inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
+          <Isvg className='icon drop-shadow w36 h36 w60-ml h60-ml inline-block' src={`/static/icons/${icon}.svg`}></Isvg>
           <br/>{tag}
           <style>{`
             .tag {
               flex: 1;
-              font-family: "Bad Script";
-              color: white;
-              text-shadow: '1px 1px 5px rgba(0, 0, 0, 0.2);
             }
 
             .icon svg {
-              stroke: 'white';
-              filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, 0.2) );
+              stroke: white;
             }
           `}</style>
         </div>

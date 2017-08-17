@@ -31,9 +31,7 @@ class Index extends Component {
               <p className='intro py30 align-center'>
                 Nous avons décidé de vous faire partager nos escapades en randonnée sur ce site.
                 <br />
-                Vous pouvez retrouver l’index des différentes randos
-                <a href='#geographical-section'><strong>géographiquement</strong></a>
-                et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
+                Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'><strong>géographiquement</strong></a> et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
               </p>
             </div>
 

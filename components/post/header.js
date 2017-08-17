@@ -20,23 +20,18 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       <Head><title>{title}</title></Head>
       <div className='header absolute w-full z1'>
         <Link href='/'>
-          <a className='home cursor-pointer absolute z5 px12 py12 txt-m txt-bold'>
+          <a className='cursor-pointer absolute z5 px12 py12 txt-m txt-bold'>
             <Logo style={{fill: '#ffffff', height: '30px'}} className='inline'/>
             <LogoText style={{fill: '#ffffff', height: '30px', marginBottom: '-7px'}} className='inline'/>
           </a>
         </Link>
       </div>
       <div className='align-l absolute bottom pb240-ml pb180 pl60 z2'>
-        <h1 className='txt-xl color-white'>{title.toUpperCase()}</h1>
-        <h2 className='txt-l txt-xl-ml'>{subtitle}</h2>
+        <h1 className='anton txt-shadow txt-xl color-white'>{title.toUpperCase()}</h1>
+        <h2 className='bad-script txt-shadow txt-l txt-xl-ml color-gray-faint'>{subtitle}</h2>
       </div>
       <TrailElevation trail={trailLineString}/>
       <style jsx>{`
-        .home {
-          color: #fff;
-          font-family: 'Belgrano';
-        }
-
         .header {
           height: 100vh;
           z-index: 1;
@@ -61,17 +56,6 @@ const Header = ({ img, title, subtitle, trail, home }) => {
         svg {
           height: 100%;
           width: 100%;
-        }
-
-        h1 {
-          font-family: 'Anton', sans-serif;
-          text-shadow: 1px 1px 3px #303240;
-        }
-
-        h2 {
-          color: ${palette.grisClair};
-          font-family: 'Bad Script';
-          text-shadow: 1px 1px 3px #303240;
         }
 
         @media screen and (min-width: 800px) {

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import palette from '../styles/palette'
+import {hexToRGB} from '../helpers/colors'
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -52,6 +53,24 @@ const Meta = () => (
         box-shadow: 0 0 10px ${palette.lightenLavande}, 0 0 5px ${palette.lightenLavande};
         opacity: 1.0;
         transform: rotate(3deg) translate(0px, -4px);
+      }
+
+      /* font style and other helper classes */
+
+      .bad-script {
+        font-family: 'Bad Script', serif;
+      }
+
+      .anton {
+        font-family: 'Anton', sans-serif;
+      }
+
+      .txt-shadow {
+        text-shadow: 1px 1px 3px ${hexToRGB(palette.bleuNuit, 0.4)};
+      }
+
+      .drop-shadow {
+        filter: drop-shadow( 1px 1px 3px ${hexToRGB(palette.bleuNuit, 0.3)} );
       }
     `}</style>
   </div>

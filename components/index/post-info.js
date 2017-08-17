@@ -30,8 +30,8 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
             <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`} opacity='1'/>
             <polygon className='hoverfilter' points={polygon} fill={`url(#${'hovergrad' + id})`} opacity='0'/>
-            <text className='title txt-xl' x='20' y='120' fill='white'>{title.toUpperCase()}</text>
-            <text className='subtitle txt-l' x='20' y='150' fill={palette.grisClair}>{subtitle}</text>
+            <text className='anton txt-shadow txt-xl' x='20' y='120' fill='white'>{title.toUpperCase()}</text>
+            <text className='bad-script txt-shadow txt-l' x='20' y='150' fill={palette.grisClair}>{subtitle}</text>
           </svg>
         </Link>
 
@@ -42,16 +42,6 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
         </svg>
 
         <style jsx>{`
-          .title {
-            font-family: 'Anton', sans-serif;
-            text-shadow: 1px 1px 3px #303240;
-          }
-
-          .subtitle {
-            font-family: 'Bad Script', sans;
-            text-shadow: 1px 1px 3px #303240;
-          }
-
           .filter, .hoverfilter {
             transition: opacity 0.3s ease-out;
           }

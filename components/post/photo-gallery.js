@@ -43,12 +43,10 @@ class PhotoGallery extends React.Component {
         />
         <style jsx>{`
           h2 {
-            font-family: 'Open Sans';
             color: ${palette.lavande};
           }
 
           p {
-            font-family: 'Open Sans';
             color: ${palette.bleuNuit};
           }
         `}</style>

@@ -53,7 +53,7 @@ class Post extends Component {
               </div>}
             </Sticky>
           </StickyContainer>
-          <article className='flex-child flex-child--grow py30 px18 px60-ml'>
+          <article className='flex-child flex-child--grow py30 px18 px60-ml color-gray-faint'>
             {
               this.props.children.map((child, i) => React.cloneElement(child, {
                 key: i,
@@ -68,8 +68,6 @@ class Post extends Component {
         <Footer />
         <style jsx>{`
           article {
-            font-size: 18px;
-            color: ${palette.grisClair};
             background-color: ${palette.bleuNuit};
           }
 

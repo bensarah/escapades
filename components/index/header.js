@@ -11,7 +11,7 @@ const IndexHeader = () => (
     <div className='align-l absolute bottom pb120-ml pb60 pl60 z2'>
       <Logo style={{fill: 'white', width: '150px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='pb18 align-center animation-fade-in animation--speed-1'/>
       <LogoText style={{fill: 'white', height: '80px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='align-center animation-fade-in animation--speed-1'/>
-      <p className='subtext txt-xl-ml txt-l align-center'>Notre blog de rando</p>
+      <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l align-center'>Notre blog de rando</p>
     </div>
     <style jsx>{`
       .header {
@@ -33,12 +33,6 @@ const IndexHeader = () => (
 
       .header::before {
         background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
-      }
-
-      .subtext {
-        color: ${palette.grisClair};
-        font-family: 'Bad Script';
-        text-shadow: 1px 1px 3px ${palette.bleuNuit};
       }
     `}</style>
   </div>
