@@ -10560,6 +10560,15 @@
             "filter": ["==", "type", "camp"]
         },
         {
+            "id": "minimal--wetland",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "wetland-11"
+            },
+            "filter": ["==", "type", "wetland"]
+        },
+        {
             "id": "minimal--start",
             "source": "trail",
             "type": "symbol",

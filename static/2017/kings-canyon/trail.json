@@ -4,12 +4,28 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "camp"
+        "type": "camp",
+        "name": "Seville Lake",
+        "altitude": "2580 m"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -118.719587, 36.684370
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "wetland",
+        "name": "Rowell Meadow",
+        "altitude": "2710 m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.741745, 36.716221
         ]
       }
     },
@@ -30,7 +46,9 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "start"
+        "type": "start",
+        "name": "Parking",
+        "altitude": "2434 m"
       },
       "geometry": {
         "type": "Point",
