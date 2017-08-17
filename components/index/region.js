@@ -61,6 +61,7 @@ class Region extends Component {
               this.props.parks[park].map((rando, i, randos) => (
                 <span key={rando.id}
                   onMouseEnter={() => this.setState({highlight: rando.coords})}
+                  onClick={() => this.setState({highlight: rando.coords})}
                 >
                 <Link prefetch
                   href={`/${new Date(rando.date).getFullYear()}/${rando.id}`}

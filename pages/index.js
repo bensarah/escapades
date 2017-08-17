@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import Head from 'next/head'
+import Emoji from '../components/emoji'
 import Page from '../layouts/main'
 import PostInfo from '../components/index/post-info'
 import Header from '../components/index/header'
@@ -39,7 +40,7 @@ class Index extends Component {
             <div id='geographical-section'>
               <div className='py24'>
                 <div className='pl36 pb18'>
-                  <h2 className='pt12 txt-xl txt-bold'>Des deux côtés de l’Atlantique</h2>
+                  <h2 className='pt12 txt-xl txt-bold'><Emoji name='earth-africa'/> Des deux côtés de l’Atlantique</h2>
                   <p className='pt12'>
                     Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
                     <br />
@@ -57,7 +58,7 @@ class Index extends Component {
             <div id='chronological-section'>
               <div className='py24'>
                 <div className='px18 pb18'>
-                  <h2 className='pt12 txt-xl txt-bold'>Tant de sentiers parcourus depuis 2012</h2>
+                  <h2 className='pt12 txt-xl txt-bold'><Emoji name='watch'/> Sur les sentiers depuis 2012</h2>
                   <p className='pt12'>
                     Vous pouvez retrouver ci-dessous les mêmes randonnées que dans la précédente section, cette fois-ci ordonnées chronologiquement.
                     <br />
@@ -76,7 +77,6 @@ class Index extends Component {
                           title={title}
                           subtitle={park}
                           header={header}
-                          highlight={() => this.setState({highlight: coords})}
                         />
                       ))
                   }

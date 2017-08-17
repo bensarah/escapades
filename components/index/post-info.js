@@ -2,21 +2,19 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import palette from '../../styles/palette'
 
-const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
-  const polygon = '0,0 300,0 300,170 160,170 150,180 140,170 0,170'
+const PostInfo = ({ id, date, title, subtitle, header }) => {
+  const polygon = '0,0 240,0 240,170 130,170 120,180 110,170 0,170'
 
   return (
       <div>
         <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
           <svg
-            className='post flex-child relative w300 mx30 unround cursor-pointer'
-            onMouseEnter={highlight}
-            onClick={highlight}
-            height='180' width='360'
+            className='post flex-child relative w240 mx30 unround cursor-pointer'
+            height='180' width='300'
           >
             <defs>
-              <pattern id={'img' + id} patternUnits='userSpaceOnUse' height='180' width='360'>
-                <image x='0' y='0' height='180' width='360' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
+              <pattern id={'img' + id} patternUnits='userSpaceOnUse' height='180' width='300'>
+                <image x='0' y='0' height='180' width='300' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
               </pattern>
               <linearGradient id={'grad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
                 <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.4}} />
@@ -35,10 +33,10 @@ const PostInfo = ({ id, date, title, subtitle, highlight, header }) => {
           </svg>
         </Link>
 
-        <svg className='timeline' height='42' width='360'>
-          <line x1='0' y1='12' x2='360' y2='12' style={{stroke: palette.grisClair, strokeWidth: 2}}/>
-          <circle cx='180' cy='12' r='5' style={{stroke: palette.bleuNuit, strokeWidth: 3, fill: palette.tournesol}}/>
-          <text className='txt-s' x='180' y='36' fill={palette.grisClair} textAnchor='middle' >{date}</text>
+        <svg className='timeline' height='42' width='300'>
+          <line x1='0' y1='12' x2='300' y2='12' style={{stroke: palette.grisClair, strokeWidth: 2}}/>
+          <circle cx='150' cy='12' r='5' style={{stroke: palette.bleuNuit, strokeWidth: 3, fill: palette.tournesol}}/>
+          <text className='txt-s' x='150' y='36' fill={palette.grisClair} textAnchor='middle' >{date}</text>
         </svg>
 
         <style jsx>{`
@@ -67,7 +65,6 @@ PostInfo.propTypes = {
   date: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  highlight: PropTypes.func,
   header: PropTypes.string
 }
 
