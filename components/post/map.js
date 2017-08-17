@@ -35,13 +35,23 @@ class Map extends Component {
       unit: 'metric'
     }))
 
-    this.map = map
+    map.scrollZoom.disable()
+    if ('ontouchstart' in window) {
+      // for touch screens
+      this.map.dragPan.disable()
+    }
+
+    map.once('mousedown', () => {
+      this.setStyle('maximal')
+      this.map.scrollZoom.enable()
+      this.map.dragPan.enable()
+    })
+
     this.props.onMap(map)
-    this.style = style
 
     map.on('load', () => {
-      this.map.resize()
-      if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
+      map.resize()
+      if (this.props.trail) map.getSource('trail').setData(this.props.trail)
     })
   }
 }
