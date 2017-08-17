@@ -117,7 +117,7 @@
     "glyphs": "mapbox://fonts/benjamintd/{fontstack}/{range}.pbf",
     "layers": [
         {
-            "id": "minimal--background",
+            "id": "background",
             "type": "background",
             "layout": {
                 "visibility": "visible"
@@ -630,7 +630,7 @@
             }
         },
         {
-            "id": "minimal--contour-line",
+            "id": "contour-line",
             "type": "line",
             "metadata": {
                 "mapbox:group": "1444933837268.9458"
@@ -689,7 +689,7 @@
             }
         },
         {
-            "id": "minimal--contour-line-index",
+            "id": "contour-line-index",
             "type": "line",
             "metadata": {
                 "mapbox:group": "1444933837268.9458"
@@ -748,7 +748,7 @@
             }
         },
         {
-            "id": "minimal--hillshade_highlight_bright",
+            "id": "hillshade_highlight_bright",
             "type": "fill",
             "metadata": {
                 "mapbox:group": "1444855815295.714"
@@ -780,7 +780,7 @@
             }
         },
         {
-            "id": "minimal--hillshade_highlight_med",
+            "id": "hillshade_highlight_med",
             "type": "fill",
             "metadata": {
                 "mapbox:group": "1444855815295.714"
@@ -811,7 +811,7 @@
             }
         },
         {
-            "id": "minimal--hillshade_shadow_faint",
+            "id": "hillshade_shadow_faint",
             "type": "fill",
             "metadata": {
                 "mapbox:group": "1444855815295.714"
@@ -843,7 +843,7 @@
             }
         },
         {
-            "id": "minimal--hillshade_shadow_med",
+            "id": "hillshade_shadow_med",
             "type": "fill",
             "metadata": {
                 "mapbox:group": "1444855815295.714"
@@ -874,7 +874,7 @@
             }
         },
         {
-            "id": "minimal--hillshade_shadow_dark",
+            "id": "hillshade_shadow_dark",
             "type": "fill",
             "metadata": {
                 "mapbox:group": "1444855815295.714"
@@ -905,7 +905,7 @@
             }
         },
         {
-            "id": "minimal--hillshade_shadow_extreme",
+            "id": "hillshade_shadow_extreme",
             "type": "fill",
             "metadata": {
                 "mapbox:group": "1444855815295.714"
@@ -937,7 +937,7 @@
             }
         },
         {
-            "id": "minimal--waterway-river-canal-shadow",
+            "id": "waterway-river-canal-shadow",
             "type": "line",
             "source": "composite",
             "source-layer": "waterway",
@@ -1015,7 +1015,7 @@
             }
         },
         {
-            "id": "minimal--waterway-river-canal",
+            "id": "waterway-river-canal",
             "type": "line",
             "source": "composite",
             "source-layer": "waterway",
@@ -1073,7 +1073,7 @@
             }
         },
         {
-            "id": "minimal--waterway-small",
+            "id": "waterway-small",
             "type": "line",
             "source": "composite",
             "source-layer": "waterway",
@@ -1119,7 +1119,7 @@
             }
         },
         {
-            "id": "minimal--water-shadow",
+            "id": "water-shadow",
             "type": "fill",
             "source": "composite",
             "source-layer": "water",
@@ -1150,7 +1150,7 @@
             }
         },
         {
-            "id": "minimal--water",
+            "id": "water",
             "type": "fill",
             "source": "composite",
             "source-layer": "water",
@@ -10481,7 +10481,7 @@
             }
         },
         {
-            "id": "minimal--trail-highlight",
+            "id": "trail-highlight",
             "source": "trail-highlight",
             "type": "line",
             "paint": {
@@ -10495,7 +10495,7 @@
             }
         },
         {
-            "id": "minimal--trail-casing",
+            "id": "trail-casing",
             "source": "trail",
             "type": "line",
             "paint": {
@@ -10508,7 +10508,7 @@
             }
         },
         {
-            "id": "minimal--trail",
+            "id": "trail",
             "source": "trail",
             "type": "line",
             "paint": {
@@ -10521,7 +10521,7 @@
             }
         },
         {
-            "id": "minimal--circle-outline-casing",
+            "id": "circle-outline-casing",
             "source": "trail",
             "type": "circle",
             "paint": {
@@ -10531,7 +10531,7 @@
             "filter": ["==", "$type", "Point"]
         },
         {
-            "id": "minimal--circle-outline",
+            "id": "circle-outline",
             "source": "trail",
             "type": "circle",
             "paint": {
@@ -10541,7 +10541,7 @@
             "filter": ["==", "$type", "Point"]
         },
         {
-            "id": "minimal--circle",
+            "id": "circle",
             "source": "trail",
             "type": "circle",
             "paint": {
@@ -10551,7 +10551,7 @@
             "filter": ["==", "$type", "Point"]
         },
         {
-            "id": "minimal--camp",
+            "id": "camp",
             "source": "trail",
             "type": "symbol",
             "layout": {
@@ -10560,7 +10560,7 @@
             "filter": ["==", "type", "camp"]
         },
         {
-            "id": "minimal--wetland",
+            "id": "wetland",
             "source": "trail",
             "type": "symbol",
             "layout": {
@@ -10569,7 +10569,7 @@
             "filter": ["==", "type", "wetland"]
         },
         {
-            "id": "minimal--start",
+            "id": "start",
             "source": "trail",
             "type": "symbol",
             "layout": {
@@ -10578,7 +10578,7 @@
             "filter": ["==", "type", "start"]
         },
         {
-            "id": "minimal--peak",
+            "id": "peak",
             "source": "trail",
             "type": "symbol",
             "layout": {
@@ -10587,7 +10587,7 @@
             "filter": ["==", "type", "peak"]
         },
         {
-            "id": "minimal--point-highlight-circle",
+            "id": "point-highlight-circle",
             "source": "point-highlight",
             "type": "circle",
             "paint": {
@@ -10601,7 +10601,7 @@
             "filter": ["==", "$type", "Point"]
         },
         {
-            "id": "minimal--point-highlight",
+            "id": "point-highlight",
             "source": "point-highlight",
             "type": "symbol",
             "layout": {

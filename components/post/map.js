@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import {Component} from 'react'
-import _ from 'lodash'
 import style from '../../styles/style'
 
 /* global mapboxgl */
@@ -26,7 +25,7 @@ class Map extends Component {
 
     const map = new mapboxgl.Map({
       container: this.props.container || 'map',
-      style: this.minimalStyle(style),
+      style: style,
       center: this.props.center || [-33, 40],
       zoom: this.props.zoom || 1
     })
@@ -40,75 +39,10 @@ class Map extends Component {
     this.props.onMap(map)
     this.style = style
 
-    this.enableStyleChange()
-    map.on('load', () => this.onLoad())
-  }
-
-  enableStyleChange () {
-    // Maximal style on hover
-    this.map.on('mousemove', () => {
-      this.setStyle('maximal')
+    map.on('load', () => {
+      this.map.resize()
+      if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
     })
-    this.map.on('mouseout', () => {
-      this.setStyle('minimal')
-    })
-
-    // Only enable scroll zoom (and dragpan for touch device)
-    // once the map has been clicked once
-    this.map.scrollZoom.disable()
-    if ('ontouchstart' in window) {
-      // for touch screens
-      this.map.dragPan.disable()
-    }
-
-    this.map.once('mousedown', () => {
-      this.setStyle('maximal')
-      this.map.scrollZoom.enable()
-      this.map.dragPan.enable()
-    })
-  }
-
-  onLoad () {
-    this.map.resize()
-    if (this.props.trail) this.map.getSource('trail').setData(this.props.trail)
-  }
-
-  minimalStyle (style) {
-    let s = _.cloneDeep(style)
-
-    s.layers.forEach(l => {
-      if (!l.id.startsWith('minimal--')) {
-        if (l.type === 'symbol') {
-          l.layout.visibility = 'none'
-        } else {
-          l.paint[l.type + '-opacity'] = 0
-        }
-      }
-    })
-
-    return s
-  }
-
-  setStyle (str) {
-    if (str === 'minimal') {
-      this.style.layers.forEach(l => {
-        if (!l.id.startsWith('minimal--')) {
-          if (l.type === 'symbol') {
-            this.map.setLayoutProperty(l.id, 'visibility', 'none')
-          } else {
-            this.map.setPaintProperty(l.id, l.type + '-opacity', 0)
-          }
-        }
-      })
-    } else {
-      this.style.layers.forEach(l => {
-        if (l.type === 'symbol') {
-          this.map.setLayoutProperty(l.id, 'visibility', 'visible')
-        } else {
-          this.map.setPaintProperty(l.id, l.type + '-opacity', l.paint[l.type + '-opacity'])
-        }
-      })
-    }
   }
 }
 
