@@ -44,11 +44,11 @@ class Region extends Component {
   formatName () {
     switch (this.props.name) {
     case 'California':
-      return <h3 className='txt-bold color-white'><Emoji name='us'/> Californie</h3>
+      return <h3 className='txt-bold txt-l color-white'><Emoji name='us'/> Californie</h3>
     case 'France':
-      return <h3 className='txt-bold color-white'><Emoji name='fr'/> France</h3>
+      return <h3 className='txt-bold txt-l color-white'><Emoji name='fr'/> France</h3>
     default:
-      return <h3 className='txt-bold color-white'>{this.props.name}</h3>
+      return <h3 className='txt-bold txt-l color-white'>{this.props.name}</h3>
     }
   }
 
@@ -63,9 +63,7 @@ class Region extends Component {
                   onMouseEnter={() => this.setState({highlight: rando.coords})}
                   onClick={() => this.setState({highlight: rando.coords})}
                 >
-                <Link prefetch
-                  href={`/${new Date(rando.date).getFullYear()}/${rando.id}`}
-                  >
+                <Link href={rando.url}>
                   <a>{rando.title}</a>
                 </Link>
                 {i !== (randos.length - 1) ? <span className='px12'>·</span> : null}

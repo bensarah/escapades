@@ -9,12 +9,16 @@ const IndexHeader = ({background}) => (
     className='header w-full display-block relative'
     style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}
   >
-    <div className='align-l align-center absolute bottom pb120-ml pb60 pl60 z2 animation-fade-in animation--speed-1'>
-      <Logo style={{fill: 'white', width: '150px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='pb18'/>
-      <LogoText style={{fill: 'white', height: '80px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}}/>
+      <div className='logo-container align-l align-center absolute bottom pl60 z2 animation-fade-in animation--speed-1 wmin120 wmin180-ml'>
+      <Logo style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full pb18 px30'/>
+      <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full '/>
       <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
     </div>
     <style jsx>{`
+      .logo-container {
+        padding-bottom: 25vh;
+      }
+
       .header {
           height: 100vh;
           z-index: 1;
