@@ -7,7 +7,7 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
 
   return (
       <div>
-        <Link prefetch href={url}>
+        <Link href={url}>
           <svg
             className='post flex-child relative w240 mx30 unround cursor-pointer'
             height='180' width='300'

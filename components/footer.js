@@ -13,12 +13,12 @@ const Footer = ({ randomRando, except }) => (
         </span>
         <span className='px18'/>
 
-        <Link href='/'>
+        <Link prefetch href='/'>
           <a className='cursor-pointer'><Emoji name='house'/><span className='pl6'>Page d’accueil</span></a>
         </Link>
         <span className='px18'/>
 
-        <Link href='/about'>
+        <Link prefetch href='/about'>
           <a className='cursor-pointer'><Emoji name='couple'/><span className='pl6'>À propos</span></a>
         </Link>
         <span className='px18'/>
@@ -60,7 +60,7 @@ function randomPostLink (posts, except) {
   var post = randomPost(posts, except)
   if (post) {
     return (
-      <Link href={post.url}>
+      <Link prefetch href={post.url}>
           <a className='cursor-pointer'>
             <Emoji name='smiley'/>
             <span className='pl6'>

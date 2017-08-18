@@ -63,9 +63,7 @@ class Region extends Component {
                   onMouseEnter={() => this.setState({highlight: rando.coords})}
                   onClick={() => this.setState({highlight: rando.coords})}
                 >
-                <Link prefetch
-                  href={rando.url}
-                  >
+                <Link href={rando.url}>
                   <a>{rando.title}</a>
                 </Link>
                 {i !== (randos.length - 1) ? <span className='px12'>·</span> : null}
