@@ -38,13 +38,12 @@ class Map extends Component {
     map.scrollZoom.disable()
     if ('ontouchstart' in window) {
       // for touch screens
-      this.map.dragPan.disable()
+      map.dragPan.disable()
     }
 
     map.once('mousedown', () => {
-      this.setStyle('maximal')
-      this.map.scrollZoom.enable()
-      this.map.dragPan.enable()
+      map.scrollZoom.enable()
+      map.dragPan.enable()
     })
 
     this.props.onMap(map)

@@ -2,8 +2,9 @@ import PropTypes from 'prop-types'
 import Emoji from './emoji'
 import palette from '../styles/palette'
 import Link from 'next/link'
+import posts from '../posts.js'
 
-const Footer = ({ children }) => (
+const Footer = ({ randomRando, except }) => (
   <div className='footer relative hmin120 py30 px30 color-gray-light'>
     <div className='w-full display-block'/>
       <div>
@@ -20,6 +21,14 @@ const Footer = ({ children }) => (
         <Link href='/about'>
           <a className='cursor-pointer'><Emoji name='couple'/><span className='pl6'>À propos</span></a>
         </Link>
+        <span className='px18'/>
+
+        {
+          randomRando
+          ? randomPostLink(posts, except)
+          : null
+        }
+
         <br/>
 
         <div className='bottom pt30 color-lighten25'>
@@ -29,20 +38,43 @@ const Footer = ({ children }) => (
       </div>
 
       <img className='none block-ml absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`} draggable={false}></img>
-    <style jsx>{`
+    <style jsx global>{`
       .footer {
         background-color: ${palette.bleuNuit};
       }
 
-      .clickable:hover, a:hover {
+      .footer .clickable:hover, .footer a:hover {
         color: white;
       }
     `}</style>
   </div>
 )
 
+function randomPost (posts, except) {
+  var filtered = posts.filter(p => p.id !== except)
+  if (filtered.length > 0) return filtered[Math.floor(Math.random() * posts.length)]
+  else return null
+}
+
+function randomPostLink (posts, except) {
+  var post = randomPost(posts, except)
+  if (post) {
+    return (
+      <Link href={post.url}>
+          <a className='cursor-pointer'>
+            <Emoji name='smiley'/>
+            <span className='pl6'>
+              Avide d’autres aventures? Lisez notre récit de {post.title}
+            </span>
+          </a>
+      </Link>
+    )
+  } else return null
+}
+
 Footer.propTypes = {
-  children: PropTypes.string
+  randomRando: PropTypes.bool,
+  except: PropTypes.string
 }
 
 export default Footer

@@ -65,7 +65,7 @@ class Post extends Component {
           </article>
         </div>
         <PhotoGallery photos={this.props.photos}/>
-        <Footer />
+        <Footer randomRando={true} except={this.props.id}/>
         <style jsx>{`
           article {
             background-color: ${palette.bleuNuit};
@@ -109,7 +109,8 @@ Post.propTypes = {
   trail: PropTypes.object,
   photos: PropTypes.array,
   jours: PropTypes.string,
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  id: PropTypes.string
 }
 
 export default Post
