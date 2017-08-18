@@ -34,6 +34,13 @@ class Section extends Component {
       </div>
     )
   }
+
+  componentDidMount () {
+    if (this.props.sidebarContent && this.props.sidebarContent.props && this.props.sidebarContent.props.src) {
+      var i = new Image()
+      i.src = this.props.sidebarContent.props.src // preload image
+    }
+  }
 }
 
 Section.propTypes = {

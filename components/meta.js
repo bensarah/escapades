@@ -13,11 +13,11 @@ const Meta = () => (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no' />
       <link rel='icon' href='/static/favicon.png/'/>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
       <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
       <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
       <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
     </Head>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
     <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />
     <style jsx global>{`
