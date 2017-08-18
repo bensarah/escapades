@@ -10521,31 +10521,13 @@
             }
         },
         {
-            "id": "circle-outline-casing",
-            "source": "trail",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 17,
-                "circle-color": "#a72d18"
-            },
-            "filter": ["==", "$type", "Point"]
-        },
-        {
-            "id": "circle-outline",
-            "source": "trail",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 16,
-                "circle-color": "#C63A22"
-            },
-            "filter": ["==", "$type", "Point"]
-        },
-        {
             "id": "circle",
             "source": "trail",
             "type": "circle",
             "paint": {
                 "circle-radius": 13,
+                "circle-stroke-width": 3,
+                "circle-stroke-color": "#C63A22",
                 "circle-color": "#ffffff"
             },
             "filter": ["==", "$type", "Point"]
@@ -10606,6 +10588,43 @@
             "type": "symbol",
             "layout": {
                 "icon-image": "hiker"
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "trail-altitude-label",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "text-field": "{altitude}",
+                "text-size": 10,
+                "text-font": ["Cabin Medium", "Arial Unicode MS Regular"],
+                "text-anchor": "bottom",
+                "text-line-height": 1,
+                "text-offset": [0, -1.5]
+            },
+            "paint": {
+              "text-color": "#a72d18",
+              "text-halo-color": "#ffffff",
+              "text-halo-width": 1
+            },
+            "filter": ["==", "$type", "Point"]
+        },
+        {
+            "id": "trail-label",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "text-field": "{name}",
+                "text-font": ["Cabin Medium", "Arial Unicode MS Regular"],
+                "text-anchor": "bottom",
+                "text-line-height": 0.5,
+                "text-offset": [0, -1.9]
+            },
+            "paint": {
+              "text-color": "#a72d18",
+              "text-halo-color": "#ffffff",
+              "text-halo-width": 1
             },
             "filter": ["==", "$type", "Point"]
         },

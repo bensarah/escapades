@@ -63,7 +63,7 @@ function randomPostLink (posts, except) {
             <a className='cursor-pointer'>
               <Emoji name='smiley'/>
               <span className='pl6'>
-                Avide d’autres aventures? Lisez notre récit de {post.title}
+                Avide d’autres aventures&nbsp;? Lisez notre récit de {post.title}
               </span>
             </a>
         </Link>

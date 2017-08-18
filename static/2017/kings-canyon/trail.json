@@ -4,6 +4,20 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "peak",
+        "name": "Mitchell Peak",
+        "altitude": "3150 m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.715127, 36.731627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "type": "camp",
         "name": "Seville Lake",
         "altitude": "2580 m"
@@ -26,20 +40,6 @@
         "type": "Point",
         "coordinates": [
           -118.741745, 36.716221
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "peak",
-        "name": "Mitchell Peak",
-        "altitude": "3150 m"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -118.715127, 36.731627
         ]
       }
     },
