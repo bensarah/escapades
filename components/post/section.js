@@ -37,8 +37,10 @@ class Section extends Component {
 
   componentDidMount () {
     if (this.props.sidebarContent && this.props.sidebarContent.props && this.props.sidebarContent.props.src) {
-      var i = new Image()
-      i.src = this.props.sidebarContent.props.src // preload image
+      window.addEventListener('load', () => {
+        var i = new Image()
+        i.src = this.props.sidebarContent.props.src // preload image
+      })
     }
   }
 }
