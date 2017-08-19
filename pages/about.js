@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Page from '../layouts/main'
 import palette from '../styles/palette'
 import Footer from '../components/footer'
+import Emoji from '../components/emoji'
 import Logo from '../components/logo'
 import LogoText from '../components/logo-text'
 import Link from 'next/link'
@@ -23,41 +24,44 @@ class About extends Component {
             </div>
           </Link>
           <div className='px18 py18 flex-parent flex-parent--center-cross flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
-            <div className='inline w360 h360' style={{
-              background: `url(/static/about/nous.jpg) no-repeat center center`,
+            <div className='inline w360 ' style={{
+              background: `url(/static/about/nous2.jpg) no-repeat center center`,
               backgroundSize: 'cover'
             }}></div>
             <div className='px36-ml py0-ml py36 w360 w-auto-ml txt-l-ml'>
+              <h2 className='txt-xl txt-bold'>Hello !</h2>
               <p>
-                On aime être perdus dans la nature, sans téléphone ni wifi.
-              </p>
-              <p>
-                Parfois on aime le aussi partager nos histoires sur internet, donc on a construit ce blog avec nos petits mains.
-              </p>
-              <p>
-                Amis développeurs, ce site est écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
-                et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
-              </p>
-              <p>
-                Amis designers, nous sommes autodidactes donc vos conseils sont les bienvenus.
-              </p>
-              <p>
-                Amis randonneurs, où nous conseillez-vous d'aller&nbsp;?
+                On adore randonner : être coupés du monde <Emoji name='no-mobile-phones'/> et voir des paysages magnifiques <Emoji name='sunrise-over-mountains'/>.
+                <br />
+                <Logo style={{fill: '#ffffff', height: '16px'}} className='inline'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline'/> est né de la volonté de partager joliment nos aventures et photos.
               </p>
               <br/>
-              <p className='monospace'>
-                S:
-                <a href='https://github.com/sarahmamy'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
-                <a href='https://instagram.com/sarah_mamy'><Isvg className={this.styles.icon} src={`/static/icons/instagram.svg`}></Isvg></a>
-                <a href='mailto:mamysrh@gmail.com'><Isvg className={this.styles.icon} src={`/static/icons/email.svg`}></Isvg></a>
-                <br className='py12'/>
-              </p>
-              <p className='monospace'>
-                B:
-                <a href='https://github.com/benjamintd'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
-                <a href='https://instagram.com/_benjamintd'><Isvg className={this.styles.icon} src={`/static/icons/instagram.svg`}></Isvg></a>
-                <a href='mailto:benjamin.tdm@gmail.com'><Isvg className={this.styles.icon} src={`/static/icons/email.svg`}></Isvg></a>
-              </p>
+              <div>
+                <p className='txt-m'>
+                  <img draggable="false" className='h24'alt='Tech & Code' src="https://twemoji.maxcdn.com/2/72x72/1f469-1f3fe-200d-1f4bb.png"/> Site écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
+                  et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
+                </p>
+                <p className='txt-m'>
+                  <img draggable="false" className='h24'alt='Web Design' src="https://twemoji.maxcdn.com/2/72x72/1f468-1f3fb-200d-1f3a8.png"/> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:NotreEmailICI'>avides de vos conseils</a>.
+                </p>
+                <p className='txt-m'>
+                  <img draggable="false" className='h24'alt='Cher amis randonneurs' src="https://twemoji.maxcdn.com/2/72x72/1f9d7-1f3fc-200d-2640-fe0f.png"/> Des <a href='mailto:NotreEmailICI'>recommandations</a> pour notre prochaine rando ?.
+                </p>
+              <br/>
+              </div>
+              <div className='align-right'>
+                <span className='bad pr6'>
+                  Sarah
+                  <a href='https://github.com/sarahmamy'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
+                  <a href='https://instagram.com/sarah_mamy'><Isvg className={this.styles.icon} src={`/static/icons/instagram.svg`}></Isvg></a>
+                </span>
+                &
+                <span className='bad pl6'>
+                   Benjamin
+                  <a href='https://github.com/benjamintd'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
+                  <a href='https://instagram.com/_benjamintd'><Isvg className={this.styles.icon} src={`/static/icons/instagram.svg`}></Isvg></a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -77,6 +81,10 @@ class About extends Component {
 
           .monospace {
             font-family: monospace;
+          }
+
+          .bad {
+            font-family: 'Bad Script';
           }
 
           a {
@@ -100,7 +108,7 @@ class About extends Component {
 
   get styles () {
     return {
-      icon: 'icon w24 h24 inline-block mx6 pb-neg12'
+      icon: 'icon w18 h18 inline-block ml6 pb-neg12'
     }
   }
 }
