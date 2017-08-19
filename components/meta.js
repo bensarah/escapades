@@ -60,11 +60,11 @@ const Meta = () => (
 
       /* font families and other helper classes */
 
-      .bad-script {
+      .bad-script, .bad-script * {
         font-family: 'Bad Script', serif;
       }
 
-      .anton {
+      .anton, .anton * {
         font-family: 'Anton', sans-serif;
       }
 

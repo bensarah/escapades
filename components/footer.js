@@ -4,11 +4,11 @@ import palette from '../styles/palette'
 import Link from 'next/link'
 import PreFooter from './pre-footer'
 
-const Footer = ({ randomRando, except }) => (
+const Footer = ({ cta, quote, url, prefooter }) => (
   <div className='footer bottom w-full'>
     {
-      randomRando
-      ? <PreFooter except={except}/>
+      prefooter
+      ? <PreFooter cta={cta} quote={quote} url={url}/>
       : null
     }
     <div className='relative py30 px30 hmin120 color-gray-light'>
@@ -48,8 +48,10 @@ const Footer = ({ randomRando, except }) => (
 )
 
 Footer.propTypes = {
-  randomRando: PropTypes.bool,
-  except: PropTypes.string
+  prefooter: PropTypes.bool,
+  cta: PropTypes.string,
+  quote: PropTypes.string,
+  url: PropTypes.string
 }
 
 export default Footer

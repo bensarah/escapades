@@ -86,7 +86,12 @@ class Index extends Component {
             </div>
           </div>
         </div>
-        <Footer randomRando={true}/>
+        <Footer
+          prefooter={true}
+          cta='Vous ne savez pas quelle rando choisir ? Commencez par l’ascension de Mitchell Peak'
+          url='/2017/kings-canyon'
+          quote='La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut...'
+        />
 
         <style jsx>{`
           .main {
