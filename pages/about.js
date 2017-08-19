@@ -30,26 +30,33 @@ class About extends Component {
             }}></div>
             <div className='px36-ml py0-ml py36 w360 w-auto-ml txt-l-ml'>
               <h2 className='txt-xl txt-bold'>Hello !</h2>
+              <br/>
               <p>
                 On adore randonner : être coupés du monde <Emoji name='no-mobile-phones'/> et voir des paysages magnifiques <Emoji name='sunrise-over-mountains'/>.
                 <br />
                 <Logo style={{fill: '#ffffff', height: '16px'}} className='inline'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline'/> est né de la volonté de partager joliment nos aventures et photos.
               </p>
               <br/>
+              <p>
+                Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
+              </p>
+              <br/>
               <div>
+                <div>
+                  <p className='txt-m align-middle'>
+                    <Isvg className='icon drop-shadow w24 h24 inline-block' src={`/static/icons/code.svg`} title='Tech & Code'></Isvg> Site écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
+                    et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
+                  </p>
+                </div>
                 <p className='txt-m'>
-                  <img draggable="false" className='h24'alt='Tech & Code' src="https://twemoji.maxcdn.com/2/72x72/1f469-1f3fe-200d-1f4bb.png"/> Site écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
-                  et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
+                  <Isvg className='icon drop-shadow w24 h24 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:NotreEmailICI'>avides de vos conseils</a>.
                 </p>
                 <p className='txt-m'>
-                  <img draggable="false" className='h24'alt='Web Design' src="https://twemoji.maxcdn.com/2/72x72/1f468-1f3fb-200d-1f3a8.png"/> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:NotreEmailICI'>avides de vos conseils</a>.
-                </p>
-                <p className='txt-m'>
-                  <img draggable="false" className='h24'alt='Cher amis randonneurs' src="https://twemoji.maxcdn.com/2/72x72/1f9d7-1f3fc-200d-2640-fe0f.png"/> Des <a href='mailto:NotreEmailICI'>recommandations</a> pour notre prochaine rando ?.
+                  <Isvg className='icon drop-shadow w24 h24 inline-block' src={`/static/icons/hiker.svg`} title='Chers amis randonneurs'></Isvg> Des <a href='mailto:NotreEmailICI'>recommandations</a> pour notre prochaine rando ?
                 </p>
               <br/>
               </div>
-              <div className='align-right'>
+              <div className='align-r'>
                 <span className='bad pr6'>
                   Sarah
                   <a href='https://github.com/sarahmamy'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
@@ -98,7 +105,7 @@ class About extends Component {
         <style jsx global>{`
           html, body {
             background-color: ${palette.bleuNuit};
-            color: white;
+            color: ${palette.grisClair};
             height: 100%;
           }
         `}</style>
