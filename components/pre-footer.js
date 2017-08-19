@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Emoji from './emoji'
 import palette from '../styles/palette'
 
 const PreFooter = ({cta, quote, url}) => {
