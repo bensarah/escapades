@@ -33,7 +33,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "NODE_ENV=production next build",
+    "build": "next build",
     "start": "next start",
     "lint": "standard",
     "fix": "standard --fix",
@@ -54,5 +54,12 @@
   "bugs": {
     "url": "https://github.com/benjamintd/hiking-blog/issues"
   },
-  "homepage": "https://github.com/benjamintd/hiking-blog#readme"
+  "homepage": "https://github.com/benjamintd/hiking-blog#readme",
+  "now": {
+    "name": "escapades",
+    "alias": "escapades",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }

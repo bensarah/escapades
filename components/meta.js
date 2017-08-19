@@ -21,6 +21,10 @@ const Meta = () => (
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
     <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />
     <style jsx global>{`
+      html {
+        overflow-y: scroll;
+      }
+
       * {
         margin: 0;
         box-sizing: border-box;
@@ -56,11 +60,11 @@ const Meta = () => (
 
       /* font families and other helper classes */
 
-      .bad-script {
+      .bad-script, .bad-script * {
         font-family: 'Bad Script', serif;
       }
 
-      .anton {
+      .anton, .anton * {
         font-family: 'Anton', sans-serif;
       }
 

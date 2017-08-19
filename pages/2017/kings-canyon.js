@@ -58,6 +58,24 @@ class KingsCanyon extends Component {
             width: 2000,
             height: 3000,
             caption: 'Les manches longues et la tête protégée contre les moustiques'
+          },
+          {
+            src: '/static/2017/kings-canyon/fleur-rouge.jpg',
+            width: 2000,
+            height: 3000,
+            caption: 'Une fleur chelou sous les souches'
+          },
+          {
+            src: '/static/2017/kings-canyon/sommet.jpg',
+            width: 3000,
+            height: 2000,
+            caption: 'Le sommet du Mt Mitchell'
+          },
+          {
+            src: '/static/2017/kings-canyon/malle.jpg',
+            width: 3000,
+            height: 2000,
+            caption: 'En vrac dans la malle'
           }
         ]}
       >

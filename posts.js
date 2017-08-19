@@ -7,7 +7,8 @@ export default [
     id: 'mount-whitney',
     coords: [-118.292369, 36.578282],
     header: '/static/2017/mount-whitney/header.jpg',
-    url: '/2017/mount-whitney'
+    url: '/2017/mount-whitney',
+    quote: 'C’était vraiment magnifique...'
   },
   {
     title: 'Mount Dana',
@@ -17,7 +18,8 @@ export default [
     id: 'mount-dana',
     coords: [-119.221144, 37.899727],
     header: '/static/2017/mount-dana/header.jpg',
-    url: '2017/mount-dana'
+    url: '2017/mount-dana',
+    quote: 'C’était vraiment magnifique...'
   },
   {
     title: 'Mitchell Peak',
@@ -27,7 +29,8 @@ export default [
     id: 'kings-canyon',
     coords: [-118.715210, 36.731693],
     header: '/static/2017/kings-canyon/1.jpg',
-    url: '/2017/kings-canyon'
+    url: '/2017/kings-canyon',
+    quote: 'La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut...'
   },
   {
     title: 'Lassen Peak',
@@ -37,7 +40,8 @@ export default [
     id: 'lassen-peak',
     coords: [-121.505004, 40.488014],
     header: '/static/2016/lassen-peak/header.jpg',
-    url: '/2016/lassen-peak'
+    url: '/2016/lassen-peak',
+    quote: 'C’était vraiment magnifique...'
   },
   {
     title: 'Half Dome',
@@ -47,7 +51,8 @@ export default [
     id: 'half-dome',
     coords: [-119.533147, 37.746009],
     header: '/static/2015/half-dome/header.jpg',
-    url: '2015/half-dome'
+    url: '2015/half-dome',
+    quote: 'C’était vraiment magnifique...'
   },
   {
     title: 'Clouds Rest',
@@ -57,6 +62,7 @@ export default [
     id: 'clouds-rest',
     coords: [-119.489384, 37.767769],
     header: '/static/2015/clouds-rest/header.jpg',
-    url: '2015/clouds-rest'
+    url: '2015/clouds-rest',
+    quote: 'C’était vraiment magnifique...'
   }
 ]

@@ -9,6 +9,7 @@ import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import {findTrail} from '../helpers/trail-extractor'
 import palette from '../styles/palette'
+import posts from '../posts'
 
 class Post extends Component {
   constructor (props) {
@@ -65,7 +66,12 @@ class Post extends Component {
           </article>
         </div>
         <PhotoGallery photos={this.props.photos}/>
-        <Footer randomRando={true} except={this.props.id}/>
+        <Footer
+          prefooter={true}
+          cta={`Avide d’autres aventures ? Lisez notre récit de ${this.state.randomPost.title}`}
+          url={this.state.randomPost.url}
+          quote={this.state.randomPost.quote}
+        />
         <style jsx>{`
           article {
             background-color: ${palette.bleuNuit};
@@ -98,6 +104,14 @@ class Post extends Component {
         `}</style>
       </Page>
     )
+  }
+
+  componentWillMount () {
+    var filtered = posts.filter(p => p.id !== this.props.id)
+    if (filtered.length > 0) {
+      var randomPost = filtered[Math.floor(Math.random() * filtered.length)]
+      this.setState({randomPost})
+    }
   }
 }
 

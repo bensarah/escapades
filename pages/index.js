@@ -23,7 +23,7 @@ class Index extends Component {
         <Head>
           <title>escapades</title>
         </Head>
-        <Header background='/static/header-background.jpg'/>
+        <Header background='/static/index/header-background.jpg'/>
 
         <div className='main'>
           <div className='px18'>
@@ -85,20 +85,13 @@ class Index extends Component {
               </div>
             </div>
           </div>
-
-          <div className='px18 bg-gray-faint color-gray'>
-              <p className='pt30 align-center'>
-                <strong>Vous hésitez entre plusieurs randos ?</strong>
-                <br />
-                Commencez par l’ascension de <a href='/2017/kings-canyon'>Mitchell Peak</a>.
-              </p>
-              <p className='quote pt6 pb30 align-center'>
-                « La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut... »
-              </p>
-          </div>
-
         </div>
-      <Footer/>
+        <Footer
+          prefooter={true}
+          cta='Vous ne savez pas quelle rando choisir ? Commencez par l’ascension de Mitchell Peak'
+          url='/2017/kings-canyon'
+          quote='La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut...'
+        />
 
         <style jsx>{`
           .main {
@@ -122,11 +115,6 @@ class Index extends Component {
 
           h3, .quote, .intro {
             font-size: 20px;
-          }
-
-          .quote {
-            color: ${palette.brique};
-            font-family: 'Bad Script';
           }
 
           a {

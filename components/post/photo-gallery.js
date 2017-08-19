@@ -23,16 +23,11 @@ class PhotoGallery extends React.Component {
   render () {
     if (!this.props.photos || this.props.photos.length === 0) return null
     return (
-      <div className='section mb12 mx12'>
+      <div className='section mb12 mx18'>
         <div className='py18'>
           <h2 className='align-center pb6 txt-xl txt-bold'>Plus de photos <Emoji name='camera'/></h2>
           <p className='align-center txt-m'>Vous pouvez cliquer sur les photos pour les agrandir.</p>
         </div>
-        <Gallery
-          photos={this.props.photos}
-          onClickPhoto={this.openLightbox}
-          margin={3}
-        />
         <Lightbox
           images={this.props.photos}
           currentImage={this.state.currentImage}
@@ -40,6 +35,13 @@ class PhotoGallery extends React.Component {
           onClose={this.closeLightbox}
           onClickPrev={this.gotoPrevious}
           onClickNext={this.gotoNext}
+          width={1600}
+          backdropClosesModal={true}
+        />
+        <Gallery
+          photos={this.props.photos}
+          onClickPhoto={this.openLightbox}
+          margin={3}
         />
         <style jsx>{`
           h2 {
