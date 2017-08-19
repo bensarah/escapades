@@ -5,11 +5,17 @@ function moveSource (map, layer, trail, start, end, options) {
   var interpolation = (options && options.interpolation) || 'cubic'
   var steps = duration / 10
   var g = trailPointsGenerator(trail, start, end, steps, interpolation)
+
+  // remove previously set interval
+  if (map.interval) clearInterval(map.interval)
+
   var interval = setInterval(() => {
     var p = g.next()
     if (p.done) clearInterval(interval)
     else map.getSource(layer).setData(p.value)
   }, 10)
+
+  map.interval = interval
 }
 
 function highlightFromTo (map, trail, start, end, options) {
