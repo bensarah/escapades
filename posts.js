@@ -64,5 +64,16 @@ export default [
     header: '/static/2015/clouds-rest/header.jpg',
     url: '2015/clouds-rest',
     quote: 'C’était vraiment magnifique...'
+  },
+  {
+    title: 'Pic des Trois Seigneurs',
+    park: 'Ariège',
+    region: 'Pyrénées',
+    date: 'Juin 2015',
+    id: 'trois-seigneurs',
+    coords: [42.830609, 1.439942],
+    header: '/static/2015/trois-seigneurs/sommet.jpg',
+    url: '2015/trois-seigneurs',
+    quote: 'Une balade douce et belle en Ariège, parfait pour une mise en jambe dans les Pyrénéées'
   }
 ]
