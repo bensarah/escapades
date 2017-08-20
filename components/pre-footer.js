@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import Emoji from './emoji'
+import posts from '../posts'
 import palette from '../styles/palette'
 
-const PreFooter = ({cta, quote, url}) => {
+const PreFooter = ({except}) => {
+  var post = randomPost(posts, except)
+
   return (
     <div className='px18 py30 bg-gray-faint color-gray align-center'>
-        <Link prefetch href={url}>
+        <Link prefetch href={post.url}>
             <a className='cursor-pointer'>
-              {cta}
+              <Emoji name='smiley'/> Avide d’autres aventures&nbsp;? Lisez notre récit de {post.title}
+              <span className='icon-inliner px6'><svg className='icon icon--s'><use xlinkHref='#icon-arrow-right'/></svg></span>
             </a>
         </Link>
-        {
-          quote
-          ? <p className='quote pt6 txt-l'>«&nbsp;{quote}&nbsp;»</p>
-          : null
-        }
+        <p className='quote pt6 txt-l'>
+          « La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut... »
+        </p>
       <style jsx>{`
         .quote {
           color: ${palette.brique};
@@ -33,10 +36,14 @@ const PreFooter = ({cta, quote, url}) => {
   )
 }
 
+function randomPost (posts, except) {
+  var filtered = posts.filter(p => p.id !== except)
+  if (filtered.length > 0) return filtered[Math.floor(Math.random() * filtered.length)]
+  else return null
+}
+
 PreFooter.propTypes = {
-  cta: PropTypes.string,
-  quote: PropTypes.string,
-  url: PropTypes.string
+  except: PropTypes.string
 }
 
 export default PreFooter
