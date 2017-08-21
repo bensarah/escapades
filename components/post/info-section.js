@@ -106,6 +106,12 @@ class InfoSection extends Component {
       case 'Eau sur le chemin':
         icon = 'water'
         break
+      case 'Points de vue':
+        icon = 'binoculars'
+        break
+      case 'Boucle':
+        icon = 'loop'
+        break
       default:
         icon = 'mountains'
         break

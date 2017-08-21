@@ -20,7 +20,7 @@ class TroisSeigneurs extends Component {
         trail={trail}
         id='trois-seigneurs'
         jours={'1/2 journée · 0 nuit'}
-        tags={['Facile', 'Points de vue']}
+        tags={['Facilement abordable', 'Points de vue', 'Boucle']}
         photos={[
           {
             src: '/static/2015/trois-seigneurs/benjamin.jpg',
