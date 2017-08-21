@@ -187,7 +187,7 @@ class TroisSeigneurs extends Component {
         </Section>
 
         <Section
-        sidebarContent={<Img src='/static/2015/trois-seigneurs/arbu.jpg'/>}
+          sidebarContent={<Img src='/static/2015/trois-seigneurs/arbu.jpg'/>}
         >
           <P>
             Nous naviguons à la vue des cairns et passons à côté de l’étang d’Arbu. Les paysages sont rocailleux et le soleil se cachera définitivement sous un épais matelas de nages.
@@ -209,6 +209,7 @@ class TroisSeigneurs extends Component {
           action={() => {
             this.state.map.flyTo({center: [1.440094, 42.830493], zoom: 13.5, duration: 4000})
           }}
+          Last={true}
         >
           <P>
             PS : D’où vient le nom <em>Pic des Trois Seigneurs</em> ?
