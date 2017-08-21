@@ -103,7 +103,7 @@ class TroisSeigneurs extends Component {
           action={() => highlightFromTo(this.state.map, trail, 0, 0.4, {pointHighlight: false})}
         >
           <P>
-            Après un réveil matinal pour faire la route depuis Montaut, en passant par le Port de Lers, nous débutons donc l’ascension vers 9h30 par l'arête ouest.
+            Après un réveil matinal pour faire la route depuis Montaut, en passant par le Port de Lers, nous débutons donc l’ascension vers 9h30 par l&#39;arête ouest.
           </P>
         </Section>
 
