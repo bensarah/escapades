@@ -28,8 +28,8 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
             <polygon points={polygon} fill={`url(#${'img' + id})`} />
             <polygon className='filter' points={polygon} fill={`url(#${'grad' + id})`} opacity='1'/>
             <polygon className='hoverfilter' points={polygon} fill={`url(#${'hovergrad' + id})`} opacity='0'/>
-            <text className='anton txt-shadow txt-xl' x='20' y='120' fill='white'>{title.toUpperCase()}</text>
-            <text className='bad-script txt-shadow txt-bold txt-l' x='20' y='150' fill='white'>{subtitle}</text>
+            <text className='anton txt-shadow txt-xl transla transition' x='20' y='150' fill='white'>{title.toUpperCase()}</text>
+            <text className='bad-script txt-shadow txt-bold txt-l apparition-text transition' x='20' y='150' fill='white' opacity='0'>{subtitle}</text>
           </svg>
         </Link>
 
@@ -40,7 +40,7 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
         </svg>
 
         <style jsx>{`
-          .filter, .hoverfilter {
+          .filter, .hoverfilter .apparition-text{
             transition: opacity 0.3s ease-out;
           }
 
@@ -55,6 +55,14 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
             opacity: 1;
           }
 
+          .post:hover .transla {
+            -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+          }
+
+          .post:hover .apparition-text {
+            opacity:1;
+          }
         `}</style>
       </div>
   )
