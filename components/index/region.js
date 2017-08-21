@@ -15,10 +15,9 @@ class Region extends Component {
 
   render () {
     return (
-      <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--column-reverse flex-parent--row-ml w-full'>
-        <div className='flex-child px12 py12 w-full w600-ml'>
+      <div className='px12 py12 border border--lighten75 round display-block flex-parent flex-parent--column-reverse flex-parent--row-ml flex-parent--space-between-main-ml w-full'>
+        <div className='flex-child w-full w600-ml'>
           {this.formatName()}
-          <br />
           <div className='pr12'>{this.parks()}</div>
         </div>
         <div className='flex-child w-full h300 w600-ml hmin360-ml z1'>

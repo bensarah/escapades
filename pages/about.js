@@ -57,7 +57,7 @@ class About extends Component {
                 Sarah
                 <a href='https://github.com/sarahmamy'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
                 <a href='https://instagram.com/sarah_mamy'><Isvg className={this.styles.icon} src={`/static/icons/instagram.svg`}></Isvg></a>
-                &
+                {'\u00A0'}&
                 Benjamin
                 <a href='https://github.com/benjamintd'><Isvg className={this.styles.icon} src={`/static/icons/github.svg`}></Isvg></a>
                 <a href='https://instagram.com/_benjamintd'><Isvg className={this.styles.icon} src={`/static/icons/instagram.svg`}></Isvg></a>
@@ -105,7 +105,7 @@ class About extends Component {
 
   get styles () {
     return {
-      icon: 'icon w18 h18 inline-block mx6'
+      icon: 'icon w18 h18 inline-block ml6'
     }
   }
 }
