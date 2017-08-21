@@ -23,58 +23,58 @@ class TroisSeigneurs extends Component {
         tags={['Facile', 'Points de vue']}
         photos={[
           {
-            src: '/static/2017/kings-canyon/kings-canyon.jpg',
-            width: 2000,
-            height: 1333,
-            caption: 'Avant la rando, balade sur la route scénique de Kings Canyon'
+            src: '/static/2015/trois-seigneurs/benjamin.jpg',
+            width: 2248,
+            height: 4000,
+            caption: 'Une photo de Benjamin, au départ. La classe du randonneur'
           },
           {
-            src: '/static/2017/kings-canyon/fleurs.jpg',
-            width: 2000,
-            height: 1333,
-            caption: 'Quelques fleurs sur le chemin'
+            src: '/static/2015/trois-seigneurs/vue.jpg',
+            width: 3872,
+            height: 2592,
+            caption: 'La vue au sommet du pic'
           },
           {
-            src: '/static/2017/kings-canyon/moro-rock.jpg',
-            width: 2000,
-            height: 1333,
-            caption: 'Avant de repartir, un petit tour sur le rocher de Moro Rock'
+            src: '/static/2015/trois-seigneurs/neige.jpg',
+            width: 3872,
+            height: 2592,
+            caption: 'Le chemin était parsemé de portions de neige'
           },
           {
-            src: '/static/2017/kings-canyon/selfie-sommet.jpg',
-            width: 2000,
-            height: 1333,
-            caption: 'L’incontournable Selfie Sommet'
+            src: '/static/2015/trois-seigneurs/sarah.jpg',
+            width: 2682,
+            height: 2376,
+            caption: 'Sur le chemin du retour'
           },
           {
-            src: '/static/2017/kings-canyon/sequoias.jpg',
-            width: 2000,
-            height: 1333,
-            caption: 'Le parc contient certains des plus vieux arbres du monde'
+            src: '/static/2015/trois-seigneurs/croix2.jpg',
+            width: 3872,
+            height: 2592,
+            caption: 'Une autre photo du sommet'
           },
           {
-            src: '/static/2017/kings-canyon/anti-moustique.jpg',
-            width: 2000,
-            height: 3000,
-            caption: 'Les manches longues et la tête protégée contre les moustiques'
+            src: '/static/2015/trois-seigneurs/bleuets.jpg',
+            width: 3872,
+            height: 2592,
+            caption: 'Des bleuets'
           },
           {
-            src: '/static/2017/kings-canyon/fleur-rouge.jpg',
-            width: 2000,
-            height: 3000,
-            caption: 'Une fleur chelou sous les souches'
+            src: '/static/2015/trois-seigneurs/rocaille.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Les paysages qu&#39;on traversait au retour : beaucoup de rocaille'
           },
           {
-            src: '/static/2017/kings-canyon/sommet.jpg',
-            width: 3000,
-            height: 2000,
-            caption: 'Le sommet du Mt Mitchell'
+            src: '/static/2015/trois-seigneurs/selfie.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Une photo de nous, peu avant l&#39;arrivée'
           },
           {
-            src: '/static/2017/kings-canyon/malle.jpg',
-            width: 3000,
-            height: 2000,
-            caption: 'En vrac dans la malle'
+            src: '/static/2015/trois-seigneurs/montaut.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Et une photo de Montaut, pour vous montrer l&#39;endroit'
           }
         ]}
       >
@@ -157,6 +157,7 @@ class TroisSeigneurs extends Component {
 
         <Section
           action={() => setTimeout(() => {
+            highlightFromTo(this.state.map, trail, 0.28, 0.39)
             this.state.map.flyTo({center: [1.440094, 42.830493], zoom: 13.5, duration: 4000})
           }, 1000)}
         >
@@ -177,7 +178,7 @@ class TroisSeigneurs extends Component {
         <Section
           action={() => setTimeout(() => {
             this.state.map.flyTo({center: [1.436951, 42.8215], zoom: 14, duration: 5000})
-            highlightFromTo(this.state.map, trail, 0.4, 0.84)
+            highlightFromTo(this.state.map, trail, 0.39, 0.84)
           }, 1000)}
         >
           <P>
