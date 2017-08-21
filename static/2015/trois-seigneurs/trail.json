@@ -4,15 +4,30 @@
       "type": "Feature",
       "properties": {
         "type": "peak",
-        "name": "Pic des Trois Seigneurs",
-        "altitude": "2 199 m"
+        "name": "Pic de Barrès",
+        "altitude": "2029 m"
       },
       "geometry": {
         "coordinates": [
-          1.440094,
-          42.830493
+          1.425753,
+          42.826398
         ],
         "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "peak",
+        "name": "Pic des Trois Seigneurs",
+        "altitude": "2199 m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.440094,
+          42.830493
+        ]
       }
     },
     {
@@ -25,21 +40,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.425753,
-          42.826398
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "peak",
-        "name": "Pic de Barrès",
-        "altitude": "2029 m"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           1.418233,
           42.821434
         ]
@@ -48,7 +48,7 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "Lake",
+        "type": "lake",
         "name": "Etang d'Arbu",
         "altitude": "1724 m"
       },

@@ -176,7 +176,7 @@ class TroisSeigneurs extends Component {
 
         <Section
           action={() => setTimeout(() => {
-            this.state.map.flyTo({center: [1.418233, 42.821434], zoom: 13, duration: 1500})
+            this.state.map.flyTo({center: [1.436951, 42.8215], zoom: 14, duration: 5000})
             highlightFromTo(this.state.map, trail, 0.4, 0.84)
           }, 1000)}
         >

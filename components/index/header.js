@@ -15,8 +15,8 @@ const IndexHeader = ({background}) => (
       <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full'/>
       <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
     </div>
-    <div className='lamp-container h60 absolute align-center bottom z2'>
-      <Isvg className='absolute bottom align-center bump' src={`/static/icons/lamp.svg`}></Isvg>
+    <div className='lamp-container h60 absolute bottom align-center z2'>
+      <Isvg className='absolute bottom animation-fade-in align-center' src={`/static/icons/lamp.svg`}></Isvg>
     </div>
     <style jsx>{`
       .logo-container {
@@ -29,8 +29,8 @@ const IndexHeader = ({background}) => (
       }
 
       .header {
-          height: 100vh;
-          z-index: 1;
+        height: 100vh;
+        z-index: 1;
       }
 
       .header:before {

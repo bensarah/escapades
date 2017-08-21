@@ -10569,6 +10569,15 @@
             "filter": ["==", "type", "peak"]
         },
         {
+            "id": "lake",
+            "source": "trail",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "water-11"
+            },
+            "filter": ["==", "type", "lake"]
+        },
+        {
             "id": "point-highlight-circle",
             "source": "point-highlight",
             "type": "circle",
@@ -11736,7 +11745,7 @@
             },
             "source": "composite",
             "source-layer": "water_label",
-            "minzoom": 5,
+            "minzoom": 9,
             "filter": [
                 ">",
                 "area",
