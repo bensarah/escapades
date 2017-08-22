@@ -4,21 +4,6 @@
       "type": "Feature",
       "properties": {
         "type": "peak",
-        "name": "Pic de Barrès",
-        "altitude": "2029 m"
-      },
-      "geometry": {
-        "coordinates": [
-          1.425753,
-          42.826398
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "peak",
         "name": "Pic des Trois Seigneurs",
         "altitude": "2199 m"
       },
@@ -28,6 +13,21 @@
           1.440094,
           42.830493
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "peak",
+        "name": "Pic de Barrès",
+        "altitude": "2029 m"
+      },
+      "geometry": {
+        "coordinates": [
+          1.425753,
+          42.826398
+        ],
+        "type": "Point"
       }
     },
     {
