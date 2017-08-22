@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import Logo from '../logo'
+import Lamp from './lamp'
 import LogoText from '../logo-text'
 import {hexToRGB} from '../../helpers/colors'
 import palette from '../../styles/palette'
-import Isvg from 'react-inlinesvg'
 
 const IndexHeader = ({background}) => (
   <div
@@ -15,8 +15,8 @@ const IndexHeader = ({background}) => (
       <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full'/>
       <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
     </div>
-    <div className='lamp-container h60 absolute bottom align-center z2'>
-      <Isvg className='absolute bottom animation-fade-in align-center' src={`/static/icons/lamp.svg`}></Isvg>
+    <div className='lamp-container absolute bottom align-center z2'>
+      <Lamp className='relative animation-fade-in align-center'/>
     </div>
     <style jsx>{`
       .logo-container {
@@ -24,8 +24,8 @@ const IndexHeader = ({background}) => (
       }
 
       .lamp-container {
-        background-color: ${palette.bleuNuit};
         width: 100vw;
+        height: 100px;
       }
 
       .header {
