@@ -14,7 +14,7 @@ class InfoSection extends Component {
           <div className='px6'>
             <div className='txt-l txt-bold'>Distance parcourue</div>
             <div className='anton bigtext'>
-              {this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',')} <span className='txt-l txt-bold'>km</span>
+              {this.props.trail.properties.distance ? this.props.trail.properties.distance.toFixed(1).toString().replace(/\./g, ',') : ''} <span className='txt-l txt-bold'>km</span>
             </div>
             <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-sun'/></svg></span>
             <span className='txt-l'>{this.props.jours}</span>
@@ -24,7 +24,7 @@ class InfoSection extends Component {
           <div className='px6'>
             <div className='txt-l txt-bold'>Dénivelé positif</div>
             <div className='anton bigtext'>
-              + {upsDowns[0]} <span className='txt-l txt-bold'>m</span>
+              + {upsDowns ? upsDowns[0] : null} <span className='txt-l txt-bold'>m</span>
             </div>
             <span className={this.styles.icon}><svg className='brique icon'><use xlinkHref='#icon-chevron-up'/></svg></span>
             <span className='txt-l'>max {this.elevMax()} m · min {this.elevMin()} m</span>
@@ -105,6 +105,12 @@ class InfoSection extends Component {
         break
       case 'Eau sur le chemin':
         icon = 'water'
+        break
+      case 'Points de vue':
+        icon = 'binoculars'
+        break
+      case 'Boucle':
+        icon = 'loop'
         break
       default:
         icon = 'mountains'

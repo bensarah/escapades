@@ -9,9 +9,13 @@ import extent from 'geojson-extent'
 /* global mapboxgl */
 
 class MapHighlights extends Component {
+  componentWillMount () {
+    this.setState({id: Math.random().toString(36).substr(2, 10)}) // random id
+  }
+
   render () {
     return (
-        <div id='map' className='h-full w-full'>
+        <div id={'map' + this.state.id} className='h-full w-full'>
         <style jsx global>{`
           .mapboxgl-ctrl-logo {
             opacity: 0.2 !important;
@@ -25,10 +29,11 @@ class MapHighlights extends Component {
     mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
 
     const map = new mapboxgl.Map({
-      container: 'map',
+      container: 'map' + this.state.id,
       style: style,
       center: [-33, 40],
       zoom: 1,
+      maxZoom: 4,
       interactive: false,
       attributionControl: false
     })
