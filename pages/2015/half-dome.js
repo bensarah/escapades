@@ -20,26 +20,62 @@ class HalfDome extends Component {
         header='/static/2015/half-dome/header.jpg'
         trail={trail}
         id='half-dome'
-        jours={'1 journée · 0 nuit'}
+        jours={'1 journée'}
         tags={['Difficile', 'Permis obligatoires', 'Fréquenté']}
         photos={[
           {
             src: '/static/2015/half-dome/au-pied.jpg',
-            width: 2248,
-            height: 4000,
+            width: 1200,
+            height: 674,
             caption: 'Au pied du Half Dome'
           },
           {
             src: '/static/2015/half-dome/avant-les-cables.jpg',
             width: 2248,
             height: 4000,
-            caption: 'Nous voilà à l&#39;approche de la denière partie'
+            caption: 'Nous voilà à l’approche de la denière partie'
+          },
+          {
+            src: '/static/2015/half-dome/cables-bouchon.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Après 10h, il y a beaucoup de monde sur les câbles'
           },
           {
             src: '/static/2015/half-dome/cascade.jpg',
             width: 2248,
             height: 4000,
             caption: 'Cascade, sur le chemin du retour'
+          },
+          {
+            src: '/static/2015/half-dome/pic.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'La photo de pic'
+          },
+          {
+            src: '/static/2015/half-dome/derniere-montee.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Difficile dernière montée avant les câbles'
+          },
+          {
+            src: '/static/2015/half-dome/lezard.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Y’a pas de lézard.'
+          },
+          {
+            src: '/static/2015/half-dome/dur.jpg',
+            width: 4000,
+            height: 2248,
+            caption: 'Un peu dans le dur - il fait chaud au soleil !'
+          },
+          {
+            src: '/static/2015/half-dome/ours.jpg',
+            width: 2248,
+            height: 4000,
+            caption: 'Il y a un ourson sur cette photo. Saurez-vous le trouver ?'
           }
         ]}
       >
@@ -57,7 +93,7 @@ class HalfDome extends Component {
           }}
         >
           <P>
-            J&#39;en avais envie et nous l’avons fait ! Nous avons gravi ce pic phare de Yosemite qu’est le Half Dome et la balade en valait bien le coup.
+            J’en avais envie et nous l’avons fait ! Nous avons gravi ce pic phare de Yosemite qu’est le Half Dome et la balade en valait bien le coup.
           </P>
           <P>
             En voilà son récit...
@@ -68,20 +104,20 @@ class HalfDome extends Component {
           sidebarContent={<Img src='/static/2015/half-dome/half-dome.jpg'/>}
         >
           <P>
-            Le Half Dome, c&#39;est un incontournable. Une grosse vague de granite qui trône au-dessus de la vallée de Yosemite. Benjamin l’avait déjà gravi quelques mois auparavant avec un groupe d’amis de Berkeley. Pour ma part, cette randonnée représentait ma première ascension de cet emblème des parcs américains.
+            Le Half Dome, c’est un incontournable. Une grosse vague de granite qui trône au-dessus de la vallée de Yosemite. Benjamin l’avait déjà gravi quelques mois auparavant avec un groupe d’amis de Berkeley. Pour ma part, cette randonnée représentait ma première ascension de cet emblème des parcs américains.
           </P>
         </Section>
 
         <Section>
           <P>
-            Tellement populaire qu&#39;il faut réguler le passage : il faut un permis pour gravir ce <em>must-do</em>. Une première poignée de permis est accordée en janvier pour toute la saison d&#39;été. Les permis restants sont joués à la loterie dans les jours qui précèdent l&#39;ascension.
+            Tellement populaire qu’il faut réguler le passage : il faut un permis pour gravir ce <em>must-do</em>. Une première poignée de permis est accordée en janvier pour toute la saison d’été. Les permis restants sont joués à la loterie dans les jours qui précèdent l’ascension.
             Ainsi, Benjamin et moi avons tenté cette loterie pour le lundi 24 août.
           </P>
           <Quote>
-            Pour un lundi, ça devrait passer ! Le même jour, l&#39;année dernière, 100% l&#39;ont eu !
+            Pour un lundi, ça devrait passer ! Le même jour, l’année dernière, 100% l’ont eu !
           </Quote>
           <P>
-            Bien sûr, c&#39;était sans compter sur notre malchance au jeu et nous apprîmes le dimanche 23 juin à 20h que nous n&#39;avions pas les permis.
+            Bien sûr, c’était sans compter sur notre malchance au jeu et nous apprîmes le dimanche 23 juin à 20h que nous n’avions pas les permis.
           </P>
         </Section>
 
@@ -90,10 +126,10 @@ class HalfDome extends Component {
         >
           <P><Emoji name='cry' size='2x'/></P>
           <P>
-            Frustrant. D&#39;autant plus que nous l’avons appris quelques heures avant le début de l’ascension. Sans le camping de la vallée et son réseau wifi que Benjamin a pu détourner*. On n&#39;aurait eu la mauvaise nouvelle qu&#39;au pied de la bosse finale du Half Dome, après avoir déjà fait plus de 80% de la montée !
+            Frustrant. D’autant plus que nous l’avons appris quelques heures avant le début de l’ascension. Sans le camping de la vallée et son réseau wifi que Benjamin a pu détourner*. On n’aurait eu la mauvaise nouvelle qu’au pied de la bosse finale du Half Dome, après avoir déjà fait plus de 80% de la montée !
           </P>
           <Footnote>
-            Soit quelqu&#39;un au nom de Tran occupe la tente 301, soit leur système d&#39;authentification laisse clairement à désirer -
+            Soit quelqu’un au nom de Tran occupe la tente 301, soit leur système d’authentification laisse clairement à désirer -
           </Footnote>
         </Section>
 
@@ -105,7 +141,7 @@ class HalfDome extends Component {
           </P>
           <Quote>Tant pis, on y va. Si on croise le ranger, on lui expliquera notre cas.</Quote>
           <P>
-            Le dimanche soir, exténués et stressés, on s&#39;endort donc en mettant le réveil à 4h du matin, pour peut-être arriver au pied du Half-Dome avant le réveil du ranger.
+            Le dimanche soir, exténués et stressés, on s’endort donc en mettant le réveil à 4h du matin, pour peut-être arriver au pied du Half-Dome avant le réveil du ranger.
           </P>
           <P><Emoji name='zzz'/></P>
         </Section>
@@ -118,14 +154,14 @@ class HalfDome extends Component {
             }, 1000)
           }}
         >
-          <P><Emoji name='clock430'/>  Nous avons donc commencé l&#39;ascension à la lampe torche à 4h30 du matin.
-            <Quote>Benjamin, on fait quoi si on croise un ours ?</Quote>
+          <P><Emoji name='clock430'/>  Nous avons donc commencé l’ascension à la lampe torche à 4h30 du matin.
           </P>
+          <Quote>Benjamin, on fait quoi si on croise un ours ?</Quote>
           <P>
-           Nous n&#39;avons pas croisé d&#39;ours mais beaucoup d&#39;autres randonneurs. <Emoji name='family'/>
+           Nous n’avons pas croisé d’ours mais beaucoup d’autres randonneurs. <Emoji name='family'/>
          </P>
          <P>
-            Débuter très tôt permet de faire l&#39;ascension alors que la température est de l’ordre de 25° - seulement - et d&#39;éviter les châleurs plus tardives. On a eu de la chance de vouloir esquiver le ranger, en somme.
+            Débuter très tôt permet de faire l’ascension alors que la température est de l’ordre de 25° - seulement - et d’éviter les châleurs plus tardives. On a eu de la chance de vouloir esquiver le ranger, en somme.
           </P>
         </Section>
 
@@ -133,25 +169,54 @@ class HalfDome extends Component {
           action={() => {
             setTimeout(() => {
               this.state.map.flyTo({center: [-119.513085, 37.745257], zoom: 13, duration: 1500})
-              highlightFromTo(this.state.map, trail, 0.15, 0.7)
+              highlightFromTo(this.state.map, trail, 0.15, 0.46)
             }, 2000)
           }}
         >
          <P>
-            Je n&#39;ai pas vu passer la montée, j&#39;étais un peu en roue libre. La fatigue était là mais je ne voulais pas trop écouter mon corps de peur de ralentir et <em>in fine</em> de ne pas pouvoir gravir la dernière montée jusqu&#39;au Half Dome.
+            Je n’ai pas vu passer la montée, j’étais un peu en roue libre. La fatigue était là mais je ne voulais pas trop écouter mon corps de peur de ralentir et <em>in fine</em> de ne pas pouvoir gravir la dernière montée jusqu’au Half Dome.
           </P>
           <P>
-            En témoignent le peu de photos et notre rythme d&#39;ascension : nous avons mis près de 4h pour faire 1440m de dénivelé, sans pause. Sans croiser le ranger ! Ouf <Emoji name='weat-smile'/>
+            En témoignent le peu de photos et notre rythme d’ascension : nous avons mis près de 4h pour faire 1440m de dénivelé, sans pause. Sans croiser le ranger ! Ouf <Emoji name='weat-smile'/>
           </P>
         </Section>
 
         <Section
-        >{/* Retrouver une photo des virages */}
+          sidebarContent={<Img src='/static/2015/half-dome/depuis-les-cables.jpg'/>}
+        >
          <P>
-            L'avant-dernière partie de cette montée est intense : des lacets en pente forte, en plein soleil, alors que les jambes sont déjà fatiguées.
+            L’avant-dernière partie de cette montée est intense : des lacets en pente forte, en plein soleil, alors que les jambes sont déjà fatiguées.
          </P>
         </Section>
-
+        <Section
+          sidebarContent={<Img src='/static/2015/half-dome/les-cables.jpg'/>}
+        >
+          <P>
+            La fin de l’ascension est atypique : les «câbles» ! En raison de la pente à 45° par endroits, la dernière montée se fait en se tractant contre la paroi. Le mur est assez lisse, ce qui a requis l’installation de paliers en bois sur lesquels s’appuyer. Une chute en dehors des câbles et c’est la dégringolade jusque dans la vallée ! Certains ont le vertige et tétanisent. Je n’ai rien eu, heureusement. Et après les câbles, on y est, enfin ! Toute la vallée de Yosemite à nos pieds, une vue imprenable. et en haut du Half Dome, c’est presque plat, c’est lunaire presque.
+          </P>
+        </Section>
+        <Section
+          sidebarContent={<Img src='/static/2015/half-dome/en-haut.jpg'/>}
+        >
+          <P>
+            Il n’est même pas 9h30 et nous enchaînons les photos, admirons la vue et en profitons aussi pour faire la sieste.
+          </P>
+          <P>
+            Détail impressionnant : une opaque brume envahit l’horizon de la vallée. C’est la conséquence des feux de fumée qui font rage dans la région.
+          </P>
+        </Section>
+        <Section
+          action={() => {
+            setTimeout(() => {
+              this.state.map.flyTo({center: [-119.518747, 37.746769], zoom: 12, duration: 1500})
+              highlightFromTo(this.state.map, trail, 0.50, 1)
+            }, 1000)
+          }}
+        >
+          <P>
+            La descente s’est faite plus doucement. On s’est octroyé une deuxième sieste et nous avons regretté d’avoir oublié la crème solaire ! Coups de soleil avec la marque du pantacourt. En tout, la balade aller-retour nous a pris 12h avec pauses.
+          </P>
+        </Section>
       </Post>
     )
   }

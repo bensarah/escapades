@@ -19,7 +19,7 @@ class TroisSeigneurs extends Component {
         header='/static/2015/trois-seigneurs/sommet.jpg'
         trail={trail}
         id='trois-seigneurs'
-        jours={'1/2 journée · 0 nuit'}
+        jours={'1/2 journée'}
         tags={['Facilement abordable', 'Points de vue', 'Boucle']}
         photos={[
           {
@@ -190,7 +190,7 @@ class TroisSeigneurs extends Component {
           sidebarContent={<Img src='/static/2015/trois-seigneurs/arbu.jpg'/>}
         >
           <P>
-            Nous naviguons à la vue des cairns et passons à côté de l’étang d’Arbu. Les paysages sont rocailleux et le soleil se cachera définitivement sous un épais matelas de nages.
+            Nous naviguons à la vue des cairns et passons à côté de l’étang d’Arbu. Les paysages sont rocailleux et le soleil se cachera définitivement sous un épais matelas de nuages.
           </P>
         </Section>
 
@@ -201,7 +201,7 @@ class TroisSeigneurs extends Component {
           }}
           >
           <P>
-            Après quelques lacets, nous arrivons de nouveau à la route, plus que deux virages à monter pour retrouver la voiture et mon Papa qui nous y aura retrouvés.
+            Après quelques lacets, nous arrivons de nouveau à la route&nbsp;; plus que deux virages à monter pour retrouver la voiture et mon Papa qui nous y aura retrouvés.
           </P>
         </Section>
 
