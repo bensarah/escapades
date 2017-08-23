@@ -37,20 +37,20 @@ class KingsCanyon extends Component {
           },
           {
             src: '/static/2017/mount-dana/fleurs.jpg',
-            width: 2000,
-            height: 3000,
+            width: 3417,
+            height: 4000,
             caption: 'La classique photographie de fleurs sur le chemin'
           },
           {
             src: '/static/2017/mount-dana/marmot.jpg',
-            width: 2000,
-            height: 1333,
+            width: 4762,
+            height: 3170,
             caption: 'Nous avons croisé quelques marmottes, moins farouches que leurs cousines françaises.'
           },
           {
             src: '/static/2017/mount-dana/wow.jpg',
-            width: 3000,
-            height: 2000,
+            width: 2000,
+            height: 1333,
             caption: 'Quelle vue magnifique en haut du Mont Dana !'
           },
           {
@@ -67,14 +67,14 @@ class KingsCanyon extends Component {
           },
           {
             src: '/static/2017/mount-dana/papillon.jpg',
-            width: 2000,
+            width: 4002,
             height: 3000,
             caption: 'Un papillon qui s&#39;est envolé un peu vite au sommet'
           },
           {
             src: '/static/2017/mount-dana/plaque.jpg',
-            width: 3000,
-            height: 2000,
+            width: 3899,
+            height: 3899,
             caption: 'Une plaque d&#39;immatriculation très drôle pour un de nos voisins de parking'
           }
         ]}
