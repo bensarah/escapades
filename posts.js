@@ -50,7 +50,7 @@ export default [
     date: 'Août 2015',
     id: 'half-dome',
     coords: [-119.533147, 37.746009],
-    header: '/static/2015/half-dome/header.jpg',
+    header: '/static/2015/half-dome/post.jpg',
     url: '2015/half-dome',
     quote: 'C’était vraiment magnifique...'
   },

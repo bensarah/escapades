@@ -182,7 +182,12 @@ class HalfDome extends Component {
         </Section>
 
         <Section
-          sidebarContent={<Img src='/static/2015/half-dome/depuis-les-cables.jpg'/>}
+          action={() => {
+            setTimeout(() => {
+              this.state.map.flyTo({center: [-119.527277, 37.748318], zoom: 15, duration: 1500})
+              highlightFromTo(this.state.map, trail, 0.46, 0.48)
+            }, 2000)
+          }}
         >
          <P>
             L’avant-dernière partie de cette montée est intense : des lacets en pente forte, en plein soleil, alors que les jambes sont déjà fatiguées.
@@ -192,17 +197,26 @@ class HalfDome extends Component {
           sidebarContent={<Img src='/static/2015/half-dome/les-cables.jpg'/>}
         >
           <P>
-            La fin de l’ascension est atypique : les «câbles» ! En raison de la pente à 45° par endroits, la dernière montée se fait en se tractant contre la paroi. Le mur est assez lisse, ce qui a requis l’installation de paliers en bois sur lesquels s’appuyer. Une chute en dehors des câbles et c’est la dégringolade jusque dans la vallée ! Certains ont le vertige et tétanisent. Je n’ai rien eu, heureusement. Et après les câbles, on y est, enfin ! Toute la vallée de Yosemite à nos pieds, une vue imprenable. et en haut du Half Dome, c’est presque plat, c’est lunaire presque.
+            La fin de l’ascension est atypique : les «câbles» ! En raison de la pente à 45° par endroits, la dernière montée se fait en se tractant contre la paroi. Le mur est assez lisse, ce qui a requis l’installation de paliers en bois sur lesquels s’appuyer. Une chute en dehors des câbles et c’est la dégringolade jusque dans la vallée ! Certains ont le vertige et tétanisent. Nous n'avons rien ressenti, heureusement.
           </P>
         </Section>
+
         <Section
           sidebarContent={<Img src='/static/2015/half-dome/en-haut.jpg'/>}
+        >
+          <P>
+            Et après les câbles, on y est, enfin ! Toute la vallée de Yosemite à nos pieds, une vue imprenable. et en haut du Half Dome, c’est presque plat, c’est lunaire presque.
+          </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2015/half-dome/fummee.jpg'/>}
         >
           <P>
             Il n’est même pas 9h30 et nous enchaînons les photos, admirons la vue et en profitons aussi pour faire la sieste.
           </P>
           <P>
-            Détail impressionnant : une opaque brume envahit l’horizon de la vallée. C’est la conséquence des feux de fumée qui font rage dans la région.
+            Détail impressionnant : une opaque brume envahit l’horizon de la vallée. C’est la conséquence des feux de forêt qui font rage dans la région.
           </P>
         </Section>
         <Section
@@ -214,9 +228,32 @@ class HalfDome extends Component {
           }}
         >
           <P>
-            La descente s’est faite plus doucement. On s’est octroyé une deuxième sieste et nous avons regretté d’avoir oublié la crème solaire ! Coups de soleil avec la marque du pantacourt. En tout, la balade aller-retour nous a pris 12h avec pauses.
+            La descente s’est faite plus doucement, mais chaudement.
+          </P>
+          <Emoji name='sun' size='2x'/>
+          <P>
+            En effet, la température dépassait largement les trente degrés. L'ombre se faisait rare sur le chemin de la descente.
           </P>
         </Section>
+        <Section
+          sidebarContent={<Img src='/static/2015/half-dome/descente.jpg'/>}
+        >
+          <P>
+            D'autant plus, que nous avions oublié la crème solaire à la voiture et que la randonnée de la veille, Clouds Rest, nous avait laissé quelques rougeurs bénignes.
+          </P>
+        </Section>
+
+        <Section
+          sidebarContent={<Img src='/static/2015/half-dome/selfie-fatigues.jpg'/>}
+        >
+          <P>
+            En tout, la balade aller-retour nous a pris 12h avec pauses.
+          </P>
+          <P>
+            Mais quelle fierté tout de même : on a gravi le Half Dome !
+          </P>
+        </Section>
+
       </Post>
     )
   }
