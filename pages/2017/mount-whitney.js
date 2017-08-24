@@ -24,10 +24,10 @@ class MountWhitney extends Component {
         tags={['Attention aux marmottes', 'Permis obligatoires', 'Difficile', 'Eau sur le chemin']}
         photos={[
           {
-            src: '/static/2017/mount-whitney/stars.jpg',
-            width: 1000,
-            height: 1000,
-            caption: 'Sur la route de Whitney, nuit étoilée donnant sur le Half Dome'
+            src: '/static/2017/mount-whitney/ovni.jpg',
+            width: 449,
+            height: 673,
+            caption: 'Sur la route de Whitney, une apparition...'
           },
           {
             src: '/static/2017/mount-whitney/biche.jpg',
@@ -55,8 +55,8 @@ class MountWhitney extends Component {
           },
           {
             src: '/static/2017/mount-whitney/selfie-top.jpg',
-            width: 2000,
-            height: 1333,
+            width: 1200,
+            height: 635,
             caption: 'Photo pic !'
           },
           {
@@ -73,8 +73,8 @@ class MountWhitney extends Component {
           },
           {
             src: '/static/2017/mount-whitney/marmotte.jpg',
-            width: 2000,
-            height: 1333,
+            width: 568,
+            height: 674,
             caption: 'Protégez votre nourriture des marmottes !'
           },
           {
@@ -85,8 +85,8 @@ class MountWhitney extends Component {
           },
           {
             src: '/static/2017/mount-whitney/sarah-sierras.jpg',
-            width: 2000,
-            height: 1333,
+            width: 1200,
+            height: 678,
             caption: 'On commence la descente'
           },
           {
@@ -103,8 +103,8 @@ class MountWhitney extends Component {
           },
           {
             src: '/static/2017/mount-whitney/water-trail-sarah.jpg',
-            width: 2000,
-            height: 1333,
+            width: 1092,
+            height: 800,
             caption: 'Caution, wet floor'
           },
           {
@@ -145,11 +145,11 @@ class MountWhitney extends Component {
         >
           <P>
             Avançons de quelques mois, Sarah a donc traversé l’Atlantique et nous voilà ensemble à quelques jours du départ.
-            Les sacs sont prêts, la météo s’annonce bonne et les dernières nouvelles du trail semblent indiquer qu’il n’y aura pas trop de neige - malgré les avertissements d’un randonneur que nous avions croisé sur le chemin du <a href='/2017/mount-whitney'>Mont Mitchell</a>:
+            Les sacs sont prêts, la météo s’annonce bonne et les dernières nouvelles du trail semblent indiquer qu’il n’y aura pas trop de neige - malgré les avertissements d’un randonneur que nous avions croisé sur le chemin du <a href='/2017/mount-whitney'>Mont Mitchell</a> :
           </P>
           <Quote>The snow was brutal!</Quote>
           <P>
-            Nous avons prévu de traverser les Sierras en passant par Yosemite, et de gravir le <a href='/2017/mount-dana'>mont Dana</a> (3 981 m) la veille pour nous habituer à l’altitude.
+            Nous avons prévu de traverser les Sierras en passant par Yosemite, et de gravir le <a href='/2017/mount-dana'>Mont Dana</a> (3 981 m) la veille pour nous habituer à l’altitude.
           </P>
         </Section>
 
@@ -187,7 +187,7 @@ class MountWhitney extends Component {
           }}
         >
           <P>
-            Après un déjeuner aux bords du lac, nous nous remettons en marche vers Trail Camp où nous bivouaquerons.
+            Après un déjeuner au bord de Mirror Lake, nous nous remettons en marche vers Trail Camp où nous bivouaquerons.
             Le paysage devient plus aride, le chemin plus rocailleux, mais la pente est toujours douce et nous avançons à bon rythme.
           </P>
         </Section>
@@ -284,7 +284,7 @@ class MountWhitney extends Component {
             Le bonheur est palpable, et on se pose à quelques mètres du bord, emmitouflés dans un sac de couchage, regardant plein Est.
           </P>
           <P>
-            <Emoji name='sunrise'/>
+            <Emoji name='sunrise-over-mountains'/>
           </P>
           <P>
             Je ne pense pas avoir été plus ému qu’à ce moment - serrés pour se tenir chaud, les premiers rayons venant frapper nos visages, et quelques applaudissements et cris de joie des autres chanceux qui ont atteint le sommet à temps.
@@ -300,10 +300,10 @@ class MountWhitney extends Component {
             Kings Canyon et les Sierras à l’Ouest, les plaines de l’Est, et la température qui monte doucement (heureusement qu’on redescend !).
           </P>
           <P>
-            Au passage, on compte les lacets pour vérifier qu’il y en a bien 97 <sup>*</sup>.
+            Au passage, on compte les lacets pour vérifier qu’il y en a bien 97<sup>*</sup>.
           </P>
           <Footnote>
-            (ou 99, si vous demandez à Sarah. Mais tout le monde sait bien que les deux derniers ne comptent pas vraiment)
+            ou 99, si vous demandez à Sarah. Mais tout le monde sait bien que les deux derniers ne comptent pas vraiment...
           </Footnote>
         </Section>
 
@@ -329,7 +329,7 @@ class MountWhitney extends Component {
           sidebarContent={<Img src='/static/2017/mount-whitney/fini.jpg'/>}
         >
           <P>
-            Nous voilà au point de départ, après une bonne journée de 15h. Faire l’ascension d’un pic à plus de 4000m d’altitude : <Emoji name='white-check-mark'/> !
+            Nous revoilà au point de départ, après une bonne journée de 15h. Faire l’ascension d’un pic à plus de 4000m d’altitude : <Emoji name='white-check-mark'/> !
           </P>
         </Section>
       </Post>
