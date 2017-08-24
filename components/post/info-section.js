@@ -88,6 +88,9 @@ class InfoSection extends Component {
       case 'Attention aux ours':
         icon = 'bear'
         break
+      case 'Attention aux marmottes':
+        icon = 'marmot'
+        break
       case 'Permis obligatoires':
         icon = 'permit'
         break

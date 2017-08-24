@@ -26,6 +26,7 @@ class Section extends Component {
           .section {
             min-height: 100vh;
           }
+
           hr {
             background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
             margin: 0;

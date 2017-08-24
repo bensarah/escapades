@@ -1,4 +1,5 @@
 import {trailPointsGenerator, findTrail, extractTrailPortion} from './trail-extractor'
+import extent from 'geojson-extent'
 
 function moveSource (map, layer, trail, start, end, options) {
   var duration = (options && options.duration) || 3000
@@ -20,8 +21,13 @@ function moveSource (map, layer, trail, start, end, options) {
 
 function highlightFromTo (map, trail, start, end, options) {
   trail = findTrail(trail)
-  if (!(options && options.trailHighlight === false)) map.getSource('trail-highlight').setData(extractTrailPortion(trail, start, end))
+  var portion = extractTrailPortion(trail, start, end)
+  if (!(options && options.trailHighlight === false)) map.getSource('trail-highlight').setData(portion)
   if (!(options && options.pointHighlight === false)) moveSource(map, 'point-highlight', trail, start, end, options)
+  if (options && options.fitBounds === true) {
+    var bbox = extent(portion)
+    map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 3000, padding: 60})
+  }
 }
 
 function removeHighlights (map) {
