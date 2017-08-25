@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 const P = ({ children }) => (
-  <p className='prose pb30 txt-m txt-l-ml'>
+  <p className='pb30 txt-m txt-l-ml'>
     { children }
   </p>
 )

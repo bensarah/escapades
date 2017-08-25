@@ -6,7 +6,10 @@ var fs = require('fs')
 
 function sharpen (file) {
   if (file.indexOf('.optim.') > -1) return
-  if (!(file.endsWith('jpg') || file.endsWith('JPG'))) return
+  var extension
+  if (file.endsWith('jpg') || file.endsWith('JPG')) extension = 'jpg'
+  if (file.endsWith('png') || file.endsWith('PNG')) extension = 'png'
+  if (!extension) return
 
   sharp(file)
     .metadata()
@@ -14,8 +17,8 @@ function sharpen (file) {
       if (info.width <= 1200) return Promise.reject(new Error('should not resize smaller photo'))
       else return Promise.resolve(sharp(file))
     })
-    .then((s) => s.resize(1200).sharpen().toFile(file + '.optim.jpg'))
-    .then(() => fs.rename(file + '.optim.jpg', file.replace('.JPG', '.jpg')))
+    .then((s) => s.resize(1200).sharpen().toFile(file + '.optim.' + extension))
+    .then(() => fs.rename(file + '.optim.' + extension, file.toLowerCase(), console.log))
     .then(() => console.log(file), 'optimized')
     .catch(console.log)
 }

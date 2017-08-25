@@ -81,6 +81,15 @@ const Meta = () => (
         background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
         margin: 0px 100px 0px 100px;
       }
+
+      a {
+        color: ${palette.lavande};
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: ${palette.lightenLavande};
+      }
     `}</style>
   </div>
 )
