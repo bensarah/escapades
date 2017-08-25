@@ -18,7 +18,7 @@ export default [
     id: 'mount-dana',
     coords: [-119.221144, 37.899727],
     header: '/static/2017/mount-dana/header.jpg',
-    url: '2017/mount-dana',
+    url: '/2017/mount-dana',
     quote: 'C’était vraiment magnifique...'
   },
   {
@@ -51,7 +51,7 @@ export default [
     id: 'half-dome',
     coords: [-119.533147, 37.746009],
     header: '/static/2015/half-dome/post.jpg',
-    url: '2015/half-dome',
+    url: '/2015/half-dome',
     quote: 'C’était vraiment magnifique...'
   },
   {
@@ -62,7 +62,7 @@ export default [
     id: 'clouds-rest',
     coords: [-119.489384, 37.767769],
     header: '/static/2015/clouds-rest/header.jpg',
-    url: '2015/clouds-rest',
+    url: '/2015/clouds-rest',
     quote: 'C’était vraiment magnifique...'
   },
   {
@@ -73,7 +73,7 @@ export default [
     id: 'trois-seigneurs',
     coords: [1.439942, 42.830609],
     header: '/static/2015/trois-seigneurs/post.jpg',
-    url: '2015/trois-seigneurs',
-    quote: 'Une balade douce et belle en Ariège, parfait pour une mise en jambe dans les Pyrénéées'
+    url: '/2015/trois-seigneurs',
+    quote: 'Une balade douce et belle en Ariège, parfait pour une mise en jambe dans les Pyrénées'
   }
 ]

@@ -88,7 +88,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             var bbox = extent(trail)
-            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 3000, padding: {top: 20, bottom: 65, left: 15, right: 5}})
+            this.state.map.fitBounds([bbox.slice(0, 2), bbox.slice(2, 4)], {duration: 3000, padding: 60})
             highlightFromTo(this.state.map, trail, 0, 0)
           }}
         >
@@ -98,12 +98,12 @@ class KingsCanyon extends Component {
           <P><Emoji name='smile' size='2x'/></P>
           <P>
             Incroyable Californie : il est rare de trouver des pics aussi hauts, aussi proches de la route.
-            C'est pourtant le cas du Mont Dana dont l'ascension se fait en 1/2 journée et qui culmine à 3 981m.
+            C’est pourtant le cas du Mont Dana dont l’ascension se fait en 1/2 journée et qui culmine à 3&nbsp;981m.
           </P>
           <P>
             Son élévation en fait le deuxième sommet le plus haut du parc de Yosemite.
-            Faire ce pic nous permettait de nous familiariser avec l'altitude, avant l'incroyable ascension du <a href='/2017/mount-whitney' target='_blank'>Mount Whitney</a>.
-            D'autant plus que le profil de cette randonnée est aypique : 950 m de dénivelé en 5km et 20% de pente en moyenne.
+            Faire ce pic nous permettait de nous familiariser avec l’altitude, avant l’incroyable ascension du <a href='/2017/mount-whitney' target='_blank'>Mount Whitney</a>.
+            D’autant plus que le profil de cette randonnée est aypique : 950 m de dénivelé en 5km et 20% de pente en moyenne.
           </P>
         </Section>
 
@@ -113,18 +113,19 @@ class KingsCanyon extends Component {
           <P>
             Après une nuit à la belle étoile dans Yosemite*, nous avons pris la voiture pour quelques kilomètres afin de commencer cette belle randonnée au petit matin.
           </P>
-          <Footnote>Je n'ai pas résisté à l'envie de vous ajouter la photo !</Footnote>
+          <Footnote>Je n’ai pas résisté à l’envie de vous ajouter la photo !</Footnote>
         </Section>
 
         <Section
           action={() => {
             setTimeout(() => {
-              this.state.map.flyTo({center: [-119.258206, 37.909613], zoom: 13, duration: 1500})}, 1000)
+              this.state.map.flyTo({center: [-119.258206, 37.909613], zoom: 13, duration: 1500})
+            }, 1000)
           }}
         >
           <P>
-            La randonnée démarre de l'entrée est du parc.
-            Sur le parking, on croise deux rangers et un couple qui s'apprêtent à gravir, eux aussi, ce pic.
+            La randonnée démarre de l’entrée est du parc.
+            Sur le parking, on croise deux rangers et un couple qui s’apprêtent à gravir, eux aussi, ce pic.
             Nous ne serons pas beaucoup plus nombreux sur ce chemin.
           </P>
 
@@ -148,8 +149,7 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => setTimeout(() => {
-            this.state.map.flyTo({center: [-118.719584, 36.682804], duration: 3000})
-            highlightFromTo(this.state.map, trail, 0, 0.5)
+            highlightFromTo(this.state.map, trail, 0, 0.5, {duration: 4000, fitBounds: true})
           }, 1000)}
         >
           <P>
@@ -159,7 +159,7 @@ class KingsCanyon extends Component {
             <Emoji name='smile'/>
           </P>
           <P>
-            Nous ressentons plusieurs épisodes de fatigue et d'essoufflement, sans vraiment savoir si l'alitude ou la difficulté de la randonnée en sont responsable. Peut-être les deux. Les symptômes ne sont pas tétanisants mais nous incitent à faire quelques pauses pour reprendre notre souffle.
+            Nous ressentons plusieurs épisodes de fatigue et d’essoufflement, sans vraiment savoir si l’alitude ou la difficulté de la randonnée en sont responsable. Peut-être les deux. Les symptômes ne sont pas tétanisants mais nous incitent à faire quelques pauses pour reprendre notre souffle.
           </P>
         </Section>
 
@@ -173,15 +173,14 @@ class KingsCanyon extends Component {
 
         <Section
           action={() => {
-            this.state.map.flyTo({center: [-118.715182, 36.708975], zoom: 12.5, duration: 3000})
-            highlightFromTo(this.state.map, trail, 0.345, 0.5)
+            this.state.map.flyTo({center: [-119.222363, 37.901452], zoom: 14, duration: 3000})
           }}
         >
           <P>
-            Nous arrivons au sommet avant 11h30. Nous frôlons les 4 000m d'altitude.
+            Nous arrivons au sommet avant 11h30. Nous frôlons les 4&nbsp;000m d’altitude.
           </P>
           <P>
-            La vue et le déjeûner nous incitent à faire une longue pause, de plus d'une heure.
+            La vue et le déjeûner nous incitent à faire une longue pause, de plus d’une heure.
           </P>
         </Section>
 
@@ -189,7 +188,7 @@ class KingsCanyon extends Component {
           sidebarContent={<Img src='/static/2017/mount-dana/mono.jpg'/>}
         >
           <P>
-            Nous ne savons plus où donner de la tête : un panorama magnifique à 360°, avec notamment l'imposant Mono Lake que nous n'avions vu que depuis sa surface.
+            Nous ne savons plus où donner de la tête : un panorama magnifique à 360°, avec notamment l’imposant Mono Lake que nous n’avions vu que depuis sa surface.
           </P>
         </Section>
 
@@ -197,7 +196,7 @@ class KingsCanyon extends Component {
           sidebarContent={<Img src='/static/2017/mount-dana/pics.jpg'/>}
         >
           <P>
-            Avant de repartir, on s'imprègne de cette vue splendide, pour que ces superbes vues s'ancrent dans notre esprit.
+            Avant de repartir, on s’imprègne de cette vue splendide, pour que ces superbes vues s’ancrent dans notre esprit.
           </P>
         </Section>
 
@@ -205,15 +204,14 @@ class KingsCanyon extends Component {
           sidebarContent={<Img src='/static/2017/mount-dana/neve.jpg'/>}
         >
           <P>
-            Comme à l'aller, nous avons évité quelques névés sur le retour.
-            J'ai parfois essayé de les dévaler en me faisant une luge de mon k-way mais la neige est dure, ce qui génère trop de frottements pour me permettre de glisser facilement.
+            Comme à l’aller, nous avons évité quelques névés sur le retour.
+            J’ai parfois essayé de les dévaler en me faisant une luge de mon k-way mais la neige est dure, ce qui génère trop de frottements pour me permettre de glisser facilement.
           </P>
         </Section>
 
         <Section
           action={() => setTimeout(() => {
-            this.state.map.flyTo({center: [-118.715293, 36.731825], zoom: 13.5, duration: 4000})
-            highlightFromTo(this.state.map, trail, 0.5, 1)
+            highlightFromTo(this.state.map, trail, 0.5, 1, {fitBounds: true, duration: 5000})
           }, 1000)}
           last={true}
         >
