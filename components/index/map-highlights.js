@@ -10,7 +10,10 @@ import extent from 'geojson-extent'
 
 class MapHighlights extends Component {
   componentWillMount () {
-    this.setState({id: Math.random().toString(36).substr(2, 10)}) // random id
+    this.setState({
+      id: Math.random().toString(36).substr(2, 10), // random id
+      markers: []
+    })
   }
 
   render () {
@@ -63,6 +66,7 @@ class MapHighlights extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
+    console.log(nextProps)
     const size = 15 // px
     if (nextProps.highlight) {
       let el = document.createElement('div')
@@ -72,8 +76,15 @@ class MapHighlights extends Component {
         .addTo(this.map)
 
       ReactDOM.render(<BlipMarker size={size}/>, el)
-
-      setTimeout(() => marker.remove(), 1300)
+      this.setState({markers: this.state.markers.concat([{marker, el}])})
+    } else {
+      this.state.markers.forEach(({marker, el}) => {
+        el.addEventListener('animationiteration', () => {
+          marker.remove()
+          el.remove()
+        })
+      })
+      this.setState({markers: []})
     }
   }
 

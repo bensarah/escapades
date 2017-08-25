@@ -59,8 +59,9 @@ class Region extends Component {
             {
               this.props.parks[park].map((rando, i, randos) => (
                 <span key={rando.id}
-                  onMouseEnter={() => this.setState({highlight: rando.coords})}
+                  onMouseOver={() => this.setState({highlight: rando.coords})}
                   onClick={() => this.setState({highlight: rando.coords})}
+                  onMouseLeave={() => this.setState({highlight: null})}
                 >
                 <Link prefetch href={rando.url}>
                   <a>{rando.title}</a>
