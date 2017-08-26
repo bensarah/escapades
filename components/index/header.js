@@ -24,7 +24,8 @@ const IndexHeader = ({background}) => (
       }
 
       .lamp-container {
-        width: 100vw;
+        left: 0;
+        right: 0;
         height: 100px;
       }
 
