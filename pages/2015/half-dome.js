@@ -48,10 +48,10 @@ class HalfDome extends Component {
             caption: 'Cascade, sur le chemin du retour'
           },
           {
-            src: '/static/2015/half-dome/pic.jpg',
+            src: '/static/2015/half-dome/post.jpg',
             width: 4000,
             height: 2248,
-            caption: 'La photo de pic'
+            caption: 'Le majestueux Half Dome depuis la crête au sud'
           },
           {
             src: '/static/2015/half-dome/derniere-montee.jpg',
@@ -197,7 +197,10 @@ class HalfDome extends Component {
           sidebarContent={<Img src='/static/2015/half-dome/les-cables.jpg'/>}
         >
           <P>
-            La fin de l’ascension est atypique : les «câbles» ! En raison de la pente à 45° par endroits, la dernière montée se fait en se tractant contre la paroi. Le mur est assez lisse, ce qui a requis l’installation de paliers en bois sur lesquels s’appuyer. Une chute en dehors des câbles et c’est la dégringolade jusque dans la vallée ! Certains ont le vertige et tétanisent. Nous n'avons rien ressenti, heureusement.
+            La fin de l’ascension est atypique : les «&nbsp;câbles&nbsp;» !
+          </P>
+          <P>
+            En raison de la pente à 45° par endroits, la dernière montée se fait en se tractant contre la paroi. Le mur est assez lisse, ce qui a requis l’installation de paliers en bois sur lesquels s’appuyer. Une chute en dehors des câbles et c’est la dégringolade jusque dans la vallée ! Certains ont le vertige et tétanisent. Nous n’avons rien ressenti, heureusement.
           </P>
         </Section>
 
@@ -210,7 +213,7 @@ class HalfDome extends Component {
         </Section>
 
         <Section
-          sidebarContent={<Img src='/static/2015/half-dome/fummee.jpg'/>}
+          sidebarContent={<Img src='/static/2015/half-dome/fumee.jpg'/>}
         >
           <P>
             Il n’est même pas 9h30 et nous enchaînons les photos, admirons la vue et en profitons aussi pour faire la sieste.
@@ -230,21 +233,22 @@ class HalfDome extends Component {
           <P>
             La descente s’est faite plus doucement, mais chaudement.
           </P>
-          <Emoji name='sun' size='2x'/>
+          <P><Emoji name='sun' size='2x'/></P>
           <P>
-            En effet, la température dépassait largement les trente degrés. L'ombre se faisait rare sur le chemin de la descente.
+            En effet, la température dépassait largement les trente degrés. L’ombre se faisait rare sur le chemin de la descente.
           </P>
         </Section>
         <Section
           sidebarContent={<Img src='/static/2015/half-dome/descente.jpg'/>}
         >
           <P>
-            D'autant plus, que nous avions oublié la crème solaire à la voiture et que la randonnée de la veille, Clouds Rest, nous avait laissé quelques rougeurs bénignes.
+            D’autant plus, que nous avions oublié la crème solaire à la voiture et que la randonnée de la veille, Clouds Rest, nous avait laissé quelques rougeurs bénignes.
           </P>
         </Section>
 
         <Section
           sidebarContent={<Img src='/static/2015/half-dome/selfie-fatigues.jpg'/>}
+          last={true}
         >
           <P>
             En tout, la balade aller-retour nous a pris 12h avec pauses.

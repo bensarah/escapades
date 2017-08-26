@@ -327,6 +327,7 @@ class MountWhitney extends Component {
         </Section>
         <Section
           sidebarContent={<Img src='/static/2017/mount-whitney/fini.jpg'/>}
+          last={true}
         >
           <P>
             Nous revoilà au point de départ, après une bonne journée de 15h. Faire l’ascension d’un pic à plus de 4000m d’altitude : <Emoji name='white-check-mark'/> !
