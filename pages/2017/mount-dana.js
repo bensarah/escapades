@@ -119,7 +119,7 @@ class KingsCanyon extends Component {
         <Section
           action={() => {
             setTimeout(() => {
-              this.state.map.flyTo({center: [-119.258206, 37.909613], zoom: 13, duration: 1500})
+              this.state.map.flyTo({center: [-119.258206, 37.909613], zoom: 15, duration: 1500})
             }, 1000)
           }}
         >
@@ -156,7 +156,7 @@ class KingsCanyon extends Component {
             La montée ne dure que quelques heures mais est de plus en plus intense.
           </P>
           <P>
-            <Emoji name='smile'/>
+            <Emoji name='sweat'/>
           </P>
           <P>
             Nous ressentons plusieurs épisodes de fatigue et d’essoufflement, sans vraiment savoir si l’alitude ou la difficulté de la randonnée en sont responsable. Peut-être les deux. Les symptômes ne sont pas tétanisants mais nous incitent à faire quelques pauses pour reprendre notre souffle.
@@ -217,6 +217,9 @@ class KingsCanyon extends Component {
         >
           <P>
             La descente fut (beaucoup) plus aisée. et nous avons retrouvé la voiture en moins de deux heures.
+          </P>
+          <P>
+            <Emoji name='car' size='2x' title='Une Fiat 500 SUV :)'/>
           </P>
         </Section>
 
