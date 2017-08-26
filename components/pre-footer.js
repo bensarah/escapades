@@ -7,7 +7,7 @@ const PreFooter = ({cta, quote, url}) => {
     <div className='px18 py30 bg-gray-faint color-gray align-center'>
         <Link prefetch href={url}>
             <a className='cursor-pointer'>
-              {cta}
+              {cta}<span className='icon-inliner px6'><svg className='icon icon--s'><use xlinkHref='#icon-arrow-right'/></svg></span>
             </a>
         </Link>
         {
