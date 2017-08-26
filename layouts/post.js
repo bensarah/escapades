@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Page from './main'
 import PropTypes from 'prop-types'
 import Header from '../components/post/header'

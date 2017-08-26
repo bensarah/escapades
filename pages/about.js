@@ -23,18 +23,18 @@ class About extends Component {
             </div>
           </Link>
           <div className='px18 py18 flex-parent flex-parent--center-cross flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
-            <div className='inline w360 h360 h-auto-ml' style={{
+            <div className='flex-child inline w360 h360 h-auto-ml' style={{
               background: `url(/static/about/nous.jpg) no-repeat center center`,
               backgroundSize: 'cover'
             }}></div>
-            <div className='px36-ml py0-ml py36 w360 w-auto-ml txt-l-ml'>
-              <h2 className='txt-xl txt-bold'>Hello !</h2>
+            <div className='flex-child px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
+              <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
               <p>
                 On adore randonner : être coupés du monde et voir des paysages magnifiques.
                 <br />
                 <Logo style={{fill: '#ffffff', height: '16px'}} className='inline'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline'/> est né de la volonté de partager joliment nos aventures et photos.
               </p>
-              <p>
+              <p className='pt36 pb12'>
                 Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
               </p>
               <br/>

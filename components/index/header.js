@@ -11,13 +11,13 @@ const IndexHeader = ({background}) => (
     style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}
   >
       <div className='logo-container align-center absolute bottom pl60 z2 animation-fade-in animation--speed-1 wmin120 wmin180-ml' title='Retour à la page d&#39;accueil'>
-      <Logo style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full pb18 px30'/>
-      <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full'/>
-      <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
-    </div>
-    <div className='lamp-container absolute bottom align-center z2'>
-      <Lamp className='relative animation-fade-in align-center'/>
-    </div>
+        <Logo style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full pb18 px30'/>
+        <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full'/>
+        <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
+      </div>
+      <div className='lamp-container absolute bottom align-center z2'>
+        <Lamp className='relative animation-fade-in align-center'/>
+      </div>
     <style jsx>{`
       .logo-container {
         padding-bottom: 25vh;

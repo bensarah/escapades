@@ -209,7 +209,7 @@ class TroisSeigneurs extends Component {
           action={() => {
             this.state.map.flyTo({center: [1.440094, 42.830493], zoom: 13.5, duration: 4000})
           }}
-          Last={true}
+          last={true}
         >
           <P>
             PS : D’où vient le nom <em>Pic des Trois Seigneurs</em> ?
