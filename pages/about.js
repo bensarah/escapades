@@ -23,11 +23,11 @@ class About extends Component {
             </div>
           </Link>
           <div className='px18 py18 flex-parent flex-parent--center-cross flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
-            <div className='flex-child inline w360 h360 h-auto-ml' style={{
+            <div className='flex-child inline-block align-middle w360 h360 h-auto-ml' style={{
               background: `url(/static/about/nous.jpg) no-repeat center center`,
               backgroundSize: 'cover'
             }}></div>
-            <div className='flex-child px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
+            <div className='flex-child inline-block align-middle px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
               <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
               <p>
                 On adore randonner : être coupés du monde et voir des paysages magnifiques.

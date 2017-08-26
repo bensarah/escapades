@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Lamp = ({className}) => (
   <span id='lamp' className={className}>
-    <svg width='80' height='100' version='1.1' viewBox='0 0 80 80' xmlSpace='preserve' xmlns='http://www.w3.org/2000/svg'>
+    <svg width='80' height='120' version='1.1' viewBox='0 0 80 80' xmlSpace='preserve' xmlns='http://www.w3.org/2000/svg'>
       <g transform='translate(-15.668)'>
         <path d='m70.336 72.154c0-6.0278-1.6824-11.476-4.401-15.389-0.92925-1.3376-1.9747-2.4936-3.1189-3.4309h-14.297c-0.47204 0.38616-0.9274 0.81124-1.3624 1.2697-0.62527 0.65307-1.2104 1.3753-1.7559 2.1619-2.7192 3.9128-4.401 9.3617-4.401 15.389 0 1.9889 0.18597 3.9147 0.53073 5.7448 0.22984 1.2209 1.3 2.1026 2.5431 2.1026h23.188c0.77726 0 1.4859-0.34538 1.9654-0.90083 0.28792-0.33487 0.49305-0.74451 0.57831-1.2017 0.34476-1.8301 0.53073-3.7553 0.53073-5.7448z'
         fill='#063c51' />
@@ -18,12 +18,17 @@ const Lamp = ({className}) => (
         <path d='m55.934 35.407c-1.0015 0-1.814 0.81186-1.814 1.814v6.2323c0 1.0015 0.81186 1.814 1.814 1.814 1.0015 0 1.814-0.81186 1.814-1.814v-6.2323c0-1.0015-0.81186-1.814-1.814-1.814z' fill='#081926' />
         <circle id='lamp-button' transform='scale(1,-1)' cx='55.934' cy='-37.485' r='2.0778' fill='#f0bd25' />
         {/* A remplacer par le vrai chemin */}
-        <polygon id='lamp-light' points="42,80 70,80 100,100 10,100" fill="#f0bd25" opacity='0'/>
+        <linearGradient id='fill-gradient' x1='0' y1='100%' x2='0' y2='0'>
+          <stop offset='30%' stopColor='#f0bd25' stopOpacity={0.4}/>
+          <stop offset='110%' stopColor='#f0bd25' stopOpacity={1}/>
+        </linearGradient>
+        <polygon id='lamp-light' points="43,80 68,80 100,120 10,120" fill='url(#fill-gradient)' opacity='0'/>
+        <polygon id='lamp-light' points="48,80 63,80 85,120 25,120" fill='url(#fill-gradient)' opacity='0'/>
       </g>
     </svg>
     <style jsx>{`
       #lamp {
-        animation: upDown 3s infinite;
+        animation: upDown 1.5s infinite;
         animation-timing-function: cubic-bezier(.40,0,.30,1);
         bottom: 0;
       }

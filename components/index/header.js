@@ -15,8 +15,8 @@ const IndexHeader = ({background}) => (
         <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full'/>
         <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
       </div>
-      <div className='lamp-container absolute bottom align-center z2'>
-        <Lamp className='relative animation-fade-in align-center'/>
+      <div className='bleuNuit lamp-container absolute bottom align-center z2'>
+        <Lamp className=' pb24 relative animation-fade-in align-center'/>
       </div>
     <style jsx>{`
       .logo-container {
@@ -43,6 +43,10 @@ const IndexHeader = ({background}) => (
         position:absolute;
         pointer-events:none;
         z-index: -1;
+      }
+
+      .bleuNuit {
+        background-color: ${palette.bleuNuit}
       }
 
       .header::before {
