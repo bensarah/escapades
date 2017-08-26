@@ -15,29 +15,30 @@ class About extends Component {
         <Head>
           <title>escapades - À propos</title>
         </Head>
-        <div className='content'>
+        <div className='content flex-parent flex-parent--column'>
           <Link prefetch href='/'>
             <div className='cursor-pointer z5 mx18 my18 txt-m txt-bold' title='Retour à la page d&#39;accueil'>
               <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
               <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
             </div>
           </Link>
-          <div className='px18 py18 flex-parent flex-parent--center-cross flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
-            <div className='flex-child inline-block align-middle w360 h360 h-auto-ml' style={{
+          <div className='px18 py18 h-full flex-child--grow flex-parent flex-parent--center-cross flex-parent--center-main  flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
+            <div className='inline w360 h360 h-auto-ml' style={{
               background: `url(/static/about/nous.jpg) no-repeat center center`,
               backgroundSize: 'cover'
             }}></div>
-            <div className='flex-child inline-block align-middle px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
-              <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
-              <p>
-                On adore randonner : être coupés du monde et voir des paysages magnifiques.
-                <br />
-                <Logo style={{fill: '#ffffff', height: '16px'}} className='inline'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline'/> est né de la volonté de partager joliment nos aventures et photos.
-              </p>
-              <p className='pt36 pb12'>
-                Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
-              </p>
-              <br/>
+            <div className='flex-child inline-block flex-parent flex-parent--column flex-parent--center-main px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
+              <div>
+                <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
+                <p>
+                  On adore randonner : être coupés du monde et voir des paysages magnifiques.
+                  <br />
+                  <Logo style={{fill: '#ffffff', height: '16px'}} className='inline-block'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline-block'/> est né de la volonté de partager joliment nos aventures et photos.
+                </p>
+                <p className='pt36 pb12'>
+                  Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
+                </p>
+              </div>
               <div>
                 <div>
                   <p className='txt-m align-middle'>
