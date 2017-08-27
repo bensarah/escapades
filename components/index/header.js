@@ -6,31 +6,27 @@ import {hexToRGB} from '../../helpers/colors'
 import palette from '../../styles/palette'
 
 const IndexHeader = ({background}) => (
-  <div
-    className='header w-full display-block relative'
-    style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}
-  >
+  <div className='w-full'>
+    <div
+      className='header w-full display-block relative'
+      style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}
+    >
       <div className='logo-container align-center absolute bottom pl60 z2 animation-fade-in animation--speed-1 wmin120 wmin180-ml' title='Retour à la page d&#39;accueil'>
         <Logo style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full pb18 px30'/>
         <LogoText style={{fill: 'white', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))'}} className='w-full'/>
         <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
       </div>
-      <div className='bleuNuit lamp-container absolute bottom align-center z2'>
-        <Lamp className=' pb24 relative animation-fade-in align-center'/>
-      </div>
+    </div>
+    <div className='lamp-container w-full align-center z2 pb120'>
+      <Lamp className='absolute lamp relative animation-fade-in align-center z5'/>
+    </div>
     <style jsx>{`
       .logo-container {
         padding-bottom: 25vh;
       }
 
-      .lamp-container {
-        left: 0;
-        right: 0;
-        height: 100px;
-      }
-
       .header {
-        height: 100vh;
+        height: 95vh;
         z-index: 1;
       }
 
@@ -46,7 +42,8 @@ const IndexHeader = ({background}) => (
         z-index: -1;
       }
 
-      .bleuNuit {
+      .lamp-container {
+        height: 5vh;
         background-color: ${palette.bleuNuit}
       }
 

@@ -1,76 +1,176 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 import PropTypes from 'prop-types'
 
-const Lamp = ({className}) => (
-  <span id='lamp' className={className}>
-    <svg width='80' height='120' version='1.1' viewBox='0 0 80 80' xmlSpace='preserve' xmlns='http://www.w3.org/2000/svg'>
-      <g transform='translate(-15.668)'>
-        <path d='m70.336 72.154c0-6.0278-1.6824-11.476-4.401-15.389-0.92925-1.3376-1.9747-2.4936-3.1189-3.4309h-14.297c-0.47204 0.38616-0.9274 0.81124-1.3624 1.2697-0.62527 0.65307-1.2104 1.3753-1.7559 2.1619-2.7192 3.9128-4.401 9.3617-4.401 15.389 0 1.9889 0.18597 3.9147 0.53073 5.7448 0.22984 1.2209 1.3 2.1026 2.5431 2.1026h23.188c0.77726 0 1.4859-0.34538 1.9654-0.90083 0.28792-0.33487 0.49305-0.74451 0.57831-1.2017 0.34476-1.8301 0.53073-3.7553 0.53073-5.7448z'
-        fill='#063c51' />
-        <path d='m70.336 72.154c0-6.0278-1.6824-11.476-4.401-15.389-0.92925-1.3376-1.9747-2.4936-3.1189-3.4309h-14.297c-0.47204 0.38616-0.9274 0.81124-1.3624 1.2697 17.59 8.5579 18.39 22.893 18.39 22.893l3.6799 1.6046c0.28792-0.33487 0.49305-0.74451 0.57831-1.2017 0.34476-1.8301 0.53073-3.7553 0.53073-5.7448z'
-        fill='#01374b' />
-        <path d='m69.875 77.492c-0.02348 0.13345-0.04757 0.26691-0.07229 0.39913-0.2286 1.2233-1.3006 2.1069-2.5449 2.1069h-23.181c-1.2444 0-2.3151-0.88353-2.5443-2.1062-0.02471-0.13284-0.04881-0.26568-0.07167-0.39914h28.414z' fill='#337b9c' />
-        <rect transform='scale(1,-1)' x='47.09' y='-54.719' width='17.156' height='2.7723' fill='#337b9c' />
-        <path d='m47.09 5.498v-1.6163c0-2.1433 1.7374-3.8807 3.8807-3.8807h9.3944c2.1433 0 3.8807 1.7374 3.8807 3.8807v1.6163z' fill='#337b9c' />
-        <rect transform='scale(1,-1)' x='47.09' y='-51.947' width='17.156' height='47.056' fill='#063c51' />
-        <path d='m64.246 51.946v-47.056h-17.156v3.2394c1.0911-1.0664 2.2663-1.6472 3.4915-1.6472 5.7417 0 10.395 12.752 10.395 28.482 0 6.3639-0.76181 12.241-2.0494 16.982z' fill='#01374b' />
-        <path d='m55.934 35.407c-1.0015 0-1.814 0.81186-1.814 1.814v6.2323c0 1.0015 0.81186 1.814 1.814 1.814 1.0015 0 1.814-0.81186 1.814-1.814v-6.2323c0-1.0015-0.81186-1.814-1.814-1.814z' fill='#081926' />
-        <circle id='lamp-button' transform='scale(1,-1)' cx='55.934' cy='-37.485' r='2.0778' fill='#f0bd25' />
-        {/* A remplacer par le vrai chemin */}
-        <linearGradient id='fill-gradient' x1='0' y1='100%' x2='0' y2='0'>
-          <stop offset='30%' stopColor='#f0bd25' stopOpacity={0.4}/>
-          <stop offset='110%' stopColor='#f0bd25' stopOpacity={1}/>
-        </linearGradient>
-        <polygon id='lamp-light' points="43,80 68,80 100,120 10,120" fill='url(#fill-gradient)' opacity='0'/>
-        <polygon id='lamp-light' points="48,80 63,80 85,120 25,120" fill='url(#fill-gradient)' opacity='0'/>
-      </g>
-    </svg>
-    <style jsx>{`
-      #lamp {
-        animation: upDown 1.5s infinite;
-        animation-timing-function: cubic-bezier(.40,0,.30,1);
-        bottom: 0;
-      }
+class Lamp extends Component {
+  constructor (props) {
+    super(props)
 
-      #lamp:hover #lamp-button {
-        animation: buttonOn 0.2s ease forwards;
-      }
+    this.handleScroll = this.handleScroll.bind(this)
 
-      #lamp:hover #lamp-light {
-        animation: lightOn 0.1s ease forwards;
-        animation-delay: 0.1s;
-      }
+    this.state = {
+      lit: false
+    }
+  }
 
-      @keyframes upDown {
-        0% {
-          bottom: 0;
-        }
-        40% {
-          bottom: 9px;
-        }
-        60% {
-          bottom: 9px;
-        }
-        100% {
-          bottom: 0;
-        }
-      }
+  render () {
+    let className = this.props.className
+    if (this.state.lit) {
+      className += ' lit'
+    }
 
-      @keyframes buttonOn {
-        to {
-          cy: -45;
-        }
-      }
+    return (
+      <div id='lamp' className={className}>
+        <svg
+          width="111.85569"
+          height="132.60056"
+          viewBox="0 0 111.85569 88.40037"
+        >
+          <defs>
+            <linearGradient id='fill-gradient' x1='0' y1='100%' x2='0' y2='0'>
+              <stop offset='0%' stopColor='#edc653' stopOpacity={0.2}/>
+              <stop offset='110%' stopColor='#f0bd25' stopOpacity={1}/>
+            </linearGradient>
+          </defs>
+          <g
+            transform="translate(0.307767,-22.101093)"
+          >
+            <path
+              d="m 70.336,72.154 c 0,-6.0278 -1.6824,-11.476 -4.401,-15.389 -0.92925,-1.3376 -1.9747,-2.4936 -3.1189,-3.4309 h -14.297 c -0.47204,0.38616 -0.9274,0.81124 -1.3624,1.2697 -0.62527,0.65307 -1.2104,1.3753 -1.7559,2.1619 -2.7192,3.9128 -4.401,9.3617 -4.401,15.389 0,1.9889 0.18597,3.9147 0.53073,5.7448 0.22984,1.2209 1.3,2.1026 2.5431,2.1026 h 23.188 c 0.77726,0 1.4859,-0.34538 1.9654,-0.90083 0.28792,-0.33487 0.49305,-0.74451 0.57831,-1.2017 0.34476,-1.8301 0.53073,-3.7553 0.53073,-5.7448 z"
+              fill="#063c51"
+            />
+            <path
+              d="m 70.336,72.154 c 0,-6.0278 -1.6824,-11.476 -4.401,-15.389 -0.92925,-1.3376 -1.9747,-2.4936 -3.1189,-3.4309 h -14.297 c -0.47204,0.38616 -0.9274,0.81124 -1.3624,1.2697 17.59,8.5579 18.39,22.893 18.39,22.893 l 3.6799,1.6046 c 0.28792,-0.33487 0.49305,-0.74451 0.57831,-1.2017 0.34476,-1.8301 0.53073,-3.7553 0.53073,-5.7448 z"
+              fill="#01374b"
+            />
+            <path
+              d="m 69.875,77.492 c -0.02348,0.13345 -0.04757,0.26691 -0.07229,0.39913 -0.2286,1.2233 -1.3006,2.1069 -2.5449,2.1069 h -23.181 c -1.2444,0 -2.3151,-0.88353 -2.5443,-2.1062 -0.02471,-0.13284 -0.04881,-0.26568 -0.07167,-0.39914 h 28.414 z"
+              fill="#337b9c"
+            />
+            <rect
+              transform="scale(1,-1)"
+              x="47.09"
+              y="-54.719002"
+              width="17.156"
+              height="2.7723"
+              fill="#337b9c"
+            />
+            <path
+              d="M 47.09,5.498 V 3.8817 c 0,-2.1433 1.7374,-3.8807 3.8807,-3.8807 h 9.3944 c 2.1433,0 3.8807,1.7374 3.8807,3.8807 V 5.498 Z"
+              fill="#337b9c"
+            />
+            <rect
+              transform="scale(1,-1)"
+              x="47.09"
+              y="-51.946999"
+              width="17.156"
+              height="47.056"
+              fill="#063c51"
+            />
+            <path
+              d="M 64.246,51.946 V 4.89 H 47.09 v 3.2394 c 1.0911,-1.0664 2.2663,-1.6472 3.4915,-1.6472 5.7417,0 10.395,12.752 10.395,28.482 0,6.3639 -0.76181,12.241 -2.0494,16.982 z"
+              fill="#01374b"
+            />
+            <path
+              d="m 55.934,35.407 c -1.0015,0 -1.814,0.81186 -1.814,1.814 v 6.2323 c 0,1.0015 0.81186,1.814 1.814,1.814 1.0015,0 1.814,-0.81186 1.814,-1.814 V 37.221 c 0,-1.0015 -0.81186,-1.814 -1.814,-1.814 z"
+              fill="#081926"
+            />
+            <circle
+              id="lamp-button"
+              transform="scale(1,-1)"
+              cx="55.933998"
+              cy="-37"
+              r="2.0778"
+              fill="#f0bd25"
+            />
+            <path
+              className='lamp-light'
+              fill='url(#fill-gradient)'
+              d="m 43.668,80 -43.975767,43.97577 c 0,0 18.227396,8.625 56.225767,8.625 37.998371,0 55.62992,-8.625 55.62992,-8.625 L 67.563459,80 Z"
+            />
+            <path
+              className='lamp-light'
+              fill='url(#fill-gradient)'
+              d="M 28.845703,100 3.8554688,149.51367 c 8.9967872,1.67604 21.0568912,3.08789 36.3945312,3.08789 14.811934,0 26.48887,-1.31468 35.273438,-2.91406 L 52.261719,100.36719 51.894531,100 Z"
+              transform="translate(15.668,-20)"
+            />
+          </g>
+        </svg>
+        <style jsx>{`
+          #lamp {
+            animation: upDown 2s infinite;
+            animation-timing-function: cubic-bezier(.40,0,.30,1);
+            bottom: 0;
+          }
 
-      @keyframes lightOn {
-        to {
-          opacity: 0.9;
-        }
-      }
-    `}</style>
-  </span>
-)
+          #lamp-button {
+            animation: buttonOff 0.2 ease forwards;
+          }
+
+          .lit #lamp-button {
+            animation: buttonOn 0.2s ease forwards;
+          }
+
+          .lamp-light {
+            opacity: 0;
+            transition: opacity 0.2s;
+            transition-delay: 0.1s;
+          }
+
+          .lit .lamp-light {
+            opacity: 0.9;
+          }
+
+          @keyframes upDown {
+            0% {
+              top : -10px;
+            }
+            30% {
+              top: -40px;
+            }
+            70% {
+              top: -40px;
+            }
+            100% {
+              top : -10px;
+            }
+          }
+
+          @keyframes buttonOn {
+            to {
+              cy: -45;
+            }
+          }
+
+          @keyframes bottonOff {
+            to {
+              cy: -37;
+            }
+          }
+        `}</style>
+      </div>
+    )
+  }
+
+  componentDidMount () {
+    const handleScroll = (e) => this.handleScroll(e)
+    window.addEventListener('scroll', handleScroll)
+    this.setState({scrollListener: handleScroll})
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.state.handleScroll)
+  }
+
+  handleScroll (event) {
+    let scrollTop = event.srcElement.body.scrollTop
+    if (scrollTop > 300 && !this.state.lit) {
+      this.setState({lit: true})
+    } else if (scrollTop <= 300 && this.state.lit) {
+      this.setState({lit: false})
+    }
+  }
+}
 
 Lamp.propTypes = {
   className: PropTypes.string
