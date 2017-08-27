@@ -103,6 +103,10 @@ class Lamp extends Component {
             bottom: 0;
           }
 
+          #lamp.lit {
+            animation-play-state: paused;
+          }
+
           #lamp-button {
             animation: buttonOff 0.2 ease forwards;
           }
@@ -164,9 +168,9 @@ class Lamp extends Component {
 
   handleScroll (event) {
     let scrollTop = event.srcElement.body.scrollTop
-    if (scrollTop > 300 && !this.state.lit) {
+    if (scrollTop > (window.innerHeight / 2) && !this.state.lit) {
       this.setState({lit: true})
-    } else if (scrollTop <= 300 && this.state.lit) {
+    } else if (scrollTop <= (window.innerHeight / 2) && this.state.lit) {
       this.setState({lit: false})
     }
   }

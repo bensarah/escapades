@@ -26,7 +26,7 @@ const IndexHeader = ({background}) => (
       }
 
       .header {
-        height: 95vh;
+        height: 88vh;
         z-index: 1;
       }
 
@@ -43,7 +43,7 @@ const IndexHeader = ({background}) => (
       }
 
       .lamp-container {
-        height: 5vh;
+        height: 12vh;
         background-color: ${palette.bleuNuit}
       }
 
@@ -51,6 +51,15 @@ const IndexHeader = ({background}) => (
         background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
       }
 
+      @media screen and (min-width: 800px) {
+        .header {
+          height: 92vh;
+        }
+
+        .lamp-container {
+          height: 8vh;
+        }
+      }
     `}</style>
   </div>
 )

@@ -32,20 +32,19 @@ class About extends Component {
                 <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
                 <p>
                   On adore randonner : être coupés du monde et voir des paysages magnifiques.
-                  <br />
+                  <br/>
                   <Logo style={{fill: '#ffffff', height: '16px'}} className='inline-block'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline-block'/> est né de la volonté de partager joliment nos aventures et photos.
                 </p>
                 <p className='pt36 pb12'>
                   Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
                 </p>
+                <br/>
               </div>
               <div>
-                <div>
-                  <p className='txt-m align-middle'>
-                    <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/code.svg`} title='Tech & Code'></Isvg> Site écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
-                    et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
-                  </p>
-                </div>
+                <p className='txt-m align-middle'>
+                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/code.svg`} title='Tech & Code'></Isvg> Site écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
+                  et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
+                </p>
                 <p className='txt-m'>
                   <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:NotreEmailICI'>avides de vos conseils</a>.
                 </p>
