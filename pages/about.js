@@ -17,7 +17,7 @@ class About extends Component {
         </Head>
         <div className='content flex-parent flex-parent--column'>
           <Link prefetch href='/'>
-            <div className='cursor-pointer z5 mx18 my18 txt-m txt-bold' title='Retour à la page d&#39;accueil'>
+            <div className='cursor-pointer z5 mx18 my18 txt-m txt-bold' title='Retour à la page d’accueil'>
               <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
               <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
             </div>

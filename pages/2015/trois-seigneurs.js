@@ -62,19 +62,19 @@ class TroisSeigneurs extends Component {
             src: '/static/2015/trois-seigneurs/rocaille.jpg',
             width: 4000,
             height: 2248,
-            caption: 'Les paysages qu&#39;on traversait au retour : beaucoup de rocaille'
+            caption: 'Les paysages qu’on traversait au retour : beaucoup de rocaille'
           },
           {
             src: '/static/2015/trois-seigneurs/selfie.jpg',
             width: 4000,
             height: 2248,
-            caption: 'Une photo de nous, peu avant l&#39;arrivée'
+            caption: 'Une photo de nous, peu avant l’arrivée'
           },
           {
             src: '/static/2015/trois-seigneurs/montaut.jpg',
             width: 4000,
             height: 2248,
-            caption: 'Et une photo de Montaut, pour vous montrer l&#39;endroit'
+            caption: 'Et une photo de Montaut, pour vous montrer l’endroit'
           }
         ]}
       >
@@ -103,7 +103,7 @@ class TroisSeigneurs extends Component {
           action={() => highlightFromTo(this.state.map, trail, 0, 0.4, {pointHighlight: false})}
         >
           <P>
-            Après un réveil matinal pour faire la route depuis Montaut, en passant par le Port de Lers, nous débutons donc l’ascension vers 9h30 par l&#39;arête ouest.
+            Après un réveil matinal pour faire la route depuis Montaut, en passant par le Port de Lers, nous débutons donc l’ascension vers 9h30 par l’arête ouest.
           </P>
         </Section>
 

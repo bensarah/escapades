@@ -18,9 +18,9 @@ const Header = ({ img, title, subtitle, trail, home }) => {
       style={{background: `url(${img}) no-repeat center center`, backgroundSize: 'cover'}}
     >
       <Head><title>{title}</title></Head>
-      <div className='header absolute w-full z1' title='Retour à la page d&#39;accueil'>
+      <div className='header absolute w-full z1'>
         <Link prefetch href='/'>
-          <a className='cursor-pointer absolute z5 px18 py18 txt-m txt-bold'>
+          <a className='cursor-pointer absolute z5 px18 py18 txt-m txt-bold' title='Retour à la page d’accueil'>
             <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
             <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
           </a>
