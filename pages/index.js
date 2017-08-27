@@ -39,7 +39,7 @@ class Index extends Component {
 
             <div id='geographical-section'>
               <div className='py24'>
-                <div className='px18 pb18'>
+                <div className='px18-ml pb18'>
                   <h2 className='pt12 txt-xl txt-bold'><Emoji name='earth-africa'/> Des deux côtés de l’Atlantique</h2>
                   <p className='pt12'>
                     Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
@@ -48,7 +48,7 @@ class Index extends Component {
                   </p>
                 </div>
               </div>
-              <div className='px18 pb24'>
+              <div className='px18-ml pb24'>
                 {this.regions()}
               </div>
             </div>
