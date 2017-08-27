@@ -26,7 +26,7 @@ class KingsCanyon extends Component {
             src: '/static/2017/mount-dana/mont-dana.jpg',
             width: 2000,
             height: 1333,
-            caption: 'Le Mont Dana vue de la route. Il n&#39;a pas l&#39;air si imposant et pourtant, il culmine à 3 981m !'
+            caption: 'Le Mont Dana vue de la route. Il n’a pas l’air si imposant et pourtant, il culmine à 3 981m !'
           },
           {
             src: '/static/2017/mount-dana/lac.jpg',
@@ -68,13 +68,13 @@ class KingsCanyon extends Component {
             src: '/static/2017/mount-dana/papillon.jpg',
             width: 4002,
             height: 3000,
-            caption: 'Un papillon qui s&#39;est envolé un peu vite au sommet'
+            caption: 'Un papillon qui s’est envolé un peu vite au sommet'
           },
           {
             src: '/static/2017/mount-dana/plaque.jpg',
             width: 3899,
             height: 3899,
-            caption: 'Une plaque d&#39;immatriculation très drôle pour un de nos voisins de parking'
+            caption: 'Une plaque d’immatriculation très drôle pour un de nos voisins de parking'
           }
         ]}
       >

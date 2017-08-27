@@ -28,7 +28,7 @@ class Index extends Component {
         <div className='main'>
           <div className='px18'>
             <div>
-              <p className='intro py30 align-center'>
+              <p className='intro txt-l-ml txt-m py30 align-center'>
                 Nous avons décidé de vous faire partager nos escapades en randonnée sur ce site.
                 <br />
                 Vous pouvez retrouver l’index des différentes randos <a href='#geographical-section'><strong>géographiquement</strong></a> et <a href='#chronological-section'><strong>chronologiquement</strong></a>.
@@ -113,10 +113,6 @@ class Index extends Component {
             color: ${palette.tournesol};
           }
 
-          h3, .quote, .intro {
-            font-size: 20px;
-          }
-
           a {
             color: ${palette.lavande}
           }
@@ -124,12 +120,6 @@ class Index extends Component {
           a:hover {
             color: ${palette.lightenLavande}
           }
-
-          .park {
-            font-size: 16px;
-            color: ${palette.brique};
-          }
-
         `}</style>
       </Page>
     )
