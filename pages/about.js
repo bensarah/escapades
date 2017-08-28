@@ -23,10 +23,11 @@ class About extends Component {
             </div>
           </Link>
           <div className='px18 py18 h-full flex-child--grow flex-parent flex-parent--center-cross flex-parent--center-main  flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
-            <div className='inline w360 h360 h-auto-ml' style={{
+            <div className='photo inline w360 h360 w600-mxl h-auto-ml' style={{
               background: `url(/static/about/nous.jpg) no-repeat center center`,
               backgroundSize: 'cover'
-            }}></div>
+            }}>
+            </div>
             <div className='flex-child inline-block flex-parent flex-parent--column flex-parent--center-main px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
               <div>
                 <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
@@ -98,6 +99,7 @@ class About extends Component {
             color: ${palette.grisClair};
             height: 100%;
           }
+
         `}</style>
       </Page>
     )

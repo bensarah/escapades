@@ -3,7 +3,6 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import palette from '../styles/palette'
 import {hexToRGB} from '../helpers/colors'
-import Smartlook from './smartlook'
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -18,7 +17,7 @@ const Meta = () => (
       <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
       <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
       <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
-      <Smartlook/>
+      {/* Add Smartlook here */}
     </Head>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
     <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />

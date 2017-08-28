@@ -261,7 +261,7 @@ class KingsCanyon extends Component {
           <P>
             On y est : Mitchell Peak, 3 150m d’altitude. Nous n’avions jamais randonné aussi haut*.
           </P>
-          <Footnote>Même si le Mont Dana 3981m puis Whitney 4421m suivront la semaine suivante.</Footnote>
+          <Footnote>Même si le <a target='_blank' href='/2017/mount-dana'>Mont Dana</a> 3981m puis <a target='_blank' href='/2017/mount-whitney'>Whitney</a> 4421m suivront la semaine suivante.</Footnote>
         </Section>
 
         <Section

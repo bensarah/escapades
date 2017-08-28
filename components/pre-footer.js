@@ -26,7 +26,7 @@ const PreFooter = ({cta, quote, url}) => {
         }
 
         a:hover {
-          color: ${palette.lightenLavande};
+          color: ${palette.tournesol};
         }
       `}</style>
     </div>
