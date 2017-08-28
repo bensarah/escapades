@@ -33,17 +33,6 @@ export default [
     quote: 'La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut...'
   },
   {
-    title: 'Lassen Peak',
-    park: 'Lassen National Park',
-    region: 'California',
-    date: 'Juin 2016',
-    id: 'lassen-peak',
-    coords: [-121.505004, 40.488014],
-    header: '/static/2016/lassen-peak/header.jpg',
-    url: '/2016/lassen-peak',
-    quote: 'C’était vraiment magnifique...'
-  },
-  {
     title: 'Half Dome',
     park: 'Yosemite',
     region: 'California',
@@ -53,17 +42,6 @@ export default [
     header: '/static/2015/half-dome/post.jpg',
     url: '/2015/half-dome',
     quote: 'Après les câbles, on y est ! Toute la vallée de Yosemite à nos pieds, une vue imprenable...'
-  },
-  {
-    title: 'Clouds Rest',
-    park: 'Yosemite',
-    region: 'California',
-    date: 'Août 2015',
-    id: 'clouds-rest',
-    coords: [-119.489384, 37.767769],
-    header: '/static/2015/clouds-rest/header.jpg',
-    url: '/2015/clouds-rest',
-    quote: 'C’était vraiment magnifique...'
   },
   {
     title: 'Trois Seigneurs',
