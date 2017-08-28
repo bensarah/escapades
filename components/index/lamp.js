@@ -20,7 +20,7 @@ class Lamp extends Component {
     }
 
     return (
-      <div id='lamp' className={className}>
+      <div id='lamp' className={className} onClick={() => window.scrollBy(0, 200)}>
         <svg
           width="111.85569"
           height="132.60056"
@@ -168,9 +168,9 @@ class Lamp extends Component {
 
   handleScroll (event) {
     let scrollTop = event.srcElement.body.scrollTop
-    if (scrollTop > (window.innerHeight / 2) && !this.state.lit) {
+    if (scrollTop > (window.innerHeight / 4) && !this.state.lit) {
       this.setState({lit: true})
-    } else if (scrollTop <= (window.innerHeight / 2) && this.state.lit) {
+    } else if (scrollTop <= (window.innerHeight / 4) && this.state.lit) {
       this.setState({lit: false})
     }
   }
