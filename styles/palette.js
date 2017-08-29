@@ -4,8 +4,8 @@ const palette = {
   taupe: '#776155',
   lavande: '#777D9B',
   bleuNuit: '#081926',
-  lightAzure: '#308FD3',
-  azure: '#067ED3',
+  lightAzure: '#BCC5F4',
+  azure: '#777D9B',
   grisClair: '#d9dade',
   lightenLavande: '#BCC5F4' // lavande is hsl(230,23,61) and lightenLavande is hsl(230,23,96)
 }
