@@ -114,11 +114,11 @@ class Index extends Component {
           }
 
           a {
-            color: ${palette.lavande}
+            color: ${palette.azure}
           }
 
           a:hover {
-            color: ${palette.lightenLavande}
+            color: ${palette.lightAzure}
           }
         `}</style>
       </Page>

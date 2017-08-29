@@ -163,7 +163,7 @@ class Lamp extends Component {
   }
 
   componentWillUnmount () {
-    window.removeEventListener('scroll', this.state.handleScroll)
+    window.removeEventListener('scroll', this.state.scrollListener)
   }
 
   handleScroll (event) {

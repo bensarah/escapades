@@ -11,7 +11,7 @@ const Footer = ({ cta, quote, url, prefooter }) => (
       ? <PreFooter cta={cta} quote={quote} url={url}/>
       : null
     }
-    <div className='relative py30 px30 hmin120 color-gray-light'>
+    <div className='relative py30 px30 hmin120 azure'>
       <div className='flex-parent flex-parent--column flex-parent--row-ml flew-parent--wrap'>
         <a href='#' className='cursor-pointer pr18 pb6' onClick={() => window.scrollTo(window.pageYOffset, 0)}>
           <Emoji name='arrow-up'/><span className='pl6'>Haut de page</span>
@@ -40,8 +40,12 @@ const Footer = ({ cta, quote, url, prefooter }) => (
         background-color: ${palette.bleuNuit};
       }
 
+      .azure {
+        color: ${palette.azure};
+      }
+
       .footer .clickable:hover, .footer a:hover {
-        color: white;
+        color: ${palette.brightAzure};
       }
     `}</style>
   </div>

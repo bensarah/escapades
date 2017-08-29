@@ -31,11 +31,11 @@ class About extends Component {
             <div className='flex-child inline-block flex-parent flex-parent--column flex-parent--center-main px36-ml py0-ml w360 w-auto-ml txt-l-ml'>
               <div>
                 <h2 className='txt-xl txt-bold pb24'>Hello !</h2>
-                <p>
+                <div>
                   On adore randonner : être coupés du monde et voir des paysages magnifiques.
                   <br/>
                   <Logo style={{fill: '#ffffff', height: '16px'}} className='inline-block'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline-block'/> est né de la volonté de partager joliment nos aventures et photos.
-                </p>
+                </div>
                 <p className='pt36 pb12'>
                   Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
                 </p>
@@ -86,11 +86,11 @@ class About extends Component {
           }
 
           a {
-            color: ${palette.lavande}
+            color: ${palette.azure}
           }
 
           a:hover {
-            color: ${palette.lightenLavande}
+            color: ${palette.lightAzure}
           }
         `}</style>
         <style jsx global>{`

@@ -66,7 +66,6 @@ class MapHighlights extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    console.log(nextProps)
     const size = 15 // px
     if (nextProps.highlight) {
       let el = document.createElement('div')

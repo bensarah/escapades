@@ -72,11 +72,11 @@ class Region extends Component {
             }
           <style jsx>{`
             a {
-              color: ${palette.lavande}
+              color: ${palette.azure}
             }
 
             a:hover {
-              color: ${palette.lightenLavande}
+              color: ${palette.lightAzure}
             }
           `}</style>
         </div>
