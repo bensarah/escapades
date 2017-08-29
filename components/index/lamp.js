@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-
 import PropTypes from 'prop-types'
 
 class Lamp extends Component {
@@ -20,7 +19,7 @@ class Lamp extends Component {
     }
 
     return (
-      <div id='lamp' className={className} onClick={() => window.scrollBy(0, 200)}>
+      <div id='lamp' className={className} onClick={() => this.smoothScrollToLampLit()}>
         <svg
           width="111.85569"
           height="142.60056"
@@ -157,6 +156,7 @@ class Lamp extends Component {
   }
 
   componentDidMount () {
+    require('smoothscroll-polyfill').polyfill()
     const handleScroll = (e) => this.handleScroll(e)
     window.addEventListener('scroll', handleScroll)
     this.setState({scrollListener: handleScroll})
@@ -167,12 +167,21 @@ class Lamp extends Component {
   }
 
   handleScroll (event) {
-    let scrollTop = event.srcElement.body.scrollTop
-    if (scrollTop > (window.innerHeight / 4) && !this.state.lit) {
+    let scrollTop = document.body.scrollTop
+    if (scrollTop >= (window.innerHeight / 3) && !this.state.lit) {
       this.setState({lit: true})
-    } else if (scrollTop <= (window.innerHeight / 4) && this.state.lit) {
+    } else if (scrollTop < (window.innerHeight / 3) && this.state.lit) {
       this.setState({lit: false})
     }
+  }
+
+  smoothScrollToLampLit () {
+    if (document.body.scrollTop > window.innerHeight / 3) return
+    window.scroll({
+      top: window.innerHeight / 3 + 1,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
 }
 

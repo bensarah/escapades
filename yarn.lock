@@ -4705,6 +4705,10 @@ smartlook-client@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/smartlook-client/-/smartlook-client-2.2.0.tgz#a8cf132cbb7fb32fa6e6919a224fbb7d88f53d87"
 
+smoothscroll-polyfill@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.3.6.tgz#492be845195157cdc2fc529a95d89e7a71509172"
+
 sntp@1.x.x:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
