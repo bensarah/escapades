@@ -2,12 +2,6 @@ import React, { Component } from 'react'
 import smartlookClient from 'smartlook-client'
 
 class Smartlook extends Component {
-  handleTag () {
-    smartlookClient.tag('tagName', 'tagValue')
-  }
-  handleDisable () {
-    smartlookClient.disable()
-  }
   render () {
     return null
   }
