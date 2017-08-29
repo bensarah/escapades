@@ -4,7 +4,7 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import palette from '../styles/palette'
 import {hexToRGB} from '../helpers/colors'
-import smartlookClient from 'smartlook-client'
+// import smartlookClient from 'smartlook-client'
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -100,7 +100,7 @@ class Meta extends Component {
   }
 
   componentDidMount () {
-    smartlookClient.init('09530f27a8e0b8bebdf57c13f7c27b74edb02ae4')
+    // smartlookClient.init('09530f27a8e0b8bebdf57c13f7c27b74edb02ae4')
   }
 }
 

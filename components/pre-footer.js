@@ -22,11 +22,11 @@ const PreFooter = ({cta, quote, url}) => {
         }
 
         a {
-          color: ${palette.lavande};
+          color: ${palette.azure};
         }
 
         a:hover {
-          color: ${palette.tournesol};
+          color: ${palette.lightAzure};
         }
       `}</style>
     </div>
