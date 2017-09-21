@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-
 import PropTypes from 'prop-types'
 
 class Lamp extends Component {
@@ -20,11 +19,11 @@ class Lamp extends Component {
     }
 
     return (
-      <div id='lamp' className={className}>
+      <div id='lamp' className={className} onClick={() => this.smoothScrollToLampLit()}>
         <svg
           width="111.85569"
-          height="132.60056"
-          viewBox="0 0 111.85569 88.40037"
+          height="142.60056"
+          viewBox="0 0 111.84699 100"
         >
           <defs>
             <linearGradient id='fill-gradient' x1='0' y1='100%' x2='0' y2='0'>
@@ -45,7 +44,7 @@ class Lamp extends Component {
             />
             <path
               d="m 69.875,77.492 c -0.02348,0.13345 -0.04757,0.26691 -0.07229,0.39913 -0.2286,1.2233 -1.3006,2.1069 -2.5449,2.1069 h -23.181 c -1.2444,0 -2.3151,-0.88353 -2.5443,-2.1062 -0.02471,-0.13284 -0.04881,-0.26568 -0.07167,-0.39914 h 28.414 z"
-              fill="#337b9c"
+              fill="#19737c"
             />
             <rect
               transform="scale(1,-1)"
@@ -53,11 +52,11 @@ class Lamp extends Component {
               y="-54.719002"
               width="17.156"
               height="2.7723"
-              fill="#337b9c"
+              fill="#19737c"
             />
             <path
               d="M 47.09,5.498 V 3.8817 c 0,-2.1433 1.7374,-3.8807 3.8807,-3.8807 h 9.3944 c 2.1433,0 3.8807,1.7374 3.8807,3.8807 V 5.498 Z"
-              fill="#337b9c"
+              fill="#19737c"
             />
             <rect
               transform="scale(1,-1)"
@@ -86,12 +85,12 @@ class Lamp extends Component {
             <path
               className='lamp-light'
               fill='url(#fill-gradient)'
-              d="m 43.668,80 -43.975767,43.97577 c 0,0 18.227396,8.625 56.225767,8.625 37.998371,0 55.62992,-8.625 55.62992,-8.625 L 67.563459,80 Z"
+              d="m 43.668929,80 -43.97235041,53.97577 c 0,0 18.22597941,8.625 56.22139841,8.625 37.995418,0 55.625593,-8.625 55.625593,-8.625 L 67.562531,80 Z"
             />
             <path
               className='lamp-light'
               fill='url(#fill-gradient)'
-              d="M 28.845703,100 3.8554688,149.51367 c 8.9967872,1.67604 21.0568912,3.08789 36.3945312,3.08789 14.811934,0 26.48887,-1.31468 35.273438,-2.91406 L 52.261719,100.36719 51.894531,100 Z"
+              d="M 28.845703,100 3.8554688,159.51367 c 8.9967872,1.67604 21.0568912,3.08789 36.3945312,3.08789 14.811934,0 26.48887,-1.31468 35.273438,-2.91406 L 52.261719,100.36719 51.894531,100 Z"
               transform="translate(15.668,-20)"
             />
           </g>
@@ -130,10 +129,10 @@ class Lamp extends Component {
               top : -10px;
             }
             30% {
-              top: -40px;
+              top: -25px;
             }
             70% {
-              top: -40px;
+              top: -25px;
             }
             100% {
               top : -10px;
@@ -157,22 +156,32 @@ class Lamp extends Component {
   }
 
   componentDidMount () {
+    require('smoothscroll-polyfill').polyfill()
     const handleScroll = (e) => this.handleScroll(e)
     window.addEventListener('scroll', handleScroll)
     this.setState({scrollListener: handleScroll})
   }
 
   componentWillUnmount () {
-    window.removeEventListener('scroll', this.state.handleScroll)
+    window.removeEventListener('scroll', this.state.scrollListener)
   }
 
   handleScroll (event) {
-    let scrollTop = event.srcElement.body.scrollTop
-    if (scrollTop > (window.innerHeight / 2) && !this.state.lit) {
+    let scrollTop = document.body.scrollTop
+    if (scrollTop >= (window.innerHeight / 3) && !this.state.lit) {
       this.setState({lit: true})
-    } else if (scrollTop <= (window.innerHeight / 2) && this.state.lit) {
+    } else if (scrollTop < (window.innerHeight / 3) && this.state.lit) {
       this.setState({lit: false})
     }
+  }
+
+  smoothScrollToLampLit () {
+    if (document.body.scrollTop > window.innerHeight / 3) return
+    window.scroll({
+      top: window.innerHeight / 3 + 1,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
 }
 

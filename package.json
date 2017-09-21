@@ -20,6 +20,8 @@
     "recharts": "^1.0.0-alpha.2",
     "sharp": "^0.18.2",
     "simplify-geojson": "^1.0.3",
+    "smartlook-client": "^2.2.0",
+    "smoothscroll-polyfill": "^0.3.6",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   },

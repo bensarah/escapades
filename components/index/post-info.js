@@ -16,7 +16,7 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
               <pattern id={'img' + id} patternUnits='userSpaceOnUse' height='180' width='300'>
                 <image x='0' y='0' height='180' width='300' xlinkHref={header} preserveAspectRatio='xMinYMin slice' />
               </pattern>
-              <linearGradient id={'grad' + id} x1='50%' y1='0%' x2='50%' y2='100%'>
+              <linearGradient id={'grad' + id} x1='50%' y1='0%' x2='50%' y2='120%'>
                 <stop className='stop' offset='0%' style={{stopColor: palette.lavande, stopOpacity: 0.4}} />
                 <stop offset='100%' style={{stopColor: palette.tournesol, stopOpacity: 0.8}}/>
               </linearGradient>

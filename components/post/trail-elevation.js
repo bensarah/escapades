@@ -91,7 +91,6 @@ class TrailElevation extends Component {
           status: 'ok',
           elevations: elevations
         })
-        console.log(JSON.stringify(this.state))
       })
       .catch(() => {
         this.setState({

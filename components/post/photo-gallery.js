@@ -57,7 +57,6 @@ class PhotoGallery extends React.Component {
   }
 
   openLightbox (index, event) {
-    console.log(index, event)
     event.preventDefault()
     this.setState({
       currentImage: index,
