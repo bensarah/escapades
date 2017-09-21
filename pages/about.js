@@ -37,7 +37,7 @@ class About extends Component {
                   <Logo style={{fill: '#ffffff', height: '16px'}} className='inline-block'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline-block'/> est né de la volonté de partager joliment nos aventures et photos.
                 </div>
                 <p className='pt36 pb12'>
-                  Une question ? <a href='mailto:NotreEmailICI'>create_email@escapades.io</a>
+                  Une question ? <a href='mailto:contact@escapades.voyage' target='_blank'>contact@escapades.voyage</a>
                 </p>
                 <br/>
               </div>
@@ -47,10 +47,10 @@ class About extends Component {
                   et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
                 </p>
                 <p className='txt-m'>
-                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:NotreEmailICI'>avides de vos conseils</a>.
+                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:contact@escapades.voyage' target='_blank'>avides de vos conseils</a>.
                 </p>
                 <p className='txt-m'>
-                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/hiker.svg`} title='Chers amis randonneurs'></Isvg> Des <a href='mailto:NotreEmailICI'>recommandations</a> pour notre prochaine rando ?
+                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/hiker.svg`} title='Chers amis randonneurs'></Isvg> Des <a href='mailto:contact@escapades.voyage' target='_blank'>recommandations</a> pour notre prochaine rando ?
                 </p>
               <br/>
               </div>
