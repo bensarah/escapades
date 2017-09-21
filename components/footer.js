@@ -14,7 +14,7 @@ class Footer extends Component {
           ? <PreFooter cta={this.props.cta} quote={this.props.quote} url={this.props.url}/>
           : null
         }
-        <div className='relative py30 px30 hmin120 azure'>
+        <div className='relative py30 px30 hmin120 lavande'>
           <div className='flex-parent flex-parent--column flex-parent--row-ml flew-parent--wrap'>
             <a href='#' className='cursor-pointer pr18 pb6' onClick={() => window.scroll({
               top: 0,
@@ -47,8 +47,8 @@ class Footer extends Component {
             background-color: ${palette.bleuNuit};
           }
 
-          .azure {
-            color: ${palette.azure};
+          .lavande {
+            color: ${palette.lavande};
           }
 
           .footer .clickable:hover, .footer a:hover {

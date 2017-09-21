@@ -42,7 +42,7 @@ class Meta extends Component {
           }
 
           #nprogress .bar {
-            background: ${palette.azure};
+            background: ${palette.lavande};
             position: fixed;
             z-index: 1031;
             top: 0;
@@ -57,7 +57,7 @@ class Meta extends Component {
             right: 0px;
             width: 100px;
             height: 100%;
-            box-shadow: 0 0 10px ${palette.azure}, 0 0 5px ${palette.azure};
+            box-shadow: 0 0 10px ${palette.lavande}, 0 0 5px ${palette.lavande};
             opacity: 1.0;
             transform: rotate(3deg) translate(0px, -4px);
           }
@@ -87,12 +87,12 @@ class Meta extends Component {
           }
 
           a {
-            color: ${palette.azure};
+            color: ${palette.lavande};
             text-decoration: none;
           }
 
           a:hover {
-            color: ${palette.lightAzure};
+            color: ${palette.lightenLavande};
           }
         `}</style>
       </div>
