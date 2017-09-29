@@ -43,7 +43,7 @@
     },
     "sources": {
         "composite": {
-            "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7",
+            "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,sarahmamy.2v30cmbv,sarahmamy.ciyupr0e100ug32pdorivtcnf-5jtus,sarahmamy.b4u9yjho",
             "type": "vector"
         }
     },
@@ -4586,6 +4586,44 @@
                     ]
                 },
                 "line-color": "hsla(224, 52%, 11%, 0.84)"
+            }
+        },
+        {
+            "id": "France",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "ne_10m_admin_0_countries-148rei",
+            "filter": [
+                "==",
+                "ADM0_A3",
+                "FRA"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "hsl(45, 87%, 54%)",
+                "line-width": 1,
+                "line-opacity": 0.6
+            }
+        },
+        {
+            "id": "California",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "ne_10m_admin_1_states_provinc-cv2a92",
+            "filter": [
+                "==",
+                "code_hasc",
+                "US.CA"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "hsl(45, 87%, 54%)",
+                "line-width": 1,
+                "line-opacity": 0.6
             }
         }
     ],
