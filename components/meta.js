@@ -16,7 +16,7 @@ class Meta extends Component {
       <div>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no' />
-          <link rel='icon' href='/static/favicon.png/'/>
+          <link rel='icon' href='/static/favicon.png'/>
           <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
           <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
           <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
@@ -100,7 +100,6 @@ class Meta extends Component {
   }
 
   componentDidMount () {
-    // smartlookClient.init('09530f27a8e0b8bebdf57c13f7c27b74edb02ae4')
   }
 }
 

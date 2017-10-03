@@ -4589,7 +4589,7 @@
             }
         },
         {
-            "id": "France",
+            "id": "france",
             "type": "line",
             "source": "composite",
             "source-layer": "ne_10m_admin_0_countries-148rei",
@@ -4602,13 +4602,13 @@
                 "visibility": "visible"
             },
             "paint": {
-                "line-color": "hsl(45, 87%, 54%)",
-                "line-width": 1,
-                "line-opacity": 0.6
+                "line-color": "hsl(206, 67%, 21%)",
+                "line-width": 2,
+                "line-opacity": 1
             }
         },
         {
-            "id": "California",
+            "id": "california",
             "type": "line",
             "source": "composite",
             "source-layer": "ne_10m_admin_1_states_provinc-cv2a92",
@@ -4621,9 +4621,9 @@
                 "visibility": "visible"
             },
             "paint": {
-                "line-color": "hsl(45, 87%, 54%)",
-                "line-width": 1,
-                "line-opacity": 0.6
+                "line-color": "hsl(206, 67%, 21%)",
+                "line-width": 2,
+                "line-opacity": 1
             }
         }
     ],
