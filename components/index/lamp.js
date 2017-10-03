@@ -167,7 +167,7 @@ class Lamp extends Component {
   }
 
   handleScroll (event) {
-    let scrollTop = document.body.scrollTop
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
     if (scrollTop >= (window.innerHeight / 3) && !this.state.lit) {
       this.setState({lit: true})
     } else if (scrollTop < (window.innerHeight / 3) && this.state.lit) {

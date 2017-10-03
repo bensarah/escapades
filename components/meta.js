@@ -26,7 +26,7 @@ class Meta extends Component {
           <meta property="og:image" content='/static/index/header-background.jpg' />
           <meta property="og:description" content="Le site de nos aventures de rando - Sarah & Benjamin" />
 
-          <link rel='icon' href='/static/favicon.png/'/>
+          <link rel='icon' href='/static/favicon.png'/>
           <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
           <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
           <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
@@ -110,7 +110,6 @@ class Meta extends Component {
   }
 
   componentDidMount () {
-    // smartlookClient.init('09530f27a8e0b8bebdf57c13f7c27b74edb02ae4')
   }
 }
 
