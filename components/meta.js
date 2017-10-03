@@ -23,7 +23,7 @@ class Meta extends Component {
           <meta property="og:locale" content="fr_FR" />
           <meta property="og:url" content='https://www.escapades.voyage' />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content='/static/index/header-background.jpg' />
+          <meta property="og:image" content='https://www.escapades.voyage/static/index/header-background.jpg' />
           <meta property="og:description" content="Le site de nos aventures de rando - Sarah & Benjamin" />
 
           <link rel='icon' href='/static/favicon.png'/>
