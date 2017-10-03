@@ -43,7 +43,7 @@ class MapHighlights extends Component {
 
     var bbox = extent(this.dotsToGeoJSON(this.props.dots))
     var dotsBounds = [bbox.slice(0, 2), bbox.slice(2, 4)]
-    map.fitBounds(dotsBounds, {animate: false, padding: 60})
+    map.fitBounds(dotsBounds, {animate: false, padding: {top: 30, bottom: 30, left: 30, right: 30}})
 
     this.map = map
 
@@ -66,7 +66,7 @@ class MapHighlights extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    const size = 15 // px
+    const size = 20 // px
     if (nextProps.highlight) {
       let el = document.createElement('div')
       el.id = 'marker-' + new Date().getDate()
