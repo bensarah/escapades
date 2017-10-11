@@ -23,7 +23,7 @@ class PhotoGallery extends React.Component {
   render () {
     if (!this.props.photos || this.props.photos.length === 0) return null
     return (
-      <div className='section mb12 mx18'>
+      <div className='section mb12 px18 bg-white z5'>
         <div className='py18'>
           <h2 className='align-center pb6 txt-xl txt-bold'>Plus de photos <Emoji name='camera'/></h2>
           <p className='align-center txt-m'>Vous pouvez cliquer sur les photos pour les agrandir.</p>
