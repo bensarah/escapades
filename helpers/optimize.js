@@ -17,7 +17,7 @@ function sharpen (file) {
       if (info.width <= 1200) return Promise.reject(new Error('should not resize smaller photo'))
       else return Promise.resolve(sharp(file))
     })
-    .then((s) => s.resize(1200).sharpen().toFile(file + '.optim.' + extension))
+    .then((s) => s.resize(1200).sharpen().jpg({progressive: true}).toFile(file + '.optim.' + extension))
     .then(() => fs.rename(file + '.optim.' + extension, file.toLowerCase(), console.log))
     .then(() => console.log(file), 'optimized')
     .catch(console.log)
