@@ -24,6 +24,8 @@ class Meta extends Component {
           <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
           <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
           <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72962798-2"></script>
         </Helmet>
         <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
         <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />
@@ -77,7 +79,11 @@ class Meta extends Component {
   }
 
   componentDidMount () {
-    // insert Google Analytics here
+    window.dataLayer = window.dataLayer || []
+    function gtag () { window.dataLayer.push(arguments) }
+    gtag('js', new Date())
+
+    gtag('config', 'UA-72962798-2')
   }
 }
 

@@ -10,6 +10,7 @@ const Img = ({ src }) => (
       backgroundSize: 'cover'
     }}
   >
+    <link rel='prefetch' href={src} />
   </div>
 )
 
