@@ -1,5 +1,5 @@
-import { Component } from 'react'
-import Head from 'next/head'
+import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import Emoji from '../components/emoji'
 import Page from '../layouts/main'
 import PostInfo from '../components/index/post-info'
@@ -20,9 +20,9 @@ class Index extends Component {
   render () {
     return (
       <Page>
-        <Head>
+        <Helmet>
           <title>escapades</title>
-        </Head>
+        </Helmet>
         <Header background='/static/index/header-background.jpg'/>
 
         <div className='main'>

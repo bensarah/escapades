@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import Head from 'next/head'
-import Link from 'next/link'
+import Helmet from 'react-helmet'
 import TrailElevation from './trail-elevation'
 import Logo from '../logo'
 import LogoText from '../logo-text'
@@ -27,14 +26,12 @@ class Header extends Component {
         className='header w-full display-block relative'
         style={{background: `url(${this.props.img}) no-repeat center center`, backgroundSize: 'cover'}}
       >
-        <Head><title>{this.props.title}</title></Head>
+        <Helmet><title>{this.props.title}</title></Helmet>
         <div className='header absolute w-full z1'>
-          <Link prefetch href='/'>
-            <a className='cursor-pointer absolute z5 px18 py18 txt-m txt-bold' title='Retour à la page d’accueil'>
-              <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
-              <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
-            </a>
-          </Link>
+          <a href='/' className='cursor-pointer absolute z5 px18 py18 txt-m txt-bold' title='Retour à la page d’accueil'>
+            <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
+            <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
+          </a>
         </div>
         <div className='align-l absolute bottom pb240-ml pb180 px36 pl60-ml z2'>
           <h1 className='anton txt-shadow txt-xl color-white pb12'>{this.props.title.toUpperCase()}</h1>

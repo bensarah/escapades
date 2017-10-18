@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Emoji from './emoji'
 import palette from '../styles/palette'
-import Link from 'next/link'
 import PreFooter from './pre-footer'
 
 class Footer extends Component {
@@ -25,14 +24,10 @@ class Footer extends Component {
             </a>
 
             <div className='pr18 pb6'>
-              <Link prefetch href='/'>
-                <a className='cursor-pointer'><Emoji name='house'/><span className='pl6'>Page d’accueil</span></a>
-              </Link>
+              <a href='/' className='cursor-pointer'><Emoji name='house'/><span className='pl6'>Page d’accueil</span></a>
             </div>
             <div className='pr18 pb6'>
-              <Link prefetch href='/about'>
-                <a className='cursor-pointer'><Emoji name='couple'/><span className='pl6'>À propos</span></a>
-              </Link>
+              <a href='/about' className='cursor-pointer'><Emoji name='couple'/><span className='pl6'>À propos</span></a>
             </div>
           </div>
 

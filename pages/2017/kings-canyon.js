@@ -1,4 +1,4 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
 import extent from 'geojson-extent'
 import Post from '../../layouts/post'
 import P from '../../components/post/paragraph'
@@ -9,7 +9,7 @@ import Img from '../../components/post/img'
 import Emoji from '../../components/emoji'
 import Footnote from '../../components/post/footnote'
 import {highlightFromTo} from '../../helpers/map-utils'
-import trail from '../../static/2017/kings-canyon/trail'
+import trail from '../static/2017/kings-canyon/trail'
 
 class KingsCanyon extends Component {
   render () {

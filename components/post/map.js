@@ -1,8 +1,7 @@
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Component} from 'react'
 import style from '../../styles/style'
-
-/* global mapboxgl */
+import loadMapboxgl from '../../helpers/load-mapbox-gl'
 
 class Map extends Component {
   render () {
@@ -21,6 +20,11 @@ class Map extends Component {
   }
 
   componentDidMount () {
+    loadMapboxgl().then(() => this.onLoad())
+  }
+
+  onLoad () {
+    /* global mapboxgl */
     mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
 
     const map = new mapboxgl.Map({

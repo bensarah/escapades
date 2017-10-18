@@ -39,7 +39,7 @@ class Post extends Component {
           <StickyContainer className='flex-child' style={{minWidth: '50%', minHeight: '100%'}}>
             <Sticky>
               {({ style }) =>
-              <div style={{...style, height: '100vh'}} ref={sidebar => { this.sidebar = sidebar }}>
+              <div style={Object.assign({}, style, {height: '100vh'})} ref={sidebar => { this.sidebar = sidebar }}>
                 <CSSTransitionGroup
                   transitionName='smooth'
                   transitionEnterTimeout={500}

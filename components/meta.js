@@ -1,20 +1,13 @@
 import React, {Component} from 'react'
-import Head from 'next/head'
-import NProgress from 'nprogress'
-import Router from 'next/router'
+import Helmet from 'react-helmet'
 import palette from '../styles/palette'
 import {hexToRGB} from '../helpers/colors'
-// import smartlookClient from 'smartlook-client'
-
-Router.onRouteChangeStart = () => NProgress.start()
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
 
 class Meta extends Component {
   render () {
     return (
       <div>
-        <Head>
+        <Helmet>
           <meta name='viewport' content='width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no' />
           <meta name="theme-color" content="#081926" />
           <meta name="description" content="Le site de nos aventures de rando - Sarah & Benjamin" />
@@ -31,7 +24,7 @@ class Meta extends Component {
           <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
           <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
           <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
-        </Head>
+        </Helmet>
         <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
         <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />
         <style jsx global>{`
@@ -44,32 +37,6 @@ class Meta extends Component {
             box-sizing: border-box;
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6em;
-          }
-
-          /* loading progress bar styles */
-          #nprogress {
-            pointer-events: none;
-          }
-
-          #nprogress .bar {
-            background: ${palette.lavande};
-            position: fixed;
-            z-index: 1031;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-          }
-
-          #nprogress .peg {
-            display: block;
-            position: absolute;
-            right: 0px;
-            width: 100px;
-            height: 100%;
-            box-shadow: 0 0 10px ${palette.lavande}, 0 0 5px ${palette.lavande};
-            opacity: 1.0;
-            transform: rotate(3deg) translate(0px, -4px);
           }
 
           /* font families and other helper classes */
@@ -110,6 +77,7 @@ class Meta extends Component {
   }
 
   componentDidMount () {
+    // insert Google Analytics here
   }
 }
 

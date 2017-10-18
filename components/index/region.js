@@ -1,6 +1,5 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import Link from 'next/link'
 import Emoji from '../emoji'
 import MapHighlights from './map-highlights'
 import palette from '../../styles/palette'
@@ -63,9 +62,7 @@ class Region extends Component {
                   onClick={() => this.setState({highlight: rando.coords})}
                   onMouseLeave={() => this.setState({highlight: null})}
                 >
-                <Link prefetch href={rando.url}>
-                  <a>{rando.title}</a>
-                </Link>
+                <a href={rando.url}>{rando.title}</a>
                 {i !== (randos.length - 1) ? <span className='px12'>·</span> : null}
                 </span>
               ))
