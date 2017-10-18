@@ -1,12 +1,11 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
 import palette from '../../styles/palette'
 import style from '../../styles/style-dark'
 import extent from 'geojson-extent'
-
-/* global mapboxgl */
+import loadMapboxgl from '../../helpers/load-mapbox-gl'
 
 class MapHighlights extends Component {
   componentWillMount () {
@@ -29,6 +28,11 @@ class MapHighlights extends Component {
   }
 
   componentDidMount () {
+    loadMapboxgl().then(() => this.onLoad())
+  }
+
+  onLoad () {
+    /* global mapboxgl */
     mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
 
     const map = new mapboxgl.Map({

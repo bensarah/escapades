@@ -1,5 +1,5 @@
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Component} from 'react'
 import Waypoint from './waypoint'
 import palette from '../../styles/palette'
 

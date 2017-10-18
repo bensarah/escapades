@@ -1,8 +1,7 @@
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Component} from 'react'
 import cheapRuler from 'cheap-ruler'
 import {AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip} from 'recharts'
-import 'whatwg-fetch'
 import palette from '../../styles/palette'
 
 const accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'

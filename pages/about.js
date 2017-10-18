@@ -1,27 +1,26 @@
-import {Component} from 'react'
-import Head from 'next/head'
+import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import Page from '../layouts/main'
 import palette from '../styles/palette'
 import Footer from '../components/footer'
 import Logo from '../components/logo'
 import LogoText from '../components/logo-text'
-import Link from 'next/link'
 import Isvg from 'react-inlinesvg'
 
 class About extends Component {
   render () {
     return (
       <Page>
-        <Head>
+        <Helmet>
           <title>escapades - À propos</title>
-        </Head>
+        </Helmet>
         <div className='content flex-parent flex-parent--column'>
-          <Link prefetch href='/'>
+          <a href='/'>
             <div className='cursor-pointer z5 mx18 my18 txt-m txt-bold' title='Retour à la page d’accueil'>
               <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
               <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-7px'}} className='inline'/>
             </div>
-          </Link>
+          </a>
           <div className='px18 py18 h-full flex-child--grow flex-parent flex-parent--center-cross flex-parent--center-main  flex-parent--column flex-parent--row-ml flex-parent--stretch-cross-ml'>
             <div className='photo inline w360 h360 w600-mxl h-auto-ml' style={{
               background: `url(/static/about/nous.jpg) no-repeat center center`,
@@ -37,7 +36,7 @@ class About extends Component {
                   <Logo style={{fill: '#ffffff', height: '16px'}} className='inline-block'/> <LogoText style={{fill: '#ffffff', height: '36px', marginBottom: '-14px'}} className='inline-block'/> est né de la volonté de partager joliment nos aventures et photos.
                 </div>
                 <p className='pt36 pb12'>
-                  Une question ? <a href='mailto:contact@escapades.voyage' target='_blank'>contact@escapades.voyage</a>
+                  Une question ? <a href='mailto:contact@escapades.voyage' target='_blank' rel='noopener noreferrer'>contact@escapades.voyage</a>
                 </p>
                 <br/>
               </div>
@@ -47,10 +46,10 @@ class About extends Component {
                   et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
                 </p>
                 <p className='txt-m'>
-                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:contact@escapades.voyage' target='_blank'>avides de vos conseils</a>.
+                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:contact@escapades.voyage' target='_blank' rel='noopener noreferrer'>avides de vos conseils</a>.
                 </p>
                 <p className='txt-m'>
-                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/hiker.svg`} title='Chers amis randonneurs'></Isvg> Des <a href='mailto:contact@escapades.voyage' target='_blank'>recommandations</a> pour notre prochaine rando ?
+                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/hiker.svg`} title='Chers amis randonneurs'></Isvg> Des <a href='mailto:contact@escapades.voyage' target='_blank' rel='noopener noreferrer'>recommandations</a> pour notre prochaine rando ?
                 </p>
               <br/>
               </div>
@@ -75,6 +74,7 @@ class About extends Component {
         <style jsx>{`
           .content {
             min-height: 100vh;
+            color: white;
           }
 
           .icon svg {

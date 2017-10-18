@@ -1,4 +1,4 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Isvg from 'react-inlinesvg'
 import palette from '../../styles/palette'

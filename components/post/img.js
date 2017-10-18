@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 const Img = ({ src }) => (
@@ -9,6 +10,7 @@ const Img = ({ src }) => (
       backgroundSize: 'cover'
     }}
   >
+    <link rel='prefetch' href={src} />
   </div>
 )
 

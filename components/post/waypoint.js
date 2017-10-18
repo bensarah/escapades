@@ -1,5 +1,5 @@
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Component} from 'react'
 import Waypoint from 'react-waypoint'
 
 class WP extends Component {
