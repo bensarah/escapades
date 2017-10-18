@@ -28,7 +28,6 @@ class Meta extends Component {
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72962798-2"></script>
         </Helmet>
         <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-        <link href='/static/vendor/twemoji-awesome.css' rel='stylesheet' />
         <style jsx global>{`
           html {
             overflow-y: scroll;
