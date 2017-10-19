@@ -5,8 +5,6 @@ import TrailElevation from './trail-elevation'
 import Logo from '../logo'
 import LogoText from '../logo-text'
 import {findTrail} from '../../helpers/trail-extractor'
-import palette from '../../styles/palette'
-import {hexToRGB} from '../../helpers/colors'
 
 class Header extends Component {
   constructor (props) {
@@ -23,7 +21,7 @@ class Header extends Component {
 
     return (
       <div
-        className='header w-full display-block relative'
+        className='post-header w-full display-block relative'
         style={{background: `url(${this.props.img}) no-repeat center center`, backgroundSize: 'cover'}}
       >
         <Helmet><title>{this.props.title}</title></Helmet>
@@ -39,39 +37,6 @@ class Header extends Component {
           {this.state.portrait ? this.mobileLandscapeWarning() : null}
         </div>
         <TrailElevation trail={trailLineString}/>
-        <style jsx>{`
-          .header {
-            height: 100vh;
-            z-index: 1;
-          }
-
-          .header:before {
-            content:'';
-            display:block;
-            height:100%;
-            width:100%;
-            top:0;
-            left:0;
-            position:absolute;
-            pointer-events:none;
-            z-index: -1;
-          }
-
-          .header::before {
-            background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
-          }
-
-          svg {
-            height: 100%;
-            width: 100%;
-          }
-
-          @media screen and (min-width: 800px) {
-            h1 {
-              font-size: 54px;
-            }
-          }
-        `}</style>
       </div>
     )
   }
@@ -93,7 +58,7 @@ class Header extends Component {
   mobileLandscapeWarning () {
     return (
       <div className='bg-darken50 inline-block color-white round px12 py12 mt12 w-auto flex-parent flex-parent--center-cross'>
-        <div className='w36 h36 mr6'><svg className='icon icon--l'><use xlinkHref='#icon-rotate'/></svg></div>
+        <div className='w36 h36 mr6'><svg className='w-full h-full icon icon--l'><use xlinkHref='#icon-rotate'/></svg></div>
         <span className='txt-s'>Cette page a été conçue pour être lue au format paysage</span>
       </div>
     )

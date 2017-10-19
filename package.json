@@ -9,6 +9,8 @@
     "cheap-ruler": "^2.5.0",
     "geojson-extent": "^0.3.2",
     "lodash": "^4.17.4",
+    "postcss-color-function": "^4.0.0",
+    "postcss-css-variables": "^0.8.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-helmet": "^5.2.0",

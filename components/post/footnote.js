@@ -1,15 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import palette from '../../styles/palette'
 
 const Footnote = ({ children }) => (
-    <p className='pb6 txt-m'>
+    <p className='pb6 txt-m lavande'>
       * { children }
-    <style jsx>{`
-      p {
-        color: ${palette.lavande};
-      }
-    `}</style>
   </p>
 )
 

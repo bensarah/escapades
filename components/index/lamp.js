@@ -95,62 +95,6 @@ class Lamp extends Component {
             />
           </g>
         </svg>
-        <style jsx>{`
-          #lamp {
-            animation: upDown 2s infinite;
-            animation-timing-function: cubic-bezier(.40,0,.30,1);
-            bottom: 0;
-          }
-
-          #lamp.lit {
-            animation-play-state: paused;
-          }
-
-          #lamp-button {
-            animation: buttonOff 0.2 ease forwards;
-          }
-
-          .lit #lamp-button {
-            animation: buttonOn 0.2s ease forwards;
-          }
-
-          .lamp-light {
-            opacity: 0;
-            transition: opacity 0.2s;
-            transition-delay: 0.1s;
-          }
-
-          .lit .lamp-light {
-            opacity: 0.9;
-          }
-
-          @keyframes upDown {
-            0% {
-              top : -10px;
-            }
-            30% {
-              top: -25px;
-            }
-            70% {
-              top: -25px;
-            }
-            100% {
-              top : -10px;
-            }
-          }
-
-          @keyframes buttonOn {
-            to {
-              cy: -45;
-            }
-          }
-
-          @keyframes bottonOff {
-            to {
-              cy: -37;
-            }
-          }
-        `}</style>
       </div>
     )
   }

@@ -17,13 +17,7 @@ class MapHighlights extends Component {
 
   render () {
     return (
-        <div id={'map' + this.state.id} className='h-full w-full'>
-        <style jsx global>{`
-          .mapboxgl-ctrl-logo {
-            opacity: 0.2 !important;
-          }
-        `}</style>
-      </div>
+        <div id={'map' + this.state.id} className='h-full w-full' />
     )
   }
 

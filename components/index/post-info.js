@@ -38,32 +38,6 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
           <circle cx='150' cy='12' r='5' style={{stroke: palette.bleuNuit, strokeWidth: 3, fill: palette.tournesol}}/>
           <text className='txt-s' x='150' y='36' fill={palette.grisClair} textAnchor='middle' >{date}</text>
         </svg>
-
-        <style jsx>{`
-          .post {
-            background-size: cover;
-          }
-
-          .filter, .hoverfilter, .apparition-text{
-            transition: opacity 0.3s ease;
-          }
-
-          .transla {
-            transition: transform 0.3s ease;
-          }
-
-          .post:hover .filter{
-            opacity: 0;
-          }
-
-          .post:hover .hoverfilter, .post:hover .apparition-text{
-            opacity: 1;
-          }
-
-          .post:hover .transla {
-            transform: translateY(-30px);
-          }
-        `}</style>
       </div>
   )
 }

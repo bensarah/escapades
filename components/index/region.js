@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Emoji from '../emoji'
 import MapHighlights from './map-highlights'
-import palette from '../../styles/palette'
 
 class Region extends Component {
   constructor (props) {
@@ -67,15 +66,6 @@ class Region extends Component {
                 </span>
               ))
             }
-          <style jsx>{`
-            a {
-              color: ${palette.lavande}
-            }
-
-            a:hover {
-              color: ${palette.lightenLavande}
-            }
-          `}</style>
         </div>
       )
     })
