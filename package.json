@@ -24,7 +24,6 @@
     "sharp": "^0.18.2",
     "simplify-geojson": "^1.0.3",
     "smoothscroll-polyfill": "^0.3.6",
-    "styled-jsx": "^2.1.2",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   },

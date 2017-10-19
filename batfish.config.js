@@ -5,9 +5,6 @@ module.exports = () => {
     siteOrigin: 'https://www.escapades.voyage',
     publicAssetsPath: 'static',
     pagesDirectory: path.join(__dirname, 'pages'),
-    babelPlugins: [
-      require('styled-jsx/babel').default
-    ],
     stylesheets: [
       path.join(__dirname, 'pages/static/vendor/twemoji-awesome.css'),
       path.join(__dirname, 'pages/static/main.css'),
