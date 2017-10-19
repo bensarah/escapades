@@ -17,12 +17,15 @@ class Index extends Component {
   }
 
   render () {
+    let headerImage = '/static/index/header-background.jpg'
+
     return (
       <Page>
         <Helmet>
           <title>escapades</title>
+          <link rel='preload' href={headerImage} />
         </Helmet>
-        <Header background='/static/index/header-background.jpg'/>
+        <Header background={headerImage}/>
 
         <div className='main'>
           <div className='px18'>

@@ -9,6 +9,7 @@ import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import {findTrail} from '../helpers/trail-extractor'
 import posts from '../posts'
+import Helmet from 'react-helmet'
 
 class Post extends Component {
   constructor (props) {
@@ -22,6 +23,9 @@ class Post extends Component {
   render () {
     return (
       <Page>
+        <Helmet>
+          <link rel='preload' href={this.props.header} />
+        </Helmet>
         <Header
           img={this.props.header}
           title={this.props.title}
