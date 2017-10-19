@@ -9,6 +9,8 @@
     "cheap-ruler": "^2.5.0",
     "geojson-extent": "^0.3.2",
     "lodash": "^4.17.4",
+    "postcss-color-alpha": "^2.0.0",
+    "postcss-css-variables": "^0.8.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-helmet": "^5.2.0",
@@ -22,7 +24,6 @@
     "sharp": "^0.18.2",
     "simplify-geojson": "^1.0.3",
     "smoothscroll-polyfill": "^0.3.6",
-    "styled-jsx": "^2.1.2",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   },

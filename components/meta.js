@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import Helmet from 'react-helmet'
-import palette from '../styles/palette'
-import {hexToRGB} from '../helpers/colors'
 
 class Meta extends Component {
   render () {
@@ -21,58 +19,11 @@ class Meta extends Component {
 
           <link rel='icon' href='/static/favicon.png'/>
           <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
-          <link href='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.min.css' rel='stylesheet' />
           <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
           <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
 
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72962798-2"></script>
         </Helmet>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-        <style jsx global>{`
-          html {
-            overflow-y: scroll;
-          }
-
-          * {
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6em;
-          }
-
-          /* font families and other helper classes */
-
-          .bad-script, .bad-script * {
-            font-family: 'Bad Script', serif;
-          }
-
-          .anton, .anton * {
-            font-family: 'Anton', sans-serif;
-          }
-
-          .txt-shadow {
-            text-shadow: 1px 1px 4px ${hexToRGB(palette.bleuNuit, 0.5)};
-          }
-
-          .drop-shadow {
-            filter: drop-shadow( 1px 1px 3px ${hexToRGB(palette.bleuNuit, 0.3)} );
-          }
-
-          hr {
-            height: 1px;
-            background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
-            margin: 0px 100px 0px 100px;
-          }
-
-          a {
-            color: ${palette.lavande};
-            text-decoration: none;
-          }
-
-          a:hover {
-            color: ${palette.lightenLavande};
-          }
-        `}</style>
       </div>
     )
   }

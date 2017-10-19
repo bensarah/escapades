@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Waypoint from './waypoint'
-import palette from '../../styles/palette'
 
 class Section extends Component {
   render () {
     return (
       <div className='section-container'>
-        <div className='section align-middle flex-parent flex-parent--column flex-parent--center-main py30'>
+        <div className='full-height align-middle flex-parent flex-parent--column flex-parent--center-main py30'>
           <Waypoint
             action={this.props.action}
             leaveAction={this.props.leaveAction}
@@ -22,16 +21,6 @@ class Section extends Component {
           ? null
           : <hr/>
         }
-        <style jsx>{`
-          .section {
-            min-height: 100vh;
-          }
-
-          hr {
-            background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
-            margin: 0;
-          }
-        `}</style>
       </div>
     )
   }

@@ -7,7 +7,6 @@ import Header from '../components/index/header'
 import Footer from '../components/footer'
 import Region from '../components/index/region'
 import posts from '../posts'
-import palette from '../styles/palette'
 
 class Index extends Component {
   constructor (props) {
@@ -18,12 +17,14 @@ class Index extends Component {
   }
 
   render () {
+    let headerImage = '/static/index/header-background.jpg'
+
     return (
       <Page>
         <Helmet>
           <title>escapades</title>
         </Helmet>
-        <Header background='/static/index/header-background.jpg'/>
+        <Header background={headerImage}/>
 
         <div className='main'>
           <div className='px18'>
@@ -40,7 +41,7 @@ class Index extends Component {
             <div id='geographical-section'>
               <div className='py24'>
                 <div className='px18-ml pb18'>
-                  <h2 className='pt12 txt-xl txt-bold'><Emoji name='earth-africa'/> Des deux côtés de l’Atlantique</h2>
+                  <h2 className='tournesol pt12 txt-xl txt-bold'><Emoji name='earth-africa'/> Des deux côtés de l’Atlantique</h2>
                   <p className='pt12'>
                     Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
                     <br />
@@ -58,7 +59,7 @@ class Index extends Component {
             <div id='chronological-section'>
               <div className='py24'>
                 <div className='px18 pb18'>
-                  <h2 className='pt12 txt-xl txt-bold'><Emoji name='clock230'/> Sur les sentiers depuis 2012</h2>
+                  <h2 className='tournesol pt12 txt-xl txt-bold'><Emoji name='clock230'/> Sur les sentiers depuis 2012</h2>
                   <p className='pt12'>
                     Vous pouvez retrouver ci-dessous les mêmes randonnées que dans la précédente section, cette fois-ci ordonnées chronologiquement.
                     <br />
@@ -92,35 +93,6 @@ class Index extends Component {
           url='/2017/kings-canyon'
           quote='La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut...'
         />
-
-        <style jsx>{`
-          .main {
-            background-color: ${palette.bleuNuit};
-            color: white;
-          }
-
-          svg {
-            height: 100%;
-            width: 100%;
-          }
-
-          hr {
-            background-image: linear-gradient(to right, ${palette.bleuNuit}, ${palette.bleuNuit}, ${palette.lavande}, ${palette.bleuNuit}, ${palette.bleuNuit});
-            margin: 0px 100px 0px 100px;
-          }
-
-          h2 {
-            color: ${palette.tournesol};
-          }
-
-          a {
-            color: ${palette.lavande}
-          }
-
-          a:hover {
-            color: ${palette.lightenLavande}
-          }
-        `}</style>
       </Page>
     )
   }

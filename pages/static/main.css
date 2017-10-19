@@ -1,0 +1,326 @@
+:root {
+  --brique: #C63A22;
+  --tournesol: #f0bd25;
+  --lavande: #777D9B;
+  --bleuNuit: #081926;
+  --grisClair: #d9dade;
+  --lightenLavande: #BCC5F4;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bleuNuit);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6em;
+}
+
+.main {
+  color: white;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.bad-script, .bad-script * {
+  font-family: 'Bad Script', serif;
+}
+
+.anton, .anton * {
+  font-family: 'Anton', sans-serif;
+}
+
+.txt-shadow {
+  text-shadow: 1px 1px 4px rgba(var(--bleuNuit), .5);
+}
+
+.drop-shadow {
+  filter: drop-shadow( 1px 1px 3px rgba(var(--bleuNuit), .3));
+}
+
+hr {
+  height: 1px;
+  background-image: linear-gradient(to right, var(--bleuNuit), var(--bleuNuit), var(--lavande), var(--bleuNuit), var(--bleuNuit));
+  margin: 0px 100px 0px 100px;
+}
+
+a {
+  color: var(--lavande) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--lightenLavande) !important;
+}
+
+.mapboxgl-ctrl-logo {
+  opacity: 0.2 !important;
+}
+
+.lavande {
+  color: var(--lavande);
+}
+
+.bleu-nuit {
+  color: var(--bleuNuit);
+}
+
+.tournesol {
+  color: var(--tournesol);
+}
+
+.bg-bleu-nuit {
+  background-color: var(--bleuNuit);
+}
+
+/* post.js */
+
+.smooth-enter {
+  opacity: 0.01;
+}
+
+.smooth-enter.smooth-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.smooth-leave {
+  opacity: 1;
+}
+
+.smooth-leave.smooth-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+  transition-delay: 500ms
+}
+
+/* footer.js */
+
+.footer .clickable:hover, .footer a:hover {
+  color: var(--lightenLavande);
+}
+
+/* prefooter.js */
+
+.prefooter .quote {
+  color: var(--brique);
+  font-family: 'Bad Script';
+}
+
+/* quote.js */
+
+.post-quote blockquote, .quote p {
+  color: var(--tournesol);
+  margin: 0;
+  padding: 0;
+}
+
+/* infosection.js */
+
+.info-section {
+  background: linear-gradient(to bottom, var(--tournesol), #ffa100);
+}
+
+.info-section .flex-parent div {
+  flex: 1
+}
+
+.bigtext {
+  font-size: 48px;
+}
+
+.brique {
+  fill: var(--brique) !important;
+}
+
+/* post/header.js */
+
+.post-header {
+  height: 100vh;
+  z-index: 1;
+}
+
+.post-header:before {
+  content:'';
+  display:block;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:absolute;
+  pointer-events:none;
+  z-index: -1;
+}
+
+.post-header::before {
+  background: linear-gradient(to top, rgba(var(--bleuNuit), .5), rgba(var(--lavande), .1));
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 54px;
+  }
+}
+
+/* region.js */
+
+a {
+  color: var(--lavande)
+}
+
+a:hover {
+  color: var(--lightenLavande)
+}
+
+/* post-info.js */
+
+.post {
+  background-size: cover;
+}
+
+.filter, .hoverfilter, .apparition-text{
+  transition: opacity 0.3s ease;
+}
+
+.transla {
+  transition: transform 0.3s ease;
+}
+
+.post:hover .filter{
+  opacity: 0;
+}
+
+.post:hover .hoverfilter, .post:hover .apparition-text{
+  opacity: 1;
+}
+
+.post:hover .transla {
+  transform: translateY(-30px);
+}
+
+
+/* lamp.js */
+
+#lamp {
+  animation: upDown 2s infinite;
+  animation-timing-function: cubic-bezier(.40,0,.30,1);
+  bottom: 0;
+}
+
+#lamp.lit {
+  animation-play-state: paused;
+}
+
+#lamp-button {
+  animation: buttonOff 0.2 ease forwards;
+}
+
+.lit #lamp-button {
+  animation: buttonOn 0.2s ease forwards;
+}
+
+.lamp-light {
+  opacity: 0;
+  transition: opacity 0.2s;
+  transition-delay: 0.1s;
+}
+
+.lit .lamp-light {
+  opacity: 0.9;
+}
+
+@keyframes upDown {
+  0% {
+    top : -10px;
+  }
+  30% {
+    top: -25px;
+  }
+  70% {
+    top: -25px;
+  }
+  100% {
+    top : -10px;
+  }
+}
+
+@keyframes buttonOn {
+  to {
+    cy: -45;
+  }
+}
+
+@keyframes bottonOff {
+  to {
+    cy: -37;
+  }
+}
+
+/* index/header.js */
+
+.logo-container {
+  padding-bottom: 25vh;
+}
+
+.index-header {
+  height: 90vh;
+  z-index: 1;
+}
+
+.index-header:before {
+  content:'';
+  display:block;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:absolute;
+  pointer-events:none;
+  z-index: -1;
+}
+
+.lamp-container {
+  height: 10vh;
+}
+
+.index-header::before {
+  background: linear-gradient(to top, rgba(var(--bleuNuit), .5), rgba(var(--lavande), .1));
+}
+
+@media screen and (min-width: 800px) {
+  .index-header {
+    height: 95vh;
+  }
+
+  .lamp-container {
+    height: 5vh;
+  }
+}
+
+/* blip-marker.js */
+
+.marker {
+  background-color: var(--tournesol);
+  border-radius: 50%;
+}
+
+/* about.js */
+
+.about {
+  min-height: 100vh;
+  color: white;
+}
+
+.about > .icon svg {
+  stroke: white;
+}

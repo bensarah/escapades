@@ -8,8 +8,8 @@ import Footer from '../components/footer'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import {findTrail} from '../helpers/trail-extractor'
-import palette from '../styles/palette'
 import posts from '../posts'
+import Helmet from 'react-helmet'
 
 class Post extends Component {
   constructor (props) {
@@ -23,6 +23,9 @@ class Post extends Component {
   render () {
     return (
       <Page>
+        <Helmet>
+          <link rel='preload' href={this.props.header} as='image'/>
+        </Helmet>
         <Header
           img={this.props.header}
           title={this.props.title}
@@ -54,7 +57,7 @@ class Post extends Component {
               </div>}
             </Sticky>
           </StickyContainer>
-          <article className='flex-child flex-child--grow py30 px18 px60-ml color-gray-light'>
+          <article className='flex-child flex-child--grow py30 px18 px60-ml color-gray-light bg-bleu-nuit'>
             {
               this.props.children.map((child, i) => React.cloneElement(child, {
                 key: i,
@@ -72,36 +75,6 @@ class Post extends Component {
           url={this.state.randomPost.url}
           quote={this.state.randomPost.quote}
         />
-        <style jsx>{`
-          article {
-            background-color: ${palette.bleuNuit};
-          }
-
-          .smooth-enter {
-            opacity: 0.01;
-          }
-
-          .smooth-enter.smooth-enter-active {
-            opacity: 1;
-            transition: opacity 500ms ease-in;
-          }
-
-          .smooth-leave {
-            opacity: 1;
-          }
-
-          .smooth-leave.smooth-leave-active {
-            opacity: 0.01;
-            transition: opacity 500ms ease-in;
-            transition-delay: 500ms
-          }
-        `}</style>
-        <style jsx global>{`
-          body {
-            width: 100%;
-            overflow-x: hidden;
-          }
-        `}</style>
       </Page>
     )
   }

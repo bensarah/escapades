@@ -8,13 +8,7 @@ class Map extends Component {
     if (this.props.container) return null
     return (
       <div>
-        <div id='map' className='absolute'/>
-        <style jsx>{`
-          #map {
-            width: 100%;
-            height: 100vh;
-          }
-        `}</style>
+        <div id='map' className='absolute' style={{width: '100%', height: '100vh'}}/>
       </div>
     )
   }

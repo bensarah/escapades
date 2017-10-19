@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import Page from '../layouts/main'
-import palette from '../styles/palette'
 import Footer from '../components/footer'
 import Logo from '../components/logo'
 import LogoText from '../components/logo-text'
@@ -14,7 +13,7 @@ class About extends Component {
         <Helmet>
           <title>escapades - À propos</title>
         </Helmet>
-        <div className='content flex-parent flex-parent--column'>
+        <div className='about flex-parent flex-parent--column'>
           <a href='/'>
             <div className='cursor-pointer z5 mx18 my18 txt-m txt-bold' title='Retour à la page d’accueil'>
               <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>
@@ -41,14 +40,10 @@ class About extends Component {
                 <br/>
               </div>
               <div>
-                <p className='txt-m align-middle'>
-                  <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/code.svg`} title='Tech & Code'></Isvg> Site écrit en <a href='https://facebook.github.io/react/'>React</a> + <a href='https://github.com/zeit/next.js/'>next.js</a>,
-                  et déployé avec <a href='https://zeit.co/now'>now.sh</a>.
-                </p>
-                <p className='txt-m'>
+                <p className='py6 txt-m'>
                   <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/palette.svg`} title='Web Design'></Isvg> Nous sommes autodidactes en web design & UX/UI donc <a href='mailto:contact@escapades.voyage' target='_blank' rel='noopener noreferrer'>avides de vos conseils</a>.
                 </p>
-                <p className='txt-m'>
+                <p className='py6 txt-m'>
                   <Isvg className='icon drop-shadow w24 h24 mr12 inline-block' src={`/static/icons/hiker.svg`} title='Chers amis randonneurs'></Isvg> Des <a href='mailto:contact@escapades.voyage' target='_blank' rel='noopener noreferrer'>recommandations</a> pour notre prochaine rando ?
                 </p>
               <br/>
@@ -71,36 +66,6 @@ class About extends Component {
           url='/2017/kings-canyon'
           quote='La dernière lignée d’arbres laisse apparaître un gigantesque pierrier et un névé. Le sommet est en haut...'
         />
-        <style jsx>{`
-          .content {
-            min-height: 100vh;
-            color: white;
-          }
-
-          .icon svg {
-            stroke: white;
-          }
-
-          p {
-            padding: 6px 0 6px 0;
-          }
-
-          a {
-            color: ${palette.lavande}
-          }
-
-          a:hover {
-            color: ${palette.lightenLavande}
-          }
-        `}</style>
-        <style jsx global>{`
-          html, body {
-            background-color: ${palette.bleuNuit};
-            color: ${palette.grisClair};
-            height: 100%;
-          }
-
-        `}</style>
       </Page>
     )
   }

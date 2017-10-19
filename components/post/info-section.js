@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Isvg from 'react-inlinesvg'
-import palette from '../../styles/palette'
 
 class InfoSection extends Component {
   render () {
@@ -35,23 +34,6 @@ class InfoSection extends Component {
         <div className='flex-parent flex-parent--row flex-parent--wrap py30 px30 align-center'>
           {this.tagsToTags()}
         </div>
-        <style jsx>{`
-          .info-section {
-            background: linear-gradient(to bottom, ${palette.tournesol} 50%, #ffa100);
-          }
-
-          .flex-parent div {
-            flex: 1
-          }
-
-          .bigtext {
-            font-size: 48px;
-          }
-
-          .brique {
-            fill: ${palette.brique}
-          }
-        `}</style>
       </div>
     )
   }

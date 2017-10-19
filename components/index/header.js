@@ -3,13 +3,15 @@ import PropTypes from 'prop-types'
 import Logo from '../logo'
 import Lamp from './lamp'
 import LogoText from '../logo-text'
-import {hexToRGB} from '../../helpers/colors'
-import palette from '../../styles/palette'
+import Helmet from 'react-helmet'
 
 const IndexHeader = ({background}) => (
   <div className='w-full'>
+    <Helmet>
+      <link rel='preload' href={background} as='image'/>
+    </Helmet>
     <div
-      className='header w-full display-block relative'
+      className='index-header w-full display-block relative'
       style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}
     >
       <div className='logo-container align-center absolute bottom pl60 z2 animation-fade-in animation--speed-1 wmin120 wmin180-ml'>
@@ -18,50 +20,9 @@ const IndexHeader = ({background}) => (
         <p className='bad-script txt-shadow color-gray-light txt-xl-ml txt-l'>Notre blog de rando</p>
       </div>
     </div>
-    <div className='lamp-container w-full align-center z2 pb120'>
-      <Lamp className='absolute lamp relative animation-fade-in align-center z5'/>
+    <div className='lamp-container bg-bleu-nuit w-full align-center z2 pb120'>
+      <Lamp className='lamp relative animation-fade-in top center align-center z5 h-full'/>
     </div>
-    <style jsx>{`
-      .logo-container {
-        padding-bottom: 25vh;
-      }
-
-      .header {
-        height: 90vh;
-        z-index: 1;
-      }
-
-      .header:before {
-        content:'';
-        display:block;
-        height:100%;
-        width:100%;
-        top:0;
-        left:0;
-        position:absolute;
-        pointer-events:none;
-        z-index: -1;
-      }
-
-      .lamp-container {
-        height: 10vh;
-        background-color: ${palette.bleuNuit}
-      }
-
-      .header::before {
-        background: linear-gradient(to top,${hexToRGB(palette.bleuNuit, 0.5)},${hexToRGB(palette.lavande, 0.1)});
-      }
-
-      @media screen and (min-width: 800px) {
-        .header {
-          height: 95vh;
-        }
-
-        .lamp-container {
-          height: 5vh;
-        }
-      }
-    `}</style>
   </div>
 )
 

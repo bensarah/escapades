@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Emoji from './emoji'
-import palette from '../styles/palette'
 import PreFooter from './pre-footer'
 
 class Footer extends Component {
   render () {
     return (
-      <div className='footer bottom w-full'>
+      <div className='footer bottom w-full bg-bleu-nuit'>
         {
           this.props.prefooter
           ? <PreFooter cta={this.props.cta} quote={this.props.quote} url={this.props.url}/>
@@ -15,7 +14,7 @@ class Footer extends Component {
         }
         <div className='relative py30 px30 hmin120 lavande'>
           <div className='flex-parent flex-parent--column flex-parent--row-ml flew-parent--wrap'>
-            <a href='#' className='cursor-pointer pr18 pb6' onClick={() => window.scroll({
+            <a className='cursor-pointer pr18 pb6' onClick={() => window.scroll({
               top: 0,
               left: 0,
               behavior: 'smooth'
@@ -37,19 +36,6 @@ class Footer extends Component {
           </div>
           <img className='none block-ml absolute bottom right pr36 pt30 h120' src={`/static/deco/footer-vector.svg`} draggable={false}/>
         </div>
-        <style jsx>{`
-          .footer {
-            background-color: ${palette.bleuNuit};
-          }
-
-          .lavande {
-            color: ${palette.lavande};
-          }
-
-          .footer .clickable:hover, .footer a:hover {
-            color: ${palette.brightAzure};
-          }
-        `}</style>
       </div>
     )
   }
