@@ -23,7 +23,6 @@ class Index extends Component {
       <Page>
         <Helmet>
           <title>escapades</title>
-          <link rel='preload' href={headerImage} />
         </Helmet>
         <Header background={headerImage}/>
 

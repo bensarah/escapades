@@ -41,11 +41,11 @@ html {
 }
 
 .txt-shadow {
-  text-shadow: 1px 1px 4px color(var(--bleuNuit) a(0.5));
+  text-shadow: 1px 1px 4px rgba(var(--bleuNuit), .5);
 }
 
 .drop-shadow {
-  filter: drop-shadow( 1px 1px 3px color(var(--bleuNuit) a(0.3)) );
+  filter: drop-shadow( 1px 1px 3px rgba(var(--bleuNuit), .3));
 }
 
 hr {
@@ -128,7 +128,7 @@ a:hover {
 /* infosection.js */
 
 .info-section {
-  background: linear-gradient(to bottom, var(--tournesol) 50%, #ffa100);
+  background: linear-gradient(to bottom, var(--tournesol), #ffa100);
 }
 
 .info-section .flex-parent div {
@@ -140,7 +140,7 @@ a:hover {
 }
 
 .brique {
-  fill: var(--brique)
+  fill: var(--brique) !important;
 }
 
 /* post/header.js */
@@ -163,7 +163,7 @@ a:hover {
 }
 
 .post-header::before {
-  background: linear-gradient(to top,color(var(--bleuNuit) a(0.5)),color(var(--lavande) a(0.1)));
+  background: linear-gradient(to top, rgba(var(--bleuNuit), .5), rgba(var(--lavande), .1));
 }
 
 @media screen and (min-width: 800px) {
@@ -294,7 +294,7 @@ a:hover {
 }
 
 .index-header::before {
-  background: linear-gradient(to top,color(var(--bleuNuit) a(0.5)),color(var(--lavande) a(0.1)));
+  background: linear-gradient(to top, rgba(var(--bleuNuit), .5), rgba(var(--lavande), .1));
 }
 
 @media screen and (min-width: 800px) {

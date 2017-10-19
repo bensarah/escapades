@@ -6,8 +6,8 @@ module.exports = () => {
     publicAssetsPath: 'static',
     pagesDirectory: path.join(__dirname, 'pages'),
     postcssPlugins: (a) => a.concat([
-      require('postcss-color-function'),
-      require('postcss-css-variables')
+      require('postcss-css-variables'),
+      require('postcss-color-alpha')
     ]),
     stylesheets: [
       path.join(__dirname, 'pages/static/vendor/twemoji-awesome.css'),

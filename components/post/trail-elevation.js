@@ -19,7 +19,6 @@ class TrailElevation extends Component {
   render () {
     switch (this.state.status) {
     case 'ok': {
-      // let upsAndDowns = this.upsAndDowns() // TODO use this somewhere?
       return (
         <div className='absolute bottom w-full mx-neg6 my-neg6 z2'>
           <ResponsiveContainer width='101%' height={this.height}>

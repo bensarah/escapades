@@ -24,7 +24,7 @@ class Post extends Component {
     return (
       <Page>
         <Helmet>
-          <link rel='preload' href={this.props.header} />
+          <link rel='preload' href={this.props.header} as='image'/>
         </Helmet>
         <Header
           img={this.props.header}
