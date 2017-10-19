@@ -14,7 +14,7 @@ class Footer extends Component {
         }
         <div className='relative py30 px30 hmin120 lavande'>
           <div className='flex-parent flex-parent--column flex-parent--row-ml flew-parent--wrap'>
-            <a href='#' className='cursor-pointer pr18 pb6' onClick={() => window.scroll({
+            <a className='cursor-pointer pr18 pb6' onClick={() => window.scroll({
               top: 0,
               left: 0,
               behavior: 'smooth'

@@ -10,6 +10,7 @@
 body {
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--bleuNuit);
 }
 
 html {
@@ -21,6 +22,10 @@ html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6em;
+}
+
+.main {
+  color: white;
 }
 
 .full-height {
@@ -68,6 +73,10 @@ a:hover {
 
 .bleu-nuit {
   color: var(--bleuNuit);
+}
+
+.tournesol {
+  color: var(--tournesol);
 }
 
 .bg-bleu-nuit {
@@ -303,4 +312,15 @@ a:hover {
 .marker {
   background-color: var(--tournesol);
   border-radius: 50%;
+}
+
+/* about.js */
+
+.about {
+  min-height: 100vh;
+  color: white;
+}
+
+.about > .icon svg {
+  stroke: white;
 }

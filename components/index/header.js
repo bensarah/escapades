@@ -19,9 +19,6 @@ const IndexHeader = ({background}) => (
     <div className='lamp-container bg-bleu-nuit w-full align-center z2 pb120'>
       <Lamp className='lamp relative animation-fade-in top center align-center z5 h-full'/>
     </div>
-    <style jsx>{`
-
-    `}</style>
   </div>
 )
 

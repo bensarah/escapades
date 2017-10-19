@@ -88,9 +88,6 @@ class MapHighlights extends Component {
   makeMarker () {
     return (
       <div className='marker'>
-        <style jsx>{`
-
-        `}</style>
       </div>
     )
   }
