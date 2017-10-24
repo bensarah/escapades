@@ -102,7 +102,7 @@ class KingsCanyon extends Component {
           </P>
           <P>
             Son élévation en fait le deuxième sommet le plus haut du parc de Yosemite.
-            Faire ce pic nous permettait de nous familiariser avec l’altitude, avant l’incroyable ascension du <a href='/2017/mount-whitney' target='_blank'>Mount Whitney</a>.
+            Gravir ce pic nous permettait de nous familiariser avec l’altitude, avant l’incroyable ascension du <a href='/2017/mount-whitney' target='_blank'>Mount Whitney</a>.
             D’autant plus que le profil de cette randonnée est aypique : 950 m de dénivelé en 5km et 20% de pente en moyenne.
           </P>
         </Section>
@@ -143,7 +143,7 @@ class KingsCanyon extends Component {
           sidebarContent={<Img src='/static/2017/mount-dana/pierrier.jpg'/>}
         >
           <P>
-            ...mais, rapidement le sentier devient plus pentu et aboutit dans un gigantesque pierrier.
+            ...mais, rapidement il devient plus pentu et aboutit dans un gigantesque pierrier.
           </P>
         </Section>
 
@@ -159,7 +159,7 @@ class KingsCanyon extends Component {
             <Emoji name='sweat'/>
           </P>
           <P>
-            Nous ressentons plusieurs épisodes de fatigue et d’essoufflement, sans vraiment savoir si l’alitude ou la difficulté de la randonnée en sont responsable. Peut-être les deux. Les symptômes ne sont pas tétanisants mais nous incitent à faire quelques pauses pour reprendre notre souffle.
+            Nous ressentons plusieurs épisodes de fatigue et d’essoufflement, sans vraiment savoir si l’alitude ou la difficulté de la randonnée en sont responsables. Peut-être les deux. Les symptômes ne sont pas tétanisants mais nous incitent à faire quelques pauses pour reprendre notre souffle.
           </P>
         </Section>
 
@@ -196,7 +196,7 @@ class KingsCanyon extends Component {
           sidebarContent={<Img src='/static/2017/mount-dana/pics.jpg'/>}
         >
           <P>
-            Avant de repartir, on s’imprègne de cette vue splendide, pour que ces superbes vues s’ancrent dans notre esprit.
+            Avant de repartir, on s’imprègne de cette vue splendide, pour qu’elle s’ancre dans notre esprit.
           </P>
         </Section>
 

@@ -45,7 +45,7 @@ class Post extends Component {
               <div style={Object.assign({}, style, {height: '100vh'})} ref={sidebar => { this.sidebar = sidebar }}>
                 <CSSTransitionGroup
                   transitionName='smooth'
-                  transitionEnterTimeout={500}
+                  transitionEnterTimeout={0}
                   transitionLeaveTimeout={0}>
                   <div key='sidebar' id='sidebar' className='absolute h-full w-full'></div>
                   {
