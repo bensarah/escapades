@@ -43,7 +43,7 @@ class Index extends Component {
                 <div className='px18-ml pb18'>
                   <h2 className='tournesol pt12 txt-xl txt-bold'><Emoji name='earth-africa'/> Des deux côtés de l’Atlantique</h2>
                   <p className='pt12'>
-                    Voilà un aperçu de nos randos dans les différentes régions du globe, répartis par parc ou chaîne de montagnes.
+                    Voilà un aperçu de nos randos dans les différentes régions du globe, réparties par parc ou chaîne de montagnes.
                     <br />
                     Cliquez sur l’une d’entre elles pour en savoir plus.
                   </p>

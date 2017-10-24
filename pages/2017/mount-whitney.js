@@ -131,7 +131,7 @@ class MountWhitney extends Component {
         >
           <P>
             Il y a des randonnées pour lesquelles on traverserait des océans.
-            Le Mont Whitney, plus haut sommet des Etats-Unis (hors Alaska) du haut de ses 4 421 m, fait partie de ceux-ci.
+            Celle du Mont Whitney, plus haut sommet des Etats-Unis (hors Alaska) du haut de ses 4 421 m, fait partie de celles-ci.
             Étant aussi l’un des sentiers les plus convoités, il y a aussi une loterie à gagner pour pouvoir le gravir.
           </P>
           <P>
@@ -296,7 +296,7 @@ class MountWhitney extends Component {
         >
           <P>
             Après s’être réchauffés et avoir repris quelques forces dans le refuge, nous voilà repartis.
-            L’avantage de randonner de nuit et qu’il reste plein de choses à découvrir sur le retour, une fois dans la lumière !
+            L’avantage de randonner de nuit est qu’il reste plein de choses à découvrir sur le retour, une fois dans la lumière !
             Kings Canyon et les Sierras à l’Ouest, les plaines de l’Est, et la température qui monte doucement (heureusement qu’on redescend !).
           </P>
           <P>
