@@ -100,6 +100,11 @@
             "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7",
             "type": "vector"
         },
+        "mapbox://mapbox.terrain-rgb": {
+            "url": "mapbox://mapbox.terrain-rgb",
+            "type": "raster-dem",
+            "tileSize": 256
+        },
         "trail": {
             "type": "geojson",
             "data": {"type": "FeatureCollection", "features": []}
@@ -630,6 +635,21 @@
             }
         },
         {
+            "id": "mapbox-terrain-rgb",
+            "type": "hillshade",
+            "metadata": {},
+            "source": "mapbox://mapbox.terrain-rgb",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "hillshade-shadow-color": "hsla(21, 84%, 0%, 0.92)",
+                "hillshade-highlight-color": "hsl(60, 16%, 100%)",
+                "hillshade-accent-color": "#081926",
+                "hillshade-illumination-direction": 332
+            }
+        },
+        {
             "id": "contour-line",
             "type": "line",
             "metadata": {
@@ -745,195 +765,6 @@
                         ]
                     ]
                 }
-            }
-        },
-        {
-            "id": "hillshade_highlight_bright",
-            "type": "fill",
-            "metadata": {
-                "mapbox:group": "1444855815295.714"
-            },
-            "source": "composite",
-            "source-layer": "hillshade",
-            "maxzoom": 18,
-            "filter": [
-                "==",
-                "level",
-                94
-            ],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(0, 0%, 100%)",
-                "fill-opacity": {
-                    "stops": [
-                        [
-                            15,
-                            0.15
-                        ],
-                        [
-                            18,
-                            0
-                        ]
-                    ]
-                },
-                "fill-antialias": false
-            }
-        },
-        {
-            "id": "hillshade_highlight_med",
-            "type": "fill",
-            "metadata": {
-                "mapbox:group": "1444855815295.714"
-            },
-            "source": "composite",
-            "source-layer": "hillshade",
-            "filter": [
-                "==",
-                "level",
-                90
-            ],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(0, 0%, 100%)",
-                "fill-opacity": {
-                    "stops": [
-                        [
-                            15,
-                            0.15
-                        ],
-                        [
-                            18,
-                            0
-                        ]
-                    ]
-                },
-                "fill-antialias": false
-            }
-        },
-        {
-            "id": "hillshade_shadow_faint",
-            "type": "fill",
-            "metadata": {
-                "mapbox:group": "1444855815295.714"
-            },
-            "source": "composite",
-            "source-layer": "hillshade",
-            "maxzoom": 17,
-            "filter": [
-                "==",
-                "level",
-                89
-            ],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(56, 59%, 22%)",
-                "fill-opacity": {
-                    "stops": [
-                        [
-                            15,
-                            0.07
-                        ],
-                        [
-                            17,
-                            0
-                        ]
-                    ]
-                },
-                "fill-antialias": false
-            }
-        },
-        {
-            "id": "hillshade_shadow_med",
-            "type": "fill",
-            "metadata": {
-                "mapbox:group": "1444855815295.714"
-            },
-            "source": "composite",
-            "source-layer": "hillshade",
-            "filter": [
-                "==",
-                "level",
-                78
-            ],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(56, 59%, 22%)",
-                "fill-opacity": {
-                    "stops": [
-                        [
-                            15,
-                            0.07
-                        ],
-                        [
-                            17,
-                            0
-                        ]
-                    ]
-                },
-                "fill-antialias": false
-            }
-        },
-        {
-            "id": "hillshade_shadow_dark",
-            "type": "fill",
-            "metadata": {
-                "mapbox:group": "1444855815295.714"
-            },
-            "source": "composite",
-            "source-layer": "hillshade",
-            "filter": [
-                "==",
-                "level",
-                67
-            ],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(56, 59%, 22%)",
-                "fill-opacity": {
-                    "stops": [
-                        [
-                            15,
-                            0.08
-                        ],
-                        [
-                            17,
-                            0
-                        ]
-                    ]
-                },
-                "fill-antialias": false
-            }
-        },
-        {
-            "id": "hillshade_shadow_extreme",
-            "type": "fill",
-            "metadata": {
-                "mapbox:group": "1444855815295.714"
-            },
-            "source": "composite",
-            "source-layer": "hillshade",
-            "maxzoom": 17,
-            "filter": [
-                "==",
-                "level",
-                56
-            ],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(56, 59%, 22%)",
-                "fill-opacity": {
-                    "stops": [
-                        [
-                            15,
-                            0.08
-                        ],
-                        [
-                            17,
-                            0
-                        ]
-                    ]
-                },
-                "fill-antialias": false
             }
         },
         {
@@ -10596,7 +10427,8 @@
             "source": "point-highlight",
             "type": "symbol",
             "layout": {
-                "icon-image": "hiker"
+                "icon-image": "hiker",
+                "icon-allow-overlap": true
             },
             "filter": ["==", "$type", "Point"]
         },
