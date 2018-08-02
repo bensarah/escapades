@@ -9,10 +9,10 @@ git clone git@github.com:benjamintd/escapades.git
 cd escapades
 ```
 
-This project uses [yarn](https://yarnpkg.com/lang/en/docs/install/) for dependency management. Install dependencies and run with the following command:
+Install dependencies and run with the following command:
 
 ```sh
-yarn
+npm install
 npm run dev
 ```
 
@@ -20,6 +20,8 @@ Then head to `http://localhost:3000`. Changes you make to components will be ref
 
 Deploy:
 ```
+npm run build
+cd out
 now
 ```
 
