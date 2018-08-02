@@ -19,7 +19,7 @@ class Meta extends Component {
 
           <link rel='icon' href='/static/favicon.png'/>
           <link href='https://fonts.googleapis.com/css?family=Open+Sans|Anton|Bad+Script' rel='stylesheet' />
-          <script async src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' />
+          <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
           <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.14.0/assembly.js' />
 
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72962798-2"></script>
