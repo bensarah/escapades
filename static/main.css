@@ -57,6 +57,7 @@ hr {
 a {
   color: var(--lavande) !important;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
