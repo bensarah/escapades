@@ -25,13 +25,9 @@ class Map extends Component {
       container: this.props.container || 'map',
       style: style,
       center: this.props.center || [-33, 40],
-      zoom: this.props.zoom || 1
+      zoom: this.props.zoom || 1,
+      crossSourceCollisions: false
     })
-
-    map.addControl(new mapboxgl.ScaleControl({
-      maxWidth: 80,
-      unit: 'metric'
-    }))
 
     map.scrollZoom.disable()
     if ('ontouchstart' in window) {

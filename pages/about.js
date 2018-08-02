@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import Page from '../layouts/main'
 import Footer from '../components/footer'
 import Logo from '../components/logo'
@@ -10,9 +10,9 @@ class About extends Component {
   render () {
     return (
       <Page>
-        <Helmet>
+        <Head>
           <title>escapades - À propos</title>
-        </Helmet>
+        </Head>
         <div className='about flex-parent flex-parent--column'>
           <a href='/'>
             <div className='cursor-pointer z5 mx18 my18 txt-m txt-bold' title='Retour à la page d’accueil'>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import Emoji from '../components/emoji'
 import Page from '../layouts/main'
 import PostInfo from '../components/index/post-info'
@@ -21,9 +21,9 @@ class Index extends Component {
 
     return (
       <Page>
-        <Helmet>
+        <Head>
           <title>escapades</title>
-        </Helmet>
+        </Head>
         <Header background={headerImage}/>
 
         <div className='main'>

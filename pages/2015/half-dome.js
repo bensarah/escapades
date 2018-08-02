@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import extent from 'geojson-extent'
+import extent from '@mapbox/geojson-extent'
 import Post from '../../layouts/post'
 import P from '../../components/post/paragraph'
 import Map from '../../components/post/map'
@@ -9,7 +9,7 @@ import Emoji from '../../components/emoji'
 import Footnote from '../../components/post/footnote'
 import Quote from '../../components/post/quote'
 import {highlightFromTo} from '../../helpers/map-utils'
-import trail from '../static/2015/half-dome/trail'
+import trail from '../../static/2015/half-dome/trail'
 
 class HalfDome extends Component {
   render () {
