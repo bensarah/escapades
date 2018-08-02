@@ -53,16 +53,5 @@ export default [
     header: '/static/2015/trois-seigneurs/post.jpg',
     url: '/2015/trois-seigneurs',
     quote: 'Une balade douce et belle en Ariège, parfait pour une mise en jambe dans les Pyrénées'
-  },
-  {
-    title: 'GR 20',
-    park: 'Corse',
-    region: 'France',
-    date: 'Juillet 2018',
-    id: 'gr20',
-    coords: [9.123577, 42.126600],
-    header: '/static/2018/gr20/gr20.jpg',
-    url: '/2018/gr20',
-    quote: 'Notre (gros) projet pour l’été 2018'
   }
 ]
