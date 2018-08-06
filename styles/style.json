@@ -10596,7 +10596,8 @@
             "source": "point-highlight",
             "type": "symbol",
             "layout": {
-                "icon-image": "hiker"
+                "icon-image": "hiker",
+                "icon-allow-overlap": true
             },
             "filter": ["==", "$type", "Point"]
         },

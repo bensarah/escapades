@@ -9,23 +9,30 @@ import {StickyContainer, Sticky} from 'react-sticky'
 import {CSSTransitionGroup} from 'react-transition-group'
 import {findTrail} from '../helpers/trail-extractor'
 import posts from '../posts'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 
 class Post extends Component {
   constructor (props) {
     super(props)
+    var randomPost
+    var filtered = posts.filter(p => p.id !== this.props.id)
+    if (filtered.length > 0) {
+      randomPost = filtered[Math.floor(Math.random() * filtered.length)]
+      this.setState({})
+    }
     this.state = {
       content: '',
-      id: 0
+      id: 0,
+      randomPost
     }
   }
 
   render () {
     return (
       <Page>
-        <Helmet>
+        <Head>
           <link rel='preload' href={this.props.header} as='image'/>
-        </Helmet>
+        </Head>
         <Header
           img={this.props.header}
           title={this.props.title}
@@ -77,14 +84,6 @@ class Post extends Component {
         />
       </Page>
     )
-  }
-
-  componentWillMount () {
-    var filtered = posts.filter(p => p.id !== this.props.id)
-    if (filtered.length > 0) {
-      var randomPost = filtered[Math.floor(Math.random() * filtered.length)]
-      this.setState({randomPost})
-    }
   }
 }
 

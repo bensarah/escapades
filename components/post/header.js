@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import TrailElevation from './trail-elevation'
 import Logo from '../logo'
 import LogoText from '../logo-text'
@@ -24,7 +24,7 @@ class Header extends Component {
         className='post-header w-full display-block relative'
         style={{background: `url(${this.props.img}) no-repeat center center`, backgroundSize: 'cover'}}
       >
-        <Helmet><title>{this.props.title}</title></Helmet>
+        <Head><title>{this.props.title}</title></Head>
         <div className='header absolute w-full z1'>
           <a href='/' className='cursor-pointer absolute z5 px18 py18 txt-m txt-bold' title='Retour à la page d’accueil'>
             <Logo style={{fill: '#ffffff', height: '36px'}} className='inline'/>

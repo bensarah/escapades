@@ -39,17 +39,18 @@ class PhotoGallery extends React.Component {
         />
         <Gallery
           photos={this.props.photos}
-          onClickPhoto={this.openLightbox}
+          onClick={this.openLightbox}
           margin={3}
         />
       </div>
     )
   }
 
-  openLightbox (index, event) {
+  openLightbox (event, obj) {
+    console.log(event, obj)
     event.preventDefault()
     this.setState({
-      currentImage: index,
+      currentImage: obj.index,
       lightboxIsOpen: true
     })
   }

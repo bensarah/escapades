@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import React from 'react'
 import Meta from '../components/meta'
 import PropTypes from 'prop-types'

@@ -3,3 +3,4 @@ node_modules
 *.db
 _batfish*
 npm-debug.log
+out/

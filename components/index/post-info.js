@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import palette from '../../styles/palette'
+import Link from 'next/link'
 
 const PostInfo = ({ id, date, title, subtitle, header, url }) => {
   const polygon = '0,0 240,0 240,170 130,170 120,180 110,170 0,170'
 
   return (
       <div>
-        <a href={url}>
+        <Link prefetch href={url}>
           <svg
             className='post flex-child relative w240 mx30 unround cursor-pointer'
             height='180' width='300'
@@ -31,7 +32,7 @@ const PostInfo = ({ id, date, title, subtitle, header, url }) => {
             <text className='anton txt-shadow txt-xl transla' x='20' y='150' fill='white'>{title.toUpperCase()}</text>
             <text className='bad-script txt-shadow txt-bold txt-l apparition-text' x='20' y='150' fill='white' opacity='0'>{subtitle}</text>
           </svg>
-        </a>
+        </Link>
 
         <svg className='timeline' height='42' width='300'>
           <line x1='0' y1='12' x2='300' y2='12' style={{stroke: palette.grisClair, strokeWidth: 2}}/>

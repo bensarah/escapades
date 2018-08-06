@@ -4,15 +4,17 @@ import PropTypes from 'prop-types'
 import BlipMarker from './blip-marker'
 import palette from '../../styles/palette'
 import style from '../../styles/style-dark'
-import extent from 'geojson-extent'
+import extent from '@mapbox/geojson-extent'
+import base64 from 'base-64'
 import loadMapboxgl from '../../helpers/load-mapbox-gl'
 
 class MapHighlights extends Component {
-  componentWillMount () {
-    this.setState({
-      id: Math.random().toString(36).substr(2, 10), // random id
+  constructor (props) {
+    super(props)
+    this.state = {
+      id: base64.encode(this.props.dots), // random id
       markers: []
-    })
+    }
   }
 
   render () {
@@ -68,7 +70,7 @@ class MapHighlights extends Component {
     if (nextProps.highlight) {
       let el = document.createElement('div')
       el.id = 'marker-' + new Date().getDate()
-      let marker = new mapboxgl.Marker(el, { offset: [-size / 2, -size / 2] })
+      let marker = new mapboxgl.Marker(el, { offset: [0, 0] })
         .setLngLat(nextProps.highlight)
         .addTo(this.map)
 

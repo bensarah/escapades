@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Logo from '../logo'
 import Lamp from './lamp'
 import LogoText from '../logo-text'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 
 const IndexHeader = ({background}) => (
   <div className='w-full'>
-    <Helmet>
+    <Head>
       <link rel='preload' href={background} as='image'/>
-    </Helmet>
+    </Head>
     <div
       className='index-header w-full display-block relative'
       style={{background: `url(${background}) no-repeat center center`, backgroundSize: 'cover'}}

@@ -1,5 +1,5 @@
 import {trailPointsGenerator, findTrail, extractTrailPortion} from './trail-extractor'
-import extent from 'geojson-extent'
+import extent from '@mapbox/geojson-extent'
 
 function moveSource (map, layer, trail, start, end, options) {
   var duration = (options && options.duration) || 3000
