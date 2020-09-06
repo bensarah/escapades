@@ -4,3 +4,5 @@ node_modules
 _batfish*
 npm-debug.log
 out/
+
+.now

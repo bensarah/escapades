@@ -10,7 +10,7 @@
     "base-64": "^0.1.0",
     "cheap-ruler": "^2.5.0",
     "lodash": "^4.17.4",
-    "next": "^6.1.1",
+    "next": "^9.2.0",
     "postcss-color-alpha": "^2.0.0",
     "postcss-css-variables": "^0.8.0",
     "react": "^16.4.2",
@@ -23,7 +23,6 @@
     "react-transition-group": "1.x",
     "react-waypoint": "^7.0.4",
     "recharts": "^1.0.0-alpha.2",
-    "sharp": "^0.18.2",
     "simplify-geojson": "^1.0.3",
     "smoothscroll-polyfill": "^0.3.6",
     "waypoints": "^4.0.1",
@@ -35,6 +34,7 @@
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
     "prop-types": "^15.5.10",
+    "sharp": "^0.25.1",
     "standard": "^10.0.2"
   },
   "scripts": {
@@ -61,12 +61,5 @@
   "bugs": {
     "url": "https://github.com/benjamintd/hiking-blog/issues"
   },
-  "homepage": "https://github.com/benjamintd/hiking-blog#readme",
-  "now": {
-    "name": "escapades",
-    "alias": "escapades",
-    "env": {
-      "NODE_ENV": "production"
-    }
-  }
+  "homepage": "https://github.com/benjamintd/hiking-blog#readme"
 }
