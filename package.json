@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
     "prop-types": "^15.5.10",
-    "sharp": "^0.25.1",
+    "sharp": "^0.30.5",
     "standard": "^10.0.2"
   },
   "scripts": {
