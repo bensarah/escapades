@@ -29,7 +29,7 @@ class MapHighlights extends Component {
 
   onLoad () {
     /* global mapboxgl */
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjaW83enIwNjYwMnB1dmlsejN6cDBzbm93In0.0ZOGwSLp8OjW6vCaEKYFng'
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamFtaW50ZCIsImEiOiJjbG10MHphMWMwMGc2Mmxsb2Q1ZzNyNjV4In0.l_bLHlHGbtyicw5-weLZ3g'
 
     const map = new mapboxgl.Map({
       container: 'map' + this.state.id,
